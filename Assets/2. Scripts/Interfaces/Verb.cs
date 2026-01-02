@@ -1,10 +1,11 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Verb", menuName = "Scriptable Objects/Verb")]
-public class Verb : ScriptableObject, IWord
+[Serializable]
+public class Verb :  IWord
 {
-    public WordType WordType => wordtype;
-    [SerializeField] private WordType wordtype;
+    public WordType WordType => WordType.Verb;
 
     public VerbType VerbType => verbType;
     [SerializeField] private VerbType verbType;
@@ -13,10 +14,10 @@ public class Verb : ScriptableObject, IWord
     [SerializeField] public string kanji;
 
     public string Kana => kana;
-    [SerializeField] public string kana;
+    [SerializeField] private string kana;
 
-    public string Meaning => meaning;
-    [SerializeField] public string meaning;
+    public List <string> Meaning => meaning;
+    [SerializeField] private List<string> meaning;
 
     public bool IsExeception;
 }

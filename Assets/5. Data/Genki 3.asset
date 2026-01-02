@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f925ee20541ae16479e0c1086cb37917, type: 3}
+  m_Name: Genki 3
+  m_EditorClassIdentifier: Assembly-CSharp::WordList
+  List:
+  - verbType: 2
+    kanji: "\u6765\u308B"
+    kana: "\u304F\u308B"
+    meaning:
+    - to come
+    IsExeception: 0
+  - verbType: 2
+    kanji: 
+    kana: "\u3059\u308B"
+    meaning:
+    - to do
+    IsExeception: 0
+  - verbType: 2
+    kanji: "\u52C9\u5F37\u3059\u308B"
+    kana: "\u3079\u3093\u304D\u3087\u3046\u3059\u308B"
+    meaning:
+    - to study
+    IsExeception: 0
+  - verbType: 1
+    kanji: "\u8D77\u304D\u308B"
+    kana: "\u304A\u304D\u308B"
+    meaning:
+    - to get up
+    IsExeception: 0
+  - verbType: 1
+    kanji: "\u98DF\u3079\u308B"
+    kana: "\u305F\u3079\u308B"
+    meaning:
+    - to eat
+    IsExeception: 0
+  - verbType: 1
+    kanji: "\u98DF\u3079\u308B"
+    kana: "\u305F\u3079\u308B"
+    meaning:
+    - to sleep
+    - to go to sleep
+    IsExeception: 0
+  - verbType: 0
+    kanji: "\u884C\u304F"
+    kana: "\u3044\u304F"
+    meaning:
+    - to go
+    IsExeception: 0
+  - verbType: 0
+    kanji: "\u5E30\u308B"
+    kana: "\u304B\u3048\u308B"
+    meaning:
+    - to go back
+    - to return
+    IsExeception: 0
+  - verbType: 0
+    kanji: "\u805E\u304F"
+    kana: "\u304D\u304F"
+    meaning:
+    - to listen
+    - to hear
+    IsExeception: 0
+  - verbType: 0
+    kanji: "\u805E\u304F"
+    kana: "\u304D\u304F"
+    meaning:
+    - to drink
+    IsExeception: 0
+  - verbType: 0
+    kanji: "\u805E\u304F"
+    kana: "\u304D\u304F"
+    meaning:
+    - to speak
+    - to talk
+    IsExeception: 0
+  - verbType: 0
+    kanji: "\u805E\u304F"
+    kana: "\u304D\u304F"
+    meaning:
+    - to read
+    IsExeception: 0

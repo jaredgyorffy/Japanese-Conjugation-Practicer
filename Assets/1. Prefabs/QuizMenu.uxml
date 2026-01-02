@@ -1,0 +1,19 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/1.%20Prefabs/Style.uss?fileID=7433441132597879392&amp;guid=2a25d9aa4030f1f42a59a0d75a5e1857&amp;type=3#Style" />
+    <ui:VisualElement name="Panel" style="flex-grow: 1; margin-left: 5%; margin-top: 5%; margin-right: 5%; margin-bottom: 5%;">
+        <ui:VisualElement name="Number" style="flex-grow: 0; justify-content: flex-start; align-items: center; align-self: center; align-content: flex-start; flex-direction: row;">
+            <ui:Label text="Question &#10;" name="Title" class="Title" style="font-size: 40px;" />
+            <ui:Label text="01&#10;" name="Number" class="Subtitle" />
+            <ui:Label text="/&#10;" name="Slash" class="Subtitle" />
+            <ui:Label text="20&#10;" name="Total" class="SubTitle Subtitle" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Question" style="flex-grow: 0; justify-content: flex-start; align-items: center; align-self: stretch; align-content: flex-start; flex-direction: row; flex-shrink: 0;">
+            <ui:Label text="はなす" name="Title" class="Title" style="font-size: 40px; align-self: auto; flex-grow: 1;" />
+            <ui:Label text="Present Form&#10;" name="Total" class="Title" style="align-self: center; flex-direction: row; justify-content: flex-end; flex-grow: 1; -unity-text-align: upper-right;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Options" style="flex-grow: 0; flex-direction: row;">
+            <ui:TextField name="TextField" placeholder-text="Write your answer here" style="flex-grow: 1;" />
+            <ui:Button text="Submit" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
