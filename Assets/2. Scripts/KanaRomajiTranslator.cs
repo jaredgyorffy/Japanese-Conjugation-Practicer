@@ -33,17 +33,20 @@ public class KanaRomajiTranslator : MonoBehaviour
 
     private void InvokeStateChangedEvent()
     {
+        foreach (var pair in KanaRomajiList.ThreeLetterPairs)
+        {
+            FindAndReplaceRomaji(pair);
+        }
+
         foreach (var pair in KanaRomajiList.TwoLetterPairs)
         {
             FindAndReplaceRomaji(pair);
         }
 
-        if (input.Contains("na"))
+        foreach (var pair in KanaRomajiList.SingleLetterPairs)
         {
-            input = input.Replace("na", "な");
-            textField.value = input;
+            FindAndReplaceRomaji(pair);
         }
-        //InputChanged?.Invoke();
     }
 
     private void FindAndReplaceRomaji(KanaRomajiPair pair)

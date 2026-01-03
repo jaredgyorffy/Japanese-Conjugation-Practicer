@@ -11,7 +11,7 @@
             <ui:Label text="はなす" name="Title" class="Title" style="font-size: 40px; align-self: auto; flex-grow: 1;" />
             <ui:Label text="Present Form&#10;" name="Total" class="Title" style="align-self: center; flex-direction: row; justify-content: flex-end; flex-grow: 1; -unity-text-align: upper-right;" />
         </ui:VisualElement>
-        <ui:VisualElement name="Options" style="flex-grow: 0; flex-direction: row;">
+        <ui:VisualElement name="Options" class="Subtitle" style="flex-grow: 0; flex-direction: row;">
             <ui:TextField name="TextField" placeholder-text="Write your answer here" style="flex-grow: 1;" />
             <ui:Button text="Submit" />
         </ui:VisualElement>

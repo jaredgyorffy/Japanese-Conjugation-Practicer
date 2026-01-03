@@ -27,7 +27,7 @@ MonoBehaviour:
   - Kana: "\u304B"
     Romaji: ka
   - Kana: "\u304C"
-    Romaji: ka
+    Romaji: ga
   - Kana: "\u304D"
     Romaji: ki
   - Kana: "\u304E"
@@ -179,14 +179,14 @@ MonoBehaviour:
     Romaji: sha
   - Kana: "\u3057\u3085"
     Romaji: shu
-  - Kana: "\u3057\u3085"
-    Romaji: shu
+  - Kana: "\u3057\u3087"
+    Romaji: sho
   - Kana: "\u3058\u3083"
-    Romaji: ja
+    Romaji: jya
   - Kana: "\u3058\u3085"
-    Romaji: ju
+    Romaji: jyu
   - Kana: "\u3058\u3087"
-    Romaji: jo
+    Romaji: jyo
   - Kana: "\u3061\u3083"
     Romaji: cha
   - Kana: "\u3061\u3085"
@@ -229,3 +229,9 @@ MonoBehaviour:
     Romaji: ryu
   - Kana: "\u308A\u3087"
     Romaji: ryo
+  - Kana: "\u3062\u3083"
+    Romaji: dya
+  - Kana: "\u3062\u3085"
+    Romaji: dyu
+  - Kana: "\u3062\u3087"
+    Romaji: dyo
