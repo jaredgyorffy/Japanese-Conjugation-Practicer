@@ -1,6 +1,7 @@
 using System;
 using Unity.Properties;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class SimpleTest : MonoBehaviour
@@ -11,6 +12,10 @@ public class SimpleTest : MonoBehaviour
     private TextField textField;
 
     private string currentAnswer;
+    private int amountCorrect;
+
+    [CreateProperty] public string PreviousAnswer => previousAnswer;
+    private string previousAnswer;
 
     [CreateProperty] public string CurrentKanji => currentKanji;
     private string currentKanji;
@@ -18,7 +23,7 @@ public class SimpleTest : MonoBehaviour
     [CreateProperty] public string CurrentKana => currentKana;
     private string currentKana;
 
-    [CreateProperty] public string CurrentQuestion => currentQuestion.ToString();
+    [CreateProperty] public string CurrentQuestion => (currentQuestion + 1).ToString();
     private int currentQuestion;
 
     [CreateProperty] public string TotalQuestions => totalQuestions.ToString();
@@ -26,6 +31,7 @@ public class SimpleTest : MonoBehaviour
 
     [SerializeField] VerbList quizQuestions;
 
+    [SerializeField] private InputManager inputManager;
     void Start()
     {
         GetReferences();
@@ -41,6 +47,12 @@ public class SimpleTest : MonoBehaviour
         submitButton = root.MQ<Button>("Submit");
         textField = root.MQ<TextField>("TextField");
         submitButton.clicked += OnPressSubmit;
+
+        textField.RegisterCallback<NavigationSubmitEvent>(evt =>
+        {
+            evt.StopImmediatePropagation(); // prevents internal handling
+            OnPressSubmit();
+        }, TrickleDown.TrickleDown);
     }
 
     private void InitializeQuiz()
@@ -50,18 +62,19 @@ public class SimpleTest : MonoBehaviour
         currentAnswer = quizQuestions.List[currentQuestion].Kana;
         currentKanji = quizQuestions.List[currentQuestion].kanji;
         currentKana = quizQuestions.List[currentQuestion].Kana;
+        textField.MQ(TextInputBaseField<string>.textInputUssName).Focus();
     }
-
 
     private void OnPressSubmit()
     {
         if (textField.value == currentAnswer)
         {
-            Debug.Log("Correct!");
+            previousAnswer = "Correct!";
+            amountCorrect += 1;
         }
         else
         {
-            Debug.Log($"Wrong! the correct answer is {currentAnswer}");
+            previousAnswer = $"Wrong! the correct answer is {currentAnswer}";
         }
         textField.value = "";
         PrepareNextQuestion();
@@ -69,9 +82,26 @@ public class SimpleTest : MonoBehaviour
 
     private void PrepareNextQuestion()
     {
+        if (currentQuestion == quizQuestions.List.Count - 1) 
+        {
+            EndQuiz();
+            return;
+        }
         currentQuestion += 1;
         currentAnswer = quizQuestions.List[currentQuestion].Kana;
         currentKanji = quizQuestions.List[currentQuestion].kanji;
         currentKana = quizQuestions.List[currentQuestion].Kana;
+
+        textField.Focus();
+    }
+
+    private void EndQuiz()
+    {
+        previousAnswer = $"Quiz Complete! {amountCorrect} / {totalQuestions}.";
+    }
+
+    private void OnDisable()
+    {
+        submitButton.clicked -= OnPressSubmit;
     }
 }

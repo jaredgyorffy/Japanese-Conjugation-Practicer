@@ -31,8 +31,13 @@
             <ui:Label text="Kana Reading&#10;" name="Question" class="Title" style="align-self: center; flex-direction: row; justify-content: flex-end; flex-grow: 1; -unity-text-align: upper-right;" />
         </ui:VisualElement>
         <ui:VisualElement name="Options" class="Subtitle" style="flex-grow: 0; flex-direction: row;">
-            <ui:TextField name="TextField" placeholder-text="Write your answer here" style="flex-grow: 1;" />
+            <ui:TextField name="TextField" placeholder-text="Write your answer here" hide-placeholder-on-focus="true" select-all-on-mouse-up="false" select-all-on-focus="false" is-delayed="false" style="flex-grow: 1;" />
             <ui:Button text="Submit" name="Submit" />
         </ui:VisualElement>
+        <ui:Label text="Correct!" display-tooltip-when-elided="true" class="Title" style="-unity-text-align: upper-center; margin-top: 5%;">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="PreviousAnswer" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:Label>
     </ui:VisualElement>
 </ui:UXML>
