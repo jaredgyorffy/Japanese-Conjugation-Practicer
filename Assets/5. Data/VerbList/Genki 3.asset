@@ -18,43 +18,48 @@ MonoBehaviour:
     kana: "\u304F\u308B"
     meaning:
     - to come
+    Present: "\u304D\u307E\u3059"
+    Negative: "\u304D\u307E\u305B\u3093"
     IsExeception: 0
   - verbType: 2
     kanji: 
     kana: "\u3059\u308B"
     meaning:
     - to do
+    Present: "\u3057\u307E\u3059"
+    Negative: "\u3057\u307E\u305B\u3093"
     IsExeception: 0
   - verbType: 2
     kanji: "\u52C9\u5F37\u3059\u308B"
     kana: "\u3079\u3093\u304D\u3087\u3046\u3059\u308B"
     meaning:
     - to study
+    Present: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3059"
+    Negative: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093"
     IsExeception: 0
   - verbType: 1
     kanji: "\u8D77\u304D\u308B"
     kana: "\u304A\u304D\u308B"
     meaning:
     - to get up
+    Present: "\u304A\u304D\u307E\u3059"
+    Negative: "\u304A\u304D\u307E\u305B\u3093"
     IsExeception: 0
   - verbType: 1
     kanji: "\u98DF\u3079\u308B"
     kana: "\u305F\u3079\u308B"
     meaning:
     - to eat
-    IsExeception: 0
-  - verbType: 1
-    kanji: "\u98DF\u3079\u308B"
-    kana: "\u305F\u3079\u308B"
-    meaning:
-    - to sleep
-    - to go to sleep
+    Present: "\u305F\u3079\u307E\u3059"
+    Negative: "\u305F\u3079\u307E\u305B\u3093"
     IsExeception: 0
   - verbType: 0
     kanji: "\u884C\u304F"
     kana: "\u3044\u304F"
     meaning:
     - to go
+    Present: "\u3044\u304D\u307E\u3059"
+    Negative: "\u3044\u304D\u307E\u305B\u3093"
     IsExeception: 0
   - verbType: 0
     kanji: "\u5E30\u308B"
@@ -62,6 +67,8 @@ MonoBehaviour:
     meaning:
     - to go back
     - to return
+    Present: "\u304B\u3048\u308A\u307E\u3059"
+    Negative: "\u304B\u3048\u308A\u307E\u305B\u3093"
     IsExeception: 0
   - verbType: 0
     kanji: "\u805E\u304F"
@@ -69,23 +76,6 @@ MonoBehaviour:
     meaning:
     - to listen
     - to hear
-    IsExeception: 0
-  - verbType: 0
-    kanji: "\u805E\u304F"
-    kana: "\u304D\u304F"
-    meaning:
-    - to drink
-    IsExeception: 0
-  - verbType: 0
-    kanji: "\u805E\u304F"
-    kana: "\u304D\u304F"
-    meaning:
-    - to speak
-    - to talk
-    IsExeception: 0
-  - verbType: 0
-    kanji: "\u805E\u304F"
-    kana: "\u304D\u304F"
-    meaning:
-    - to read
+    Present: "\u304D\u304D\u307E\u3059"
+    Negative: "\u304D\u304D\u307E\u305B\u3093"
     IsExeception: 0

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+using NaughtyAttributes;
 [Serializable]
 public class Verb :  IWord
 {
@@ -18,6 +18,9 @@ public class Verb :  IWord
 
     public List <string> Meaning => meaning;
     [SerializeField] private List<string> meaning;
+
+    [Foldout("Tenses")] public string Present;
+    [Foldout("Tenses")] public string Negative;
 
     public bool IsExeception;
 }

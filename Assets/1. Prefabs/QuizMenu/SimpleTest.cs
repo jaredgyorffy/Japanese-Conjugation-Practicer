@@ -14,6 +14,9 @@ public class SimpleTest : MonoBehaviour
     private string currentAnswer;
     private int amountCorrect;
 
+    [CreateProperty] public string QuestionType => questionType;
+    private string questionType;
+
     [CreateProperty] public string PreviousAnswer => previousAnswer;
     private string previousAnswer;
 
@@ -47,6 +50,7 @@ public class SimpleTest : MonoBehaviour
         submitButton = root.MQ<Button>("Submit");
         textField = root.MQ<TextField>("TextField");
         submitButton.clicked += OnPressSubmit;
+        questionType = "Present Tense";
 
         textField.RegisterCallback<NavigationSubmitEvent>(evt =>
         {
@@ -59,7 +63,7 @@ public class SimpleTest : MonoBehaviour
     {
         totalQuestions = quizQuestions.List.Count;
         currentQuestion = 0;
-        currentAnswer = quizQuestions.List[currentQuestion].Kana;
+        currentAnswer = quizQuestions.List[currentQuestion].Present;
         currentKanji = quizQuestions.List[currentQuestion].kanji;
         currentKana = quizQuestions.List[currentQuestion].Kana;
         textField.MQ(TextInputBaseField<string>.textInputUssName).Focus();
@@ -88,7 +92,7 @@ public class SimpleTest : MonoBehaviour
             return;
         }
         currentQuestion += 1;
-        currentAnswer = quizQuestions.List[currentQuestion].Kana;
+        currentAnswer = quizQuestions.List[currentQuestion].Present;
         currentKanji = quizQuestions.List[currentQuestion].kanji;
         currentKana = quizQuestions.List[currentQuestion].Kana;
 
