@@ -1,4 +1,6 @@
+using NaughtyAttributes;
 using System;
+using System.Collections.Generic;
 using Unity.Properties;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,6 +15,10 @@ public class SimpleTest : MonoBehaviour
 
     private string currentAnswer;
     private int amountCorrect;
+
+    [SerializeField] private bool PresentTense;
+    [SerializeField] private bool NegativeTense;
+    public List<VerbConjugation> questionTypes;
 
     [CreateProperty] public string QuestionType => questionType;
     private string questionType;
@@ -38,7 +44,7 @@ public class SimpleTest : MonoBehaviour
     void Start()
     {
         GetReferences();
-
+        InitializeQuestionTypes();
         InitializeQuiz();
     }
 
@@ -59,14 +65,32 @@ public class SimpleTest : MonoBehaviour
         }, TrickleDown.TrickleDown);
     }
 
+    private void InitializeQuestionTypes()
+    {
+        questionTypes = new List<VerbConjugation>();
+        if (PresentTense)
+        {
+            questionTypes.Add(VerbConjugation.Present);
+        }
+        if (NegativeTense)
+        {
+            questionTypes.Add(VerbConjugation.Negative);
+        }
+    }
+
     private void InitializeQuiz()
     {
         totalQuestions = quizQuestions.List.Count;
         currentQuestion = 0;
-        currentAnswer = quizQuestions.List[currentQuestion].Present;
-        currentKanji = quizQuestions.List[currentQuestion].kanji;
-        currentKana = quizQuestions.List[currentQuestion].Kana;
-        textField.MQ(TextInputBaseField<string>.textInputUssName).Focus();
+
+        PrepareNextQuestion();
+    }
+
+    private VerbConjugation GetQuestionType()
+    {
+        int index = UnityEngine.Random.Range(0, questionTypes.Count);
+        Debug.Log(index);
+        return questionTypes[index];
     }
 
     private void OnPressSubmit()
@@ -81,18 +105,35 @@ public class SimpleTest : MonoBehaviour
             previousAnswer = $"Wrong! the correct answer is {currentAnswer}";
         }
         textField.value = "";
+        currentQuestion += 1;
         PrepareNextQuestion();
     }
 
     private void PrepareNextQuestion()
     {
-        if (currentQuestion == quizQuestions.List.Count - 1) 
+        if (currentQuestion >= quizQuestions.List.Count) 
         {
             EndQuiz();
             return;
         }
-        currentQuestion += 1;
-        currentAnswer = quizQuestions.List[currentQuestion].Present;
+
+        VerbConjugation form = GetQuestionType();
+
+        switch (form)
+        {
+        case VerbConjugation.Present:
+            currentAnswer = quizQuestions.List[currentQuestion].Present;
+            questionType = "Present Tense";
+            break;
+        case VerbConjugation.Negative:
+            currentAnswer = quizQuestions.List[currentQuestion].Negative;
+            questionType = "Negative Tense";
+            break;
+        default:
+            Debug.LogWarning("Error: Question Type not valid");
+            break;
+        }
+
         currentKanji = quizQuestions.List[currentQuestion].kanji;
         currentKana = quizQuestions.List[currentQuestion].Kana;
 
