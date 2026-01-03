@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 543165419}
   - component: {fileID: 543165418}
   - component: {fileID: 543165420}
+  - component: {fileID: 543165421}
   m_Layer: 0
   m_Name: Quiz Menu
   m_TagString: Untagged
@@ -452,6 +453,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   KanaRomajiList: {fileID: 11400000, guid: fbf3c020122df7444bccb570f8415f17, type: 2}
+--- !u!114 &543165421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543165417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb58b2e8b86d0814e92ed383bec3a2ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleTest
+  quizQuestions: {fileID: 11400000, guid: 30256d0601d06074fb7f8c49248bc339, type: 2}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
