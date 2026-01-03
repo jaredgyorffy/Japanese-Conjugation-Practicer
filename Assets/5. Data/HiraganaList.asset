@@ -1,0 +1,231 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c96fa35cdab399479ea93832f646f32, type: 3}
+  m_Name: HiraganaList
+  m_EditorClassIdentifier: Assembly-CSharp::KanaRomajiList
+  SingleLetterPairs:
+  - Kana: "\u3042"
+    Romaji: a
+  - Kana: "\u3044"
+    Romaji: i
+  - Kana: "\u3046"
+    Romaji: u
+  - Kana: "\u3048"
+    Romaji: e
+  - Kana: "\u304A"
+    Romaji: o
+  TwoLetterPairs:
+  - Kana: "\u304B"
+    Romaji: ka
+  - Kana: "\u304C"
+    Romaji: ka
+  - Kana: "\u304D"
+    Romaji: ki
+  - Kana: "\u304E"
+    Romaji: gi
+  - Kana: "\u304F"
+    Romaji: ku
+  - Kana: "\u3050"
+    Romaji: gu
+  - Kana: "\u3051"
+    Romaji: ke
+  - Kana: "\u3052"
+    Romaji: ge
+  - Kana: "\u3053"
+    Romaji: ko
+  - Kana: "\u3054"
+    Romaji: go
+  - Kana: "\u3055"
+    Romaji: sa
+  - Kana: "\u3056"
+    Romaji: za
+  - Kana: "\u3057"
+    Romaji: shi
+  - Kana: "\u3058"
+    Romaji: ji
+  - Kana: "\u3059"
+    Romaji: su
+  - Kana: "\u305A"
+    Romaji: zu
+  - Kana: "\u305B"
+    Romaji: se
+  - Kana: "\u305C"
+    Romaji: ze
+  - Kana: "\u305D"
+    Romaji: so
+  - Kana: "\u305E"
+    Romaji: zo
+  - Kana: "\u305F"
+    Romaji: ta
+  - Kana: "\u3060"
+    Romaji: da
+  - Kana: "\u3061"
+    Romaji: chi
+  - Kana: "\u3062"
+    Romaji: di
+  - Kana: "\u3063"
+    Romaji: xtu
+  - Kana: "\u3064"
+    Romaji: tu
+  - Kana: "\u3065"
+    Romaji: du
+  - Kana: "\u3066"
+    Romaji: te
+  - Kana: "\u3067"
+    Romaji: de
+  - Kana: "\u3068"
+    Romaji: to
+  - Kana: "\u3069"
+    Romaji: do
+  - Kana: "\u306A"
+    Romaji: na
+  - Kana: "\u306B"
+    Romaji: ni
+  - Kana: "\u306C"
+    Romaji: nu
+  - Kana: "\u306C"
+    Romaji: nu
+  - Kana: "\u306D"
+    Romaji: ne
+  - Kana: "\u306E"
+    Romaji: no
+  - Kana: "\u306F"
+    Romaji: ha
+  - Kana: "\u3070"
+    Romaji: ba
+  - Kana: "\u3071"
+    Romaji: pa
+  - Kana: "\u3072"
+    Romaji: hi
+  - Kana: "\u3073"
+    Romaji: bi
+  - Kana: "\u3074"
+    Romaji: pi
+  - Kana: "\u3075"
+    Romaji: fu
+  - Kana: "\u3076"
+    Romaji: bu
+  - Kana: "\u3077"
+    Romaji: pu
+  - Kana: "\u3077"
+    Romaji: pu
+  - Kana: "\u3078"
+    Romaji: he
+  - Kana: "\u3079"
+    Romaji: be
+  - Kana: "\u307A"
+    Romaji: pe
+  - Kana: "\u307B"
+    Romaji: ho
+  - Kana: "\u307C"
+    Romaji: bo
+  - Kana: "\u307D"
+    Romaji: po
+  - Kana: "\u307E"
+    Romaji: ma
+  - Kana: "\u307F"
+    Romaji: mi
+  - Kana: "\u3080"
+    Romaji: mu
+  - Kana: "\u3081"
+    Romaji: me
+  - Kana: "\u3082"
+    Romaji: mo
+  - Kana: "\u3084"
+    Romaji: ya
+  - Kana: "\u3086"
+    Romaji: yu
+  - Kana: "\u3088"
+    Romaji: yo
+  - Kana: "\u3089"
+    Romaji: ra
+  - Kana: "\u308A"
+    Romaji: ri
+  - Kana: "\u308B"
+    Romaji: ru
+  - Kana: "\u308C"
+    Romaji: re
+  - Kana: "\u308D"
+    Romaji: ro
+  - Kana: "\u308F"
+    Romaji: wa
+  - Kana: "\u3092"
+    Romaji: wo
+  - Kana: "\u3093"
+    Romaji: nn
+  ThreeLetterPairs:
+  - Kana: "\u304D\u3083"
+    Romaji: kya
+  - Kana: "\u304D\u3085"
+    Romaji: kyu
+  - Kana: "\u304D\u3087"
+    Romaji: kyo
+  - Kana: "\u304E\u3083"
+    Romaji: gya
+  - Kana: "\u304E\u3085"
+    Romaji: gyu
+  - Kana: "\u304E\u3087"
+    Romaji: gyo
+  - Kana: "\u3057\u3083"
+    Romaji: sha
+  - Kana: "\u3057\u3085"
+    Romaji: shu
+  - Kana: "\u3057\u3085"
+    Romaji: shu
+  - Kana: "\u3058\u3083"
+    Romaji: ja
+  - Kana: "\u3058\u3085"
+    Romaji: ju
+  - Kana: "\u3058\u3087"
+    Romaji: jo
+  - Kana: "\u3061\u3083"
+    Romaji: cha
+  - Kana: "\u3061\u3085"
+    Romaji: chu
+  - Kana: "\u3061\u3087"
+    Romaji: cho
+  - Kana: "\u306B\u3083"
+    Romaji: nya
+  - Kana: "\u306B\u3085"
+    Romaji: nyu
+  - Kana: "\u306B\u3087"
+    Romaji: nyo
+  - Kana: "\u3072\u3083"
+    Romaji: hya
+  - Kana: "\u3072\u3085"
+    Romaji: hyu
+  - Kana: "\u3072\u3087"
+    Romaji: hyo
+  - Kana: "\u3073\u3083"
+    Romaji: bya
+  - Kana: "\u3073\u3085"
+    Romaji: byu
+  - Kana: "\u3073\u3087"
+    Romaji: byo
+  - Kana: "\u3074\u3083"
+    Romaji: pya
+  - Kana: "\u3074\u3085"
+    Romaji: pyu
+  - Kana: "\u3074\u3087"
+    Romaji: pyo
+  - Kana: "\u307F\u3083"
+    Romaji: mya
+  - Kana: "\u307F\u3085"
+    Romaji: myu
+  - Kana: "\u307F\u3087"
+    Romaji: myo
+  - Kana: "\u308A\u3083"
+    Romaji: rya
+  - Kana: "\u308A\u3085"
+    Romaji: ryu
+  - Kana: "\u308A\u3087"
+    Romaji: ryo
