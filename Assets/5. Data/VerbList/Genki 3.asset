@@ -19,48 +19,90 @@ MonoBehaviour:
     meaning:
     - to come
     Present: "\u304D\u307E\u3059"
-    Negative: "\u304D\u307E\u305B\u3093"
-    IsExeception: 0
+    PresentNegative: "\u304D\u307E\u305B\u3093"
+    Past: "\u304D\u307E\u3057\u305F"
+    PastNegative: "\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
+    ShortPast: "\u304D\u305F"
+    ShortPresentNegative: "\u3053\u306A\u3044"
+    ShortPastNegative: "\u3053\u306A\u304B\u3063\u305F"
+    Volitional: "\u304D\u307E\u3057\u3087\u3046"
+    TeForm: "\u304D\u3066"
+    Request: "\u304D\u3066\u304F\u3060\u3055\u3044"
   - verbType: 2
     kanji: 
     kana: "\u3059\u308B"
     meaning:
     - to do
     Present: "\u3057\u307E\u3059"
-    Negative: "\u3057\u307E\u305B\u3093"
-    IsExeception: 0
+    PresentNegative: "\u3057\u307E\u305B\u3093"
+    Past: "\u3057\u307E\u305B\u3093"
+    PastNegative: "\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
+    ShortPast: "\u3057\u305F"
+    ShortPresentNegative: "\u3057\u306A\u3044"
+    ShortPastNegative: "\u3057\u306A\u304B\u3063\u305F"
+    Volitional: "\u3057\u307E\u3057\u3087\u3046"
+    TeForm: "\u3057\u3066"
+    Request: "\u3057\u3066\u304F\u3060\u3055\u3044"
   - verbType: 2
     kanji: "\u52C9\u5F37\u3059\u308B"
     kana: "\u3079\u3093\u304D\u3087\u3046\u3059\u308B"
     meaning:
     - to study
     Present: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3059"
-    Negative: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093"
-    IsExeception: 0
+    PresentNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093"
+    Past: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093"
+    PastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
+    ShortPast: "\u3079\u3093\u304D\u3087\u3046\u3057\u305F"
+    ShortPresentNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u306A\u3044"
+    ShortPastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u306A\u304B\u3063\u305F"
+    Volitional: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3057\u3087\u3046"
+    TeForm: "\u3079\u3093\u304D\u3087\u3046\u3057\u3066"
+    Request: "\u3079\u3093\u304D\u3087\u3046\u3057\u3066\u304F\u3060\u3055\u3044"
   - verbType: 1
     kanji: "\u8D77\u304D\u308B"
     kana: "\u304A\u304D\u308B"
     meaning:
     - to get up
     Present: "\u304A\u304D\u307E\u3059"
-    Negative: "\u304A\u304D\u307E\u305B\u3093"
-    IsExeception: 0
+    PresentNegative: "\u304A\u304D\u307E\u305B\u3093"
+    Past: "\u304A\u304D\u307E\u305B\u3093"
+    PastNegative: "\u304A\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
+    ShortPast: "\u304A\u304D\u305F"
+    ShortPresentNegative: "\u304A\u304D\u306A\u3044"
+    ShortPastNegative: "\u304A\u304D\u306A\u304B\u3063\u305F"
+    Volitional: "\u304A\u304D\u307E\u3057\u3087\u3046"
+    TeForm: "\u304A\u304D\u3066"
+    Request: "\u304A\u304D\u3066\u304F\u3060\u3055\u3044"
   - verbType: 1
     kanji: "\u98DF\u3079\u308B"
     kana: "\u305F\u3079\u308B"
     meaning:
     - to eat
     Present: "\u305F\u3079\u307E\u3059"
-    Negative: "\u305F\u3079\u307E\u305B\u3093"
-    IsExeception: 0
+    PresentNegative: "\u305F\u3079\u307E\u305B\u3093"
+    Past: "\u305F\u3079\u307E\u3057\u305F"
+    PastNegative: "\u305F\u3079\u307E\u305B\u3093\u3067\u3057\u305F"
+    ShortPast: "\u305F\u3079\u305F"
+    ShortPresentNegative: "\u305F\u3079\u306A\u3044"
+    ShortPastNegative: "\u305F\u3079\u306A\u304B\u3063\u305F"
+    Volitional: "\u305F\u3079\u307E\u3057\u3087\u3046"
+    TeForm: "\u305F\u3079\u3066"
+    Request: "\u305F\u3079\u3066\u304F\u3060\u3055\u3044"
   - verbType: 0
     kanji: "\u884C\u304F"
     kana: "\u3044\u304F"
     meaning:
     - to go
     Present: "\u3044\u304D\u307E\u3059"
-    Negative: "\u3044\u304D\u307E\u305B\u3093"
-    IsExeception: 0
+    PresentNegative: "\u3044\u304D\u307E\u305B\u3093"
+    Past: "\u3044\u304D\u307E\u3057\u305F"
+    PastNegative: "\u3044\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
+    ShortPast: "\u3044\u3063\u305F"
+    ShortPresentNegative: "\u3044\u304B\u306A\u3044"
+    ShortPastNegative: "\u3044\u304B\u306A\u304B\u3063\u305F"
+    Volitional: "\u3044\u304D\u307E\u3057\u3087\u3046"
+    TeForm: "\u3044\u3063\u3066"
+    Request: "\u3044\u3063\u3066\u304F\u3060\u3055\u3044"
   - verbType: 0
     kanji: "\u5E30\u308B"
     kana: "\u304B\u3048\u308B"
@@ -68,14 +110,75 @@ MonoBehaviour:
     - to go back
     - to return
     Present: "\u304B\u3048\u308A\u307E\u3059"
-    Negative: "\u304B\u3048\u308A\u307E\u305B\u3093"
-    IsExeception: 0
+    PresentNegative: "\u304B\u3048\u308A\u307E\u305B\u3093"
+    Past: "\u304B\u3048\u308A\u307E\u3057\u305F"
+    PastNegative: "\u304B\u3048\u308A\u307E\u305B\u3093\u3067\u3057\u305F"
+    ShortPast: "\u304B\u3048\u3063\u305F"
+    ShortPresentNegative: "\u304B\u3048\u3089\u306A\u3044"
+    ShortPastNegative: "\u304B\u3048\u3089\u306A\u304B\u3063\u305F"
+    Volitional: "\u304B\u3048\u308A\u307E\u3057\u3087\u3046"
+    TeForm: "\u304B\u3048\u3063\u3066"
+    Request: "\u304B\u3048\u3063\u3066\u304F\u3060\u3055\u3044"
   - verbType: 0
     kanji: "\u805E\u304F"
     kana: "\u304D\u304F"
     meaning:
     - to listen
     - to hear
+    - to ask
     Present: "\u304D\u304D\u307E\u3059"
-    Negative: "\u304D\u304D\u307E\u305B\u3093"
-    IsExeception: 0
+    PresentNegative: "\u304D\u304D\u307E\u305B\u3093"
+    Past: "\u304D\u304D\u307E\u3057\u305F"
+    PastNegative: "\u304D\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
+    ShortPast: "\u304D\u3044\u305F"
+    ShortPresentNegative: "\u304D\u304B\u306A\u3044"
+    ShortPastNegative: "\u304D\u304B\u306A\u304B\u3063\u305F"
+    Volitional: "\u304D\u304D\u307E\u3057\u3087\u3046"
+    TeForm: "\u304D\u3044\u3066"
+    Request: "\u304D\u3044\u3066\u304F\u3060\u3055\u3044"
+  - verbType: 0
+    kanji: "\u98F2\u3080"
+    kana: "\u306E\u3080"
+    meaning:
+    - to drink
+    Present: "\u306E\u307F\u307E\u3059"
+    PresentNegative: "\u306E\u307F\u307E\u305B\u3093"
+    Past: "\u306E\u307F\u307E\u3057\u305F"
+    PastNegative: "\u306E\u307F\u307E\u305B\u3093\u3067\u3057\u305F"
+    ShortPast: "\u306E\u3093\u3060"
+    ShortPresentNegative: "\u306E\u307E\u306A\u3044"
+    ShortPastNegative: "\u306E\u307E\u306A\u304B\u3063\u305F"
+    Volitional: "\u306E\u307F\u307E\u3057\u3087\u3046"
+    TeForm: "\u306E\u3093\u3067"
+    Request: "\u306E\u3093\u3067\u304F\u3060\u3055\u3044"
+  - verbType: 0
+    kanji: "\u8A71\u3059"
+    kana: "\u306F\u306A\u3059"
+    meaning:
+    - to speak
+    - to talk
+    Present: "\u306F\u306A\u3057\u307E\u3059"
+    PresentNegative: "\u306F\u306A\u3057\u307E\u305B\u3093"
+    Past: "\u306F\u306A\u3057\u307E\u3057\u305F"
+    PastNegative: "\u306F\u306A\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
+    ShortPast: "\u306F\u306A\u3057\u305F"
+    ShortPresentNegative: "\u306F\u306A\u3055\u306A\u3044"
+    ShortPastNegative: "\u306F\u306A\u3055\u306A\u304B\u3063\u305F"
+    Volitional: "\u306F\u306A\u3057\u307E\u3057\u3087\u3046"
+    TeForm: "\u306F\u306A\u3057\u3066"
+    Request: "\u306F\u306A\u3057\u3066\u304F\u3060\u3055\u3044"
+  - verbType: 0
+    kanji: "\u8AAD\u3080"
+    kana: "\u3088\u3080"
+    meaning:
+    - to read
+    Present: "\u3088\u307F\u307E\u3059"
+    PresentNegative: "\u3088\u307F\u307E\u305B\u3093"
+    Past: "\u3088\u307F\u307E\u3057\u305F"
+    PastNegative: "\u3088\u307F\u307E\u305B\u3093\u3067\u3057\u305F"
+    ShortPast: "\u3088\u3093\u3060"
+    ShortPresentNegative: "\u3088\u307E\u306A\u3044"
+    ShortPastNegative: "\u3088\u307E\u306A\u304B\u3063\u305F"
+    Volitional: "\u3088\u307F\u307E\u3057\u3087\u3046"
+    TeForm: "\u3088\u3093\u3067"
+    Request: "\u3088\u3093\u3067\u304F\u3060\u3055\u3044"

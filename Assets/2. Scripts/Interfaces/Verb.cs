@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using UnityEngine.Serialization;
 [Serializable]
 public class Verb :  IWord
 {
@@ -19,10 +20,16 @@ public class Verb :  IWord
     public List <string> Meaning => meaning;
     [SerializeField] private List<string> meaning;
 
-    [Foldout("Tenses")] public string Present;
-    [Foldout("Tenses")] public string Negative;
-
-    public bool IsExeception;
+    [Foldout("Tenses")][FormerlySerializedAs("Present")] public string Present;
+    [Foldout("Tenses")][FormerlySerializedAs("Negative")] public string PresentNegative;
+    [Foldout("Tenses")] public string Past;
+    [Foldout("Tenses")] public string PastNegative;
+    [Foldout("Tenses")] public string ShortPast;
+    [Foldout("Tenses")] public string ShortPresentNegative;
+    [Foldout("Tenses")] public string ShortPastNegative;
+    [Foldout("Tenses")] public string Volitional;
+    [Foldout("Tenses")] public string TeForm;
+    [Foldout("Tenses")] public string Request;
 }
 
 public enum VerbType
@@ -36,9 +43,13 @@ public enum VerbConjugation
 {
     Dictionary,
     Present,
-    Negative,
+    PresentNegative,
     Past,
     PastNegative,
+    ShortPast,
+    ShortPresentNegative,
+    ShortPastNegative,
     Volitional,
     TeForm,
+    Request,
 }

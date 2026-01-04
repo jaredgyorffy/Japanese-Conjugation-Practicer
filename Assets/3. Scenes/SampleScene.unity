@@ -466,8 +466,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTest
   PresentTense: 1
-  NegativeTense: 1
-  questionTypes: 
+  PresentNegativeTense: 1
+  PastTense: 1
+  PastNegativeTense: 1
+  ShortPastTense: 1
+  ShortPresentNegativeTense: 1
+  ShortPastNegativeTense: 1
+  VolitionalTense: 1
+  TeFormStem: 1
+  RequestTense: 1
   quizQuestions: {fileID: 11400000, guid: 30256d0601d06074fb7f8c49248bc339, type: 2}
   inputManager: {fileID: 1478899879}
 --- !u!1 &832575517
