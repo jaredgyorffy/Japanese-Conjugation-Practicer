@@ -128,7 +128,6 @@ public class SimpleTest : MonoBehaviour
     private VerbConjugation GetQuestionType()
     {
         int index = UnityEngine.Random.Range(0, questionTypes.Count);
-        Debug.Log(index);
         return questionTypes[index];
     }
 
