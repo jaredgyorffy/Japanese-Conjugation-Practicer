@@ -52,8 +52,6 @@ public class SimpleTest : MonoBehaviour
     void Start()
     {
         GetReferences();
-        InitializeQuestionTypes();
-        InitializeQuiz();
     }
 
     private void GetReferences()
@@ -117,9 +115,62 @@ public class SimpleTest : MonoBehaviour
         }
     }
 
-    private void InitializeQuiz()
+    private void InitializeQuestionTypes(QuizConfiguration config)
     {
-        totalQuestions = quizQuestions.List.Count;
+        questionTypes = new List<VerbConjugation>();
+        if (config.PresentTense)
+        {
+            questionTypes.Add(VerbConjugation.Present);
+        }
+        if (config.PresentNegativeTense)
+        {
+            questionTypes.Add(VerbConjugation.PresentNegative);
+        }
+        if (config.PastTense)
+        {
+            questionTypes.Add(VerbConjugation.Past);
+        }
+        if (config.PastNegativeTense)
+        {
+            questionTypes.Add(VerbConjugation.PastNegative);
+        }
+        if (config.ShortPastTense)
+        {
+            questionTypes.Add(VerbConjugation.ShortPast);
+        }
+        if (config.ShortPresentNegativeTense)
+        {
+            questionTypes.Add(VerbConjugation.ShortPresentNegative);
+        }
+        if (config.ShortPastNegativeTense)
+        {
+            questionTypes.Add(VerbConjugation.ShortPastNegative);
+        }
+        if (config.VolitionalTense)
+        {
+            questionTypes.Add(VerbConjugation.Volitional);
+        }
+        if (config.TeFormStem)
+        {
+            questionTypes.Add(VerbConjugation.TeForm);
+        }
+        if (config.RequestTense)
+        {
+            questionTypes.Add(VerbConjugation.Request);
+        }
+    }
+
+    public void InitializeQuiz(QuizConfiguration config, int QuestionCount = 0)
+    {
+        InitializeQuestionTypes(config);
+        if (QuestionCount > 0)
+        {
+            totalQuestions = QuestionCount;
+        }
+        else
+        {
+            totalQuestions = quizQuestions.List.Count;
+        }
         currentQuestion = 0;
 
         PrepareNextQuestion();

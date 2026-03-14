@@ -1,6 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/1.%20Prefabs/QuizMenu/Style.uss?fileID=7433441132597879392&amp;guid=2a25d9aa4030f1f42a59a0d75a5e1857&amp;type=3#Style" />
-    <ui:VisualElement name="Panel" style="flex-grow: 1; margin-left: 5%; margin-top: 5%; margin-right: 5%; margin-bottom: 5%;">
+    <ui:VisualElement name="Panel" style="flex-grow: 1; margin-left: 0%; margin-top: 0%; margin-right: 0%; margin-bottom: 0%; background-color: rgb(202, 202, 202); flex-shrink: 0; padding-top: 5%; padding-right: 5%; padding-bottom: 5%; padding-left: 5%;">
         <ui:VisualElement name="Number" style="flex-grow: 0; justify-content: flex-start; align-items: center; align-self: center; align-content: flex-start; flex-direction: row;">
             <ui:Label text="Question &#10;" name="Title" class="Title" style="font-size: 40px;" />
             <ui:Label text="01" name="CurrentQuestion" class="Subtitle">

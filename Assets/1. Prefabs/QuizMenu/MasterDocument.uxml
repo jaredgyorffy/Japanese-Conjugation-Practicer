@@ -1,0 +1,6 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="StartScreen" src="project://database/Assets/1.%20Prefabs/QuizMenu/StartScreen.uxml?fileID=9197481963319205126&amp;guid=445e6f9272b83af45a9c1b2daf001782&amp;type=3#StartScreen" />
+    <ui:Template name="QuizMenu" src="project://database/Assets/1.%20Prefabs/QuizMenu/QuizMenu.uxml?fileID=9197481963319205126&amp;guid=752b9fe268727f84e8232a2741070e61&amp;type=3#QuizMenu" />
+    <ui:Instance template="QuizMenu" name="QuizMenu" enabled="true" style="flex-shrink: 0; flex-grow: 1; width: 100%; height: 100%; position: absolute; display: flex;" />
+    <ui:Instance template="StartScreen" name="StartScreen" enabled="true" style="flex-shrink: 0; flex-grow: 1; align-items: stretch; width: 100%; height: 100%; position: absolute;" />
+</ui:UXML>
