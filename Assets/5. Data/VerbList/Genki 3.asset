@@ -18,9 +18,9 @@ MonoBehaviour:
     kana: "\u304F\u308B"
     meaning:
     - to come
-    PoliteNonpast: "\u304D\u307E\u3059"
-    PoliteNonPastNegative: "\u304D\u307E\u305B\u3093"
-    PolitePast: "\u304D\u307E\u3057\u305F"
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
     PolitePastNegative: "\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
     StandardNonpast: 
     StandardPast: "\u304D\u305F"
@@ -34,9 +34,9 @@ MonoBehaviour:
     kana: "\u3059\u308B"
     meaning:
     - to do
-    PoliteNonpast: "\u3057\u307E\u3059"
-    PoliteNonPastNegative: "\u3057\u307E\u305B\u3093"
-    PolitePast: "\u3057\u307E\u3057\u305F"
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
     PolitePastNegative: "\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
     StandardNonpast: 
     StandardPast: "\u3057\u305F"
@@ -50,9 +50,9 @@ MonoBehaviour:
     kana: "\u3079\u3093\u304D\u3087\u3046\u3059\u308B"
     meaning:
     - to study
-    PoliteNonpast: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3059"
-    PoliteNonPastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093"
-    PolitePast: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3057\u305F"
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
     PolitePastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
     StandardNonpast: 
     StandardPast: "\u3079\u3093\u304D\u3087\u3046\u3057\u305F"
@@ -66,9 +66,9 @@ MonoBehaviour:
     kana: "\u304A\u304D\u308B"
     meaning:
     - to get up
-    PoliteNonpast: "\u304A\u304D\u307E\u3059"
-    PoliteNonPastNegative: "\u304A\u304D\u307E\u305B\u3093"
-    PolitePast: "\u304A\u304D\u307E\u3057\u305F"
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
     PolitePastNegative: "\u304A\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
     StandardNonpast: 
     StandardPast: "\u304A\u304D\u305F"
@@ -82,9 +82,9 @@ MonoBehaviour:
     kana: "\u305F\u3079\u308B"
     meaning:
     - to eat
-    PoliteNonpast: "\u305F\u3079\u307E\u3059"
-    PoliteNonPastNegative: "\u305F\u3079\u307E\u305B\u3093"
-    PolitePast: "\u305F\u3079\u307E\u3057\u305F"
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
     PolitePastNegative: "\u305F\u3079\u307E\u305B\u3093\u3067\u3057\u305F"
     StandardNonpast: 
     StandardPast: "\u305F\u3079\u305F"
@@ -98,9 +98,9 @@ MonoBehaviour:
     kana: "\u3044\u304F"
     meaning:
     - to go
-    PoliteNonpast: "\u3044\u304D\u307E\u3059"
-    PoliteNonPastNegative: "\u3044\u304D\u307E\u305B\u3093"
-    PolitePast: "\u3044\u304D\u307E\u3057\u305F"
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
     PolitePastNegative: "\u3044\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
     StandardNonpast: 
     StandardPast: "\u3044\u3063\u305F"
@@ -115,9 +115,9 @@ MonoBehaviour:
     meaning:
     - to go back
     - to return
-    PoliteNonpast: "\u304B\u3048\u308A\u307E\u3059"
-    PoliteNonPastNegative: "\u304B\u3048\u308A\u307E\u305B\u3093"
-    PolitePast: "\u304B\u3048\u308A\u307E\u3057\u305F"
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
     PolitePastNegative: "\u304B\u3048\u308A\u307E\u305B\u3093\u3067\u3057\u305F"
     StandardNonpast: 
     StandardPast: "\u304B\u3048\u3063\u305F"
@@ -133,9 +133,9 @@ MonoBehaviour:
     - to listen
     - to hear
     - to ask
-    PoliteNonpast: "\u304D\u304D\u307E\u3059"
-    PoliteNonPastNegative: "\u304D\u304D\u307E\u305B\u3093"
-    PolitePast: "\u304D\u304D\u307E\u3057\u305F"
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
     PolitePastNegative: "\u304D\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
     StandardNonpast: 
     StandardPast: "\u304D\u3044\u305F"
@@ -149,9 +149,9 @@ MonoBehaviour:
     kana: "\u306E\u3080"
     meaning:
     - to drink
-    PoliteNonpast: "\u306E\u307F\u307E\u3059"
-    PoliteNonPastNegative: "\u306E\u307F\u307E\u305B\u3093"
-    PolitePast: "\u306E\u307F\u307E\u3057\u305F"
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
     PolitePastNegative: "\u306E\u307F\u307E\u305B\u3093\u3067\u3057\u305F"
     StandardNonpast: 
     StandardPast: "\u306E\u3093\u3060"
@@ -166,9 +166,9 @@ MonoBehaviour:
     meaning:
     - to speak
     - to talk
-    PoliteNonpast: "\u306F\u306A\u3057\u307E\u3059"
-    PoliteNonPastNegative: "\u306F\u306A\u3057\u307E\u305B\u3093"
-    PolitePast: "\u306F\u306A\u3057\u307E\u3057\u305F"
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
     PolitePastNegative: "\u306F\u306A\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
     StandardNonpast: 
     StandardPast: "\u306F\u306A\u3057\u305F"
@@ -182,9 +182,9 @@ MonoBehaviour:
     kana: "\u3088\u3080"
     meaning:
     - to read
-    PoliteNonpast: "\u3088\u307F\u307E\u3059"
-    PoliteNonPastNegative: "\u3088\u307F\u307E\u305B\u3093"
-    PolitePast: "\u3088\u307F\u307E\u3057\u305F"
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
     PolitePastNegative: "\u3088\u307F\u307E\u305B\u3093\u3067\u3057\u305F"
     StandardNonpast: 
     StandardPast: "\u3088\u3093\u3060"
