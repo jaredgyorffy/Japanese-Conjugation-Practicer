@@ -1,10 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.Serialization;
+using Unity.VisualScripting;
 [Serializable]
-public class Verb :  IWord
+public class Verb : IWord
 {
     public WordType WordType => WordType.Verb;
 
@@ -20,16 +21,57 @@ public class Verb :  IWord
     public List <string> Meaning => meaning;
     [SerializeField] private List<string> meaning;
 
-    [Foldout("Tenses")][FormerlySerializedAs("Present")] public string Present;
-    [Foldout("Tenses")][FormerlySerializedAs("Negative")] public string PresentNegative;
-    [Foldout("Tenses")] public string Past;
-    [Foldout("Tenses")] public string PastNegative;
-    [Foldout("Tenses")] public string ShortPast;
-    [Foldout("Tenses")] public string ShortPresentNegative;
-    [Foldout("Tenses")] public string ShortPastNegative;
-    [Foldout("Tenses")] public string Volitional;
-    [Foldout("Tenses")] public string TeForm;
-    [Foldout("Tenses")] public string Request;
+    public string PoliteNonpast => ConjugatePoliteNonpast(kana);
+    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)][SerializeField][AllowNesting] private string politeNonpast;
+    [Foldout("Tenses")][FormerlySerializedAs("PresentNegative")] public string PoliteNonPastNegative;
+    [Foldout("Tenses")][FormerlySerializedAs("Past")] public string PolitePast;
+    [Foldout("Tenses")][FormerlySerializedAs("PastNegative")] public string PolitePastNegative;
+    [Foldout("Tenses")] public string StandardNonpast;
+    [Foldout("Tenses")][FormerlySerializedAs("ShortPast")] public string StandardPast;
+    [Foldout("Tenses")][FormerlySerializedAs("ShortPresentNegative")] public string StandardNonpastNegative;
+    [Foldout("Tenses")][FormerlySerializedAs("ShortPastNegative")] public string StandardPastNegative;
+    [Foldout("Tenses")][FormerlySerializedAs("Volitional")] public string PoliteVolitional;
+    [Foldout("Tenses")] public string StandardVolitional;
+    [Foldout("Tenses")][FormerlySerializedAs("TeForm")] public string TeForm;
+
+    private string ConjugatePoliteNonpast(string dictionaryForm)
+    {
+        string conjugatedForm = "";
+        if (VerbType == VerbType.RU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "ます";
+        }
+        else if (VerbType == VerbType.U)
+        {
+            string stem = dictionaryForm.Substring(0, dictionaryForm.Length - 1);
+            char lastChar = dictionaryForm[dictionaryForm.Length - 1];
+            switch (lastChar)
+            {
+                case 'う':
+                case 'つ':
+                case 'る':
+                    conjugatedForm = stem + "います";
+                    break;
+                case 'む':
+                case 'ぶ':
+                case 'ぬ':
+                    conjugatedForm = stem + "みます";
+                    break;
+                case 'く':
+                    conjugatedForm = stem + "きます";
+                    break;
+                case 'ぐ':
+                    conjugatedForm = stem + "ぎます";
+                    break;
+                case 'す':
+                    conjugatedForm = stem + "します";
+                    break;
+                default:
+                    throw new Exception("Invalid verb ending for U-verb.");
+            }
+        }
+        return conjugatedForm;
+    }
 }
 
 public enum VerbType
@@ -39,17 +81,18 @@ public enum VerbType
     IRR, // 
 }
 
+//Formality > Time > Positive/Negative
 public enum VerbConjugation
 {
-    Dictionary,
-    Present,
-    PresentNegative,
-    Past,
-    PastNegative,
-    ShortPast,
-    ShortPresentNegative,
-    ShortPastNegative,
-    Volitional,
+    StandardNonpast,
+    PoliteNonpast,
+    PoliteNonpastNegative,
+    PolitePast,
+    PolitePastNegative,
+    StandardNonpastNegative,
+    StandardPast,
+    StandardPastNegative,
+    PoliteVolitional,
+    StandardVolitional,
     TeForm,
-    Request,
 }

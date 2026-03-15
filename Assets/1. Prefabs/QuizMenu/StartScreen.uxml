@@ -2,20 +2,9 @@
     <Style src="project://database/Assets/1.%20Prefabs/QuizMenu/Style.uss?fileID=7433441132597879392&amp;guid=2a25d9aa4030f1f42a59a0d75a5e1857&amp;type=3#Style" />
     <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgb(255, 255, 255); padding-top: 5%; padding-right: 5%; padding-bottom: 5%; padding-left: 5%;">
         <ui:VisualElement name="Options" style="flex-grow: 0; flex-direction: row;">
-            <ui:VisualElement name="Forms" style="flex-grow: 0; flex-direction: column; flex-wrap: nowrap; flex-shrink: 1; width: 50%;">
-                <ui:Toggle label="Toggle" name="Toggle" />
-                <ui:Toggle label="Toggle" name="Toggle" />
-                <ui:Toggle label="Toggle" name="Toggle" />
-                <ui:Toggle label="Toggle" name="Toggle" />
-                <ui:Toggle label="Toggle" name="Toggle" />
-            </ui:VisualElement>
-            <ui:VisualElement name="Chapters" style="flex-grow: 1; flex-direction: column; flex-wrap: nowrap; width: 50%;">
-                <ui:Toggle label="Toggle" name="Toggle" />
-                <ui:Toggle label="Toggle" name="Toggle" />
-                <ui:Toggle label="Toggle" name="Toggle" />
-                <ui:Toggle label="Toggle" name="Toggle" />
-                <ui:Toggle label="Toggle" name="Toggle" />
-            </ui:VisualElement>
+            <ui:VisualElement name="Forms" style="flex-grow: 0; flex-direction: column; flex-wrap: nowrap; flex-shrink: 1; width: 50%;" />
+            <ui:VisualElement name="Spacer" style="flex-grow: 1; flex-direction: column; flex-wrap: nowrap; width: 50%;" />
+            <ui:VisualElement name="Chapters" style="flex-grow: 1; flex-direction: column; flex-wrap: nowrap; width: 50%;" />
         </ui:VisualElement>
         <ui:Button name="Start" class="Button" style="flex-grow: 0; flex-shrink: 0; margin-top: 1%; margin-right: 1%; margin-bottom: 1%; margin-left: 1%;">
             <ui:Label text="Begin Quiz" class="Title" />

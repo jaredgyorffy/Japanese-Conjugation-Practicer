@@ -465,16 +465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb58b2e8b86d0814e92ed383bec3a2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTest
-  PresentTense: 1
-  PresentNegativeTense: 1
-  PastTense: 1
-  PastNegativeTense: 1
-  ShortPastTense: 1
-  ShortPresentNegativeTense: 1
-  ShortPastNegativeTense: 1
-  VolitionalTense: 1
-  TeFormStem: 1
-  RequestTense: 1
   quizQuestions: {fileID: 11400000, guid: 30256d0601d06074fb7f8c49248bc339, type: 2}
   inputManager: {fileID: 1478899879}
 --- !u!1 &742139356
@@ -508,6 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   test: {fileID: 543165421}
+  togglePrefab: {fileID: 9197481963319205126, guid: 57db5c9776dabb6468ad1ea3148be33b, type: 3}
   inputManager: {fileID: 1478899879}
 --- !u!114 &742139358
 MonoBehaviour:

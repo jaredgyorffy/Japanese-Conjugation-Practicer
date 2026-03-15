@@ -16,16 +16,6 @@ public class SimpleTest : MonoBehaviour
     private string currentAnswer;
     private int amountCorrect;
 
-    [SerializeField] private bool PresentTense;
-    [SerializeField] private bool PresentNegativeTense;
-    [SerializeField] private bool PastTense;
-    [SerializeField] private bool PastNegativeTense;
-    [SerializeField] private bool ShortPastTense;
-    [SerializeField] private bool ShortPresentNegativeTense;
-    [SerializeField] private bool ShortPastNegativeTense;
-    [SerializeField] private bool VolitionalTense;
-    [SerializeField] private bool TeFormStem;
-    [SerializeField] private bool RequestTense;
     private List<VerbConjugation> questionTypes;
 
     [CreateProperty] public string QuestionType => questionType;
@@ -70,93 +60,48 @@ public class SimpleTest : MonoBehaviour
         }, TrickleDown.TrickleDown);
     }
 
-    private void InitializeQuestionTypes()
-    {
-        questionTypes = new List<VerbConjugation>();
-        if (PresentTense)
-        {
-            questionTypes.Add(VerbConjugation.Present);
-        }
-        if (PresentNegativeTense)
-        {
-            questionTypes.Add(VerbConjugation.PresentNegative);
-        }
-        if (PastTense)
-        {
-            questionTypes.Add(VerbConjugation.Past);
-        }
-        if (PastNegativeTense)
-        {
-            questionTypes.Add(VerbConjugation.PastNegative);
-        }
-        if (ShortPastTense)
-        {
-            questionTypes.Add(VerbConjugation.ShortPast);
-        }
-        if (ShortPresentNegativeTense)
-        {
-            questionTypes.Add(VerbConjugation.ShortPresentNegative);
-        }
-        if (ShortPastNegativeTense)
-        {
-            questionTypes.Add(VerbConjugation.ShortPastNegative);
-        }
-        if (VolitionalTense)
-        {
-            questionTypes.Add(VerbConjugation.Volitional);
-        }
-        if (TeFormStem)
-        {
-            questionTypes.Add(VerbConjugation.TeForm);
-        }
-        if (RequestTense)
-        {
-            questionTypes.Add(VerbConjugation.Request);
-        }
-    }
-
     private void InitializeQuestionTypes(QuizConfiguration config)
     {
         questionTypes = new List<VerbConjugation>();
-        if (config.PresentTense)
+        if (config.NonpastPoliteForm)
         {
-            questionTypes.Add(VerbConjugation.Present);
+            questionTypes.Add(VerbConjugation.PoliteNonpast);
         }
-        if (config.PresentNegativeTense)
+        if (config.NonpastNegativePoliteForm)
         {
-            questionTypes.Add(VerbConjugation.PresentNegative);
+            questionTypes.Add(VerbConjugation.PoliteNonpastNegative);
         }
-        if (config.PastTense)
+        if (config.PastPoliteForm)
         {
-            questionTypes.Add(VerbConjugation.Past);
+            questionTypes.Add(VerbConjugation.PolitePast);
         }
-        if (config.PastNegativeTense)
+        if (config.PastNegativePoliteForm)
         {
-            questionTypes.Add(VerbConjugation.PastNegative);
+            questionTypes.Add(VerbConjugation.PolitePastNegative);
         }
-        if (config.ShortPastTense)
+        if (config.PastStandardForm)
         {
-            questionTypes.Add(VerbConjugation.ShortPast);
+            questionTypes.Add(VerbConjugation.StandardNonpast);
         }
-        if (config.ShortPresentNegativeTense)
+        if (config.NonpastNegativeStandardForm)
         {
-            questionTypes.Add(VerbConjugation.ShortPresentNegative);
+            questionTypes.Add(VerbConjugation.StandardNonpastNegative);
         }
-        if (config.ShortPastNegativeTense)
+        if (config.PastNegativeStandardForm)
         {
-            questionTypes.Add(VerbConjugation.ShortPastNegative);
+            questionTypes.Add(VerbConjugation.StandardPastNegative);
         }
-        if (config.VolitionalTense)
+        if (config.VolitionalForm)
         {
-            questionTypes.Add(VerbConjugation.Volitional);
+            questionTypes.Add(VerbConjugation.PoliteVolitional);
         }
         if (config.TeFormStem)
         {
             questionTypes.Add(VerbConjugation.TeForm);
         }
-        if (config.RequestTense)
+        if (config.PoliteVolitionalForm)
         {
-            questionTypes.Add(VerbConjugation.Request);
+            questionTypes.Add(VerbConjugation.PoliteVolitional);
         }
     }
 
@@ -207,48 +152,52 @@ public class SimpleTest : MonoBehaviour
         }
 
         VerbConjugation form = GetQuestionType();
-
+        //Formality > Time > Positive/Negative
         switch (form)
         {
-        case VerbConjugation.Present:
-            currentAnswer = quizQuestions.List[currentQuestion].Present;
-            questionType = "Present Tense";
+        case VerbConjugation.PoliteNonpast:
+            currentAnswer = quizQuestions.List[currentQuestion].PoliteNonpast;
+            questionType = "Polite Non-past Form";
             break;
-        case VerbConjugation.PresentNegative:
-            currentAnswer = quizQuestions.List[currentQuestion].PresentNegative;
-            questionType = "Negative Tense";
+        case VerbConjugation.PoliteNonpastNegative:
+            currentAnswer = quizQuestions.List[currentQuestion].PoliteNonPastNegative;
+            questionType = "Polite Non-past Negative Form";
             break;
-        case VerbConjugation.Past:
-            currentAnswer = quizQuestions.List[currentQuestion].Past;
-            questionType = "Past Tense";
+        case VerbConjugation.PolitePast:
+            currentAnswer = quizQuestions.List[currentQuestion].PolitePast;
+            questionType = "Polite Past Form";
             break;
-        case VerbConjugation.PastNegative:
-            currentAnswer = quizQuestions.List[currentQuestion].PastNegative;
-            questionType = "Past Negative Tense";
+        case VerbConjugation.PolitePastNegative:
+            currentAnswer = quizQuestions.List[currentQuestion].PolitePastNegative;
+            questionType = "Polite Past Negative Form";
             break;
-        case VerbConjugation.ShortPast:
-            currentAnswer = quizQuestions.List[currentQuestion].ShortPast;
-            questionType = "Short Past Tense";
+        case VerbConjugation.StandardPast:
+            currentAnswer = quizQuestions.List[currentQuestion].StandardPast;
+            questionType = "Standard Past Form";
             break;
-        case VerbConjugation.ShortPresentNegative:
-            currentAnswer = quizQuestions.List[currentQuestion].ShortPresentNegative;
-            questionType = "Short Present Negative Tense";
+        case VerbConjugation.StandardNonpast:
+            currentAnswer = quizQuestions.List[currentQuestion].StandardNonpast;
+            questionType = "Standard Past Form";
             break;
-        case VerbConjugation.ShortPastNegative:
-            currentAnswer = quizQuestions.List[currentQuestion].ShortPastNegative;
-            questionType = "Short Past Negative Tense";
+        case VerbConjugation.StandardNonpastNegative:
+            currentAnswer = quizQuestions.List[currentQuestion].StandardNonpastNegative;
+            questionType = "Standard Non-past Negative Form";
             break;
-        case VerbConjugation.Volitional:
-            currentAnswer = quizQuestions.List[currentQuestion].Volitional;
-            questionType = "Volitional Tense";
+        case VerbConjugation.StandardPastNegative:
+            currentAnswer = quizQuestions.List[currentQuestion].StandardPastNegative;
+            questionType = "Standard Past Negative Form";
+            break;
+        case VerbConjugation.PoliteVolitional:
+            currentAnswer = quizQuestions.List[currentQuestion].PoliteVolitional;
+            questionType = "Polite Volitional Form";
             break;
         case VerbConjugation.TeForm:
             currentAnswer = quizQuestions.List[currentQuestion].TeForm;
-            questionType = "Te-form Stem";
+            questionType = "Te-form";
             break;
-        case VerbConjugation.Request:
-            currentAnswer = quizQuestions.List[currentQuestion].Request;
-            questionType = "Polite Request";
+        case VerbConjugation.StandardVolitional:
+            currentAnswer = quizQuestions.List[currentQuestion].StandardVolitional;
+            questionType = "Standard Volitional Form";
             break;
         default:
             Debug.LogWarning("Error: Question Type not valid");
