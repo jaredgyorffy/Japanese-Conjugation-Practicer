@@ -29,11 +29,19 @@ public class Verb : IWord
     public string PoliteNonPastNegative => ConjugatePoliteNonPastNegative(kana);
     [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)][SerializeField][AllowNesting] private string politeNonPastNegative;
 
-    [Foldout("Tenses")][FormerlySerializedAs("PastNegative")] public string PolitePastNegative;
-    [Foldout("Tenses")] public string StandardNonpast;
-    [Foldout("Tenses")][FormerlySerializedAs("ShortPast")] public string StandardPast;
-    [Foldout("Tenses")][FormerlySerializedAs("ShortPresentNegative")] public string StandardNonpastNegative;
-    [Foldout("Tenses")][FormerlySerializedAs("ShortPastNegative")] public string StandardPastNegative;
+    public string PolitePastNegative => ConjugatePolitePastNegative(kana);
+    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)][SerializeField][AllowNesting] private string politePastNegative;
+    public string StandardNonpast => kana;
+
+    public string StandardPast => ConjugateStandardpast(kana);
+    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)] public string standardPast;
+
+    public string StandardNonpastNegative => ConjugateStandardNonPastNegative(kana);
+    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)] public string standardNonpastNegative;
+
+    public string StandardPastNegative => ConjugateStandardPastNegative(kana);
+    [Foldout("Tenses")][FormerlySerializedAs("ShortPastNegative")] public string standardPastNegative;
+
     [Foldout("Tenses")][FormerlySerializedAs("Volitional")] public string PoliteVolitional;
     [Foldout("Tenses")] public string StandardVolitional;
     [Foldout("Tenses")][FormerlySerializedAs("TeForm")] public string TeForm;
@@ -79,9 +87,13 @@ public class Verb : IWord
                 conjugatedForm = stem + "ぎます";
                 break;
 
-                default:
-                    throw new Exception("Invalid verb ending for U-verb.");
+            default:
+                throw new Exception("Invalid verb ending for U-verb.");
             }
+        }
+        else if (VerbType == VerbType.IRR)
+        {
+            return politeNonpast;
         }
         return conjugatedForm;
     }
@@ -126,6 +138,10 @@ public class Verb : IWord
                 conjugatedForm = stem + "ぎません";
                 break;
             }
+        }
+        else if (VerbType == VerbType.IRR)
+        {
+            return politeNonPastNegative;
         }
         return conjugatedForm;
     }
@@ -173,6 +189,214 @@ public class Verb : IWord
             default:
                 throw new Exception("Invalid verb ending for U-verb.");
             }
+        }
+        else if (VerbType == VerbType.IRR)
+        {
+            return politePast;
+        }
+        return conjugatedForm;
+    }
+    private string ConjugatePolitePastNegative(string dictionaryForm)
+    {
+        string conjugatedForm = "";
+        if (VerbType == VerbType.RU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "ませんでした";
+        }
+        else if (VerbType == VerbType.U)
+        {
+            string stem = dictionaryForm.Substring(0, dictionaryForm.Length - 1);
+            char lastChar = dictionaryForm[dictionaryForm.Length - 1];
+            switch (lastChar)
+            {
+            case 'う':
+                conjugatedForm = stem + "いませんでした";
+                break;
+            case 'く':
+                conjugatedForm = stem + "きませんでした";
+                break;
+            case 'す':
+                conjugatedForm = stem + "しませんでした";
+                break;
+            case 'つ':
+                conjugatedForm = stem + "ちませんでした";
+                break;
+            case 'る':
+                conjugatedForm = stem + "りませんでした";
+                break;
+            case 'ぬ':
+                conjugatedForm = stem + "にませんでした";
+                break;
+            case 'む':
+                conjugatedForm = stem + "みませんでした";
+                break;
+            case 'ぶ':
+                conjugatedForm = stem + "びませんでした";
+                break;
+            case 'ぐ':
+                conjugatedForm = stem + "ぎませんでした";
+                break;
+
+            default:
+                throw new Exception("Invalid verb ending for U-verb.");
+            }
+        }
+        else if (VerbType == VerbType.IRR)
+        {
+            return politePastNegative;
+        }
+        return conjugatedForm;
+    }
+    private string ConjugateStandardpast(string dictionaryForm)
+    {
+        string conjugatedForm = "";
+        if (VerbType == VerbType.RU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "た";
+        }
+        else if (VerbType == VerbType.U)
+        {
+            string stem = dictionaryForm.Substring(0, dictionaryForm.Length - 1);
+            char lastChar = dictionaryForm[dictionaryForm.Length - 1];
+            switch (lastChar)
+            {
+            case 'う':
+                conjugatedForm = stem + "った";
+                break;
+            case 'く':
+                conjugatedForm = stem + "いた";
+                break;
+            case 'す':
+                conjugatedForm = stem + "した";
+                break;
+            case 'つ':
+                conjugatedForm = stem + "った";
+                break;
+            case 'る':
+                conjugatedForm = stem + "った";
+                break;
+            case 'ぬ':
+                conjugatedForm = stem + "んだ";
+                break;
+            case 'む':
+                conjugatedForm = stem + "んだ";
+                break;
+            case 'ぶ':
+                conjugatedForm = stem + "んだ";
+                break;
+            case 'ぐ':
+                conjugatedForm = stem + "いだ";
+                break;
+
+            default:
+                throw new Exception("Invalid verb ending for U-verb.");
+            }
+        }
+        else if (VerbType == VerbType.IRR)
+        {
+            return standardPast;
+        }
+        return conjugatedForm;
+    }
+    private string ConjugateStandardNonPastNegative(string dictionaryForm)
+    {
+        string conjugatedForm = "";
+        if (VerbType == VerbType.RU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "ない";
+        }
+        else if (VerbType == VerbType.U)
+        {
+            string stem = dictionaryForm.Substring(0, dictionaryForm.Length - 1);
+            char lastChar = dictionaryForm[dictionaryForm.Length - 1];
+            switch (lastChar)
+            {
+            case 'う':
+                conjugatedForm = stem + "わない";
+                break;
+            case 'く':
+                conjugatedForm = stem + "かない";
+                break;
+            case 'す':
+                conjugatedForm = stem + "さない";
+                break;
+            case 'つ':
+                conjugatedForm = stem + "たない";
+                break;
+            case 'る':
+                conjugatedForm = stem + "らない";
+                break;
+            case 'ぬ':
+                conjugatedForm = stem + "なない";
+                break;
+            case 'む':
+                conjugatedForm = stem + "まない";
+                break;
+            case 'ぶ':
+                conjugatedForm = stem + "ばない";
+                break;
+            case 'ぐ':
+                conjugatedForm = stem + "がない";
+                break;
+
+            default:
+                throw new Exception("Invalid verb ending for U-verb.");
+            }
+        }
+        else if (VerbType == VerbType.IRR)
+        {
+            return standardNonpastNegative;
+        }
+        return conjugatedForm;
+    }
+    private string ConjugateStandardPastNegative(string dictionaryForm)
+    {
+        string conjugatedForm = "";
+        if (VerbType == VerbType.RU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "なかった";
+        }
+        else if (VerbType == VerbType.U)
+        {
+            string stem = dictionaryForm.Substring(0, dictionaryForm.Length - 1);
+            char lastChar = dictionaryForm[dictionaryForm.Length - 1];
+            switch (lastChar)
+            {
+            case 'う':
+                conjugatedForm = stem + "わなかった";
+                break;
+            case 'く':
+                conjugatedForm = stem + "かなかった";
+                break;
+            case 'す':
+                conjugatedForm = stem + "さなかった";
+                break;
+            case 'つ':
+                conjugatedForm = stem + "たなかった";
+                break;
+            case 'る':
+                conjugatedForm = stem + "らなかった";
+                break;
+            case 'ぬ':
+                conjugatedForm = stem + "ななかった";
+                break;
+            case 'む':
+                conjugatedForm = stem + "まなかった";
+                break;
+            case 'ぶ':
+                conjugatedForm = stem + "ばなかった";
+                break;
+            case 'ぐ':
+                conjugatedForm = stem + "がなかった";
+                break;
+
+            default:
+                throw new Exception("Invalid verb ending for U-verb.");
+            }
+        }
+        else if (VerbType == VerbType.IRR)
+        {
+            return standardNonpastNegative;
         }
         return conjugatedForm;
     }
