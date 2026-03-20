@@ -63,46 +63,46 @@ public class SimpleTest : MonoBehaviour
     private void InitializeQuestionTypes(QuizConfiguration config)
     {
         questionTypes = new List<VerbConjugation>();
-        if (config.NonpastPoliteForm)
+        if (config.PoliteNonpastForm)
         {
             questionTypes.Add(VerbConjugation.PoliteNonpast);
         }
-        if (config.NonpastNegativePoliteForm)
+        if (config.PoliteNonpastNegativeForm)
         {
             questionTypes.Add(VerbConjugation.PoliteNonpastNegative);
         }
-        if (config.PastPoliteForm)
+        if (config.PolitePastForm)
         {
             questionTypes.Add(VerbConjugation.PolitePast);
         }
-        if (config.PastNegativePoliteForm)
+        if (config.PolitePastNegativeForm)
         {
             questionTypes.Add(VerbConjugation.PolitePastNegative);
         }
-        if (config.PastStandardForm)
+        if (config.StandardPastForm)
         {
             questionTypes.Add(VerbConjugation.StandardNonpast);
         }
-        if (config.NonpastNegativeStandardForm)
+        if (config.StandardNonpastNegativeForm)
         {
             questionTypes.Add(VerbConjugation.StandardNonpastNegative);
         }
-        if (config.PastNegativeStandardForm)
+        if (config.StandardPastNegativeForm)
         {
             questionTypes.Add(VerbConjugation.StandardPastNegative);
-        }
-        if (config.VolitionalForm)
-        {
-            questionTypes.Add(VerbConjugation.PoliteVolitional);
-        }
-        if (config.TeFormStem)
-        {
-            questionTypes.Add(VerbConjugation.TeForm);
         }
         if (config.PoliteVolitionalForm)
         {
             questionTypes.Add(VerbConjugation.PoliteVolitional);
         }
+        if (config.CasualVolitionalForm)
+        {
+            questionTypes.Add(VerbConjugation.CasualVolitional);
+        }
+        /*if (config.TeFormStem)
+        {
+            questionTypes.Add(VerbConjugation.TeForm);
+        }*/
     }
 
     public void InitializeQuiz(QuizConfiguration config, int QuestionCount = 0)
@@ -195,9 +195,9 @@ public class SimpleTest : MonoBehaviour
             currentAnswer = quizQuestions.List[currentQuestion].TeForm;
             questionType = "Te-form";
             break;
-        case VerbConjugation.StandardVolitional:
-            currentAnswer = quizQuestions.List[currentQuestion].StandardVolitional;
-            questionType = "Standard Volitional Form";
+        case VerbConjugation.CasualVolitional:
+            currentAnswer = quizQuestions.List[currentQuestion].CasualVolitional;
+            questionType = "Casual Volitional Form";
             break;
         default:
             Debug.LogWarning("Error: Question Type not valid");

@@ -68,54 +68,51 @@ public class MainMenu : MonoBehaviour
 
 public class QuizConfiguration
 {
-    public bool NonpastPoliteForm;
-    public bool NonpastNegativePoliteForm;
-    public bool PastPoliteForm;
-    public bool PastNegativePoliteForm;
-    public bool PastStandardForm;
-    public bool NonpastNegativeStandardForm;
-    public bool PastNegativeStandardForm;
-    public bool VolitionalForm;
+    public bool PoliteNonpastForm;
+    public bool PoliteNonpastNegativeForm;
+    public bool PolitePastForm;
+    public bool PolitePastNegativeForm;
+    public bool StandardPastForm;
+    public bool StandardNonpastNegativeForm;
+    public bool StandardPastNegativeForm;
+    public bool PoliteVolitionalForm;
+    public bool CasualVolitionalForm;
     public bool TeFormStem;
     public bool TeForm;
-    public bool PoliteVolitionalForm;
-    public bool StandardVolitionalForm;
 
     public List<(string name, bool on)> GetForms()
     {
         return new List<(string name, bool on)>
         {
-            ("Non-past Polite Form", false),
-            ("Non-past Negative Polite Form", false),
-            ("Past Polite Form", false),
-            ("Past Negative Polite Form", false),
-            ("Past Standard Form", false),
-            ("Nonpast Negative Standard Form", false),
-            ("Past Negative Standard Form", false),
-            ("Volitional Form", false),
+            ("Polite Non-past Form", false),
+            ("Polite Non-past Negative Form", false),
+            ("Polite Past Form", false),
+            ("Polite Past Negative Form", false),
+            ("Standard Past Form", false),
+            ("Standard Nonpast Negative Form", false),
+            ("Standard Past Negative Form", false),
+            ("Polite Volitional Form", false),
+            ("Casual Volitional Form", false),
             ("Te-Form Stem", false),
             ("Te-Form", false),
-            ("Polite Volitional Form", false),
-            ("Standard Volitional Form", false)
         };
     }
 
     public void SetForms(List<(string name, bool on)> formsEnabled)
     {
-        if (formsEnabled.Count < 12)
-            throw new ArgumentException("formsEnabled must have at least 12 elements.");
+        if (formsEnabled.Count < 11)
+            throw new ArgumentException("formsEnabled must have at least 11 elements.");
 
-        NonpastPoliteForm = formsEnabled[0].on;
-        NonpastNegativePoliteForm = formsEnabled[1].on;
-        PastPoliteForm = formsEnabled[2].on;
-        PastNegativePoliteForm = formsEnabled[3].on;
-        PastStandardForm = formsEnabled[4].on;
-        NonpastNegativeStandardForm = formsEnabled[5].on;
-        PastNegativeStandardForm = formsEnabled[6].on;
-        VolitionalForm = formsEnabled[7].on;
-        TeFormStem = formsEnabled[8].on;
-        TeForm = formsEnabled[9].on;
-        PoliteVolitionalForm = formsEnabled[10].on;
-        StandardVolitionalForm = formsEnabled[11].on;
+        PoliteNonpastForm = formsEnabled[0].on;
+        PoliteNonpastNegativeForm = formsEnabled[1].on;
+        PolitePastForm = formsEnabled[2].on;
+        PolitePastNegativeForm = formsEnabled[3].on;
+        StandardPastForm = formsEnabled[4].on;
+        StandardNonpastNegativeForm = formsEnabled[5].on;
+        StandardPastNegativeForm = formsEnabled[6].on;
+        PoliteVolitionalForm = formsEnabled[7].on;
+        CasualVolitionalForm = formsEnabled[8].on;
+        TeFormStem = formsEnabled[9].on;
+        TeForm = formsEnabled[10].on;
     }
 }

@@ -18,48 +18,45 @@ MonoBehaviour:
     kana: "\u304F\u308B"
     meaning:
     - to come
-    politeNonpast: 
-    politePast: 
-    politeNonPastNegative: 
-    PolitePastNegative: "\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
-    StandardNonpast: 
-    StandardPast: "\u304D\u305F"
-    StandardNonpastNegative: "\u3053\u306A\u3044"
-    StandardPastNegative: "\u3053\u306A\u304B\u3063\u305F"
-    PoliteVolitional: "\u304D\u307E\u3057\u3087\u3046"
-    StandardVolitional: 
+    politeNonpast: "\u304D\u307E\u3059"
+    politePast: "\u304D\u307E\u3057\u305F"
+    politeNonPastNegative: "\u304D\u307E\u305B\u3093"
+    politePastNegative: "\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
+    standardPast: "\u304D\u305F"
+    standardNonpastNegative: "\u3053\u306A\u3044"
+    standardPastNegative: "\u3053\u306A\u304B\u3063\u305F"
+    politeVolitional: "\u3053\u307E\u3057\u3087\u3046"
+    casualVolitional: "\u3053\u3088\u3046"
     TeForm: "\u304D\u3066"
   - verbType: 2
     kanji: 
     kana: "\u3059\u308B"
     meaning:
     - to do
-    politeNonpast: 
-    politePast: 
-    politeNonPastNegative: 
-    PolitePastNegative: "\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
-    StandardNonpast: 
-    StandardPast: "\u3057\u305F"
-    StandardNonpastNegative: "\u3057\u306A\u3044"
-    StandardPastNegative: "\u3057\u306A\u304B\u3063\u305F"
-    PoliteVolitional: "\u3057\u307E\u3057\u3087\u3046"
-    StandardVolitional: 
+    politeNonpast: "\u3057\u307E\u3059"
+    politePast: "\u3057\u307E\u3057\u305F"
+    politeNonPastNegative: "\u3057\u307E\u305B\u3093"
+    politePastNegative: "\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
+    standardPast: "\u3057\u305F"
+    standardNonpastNegative: "\u3057\u306A\u3044"
+    standardPastNegative: "\u3057\u306A\u304B\u3063\u305F"
+    politeVolitional: "\u3057\u307E\u3057\u3087\u3046"
+    casualVolitional: "\u3057\u3088\u3046"
     TeForm: "\u3057\u3066"
   - verbType: 2
     kanji: "\u52C9\u5F37\u3059\u308B"
     kana: "\u3079\u3093\u304D\u3087\u3046\u3059\u308B"
     meaning:
     - to study
-    politeNonpast: 
-    politePast: 
-    politeNonPastNegative: 
-    PolitePastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
-    StandardNonpast: 
-    StandardPast: "\u3079\u3093\u304D\u3087\u3046\u3057\u305F"
-    StandardNonpastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u306A\u3044"
-    StandardPastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u306A\u304B\u3063\u305F"
-    PoliteVolitional: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3057\u3087\u3046"
-    StandardVolitional: 
+    politeNonpast: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3059"
+    politePast: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3057\u305F"
+    politeNonPastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093"
+    politePastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
+    standardPast: "\u3079\u3093\u304D\u3087\u3046\u3057\u305F"
+    standardNonpastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u306A\u3044"
+    standardPastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u306A\u304B\u3063\u305F"
+    politeVolitional: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3057\u3087\u3046"
+    casualVolitional: "\u3079\u3093\u304D\u3087\u3046\u3057\u3088\u3046"
     TeForm: "\u3079\u3093\u304D\u3087\u3046\u3057\u3066"
   - verbType: 1
     kanji: "\u8D77\u304D\u308B"
@@ -69,13 +66,12 @@ MonoBehaviour:
     politeNonpast: 
     politePast: 
     politeNonPastNegative: 
-    PolitePastNegative: "\u304A\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
-    StandardNonpast: 
-    StandardPast: "\u304A\u304D\u305F"
-    StandardNonpastNegative: "\u304A\u304D\u306A\u3044"
-    StandardPastNegative: "\u304A\u304D\u306A\u304B\u3063\u305F"
-    PoliteVolitional: "\u304A\u304D\u307E\u3057\u3087\u3046"
-    StandardVolitional: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
     TeForm: "\u304A\u304D\u3066"
   - verbType: 1
     kanji: "\u98DF\u3079\u308B"
@@ -85,13 +81,12 @@ MonoBehaviour:
     politeNonpast: 
     politePast: 
     politeNonPastNegative: 
-    PolitePastNegative: "\u305F\u3079\u307E\u305B\u3093\u3067\u3057\u305F"
-    StandardNonpast: 
-    StandardPast: "\u305F\u3079\u305F"
-    StandardNonpastNegative: "\u305F\u3079\u306A\u3044"
-    StandardPastNegative: "\u305F\u3079\u306A\u304B\u3063\u305F"
-    PoliteVolitional: "\u305F\u3079\u307E\u3057\u3087\u3046"
-    StandardVolitional: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
     TeForm: "\u305F\u3079\u3066"
   - verbType: 0
     kanji: "\u884C\u304F"
@@ -101,13 +96,12 @@ MonoBehaviour:
     politeNonpast: 
     politePast: 
     politeNonPastNegative: 
-    PolitePastNegative: "\u3044\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
-    StandardNonpast: 
-    StandardPast: "\u3044\u3063\u305F"
-    StandardNonpastNegative: "\u3044\u304B\u306A\u3044"
-    StandardPastNegative: "\u3044\u304B\u306A\u304B\u3063\u305F"
-    PoliteVolitional: "\u3044\u304D\u307E\u3057\u3087\u3046"
-    StandardVolitional: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
     TeForm: "\u3044\u3063\u3066"
   - verbType: 0
     kanji: "\u5E30\u308B"
@@ -118,13 +112,12 @@ MonoBehaviour:
     politeNonpast: 
     politePast: 
     politeNonPastNegative: 
-    PolitePastNegative: "\u304B\u3048\u308A\u307E\u305B\u3093\u3067\u3057\u305F"
-    StandardNonpast: 
-    StandardPast: "\u304B\u3048\u3063\u305F"
-    StandardNonpastNegative: "\u304B\u3048\u3089\u306A\u3044"
-    StandardPastNegative: "\u304B\u3048\u3089\u306A\u304B\u3063\u305F"
-    PoliteVolitional: "\u304B\u3048\u308A\u307E\u3057\u3087\u3046"
-    StandardVolitional: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
     TeForm: "\u304B\u3048\u3063\u3066"
   - verbType: 0
     kanji: "\u805E\u304F"
@@ -136,13 +129,12 @@ MonoBehaviour:
     politeNonpast: 
     politePast: 
     politeNonPastNegative: 
-    PolitePastNegative: "\u304D\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
-    StandardNonpast: 
-    StandardPast: "\u304D\u3044\u305F"
-    StandardNonpastNegative: "\u304D\u304B\u306A\u3044"
-    StandardPastNegative: "\u304D\u304B\u306A\u304B\u3063\u305F"
-    PoliteVolitional: "\u304D\u304D\u307E\u3057\u3087\u3046"
-    StandardVolitional: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
     TeForm: "\u304D\u3044\u3066"
   - verbType: 0
     kanji: "\u98F2\u3080"
@@ -152,13 +144,12 @@ MonoBehaviour:
     politeNonpast: 
     politePast: 
     politeNonPastNegative: 
-    PolitePastNegative: "\u306E\u307F\u307E\u305B\u3093\u3067\u3057\u305F"
-    StandardNonpast: 
-    StandardPast: "\u306E\u3093\u3060"
-    StandardNonpastNegative: "\u306E\u307E\u306A\u3044"
-    StandardPastNegative: "\u306E\u307E\u306A\u304B\u3063\u305F"
-    PoliteVolitional: "\u306E\u307F\u307E\u3057\u3087\u3046"
-    StandardVolitional: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
     TeForm: "\u306E\u3093\u3067"
   - verbType: 0
     kanji: "\u8A71\u3059"
@@ -169,13 +160,12 @@ MonoBehaviour:
     politeNonpast: 
     politePast: 
     politeNonPastNegative: 
-    PolitePastNegative: "\u306F\u306A\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
-    StandardNonpast: 
-    StandardPast: "\u306F\u306A\u3057\u305F"
-    StandardNonpastNegative: "\u306F\u306A\u3055\u306A\u3044"
-    StandardPastNegative: "\u306F\u306A\u3055\u306A\u304B\u3063\u305F"
-    PoliteVolitional: "\u306F\u306A\u3057\u307E\u3057\u3087\u3046"
-    StandardVolitional: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
     TeForm: "\u306F\u306A\u3057\u3066"
   - verbType: 0
     kanji: "\u8AAD\u3080"
@@ -185,11 +175,10 @@ MonoBehaviour:
     politeNonpast: 
     politePast: 
     politeNonPastNegative: 
-    PolitePastNegative: "\u3088\u307F\u307E\u305B\u3093\u3067\u3057\u305F"
-    StandardNonpast: 
-    StandardPast: "\u3088\u3093\u3060"
-    StandardNonpastNegative: "\u3088\u307E\u306A\u3044"
-    StandardPastNegative: "\u3088\u307E\u306A\u304B\u3063\u305F"
-    PoliteVolitional: "\u3088\u307F\u307E\u3057\u3087\u3046"
-    StandardVolitional: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
     TeForm: "\u3088\u3093\u3067"

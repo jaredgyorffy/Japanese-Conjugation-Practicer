@@ -34,16 +34,18 @@ public class Verb : IWord
     public string StandardNonpast => kana;
 
     public string StandardPast => ConjugateStandardpast(kana);
-    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)] public string standardPast;
+    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)][SerializeField][AllowNesting] private string standardPast;
 
     public string StandardNonpastNegative => ConjugateStandardNonPastNegative(kana);
-    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)] public string standardNonpastNegative;
+    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)][SerializeField][AllowNesting] private string standardNonpastNegative;
 
     public string StandardPastNegative => ConjugateStandardPastNegative(kana);
-    [Foldout("Tenses")][FormerlySerializedAs("ShortPastNegative")] public string standardPastNegative;
+    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)][SerializeField][AllowNesting] private string standardPastNegative;
+    public string PoliteVolitional => ConjugatePoliteVolitional(kana);
+    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)][SerializeField][AllowNesting] private string politeVolitional;
 
-    [Foldout("Tenses")][FormerlySerializedAs("Volitional")] public string PoliteVolitional;
-    [Foldout("Tenses")] public string StandardVolitional;
+    public string CasualVolitional => ConjugateCasualVolitional(kana);
+    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)][SerializeField][AllowNesting] private  string casualVolitional;
     [Foldout("Tenses")][FormerlySerializedAs("TeForm")] public string TeForm;
     
     private string ConjugatePoliteNonpast(string dictionaryForm)
@@ -400,6 +402,108 @@ public class Verb : IWord
         }
         return conjugatedForm;
     }
+    private string ConjugatePoliteVolitional(string dictionaryForm)
+    {
+        string conjugatedForm = "";
+        if (VerbType == VerbType.RU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "ましょう";
+        }
+        else if (VerbType == VerbType.U)
+        {
+            string stem = dictionaryForm.Substring(0, dictionaryForm.Length - 1);
+            char lastChar = dictionaryForm[dictionaryForm.Length - 1];
+            switch (lastChar)
+            {
+            case 'う':
+                conjugatedForm = stem + "いましょう";
+                break;
+            case 'く':
+                conjugatedForm = stem + "きましょう";
+                break;
+            case 'す':
+                conjugatedForm = stem + "しましょう";
+                break;
+            case 'つ':
+                conjugatedForm = stem + "ちましょう";
+                break;
+            case 'る':
+                conjugatedForm = stem + "りましょう";
+                break;
+            case 'ぬ':
+                conjugatedForm = stem + "にましょう";
+                break;
+            case 'む':
+                conjugatedForm = stem + "みましょう";
+                break;
+            case 'ぶ':
+                conjugatedForm = stem + "びましょう";
+                break;
+            case 'ぐ':
+                conjugatedForm = stem + "ぎましょう";
+                break;
+
+            default:
+                throw new Exception("Invalid verb ending for U-verb.");
+            }
+        }
+        else if (VerbType == VerbType.IRR)
+        {
+            return politeVolitional;
+        }
+        return conjugatedForm;
+    }
+    private string ConjugateCasualVolitional(string dictionaryForm)
+    {
+        string conjugatedForm = "";
+        if (VerbType == VerbType.RU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "よう";
+        }
+        else if (VerbType == VerbType.U)
+        {
+            string stem = dictionaryForm.Substring(0, dictionaryForm.Length - 1);
+            char lastChar = dictionaryForm[dictionaryForm.Length - 1];
+            switch (lastChar)
+            {
+            case 'る':
+                conjugatedForm = stem + "ろう";
+                break;
+            case 'う':
+                conjugatedForm = stem + "おう";
+                break;
+            case 'く':
+                conjugatedForm = stem + "こう";
+                break;
+            case 'す':
+                conjugatedForm = stem + "そう";
+                break;
+            case 'つ':
+                conjugatedForm = stem + "とう";
+                break;
+            case 'ぬ':
+                conjugatedForm = stem + "のう";
+                break;
+            case 'ぶ':
+                conjugatedForm = stem + "ぼう";
+                break;
+            case 'む':
+                conjugatedForm = stem + "もう";
+                break;
+            case 'ぐ':
+                conjugatedForm = stem + "ごう";
+                break;
+
+            default:
+                throw new Exception("Invalid verb ending for U-verb.");
+            }
+        }
+        else if (VerbType == VerbType.IRR)
+        {
+            return casualVolitional;
+        }
+        return conjugatedForm;
+    }
 }
 
 public enum VerbType
@@ -421,6 +525,6 @@ public enum VerbConjugation
     StandardPast,
     StandardPastNegative,
     PoliteVolitional,
-    StandardVolitional,
+    CasualVolitional,
     TeForm,
 }
