@@ -7,16 +7,16 @@ using Unity.VisualScripting;
 [Serializable]
 public class Verb : IWord
 {
-    public WordType WordType => WordType.Verb;
-
-    public VerbType VerbType => verbType;
-    [SerializeField] private VerbType verbType;
+    public string Kana => kana;
+    [SerializeField] private string kana;
 
     public string Kanji => kanji;
     [SerializeField] public string kanji;
 
-    public string Kana => kana;
-    [SerializeField] private string kana;
+    public WordType WordType => WordType.Verb;
+
+    public VerbType VerbType => verbType;
+    [SerializeField] private VerbType verbType;
 
     public List <string> Meaning => meaning;
     [SerializeField] private List<string> meaning;
@@ -46,8 +46,9 @@ public class Verb : IWord
 
     public string CasualVolitional => ConjugateCasualVolitional(kana);
     [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)][SerializeField][AllowNesting] private  string casualVolitional;
-    [Foldout("Tenses")][FormerlySerializedAs("TeForm")] public string TeForm;
-    
+    public string TeForm => ConjugateTeForm(kana);
+    [Foldout("Irregular Conjugation")][ShowIf("VerbType", VerbType.IRR)][SerializeField][AllowNesting] private string teForm;
+
     private string ConjugatePoliteNonpast(string dictionaryForm)
     {
         string conjugatedForm = "";
@@ -501,6 +502,60 @@ public class Verb : IWord
         else if (VerbType == VerbType.IRR)
         {
             return casualVolitional;
+        }
+        return conjugatedForm;
+    }
+    private string ConjugateTeForm(string dictionaryForm)
+    {
+        string conjugatedForm = "";
+        if (VerbType == VerbType.RU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "て";
+        }
+        else if (VerbType == VerbType.U)
+        {
+            string stem = dictionaryForm.Substring(0, dictionaryForm.Length - 1);
+            char lastChar = dictionaryForm[dictionaryForm.Length - 1];
+            switch (lastChar)
+            {
+            case 'る':
+                conjugatedForm = stem + "って";
+                break;
+            case 'う':
+                conjugatedForm = stem + "って";
+                break;
+            case 'つ':
+                conjugatedForm = stem + "って";
+                break;
+
+            case 'く':
+                conjugatedForm = stem + "いて";
+                break;
+            case 'ぐ':
+                conjugatedForm = stem + "いて";
+                break;
+
+            case 'ぬ':
+                conjugatedForm = stem + "んで";
+                break;
+            case 'ぶ':
+                conjugatedForm = stem + "んで";
+                break;
+            case 'む':
+
+                conjugatedForm = stem + "んで";
+                break;
+            case 'す':
+                conjugatedForm = stem + "して";
+                break;
+
+            default:
+                throw new Exception("Invalid verb ending for U-verb.");
+            }
+        }
+        else if (VerbType == VerbType.IRR)
+        {
+            return teForm;
         }
         return conjugatedForm;
     }

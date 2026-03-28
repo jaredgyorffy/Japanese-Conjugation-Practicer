@@ -1,22 +1,20 @@
-using NaughtyAttributes;
 using System;
 using System.Collections.Generic;
-using Unity.Properties;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private SimpleTest test;
+    [SerializeField] private VisualTreeAsset togglePrefab;
+    [SerializeField] private InputManager inputManager;
+
     private UIDocument uiDocument;
     private VisualElement root;
     private Button startButton;
-    [SerializeField] private SimpleTest test;
-    [SerializeField] private VisualTreeAsset togglePrefab;
 
     private List<Toggle> toggles = new();
 
-    [SerializeField] private InputManager inputManager;
     void Start()
     {
         GetReferences();
@@ -77,7 +75,6 @@ public class QuizConfiguration
     public bool StandardPastNegativeForm;
     public bool PoliteVolitionalForm;
     public bool CasualVolitionalForm;
-    public bool TeFormStem;
     public bool TeForm;
 
     public List<(string name, bool on)> GetForms()
@@ -93,14 +90,13 @@ public class QuizConfiguration
             ("Standard Past Negative Form", false),
             ("Polite Volitional Form", false),
             ("Casual Volitional Form", false),
-            ("Te-Form Stem", false),
             ("Te-Form", false),
         };
     }
 
     public void SetForms(List<(string name, bool on)> formsEnabled)
     {
-        if (formsEnabled.Count < 11)
+        if (formsEnabled.Count < 10)
             throw new ArgumentException("formsEnabled must have at least 11 elements.");
 
         PoliteNonpastForm = formsEnabled[0].on;
@@ -112,7 +108,6 @@ public class QuizConfiguration
         StandardPastNegativeForm = formsEnabled[6].on;
         PoliteVolitionalForm = formsEnabled[7].on;
         CasualVolitionalForm = formsEnabled[8].on;
-        TeFormStem = formsEnabled[9].on;
-        TeForm = formsEnabled[10].on;
+        TeForm = formsEnabled[9].on;
     }
 }

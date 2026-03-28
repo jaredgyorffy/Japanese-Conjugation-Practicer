@@ -99,10 +99,10 @@ public class SimpleTest : MonoBehaviour
         {
             questionTypes.Add(VerbConjugation.CasualVolitional);
         }
-        /*if (config.TeFormStem)
+        if (config.TeForm)
         {
             questionTypes.Add(VerbConjugation.TeForm);
-        }*/
+        }
     }
 
     public void InitializeQuiz(QuizConfiguration config, int QuestionCount = 0)
