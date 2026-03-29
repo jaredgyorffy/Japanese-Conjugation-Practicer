@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     private VisualElement root;
     private Button startButton;
     private IntegerField questionCount;
+    private Label warningText;
 
     private List<Toggle> toggles = new();
 
@@ -29,7 +30,9 @@ public class MainMenu : MonoBehaviour
         root.dataSource = this;
         startButton = root.MQ<Button>("Start");
         questionCount = root.MQ<IntegerField>("QuestionCount");
+        warningText = root.MQ<Label>("Warning");
         startButton.clicked += OnPressStart;
+        warningText.visible = false;
     }
 
     private void OnPressStart()
@@ -37,7 +40,8 @@ public class MainMenu : MonoBehaviour
         QuizConfiguration config = InitializeQuiz();
         if (config.IsValid() == false)
         {
-            Debug.LogWarning("Warning: No Question Types Selected");
+            warningText.visible = true;
+            warningText.text = "No Question Types Selected";
             return;
         }
 
@@ -47,6 +51,14 @@ public class MainMenu : MonoBehaviour
             questions = questionCount.value;
         }
 
+        if ((config.QuestionTypes() * 11) < questionCount.value)
+        {
+            warningText.visible = true;
+            warningText.text = "Not enough questions available with selected parameters";
+            return;
+        }
+
+        warningText.visible = false;
         test.InitializeQuiz(config, questions, Restart);
         root.visible = false;
     }
@@ -80,6 +92,7 @@ public class MainMenu : MonoBehaviour
 
     private void Restart()
     {
+        warningText.visible = false;
         root.visible = true;
     }
 }
@@ -110,6 +123,21 @@ public class QuizConfiguration
         || CasualVolitionalForm
         || TeForm;
     }
+
+    public int QuestionTypes()
+    {
+        return
+        (PoliteNonpastForm ? 1 : 0) +
+        (PoliteNonpastNegativeForm ? 1 : 0) +
+        (PolitePastForm ? 1 : 0) +
+        (PolitePastNegativeForm ? 1 : 0) +
+        (StandardPastForm ? 1 : 0) +
+        (StandardNonpastNegativeForm ? 1 : 0) +
+        (StandardPastNegativeForm ? 1 : 0) +
+        (PoliteVolitionalForm ? 1 : 0) +
+        (CasualVolitionalForm ? 1 : 0) +
+        (TeForm ? 1 : 0);
+}
 
     public List<(string name, bool on)> GetForms()
     {

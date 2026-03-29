@@ -40,6 +40,8 @@ public class SimpleTest : MonoBehaviour
 
     [SerializeField] VerbList quizQuestions;
 
+    private List<(string, VerbConjugation)> askedQuestions = new();
+
     [SerializeField] private InputManager inputManager;
     void Start()
     {
@@ -57,7 +59,6 @@ public class SimpleTest : MonoBehaviour
 
         restartButton = root.MQ<Button>("Restart");
         restartButton.clicked += RestartQuiz;
-        restartButton.SetEnabled(false);
 
         textField.RegisterCallback<NavigationSubmitEvent>(evt =>
         {
@@ -113,6 +114,9 @@ public class SimpleTest : MonoBehaviour
 
     public void InitializeQuiz(QuizConfiguration config, int QuestionCount = 0, Action restartAction = null)
     {
+        askedQuestions = new();
+        restartButton.SetEnabled(true);
+        restartButton.visible = true;
         previousAnswer = "";
         InitializeQuestionTypes(config);
         if (QuestionCount > 0)
@@ -166,10 +170,11 @@ public class SimpleTest : MonoBehaviour
             return;
         }
 
-        VerbConjugation form = GetQuestionType();
-        //Formality > Time > Positive/Negative
+        (int, VerbConjugation) question = GetQuestion();
 
-        int wordIndex = UnityEngine.Random.Range(0, quizQuestions.List.Count);
+        int wordIndex = question.Item1;
+        VerbConjugation form = question.Item2;
+
         switch (form)
         {
         case VerbConjugation.PoliteNonpast:
@@ -222,14 +227,26 @@ public class SimpleTest : MonoBehaviour
         }
         currentKanji = quizQuestions.List[wordIndex].kanji;
         currentKana = quizQuestions.List[wordIndex].Kana;
-        
+        askedQuestions.Add((quizQuestions.List[wordIndex].Kana, form));
         textField.Focus();
+    }
+
+    private (int, VerbConjugation) GetQuestion()
+    {
+        VerbConjugation form = GetQuestionType();
+        int wordIndex = UnityEngine.Random.Range(0, quizQuestions.List.Count);
+        if (askedQuestions.Contains((quizQuestions.List[wordIndex].Kana, form)))
+        {
+            return GetQuestion();
+        }
+        return (wordIndex, form);
     }
 
     private void EndQuiz()
     {
         previousAnswer += $" Quiz Complete! {amountCorrect} / {totalQuestions}.";
         restartButton.SetEnabled(true);
+        restartButton.visible = true;
     }
 
     private void RestartQuiz()
