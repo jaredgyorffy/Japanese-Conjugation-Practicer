@@ -11,6 +11,7 @@ public class SimpleTest : MonoBehaviour
     private UIDocument uiDocument;
     private VisualElement root;
     private Button submitButton;
+    private Button restartButton;
     private TextField textField;
     private Action restartAction;
 
@@ -50,9 +51,13 @@ public class SimpleTest : MonoBehaviour
         uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
         root.dataSource = this;
-        submitButton = root.MQ<Button>("Submit");
         textField = root.MQ<TextField>("TextField");
+        submitButton = root.MQ<Button>("Submit");
         submitButton.clicked += OnPressSubmit;
+
+        restartButton = root.MQ<Button>("Restart");
+        restartButton.clicked += RestartQuiz;
+        restartButton.SetEnabled(false);
 
         textField.RegisterCallback<NavigationSubmitEvent>(evt =>
         {
@@ -119,6 +124,8 @@ public class SimpleTest : MonoBehaviour
             totalQuestions = quizQuestions.List.Count;
         }
         currentQuestion = 0;
+        amountCorrect = 0;
+
         this.restartAction = restartAction;
         PrepareNextQuestion();
     }
@@ -138,7 +145,7 @@ public class SimpleTest : MonoBehaviour
         }
         else
         {
-            previousAnswer = $"Wrong! the correct answer is {currentAnswer}";
+            previousAnswer = $"Wrong! the correct answer is {currentAnswer}.";
         }
         textField.value = "";
 
@@ -221,9 +228,8 @@ public class SimpleTest : MonoBehaviour
 
     private void EndQuiz()
     {
-        previousAnswer = $"Quiz Complete! {amountCorrect} / {totalQuestions}.";
-
-        Invoke("RestartQuiz", 5);
+        previousAnswer += $" Quiz Complete! {amountCorrect} / {totalQuestions}.";
+        restartButton.SetEnabled(true);
     }
 
     private void RestartQuiz()
