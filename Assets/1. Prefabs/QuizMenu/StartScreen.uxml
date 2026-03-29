@@ -6,6 +6,7 @@
             <ui:VisualElement name="Spacer" style="flex-grow: 1; flex-direction: column; flex-wrap: nowrap; width: 50%;" />
             <ui:VisualElement name="Chapters" style="flex-grow: 1; flex-direction: column; flex-wrap: nowrap; width: 50%;" />
         </ui:VisualElement>
+        <ui:IntegerField label="Number of Questions" value="12" name="QuestionCount" style="width: 33%; align-self: center;" />
         <ui:Button name="Start" class="Button" style="flex-grow: 0; flex-shrink: 0; margin-top: 1%; margin-right: 1%; margin-bottom: 1%; margin-left: 1%;">
             <ui:Label text="Begin Quiz" class="Title" />
         </ui:Button>

@@ -12,6 +12,7 @@ public class SimpleTest : MonoBehaviour
     private VisualElement root;
     private Button submitButton;
     private TextField textField;
+    private Action restartAction;
 
     private string currentAnswer;
     private int amountCorrect;
@@ -81,7 +82,7 @@ public class SimpleTest : MonoBehaviour
         }
         if (config.StandardPastForm)
         {
-            questionTypes.Add(VerbConjugation.StandardNonpast);
+            questionTypes.Add(VerbConjugation.StandardPast);
         }
         if (config.StandardNonpastNegativeForm)
         {
@@ -105,8 +106,9 @@ public class SimpleTest : MonoBehaviour
         }
     }
 
-    public void InitializeQuiz(QuizConfiguration config, int QuestionCount = 0)
+    public void InitializeQuiz(QuizConfiguration config, int QuestionCount = 0, Action restartAction = null)
     {
+        previousAnswer = "";
         InitializeQuestionTypes(config);
         if (QuestionCount > 0)
         {
@@ -117,7 +119,7 @@ public class SimpleTest : MonoBehaviour
             totalQuestions = quizQuestions.List.Count;
         }
         currentQuestion = 0;
-
+        this.restartAction = restartAction;
         PrepareNextQuestion();
     }
 
@@ -139,13 +141,19 @@ public class SimpleTest : MonoBehaviour
             previousAnswer = $"Wrong! the correct answer is {currentAnswer}";
         }
         textField.value = "";
-        currentQuestion += 1;
+
+        if (currentQuestion >= totalQuestions - 1)
+        {
+            EndQuiz();
+            return;
+        }
+        currentQuestion++;
         PrepareNextQuestion();
     }
 
     private void PrepareNextQuestion()
     {
-        if (currentQuestion >= quizQuestions.List.Count) 
+        if (currentQuestion >= totalQuestions) 
         {
             EndQuiz();
             return;
@@ -153,58 +161,60 @@ public class SimpleTest : MonoBehaviour
 
         VerbConjugation form = GetQuestionType();
         //Formality > Time > Positive/Negative
+
+        int wordIndex = UnityEngine.Random.Range(0, quizQuestions.List.Count);
         switch (form)
         {
         case VerbConjugation.PoliteNonpast:
-            currentAnswer = quizQuestions.List[currentQuestion].PoliteNonpast;
+            currentAnswer = quizQuestions.List[wordIndex].PoliteNonpast;
             questionType = "Polite Non-past Form";
             break;
         case VerbConjugation.PoliteNonpastNegative:
-            currentAnswer = quizQuestions.List[currentQuestion].PoliteNonPastNegative;
+            currentAnswer = quizQuestions.List[wordIndex].PoliteNonPastNegative;
             questionType = "Polite Non-past Negative Form";
             break;
         case VerbConjugation.PolitePast:
-            currentAnswer = quizQuestions.List[currentQuestion].PolitePast;
+            currentAnswer = quizQuestions.List[wordIndex].PolitePast;
             questionType = "Polite Past Form";
             break;
         case VerbConjugation.PolitePastNegative:
-            currentAnswer = quizQuestions.List[currentQuestion].PolitePastNegative;
+            currentAnswer = quizQuestions.List[wordIndex].PolitePastNegative;
             questionType = "Polite Past Negative Form";
             break;
         case VerbConjugation.StandardPast:
-            currentAnswer = quizQuestions.List[currentQuestion].StandardPast;
+            currentAnswer = quizQuestions.List[wordIndex].StandardPast;
             questionType = "Standard Past Form";
             break;
         case VerbConjugation.StandardNonpast:
-            currentAnswer = quizQuestions.List[currentQuestion].StandardNonpast;
+            currentAnswer = quizQuestions.List[wordIndex].StandardNonpast;
             questionType = "Standard Past Form";
             break;
         case VerbConjugation.StandardNonpastNegative:
-            currentAnswer = quizQuestions.List[currentQuestion].StandardNonpastNegative;
+            currentAnswer = quizQuestions.List[wordIndex].StandardNonpastNegative;
             questionType = "Standard Non-past Negative Form";
             break;
         case VerbConjugation.StandardPastNegative:
-            currentAnswer = quizQuestions.List[currentQuestion].StandardPastNegative;
+            currentAnswer = quizQuestions.List[wordIndex].StandardPastNegative;
             questionType = "Standard Past Negative Form";
             break;
         case VerbConjugation.PoliteVolitional:
-            currentAnswer = quizQuestions.List[currentQuestion].PoliteVolitional;
+            currentAnswer = quizQuestions.List[wordIndex].PoliteVolitional;
             questionType = "Polite Volitional Form";
             break;
         case VerbConjugation.TeForm:
-            currentAnswer = quizQuestions.List[currentQuestion].TeForm;
+            currentAnswer = quizQuestions.List[wordIndex].TeForm;
             questionType = "Te-form";
             break;
         case VerbConjugation.CasualVolitional:
-            currentAnswer = quizQuestions.List[currentQuestion].CasualVolitional;
+            currentAnswer = quizQuestions.List[wordIndex].CasualVolitional;
             questionType = "Casual Volitional Form";
             break;
         default:
             Debug.LogWarning("Error: Question Type not valid");
             break;
         }
-        currentKanji = quizQuestions.List[currentQuestion].kanji;
-        currentKana = quizQuestions.List[currentQuestion].Kana;
+        currentKanji = quizQuestions.List[wordIndex].kanji;
+        currentKana = quizQuestions.List[wordIndex].Kana;
         
         textField.Focus();
     }
@@ -212,6 +222,16 @@ public class SimpleTest : MonoBehaviour
     private void EndQuiz()
     {
         previousAnswer = $"Quiz Complete! {amountCorrect} / {totalQuestions}.";
+
+        Invoke("RestartQuiz", 5);
+    }
+
+    private void RestartQuiz()
+    {
+        if (restartAction != null)
+        {
+            restartAction.Invoke();
+        }
     }
 
     private void OnDisable()

@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     private UIDocument uiDocument;
     private VisualElement root;
     private Button startButton;
+    private IntegerField questionCount;
 
     private List<Toggle> toggles = new();
 
@@ -27,12 +28,26 @@ public class MainMenu : MonoBehaviour
         root = uiDocument.rootVisualElement;
         root.dataSource = this;
         startButton = root.MQ<Button>("Start");
+        questionCount = root.MQ<IntegerField>("QuestionCount");
         startButton.clicked += OnPressStart;
     }
 
     private void OnPressStart()
     {
-        test.InitializeQuiz(InitializeQuiz());
+        QuizConfiguration config = InitializeQuiz();
+        if (config.IsValid() == false)
+        {
+            Debug.LogWarning("Warning: No Question Types Selected");
+            return;
+        }
+
+        int questions = 0;
+        if (questionCount != null)
+        {
+            questions = questionCount.value;
+        }
+
+        test.InitializeQuiz(config, questions, Restart);
         root.visible = false;
     }
 
@@ -62,6 +77,11 @@ public class MainMenu : MonoBehaviour
         config.SetForms(listOfForms);
         return config;
     }
+
+    private void Restart()
+    {
+        root.visible = true;
+    }
 }
 
 public class QuizConfiguration
@@ -76,6 +96,20 @@ public class QuizConfiguration
     public bool PoliteVolitionalForm;
     public bool CasualVolitionalForm;
     public bool TeForm;
+
+    public bool IsValid()
+    {
+        return PoliteNonpastForm
+        || PoliteNonpastNegativeForm
+        || PolitePastForm
+        || PolitePastNegativeForm
+        || StandardPastForm
+        || StandardNonpastNegativeForm
+        || StandardPastNegativeForm
+        || PoliteVolitionalForm
+        || CasualVolitionalForm
+        || TeForm;
+    }
 
     public List<(string name, bool on)> GetForms()
     {
