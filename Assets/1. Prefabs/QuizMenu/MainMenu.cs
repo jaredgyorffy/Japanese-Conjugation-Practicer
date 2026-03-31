@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private SimpleTest test;
     [SerializeField] private VisualTreeAsset togglePrefab;
     [SerializeField] private InputManager inputManager;
+    [SerializeField] private GlobalVariables globalVariables;
 
     private UIDocument uiDocument;
     private VisualElement root;
@@ -15,7 +16,8 @@ public class MainMenu : MonoBehaviour
     private IntegerField questionCount;
     private Label warningText;
 
-    private List<Toggle> toggles = new();
+    private List<Toggle> formToggles = new();
+    private List<Toggle> contentToggles = new();
 
     void Start()
     {
@@ -25,6 +27,10 @@ public class MainMenu : MonoBehaviour
 
     private void GetReferences()
     {
+        //using UnityEngine.AddressableAssets;
+        //var asyncHandle = Addressables.LoadAssetAsync<GlobalTuner>("GlobalTuner.asset");
+        //GlobalTuner globalTuner = asyncHandle.WaitForCompletion();
+
         uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
         root.dataSource = this;
@@ -45,13 +51,20 @@ public class MainMenu : MonoBehaviour
             return;
         }
 
+        if (config.words.Count == 0)
+        {
+            warningText.visible = true;
+            warningText.text = "No Content Types Selected";
+            return;
+        }
+
         int questions = 0;
         if (questionCount != null)
         {
             questions = questionCount.value;
         }
 
-        if ((config.QuestionTypes() * 11) < questionCount.value)
+        if ((config.QuestionTypes() * config.words.Count) < questions)
         {
             warningText.visible = true;
             warningText.text = "Not enough questions available with selected parameters";
@@ -73,8 +86,18 @@ public class MainMenu : MonoBehaviour
             var toggleBox = togglePrefab.Instantiate();
             var toggleLayer = toggleBox.MQ<Label>().text = listOfForms[i].name;
 
-            toggles.Add(toggleBox.MQ<Toggle>());
+            formToggles.Add(toggleBox.MQ<Toggle>());
             forms.Add(toggleBox);
+        }
+
+        VisualElement content = root.MQ<VisualElement>("Content");
+        for (int i = 0; i < globalVariables.WordLists.Count; i++)
+        {
+            var toggleBox = togglePrefab.Instantiate();
+            var toggleLayer = toggleBox.MQ<Label>().text = globalVariables.WordLists[i].listName;
+
+            contentToggles.Add(toggleBox.MQ<Toggle>());
+            content.Add(toggleBox);
         }
     }
 
@@ -82,10 +105,19 @@ public class MainMenu : MonoBehaviour
     {
         QuizConfiguration config = new QuizConfiguration();
         var listOfForms = config.GetForms();
-        for (int i = 0; i < toggles.Count; i++)
+        for (int i = 0; i < formToggles.Count; i++)
         {
-            listOfForms[i] = (listOfForms[i].name, toggles[i].value);
+            listOfForms[i] = (listOfForms[i].name, formToggles[i].value);
         }
+
+        for (int i = 0; i < contentToggles.Count; i++)
+        {
+            if (contentToggles[i] != null && contentToggles[i].value)
+            {
+                config.words.AddRange(globalVariables.WordLists[i].List);
+            }
+        }
+
         config.SetForms(listOfForms);
         return config;
     }
@@ -109,6 +141,8 @@ public class QuizConfiguration
     public bool PoliteVolitionalForm;
     public bool CasualVolitionalForm;
     public bool TeForm;
+
+    public List<Verb> words = new();
 
     public bool IsValid()
     {
@@ -137,7 +171,7 @@ public class QuizConfiguration
         (PoliteVolitionalForm ? 1 : 0) +
         (CasualVolitionalForm ? 1 : 0) +
         (TeForm ? 1 : 0);
-}
+    }
 
     public List<(string name, bool on)> GetForms()
     {

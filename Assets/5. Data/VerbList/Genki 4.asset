@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f925ee20541ae16479e0c1086cb37917, type: 3}
+  m_Name: Genki 4
+  m_EditorClassIdentifier: Assembly-CSharp::WordList
+  List:
+  - kana: "\u3042\u3046"
+    kanji: "\u4F1A\u3046"
+    verbType: 0
+    meaning:
+    - to meet
+    - to see (a person)
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u3042\u308B"
+    kanji: "\u6709\u308B"
+    verbType: 2
+    meaning:
+    - to be
+    - to exist
+    - to live
+    - there is...
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u304B\u3046"
+    kanji: "\u8CB7\u3046"
+    verbType: 2
+    meaning:
+    - to buy
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u304B\u304F"
+    kanji: "\u66F8\u304F"
+    verbType: 0
+    meaning:
+    - to write
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u3044\u308B"
+    kanji: 
+    verbType: 1
+    meaning:
+    - "to exist\u200B"
+    - to be (of animate objects)
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u3068\u308B"
+    kanji: "\u64AE\u308B"
+    verbType: 0
+    meaning:
+    - to take (a picture)
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u307E\u3064"
+    kanji: "\u5F85\u3064"
+    verbType: 0
+    meaning:
+    - to wait
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u308F\u304B\u308B"
+    kanji: 
+    verbType: 0
+    meaning:
+    - to understand
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 

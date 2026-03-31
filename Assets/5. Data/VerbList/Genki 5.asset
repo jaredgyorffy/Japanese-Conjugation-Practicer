@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f925ee20541ae16479e0c1086cb37917, type: 3}
+  m_Name: Genki 5
+  m_EditorClassIdentifier: Assembly-CSharp::WordList
+  List:
+  - kana: "\u3067\u304B\u3051\u308B"
+    kanji: "\u51FA\u304B\u3051\u308B"
+    verbType: 1
+    meaning:
+    - 'to go out '
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u304A\u3088\u3050"
+    kanji: "\u6CF3\u3050"
+    verbType: 0
+    meaning:
+    - to swim
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u304D\u304F"
+    kanji: "\u805E\u304F"
+    verbType: 0
+    meaning:
+    - to ask
+    - "to hear\u200B"
+    - to listen
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u306E\u308B"
+    kanji: "\u4E57\u308B"
+    verbType: 0
+    meaning:
+    - to ask
+    - "to hear\u200B"
+    - to listen
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u3084\u308B"
+    kanji: 
+    verbType: 0
+    meaning:
+    - to do
+    - to perform
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 

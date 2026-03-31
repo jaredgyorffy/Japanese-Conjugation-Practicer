@@ -500,6 +500,7 @@ MonoBehaviour:
   test: {fileID: 543165421}
   togglePrefab: {fileID: 9197481963319205126, guid: 57db5c9776dabb6468ad1ea3148be33b, type: 3}
   inputManager: {fileID: 1478899879}
+  globalVariables: {fileID: 11400000, guid: f7703807486d42a4fb706ff31f7d471a, type: 2}
 --- !u!114 &742139358
 MonoBehaviour:
   m_ObjectHideFlags: 0

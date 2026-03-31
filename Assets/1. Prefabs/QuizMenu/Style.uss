@@ -6,6 +6,9 @@ VisualElement {
 
 .Title {
     font-size: 40px;
+    align-self: center;
+    -unity-font-style: bold;
+    align-items: center;
 }
 
 .Paragraph {
