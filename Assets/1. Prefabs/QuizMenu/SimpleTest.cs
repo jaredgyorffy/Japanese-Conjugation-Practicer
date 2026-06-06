@@ -14,6 +14,7 @@ public class SimpleTest : MonoBehaviour
     private Button restartButton;
     private TextField textField;
     private Action restartAction;
+    private KanaRomajiTranslator textConverter;
 
     private string currentAnswer;
     private int amountCorrect;
@@ -43,6 +44,7 @@ public class SimpleTest : MonoBehaviour
     private List<(string, VerbConjugation)> askedQuestions = new();
 
     [SerializeField] private InputManager inputManager;
+    private bool confirmAnswer = false;
     void Start()
     {
         GetReferences();
@@ -60,9 +62,11 @@ public class SimpleTest : MonoBehaviour
         restartButton = root.MQ<Button>("Restart");
         restartButton.clicked += RestartQuiz;
 
+        textConverter = GetComponent<KanaRomajiTranslator>();
+        textConverter.InputChanged += OnInputChanged;
         textField.RegisterCallback<NavigationSubmitEvent>(evt =>
         {
-            evt.StopImmediatePropagation(); // prevents internal handling
+            evt.StopImmediatePropagation();
             OnPressSubmit();
         }, TrickleDown.TrickleDown);
     }
@@ -142,18 +146,46 @@ public class SimpleTest : MonoBehaviour
         return questionTypes[index];
     }
 
+    private void OnInputChanged()
+    {
+        confirmAnswer = false;
+    }
+
     private void OnPressSubmit()
     {
-        if (textField.value == currentAnswer)
+        if (confirmAnswer == false)
         {
-            previousAnswer = "Correct!";
-            amountCorrect += 1;
+            if (textField.value == currentAnswer)
+            {
+                previousAnswer = "Correct!";
+                confirmAnswer = true;
+                textField.Focus();
+                return;
+            }
+            else
+            {
+                previousAnswer = $"Wrong! Try again?";
+                confirmAnswer = true;
+                textField.Focus();
+                return;
+            }
         }
         else
         {
-            previousAnswer = $"Wrong! the correct answer is {currentAnswer}.";
+            if (textField.value == currentAnswer)
+            {
+                previousAnswer = "";
+                //Play Correct VFX
+                amountCorrect += 1;
+            }
+            else
+            {
+                previousAnswer = $"Wrong! the correct answer is {currentAnswer}.";
+            }
         }
+
         textField.value = "";
+        confirmAnswer = false;
 
         if (currentQuestion >= totalQuestions - 1)
         {

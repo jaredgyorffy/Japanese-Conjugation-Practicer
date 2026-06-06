@@ -1,12 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 public class KanaRomajiTranslator : MonoBehaviour
 {
-    string input;
+    private Observable<string> input;
 
-    //public delegate void InputChangedEventHandler();
-    //public event InputChangedEventHandler InputChanged;
+    public delegate void InputChangedEventHandler();
+    public event InputChangedEventHandler InputChanged;
 
     UIDocument uiDocument;
     VisualElement root;
@@ -21,17 +21,17 @@ public class KanaRomajiTranslator : MonoBehaviour
         root = uiDocument.rootVisualElement;
         textField = root.MQ<TextField>("TextField");
         input = new Observable<string>();
-        //BindInputChanged(input);
+        BindInputChanged(input);
     }
 
     private void Update()
     {
-        input = textField.value;
-        InvokeStateChangedEvent();
+        input.Value = textField.value;
     }
 
     private void InvokeStateChangedEvent()
     {
+        InputChanged.Invoke();
         foreach (var pair in KanaRomajiList.ThreeLetterPairs)
         {
             FindAndReplaceRomaji(pair);
@@ -58,7 +58,7 @@ public class KanaRomajiTranslator : MonoBehaviour
 
     private bool FindRomaji(KanaRomajiPair pair)
     {
-        if (input.Contains(pair.Romaji))
+        if (input.Value.Contains(pair.Romaji))
         {
             return true;
         }
@@ -70,13 +70,14 @@ public class KanaRomajiTranslator : MonoBehaviour
 
     private void ReplaceRomaji(KanaRomajiPair pair)
     {
-        input = input.Replace(pair.Romaji, pair.Kana);
-        textField.value = input;
+        string value = input.Value;
+        input.Value = value.Replace(pair.Romaji, pair.Kana);
+        textField.value = input.Value;
     }
 
-    /*public void BindInputChanged(Observable<string> input)
+    public void BindInputChanged(Observable<string> input)
     {
         this.input = input;
-        this.input.ValueChanged += (_) => InvokeStateChangedEvent();
-    }*/
+        input.ValueChanged += (_) => InvokeStateChangedEvent();
+    }
 }
