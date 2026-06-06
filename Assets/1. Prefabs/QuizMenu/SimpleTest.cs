@@ -24,8 +24,8 @@ public class SimpleTest : MonoBehaviour
     [CreateProperty] public string QuestionType => questionType;
     private string questionType;
 
-    [CreateProperty] public string PreviousAnswer => previousAnswer;
-    private string previousAnswer;
+    [CreateProperty] public string PreviousAnswer => feedbackText;
+    private string feedbackText;
 
     [CreateProperty] public string CurrentKanji => currentKanji;
     private string currentKanji;
@@ -45,6 +45,7 @@ public class SimpleTest : MonoBehaviour
 
     [SerializeField] private InputManager inputManager;
     private bool confirmAnswer = false;
+    public bool StrictMode = false;
     void Start()
     {
         GetReferences();
@@ -123,7 +124,7 @@ public class SimpleTest : MonoBehaviour
         askedQuestions = new();
         restartButton.SetEnabled(true);
         restartButton.visible = false;
-        previousAnswer = "";
+        feedbackText = "";
         InitializeQuestionTypes(config);
         if (QuestionCount > 0)
         {
@@ -149,24 +150,35 @@ public class SimpleTest : MonoBehaviour
     private void OnInputChanged()
     {
         confirmAnswer = false;
+        textField.style.color = Color.black;
     }
 
     private void OnPressSubmit()
     {
-        if (confirmAnswer == false)
+        if (textField.value.ContainsInvalidCharacters())
+        {
+            feedbackText = $"Text must only contain japanese characters";
+            textField.style.color = Color.maroon;
+            textField.Focus();
+            return;
+        }
+
+        if (shouldConfirmAnswer == false)
         {
             if (textField.value == currentAnswer)
             {
-                previousAnswer = "Correct!";
+                feedbackText = "Correct!";
                 confirmAnswer = true;
                 textField.Focus();
+                textField.style.color = Color.forestGreen;
                 return;
             }
             else
             {
-                previousAnswer = $"Wrong! Try again?";
+                feedbackText = $"Wrong! Try again?";
                 confirmAnswer = true;
                 textField.Focus();
+                textField.style.color = Color.maroon;
                 return;
             }
         }
@@ -174,13 +186,13 @@ public class SimpleTest : MonoBehaviour
         {
             if (textField.value == currentAnswer)
             {
-                previousAnswer = "";
+                feedbackText = "";
                 //Play Correct VFX
                 amountCorrect += 1;
             }
             else
             {
-                previousAnswer = $"Wrong! the correct answer is {currentAnswer}.";
+                feedbackText = $"The correct answer was {currentAnswer}.";
             }
         }
 
@@ -195,6 +207,8 @@ public class SimpleTest : MonoBehaviour
         currentQuestion++;
         PrepareNextQuestion();
     }
+
+    private bool shouldConfirmAnswer => StrictMode || confirmAnswer ? true : false;
 
     private void PrepareNextQuestion()
     {
@@ -278,8 +292,9 @@ public class SimpleTest : MonoBehaviour
 
     private void EndQuiz()
     {
-        previousAnswer += $" Quiz Complete! {amountCorrect} / {totalQuestions}.";
+        feedbackText += $" Quiz Complete! {amountCorrect} / {totalQuestions}.";
         restartButton.SetEnabled(true);
+        submitButton.SetEnabled(false);
         restartButton.visible = true;
     }
 
@@ -287,12 +302,14 @@ public class SimpleTest : MonoBehaviour
     {
         if (restartAction != null)
         {
+            submitButton.SetEnabled(true);
             restartAction.Invoke();
         }
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         submitButton.clicked -= OnPressSubmit;
+        textConverter.InputChanged -= OnInputChanged;
     }
 }
