@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f925ee20541ae16479e0c1086cb37917, type: 3}
   m_Name: Genki 4
   m_EditorClassIdentifier: Assembly-CSharp::WordList
+  <listName>k__BackingField: Genki 4
   List:
   - kana: "\u3042\u3046"
     kanji: "\u4F1A\u3046"
