@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
-using UnityEngine.Serialization;
-using Unity.VisualScripting;
 [Serializable]
 public class Verb : IWord
 {
@@ -565,10 +563,9 @@ public enum VerbType
 {
     U, //Godan Verbs, U-Verbs
     RU, // Ichidan Verbs, RU-Verbs
-    IRR, // 
+    IRR, // Irregular
 }
 
-//Formality > Time > Positive/Negative
 public enum VerbConjugation
 {
     StandardNonpast,

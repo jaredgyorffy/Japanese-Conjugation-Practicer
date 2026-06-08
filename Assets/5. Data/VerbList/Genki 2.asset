@@ -10,8 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 478a6b45f4173a947984457165db4dad, type: 3}
-  m_Name: Genki 4
-  m_EditorClassIdentifier: Assembly-CSharp::WordList
-  <listName>k__BackingField: Genki 4
+  m_Name: Genki 2
+  m_EditorClassIdentifier: Assembly-CSharp::VerbList
+  <listName>k__BackingField: Genki 2
   verbList: []
-  adjectiveList: []
+  adjectiveList:
+  - kana: "\u304A\u3044\u3057\u3044"
+    kanji: 
+    adjectiveType: 0
+    meaning:
+    - delicious
+  - kana: "\u305F\u304B\u3044"
+    kanji: "\u9AD8\u3044"
+    adjectiveType: 0
+    meaning:
+    - expensive
+    - high
+    - tall

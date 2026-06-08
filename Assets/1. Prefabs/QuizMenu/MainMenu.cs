@@ -114,7 +114,7 @@ public class MainMenu : MonoBehaviour
         {
             if (contentToggles[i] != null && contentToggles[i].value)
             {
-                config.words.AddRange(globalVariables.WordLists[i].List);
+                config.words.AddRange(globalVariables.WordLists[i].verbList);
             }
         }
 
