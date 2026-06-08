@@ -13,7 +13,176 @@ MonoBehaviour:
   m_Name: Genki 3
   m_EditorClassIdentifier: Assembly-CSharp::WordList
   <listName>k__BackingField: Genki 3
-  verbList: []
+  verbList:
+  - kana: "\u304F\u308B"
+    kanji: "\u6765\u308B"
+    verbType: 2
+    meaning:
+    - to come
+    politeNonpast: "\u304D\u307E\u3059"
+    politePast: "\u304D\u307E\u3057\u305F"
+    politeNonPastNegative: "\u304D\u307E\u305B\u3093"
+    politePastNegative: "\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
+    standardPast: "\u304D\u305F"
+    standardNonpastNegative: "\u3053\u306A\u3044"
+    standardPastNegative: "\u3053\u306A\u304B\u3063\u305F"
+    politeVolitional: "\u3053\u307E\u3057\u3087\u3046"
+    casualVolitional: "\u3053\u3088\u3046"
+    teForm: "\u304D\u3066"
+  - kana: "\u3059\u308B"
+    kanji: 
+    verbType: 2
+    meaning:
+    - to do
+    politeNonpast: "\u3057\u307E\u3059"
+    politePast: "\u3057\u307E\u3057\u305F"
+    politeNonPastNegative: "\u3057\u307E\u305B\u3093"
+    politePastNegative: "\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
+    standardPast: "\u3057\u305F"
+    standardNonpastNegative: "\u3057\u306A\u3044"
+    standardPastNegative: "\u3057\u306A\u304B\u3063\u305F"
+    politeVolitional: "\u3057\u307E\u3057\u3087\u3046"
+    casualVolitional: "\u3057\u3088\u3046"
+    teForm: "\u3057\u3066"
+  - kana: "\u3079\u3093\u304D\u3087\u3046\u3059\u308B"
+    kanji: "\u52C9\u5F37\u3059\u308B"
+    verbType: 2
+    meaning:
+    - to study
+    politeNonpast: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3059"
+    politePast: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3057\u305F"
+    politeNonPastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093"
+    politePastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u305B\u3093\u3067\u3057\u305F"
+    standardPast: "\u3079\u3093\u304D\u3087\u3046\u3057\u305F"
+    standardNonpastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u306A\u3044"
+    standardPastNegative: "\u3079\u3093\u304D\u3087\u3046\u3057\u306A\u304B\u3063\u305F"
+    politeVolitional: "\u3079\u3093\u304D\u3087\u3046\u3057\u307E\u3057\u3087\u3046"
+    casualVolitional: "\u3079\u3093\u304D\u3087\u3046\u3057\u3088\u3046"
+    teForm: "\u3079\u3093\u304D\u3087\u3046\u3057\u3066"
+  - kana: "\u304A\u304D\u308B"
+    kanji: "\u8D77\u304D\u308B"
+    verbType: 1
+    meaning:
+    - to get up
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u305F\u3079\u308B"
+    kanji: "\u98DF\u3079\u308B"
+    verbType: 1
+    meaning:
+    - to eat
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u3044\u304F"
+    kanji: "\u884C\u304F"
+    verbType: 2
+    meaning:
+    - to go
+    politeNonpast: "\u3044\u304D\u307E\u3059"
+    politePast: "\u3044\u304D\u307E\u3057\u305F"
+    politeNonPastNegative: "\u3044\u304D\u307E\u305B\u3093"
+    politePastNegative: "\u3044\u304D\u307E\u305B\u3093\u3067\u3057\u305F"
+    standardPast: "\u3044\u3063\u305F"
+    standardNonpastNegative: "\u3044\u304B\u306A\u3044"
+    standardPastNegative: "\u3044\u304B\u306A\u304B\u3063\u305F"
+    politeVolitional: "\u3044\u304F\u3067\u3057\u3087\u3046"
+    casualVolitional: "\u3044\u304F\u3060\u308D\u3046"
+    teForm: "\u3044\u3063\u3066"
+  - kana: "\u304B\u3048\u308B"
+    kanji: "\u5E30\u308B"
+    verbType: 0
+    meaning:
+    - to go back
+    - to return
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u304D\u304F"
+    kanji: "\u805E\u304F"
+    verbType: 0
+    meaning:
+    - to listen
+    - to hear
+    - to ask
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u306E\u3080"
+    kanji: "\u98F2\u3080"
+    verbType: 0
+    meaning:
+    - to drink
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u306F\u306A\u3059"
+    kanji: "\u8A71\u3059"
+    verbType: 0
+    meaning:
+    - to speak
+    - to talk
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u3088\u3080"
+    kanji: "\u8AAD\u3080"
+    verbType: 0
+    meaning:
+    - to read
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
   adjectiveList:
   - kana: "\u3044\u3044"
     kanji: "\u826F\u3044"

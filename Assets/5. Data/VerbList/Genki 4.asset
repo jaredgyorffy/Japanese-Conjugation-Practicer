@@ -13,5 +13,131 @@ MonoBehaviour:
   m_Name: Genki 4
   m_EditorClassIdentifier: Assembly-CSharp::WordList
   <listName>k__BackingField: Genki 4
-  verbList: []
+  verbList:
+  - kana: "\u3042\u3046"
+    kanji: "\u4F1A\u3046"
+    verbType: 0
+    meaning:
+    - to meet
+    - to see (a person)
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u3042\u308B"
+    kanji: "\u6709\u308B"
+    verbType: 2
+    meaning:
+    - to be
+    - to exist
+    - to live
+    - there is...
+    politeNonpast: "\u3042\u308A\u307E\u3059"
+    politePast: "\u3042\u308A\u307E\u3057\u305F"
+    politeNonPastNegative: "\u3042\u308A\u307E\u305B\u3093"
+    politePastNegative: "\u3042\u308A\u307E\u305B\u3093\u3067\u3057\u305F"
+    standardPast: "\u3042\u3063\u305F"
+    standardNonpastNegative: "\u306A\u3044"
+    standardPastNegative: "\u306A\u304B\u3063\u305F"
+    politeVolitional: "\u3042\u308A\u307E\u3057\u3087\u3046"
+    casualVolitional: "\u3042\u308D\u3046"
+    teForm: "\u3042\u3063\u3066"
+  - kana: "\u304B\u3046"
+    kanji: "\u8CB7\u3046"
+    verbType: 0
+    meaning:
+    - to buy
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u304B\u304F"
+    kanji: "\u66F8\u304F"
+    verbType: 0
+    meaning:
+    - to write
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u3044\u308B"
+    kanji: 
+    verbType: 2
+    meaning:
+    - "to exist\u200B"
+    - to be (of animate objects)
+    politeNonpast: "\u3044\u307E\u3059"
+    politePast: "\u3044\u307E\u3057\u305F"
+    politeNonPastNegative: "\u3044\u307E\u305B\u3093"
+    politePastNegative: "\u3044\u307E\u305B\u3093\u3067\u3057\u305F"
+    standardPast: "\u3044\u305F"
+    standardNonpastNegative: "\u3044\u306A\u3044"
+    standardPastNegative: "\u3044\u306A\u304B\u3063\u305F"
+    politeVolitional: "\u3044\u307E\u3057\u3087\u3046"
+    casualVolitional: "\u3044\u3088\u3046"
+    teForm: "\u3044\u3066"
+  - kana: "\u3068\u308B"
+    kanji: "\u64AE\u308B"
+    verbType: 0
+    meaning:
+    - to take (a picture)
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u307E\u3064"
+    kanji: "\u5F85\u3064"
+    verbType: 0
+    meaning:
+    - to wait
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u308F\u304B\u308B"
+    kanji: 
+    verbType: 0
+    meaning:
+    - to understand
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+
   adjectiveList: []

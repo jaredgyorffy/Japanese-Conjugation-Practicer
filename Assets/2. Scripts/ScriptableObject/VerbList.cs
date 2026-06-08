@@ -7,5 +7,5 @@ public class VerbList : ScriptableObject
 {
     [field: SerializeField] public string listName { get; private set; }
     [field: SerializeField][FormerlySerializedAs("List")] public List<Verb> verbList;
-    public List<Adjective> adjectiveList;
+    [field: SerializeField] public List<Adjective> adjectiveList;
 }

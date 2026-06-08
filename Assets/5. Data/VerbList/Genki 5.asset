@@ -13,7 +13,88 @@ MonoBehaviour:
   m_Name: Genki 5
   m_EditorClassIdentifier: Assembly-CSharp::WordList
   <listName>k__BackingField: Genki 5
-  verbList: []
+  verbList:
+  - kana: "\u3067\u304B\u3051\u308B"
+    kanji: "\u51FA\u304B\u3051\u308B"
+    verbType: 1
+    meaning:
+    - 'to go out '
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u304A\u3088\u3050"
+    kanji: "\u6CF3\u3050"
+    verbType: 0
+    meaning:
+    - to swim
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u304D\u304F"
+    kanji: "\u805E\u304F"
+    verbType: 0
+    meaning:
+    - to ask
+    - "to hear\u200B"
+    - to listen
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u306E\u308B"
+    kanji: "\u4E57\u308B"
+    verbType: 0
+    meaning:
+    - to ask
+    - "to hear\u200B"
+    - to listen
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+  - kana: "\u3084\u308B"
+    kanji: 
+    verbType: 0
+    meaning:
+    - to do
+    - to perform
+    politeNonpast: 
+    politePast: 
+    politeNonPastNegative: 
+    politePastNegative: 
+    standardPast: 
+    standardNonpastNegative: 
+    standardPastNegative: 
+    politeVolitional: 
+    casualVolitional: 
+    teForm: 
+
   adjectiveList:
   - kana: "\u304D\u3089\u3044"
     kanji: "\u5ACC\u3044"

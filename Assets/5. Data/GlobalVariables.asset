@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GlobalVariables
   m_EditorClassIdentifier: Assembly-CSharp::GlobalVariables
   <WordLists>k__BackingField:
+  - {fileID: 11400000, guid: 633606cacf95a9247be505b66be32f3e, type: 2}
   - {fileID: 11400000, guid: 30256d0601d06074fb7f8c49248bc339, type: 2}
   - {fileID: 11400000, guid: 9555e275a564bbe45bd206c09c33cad6, type: 2}
   - {fileID: 11400000, guid: c7d5cb8aa43c89646b7039f664ebcba9, type: 2}
