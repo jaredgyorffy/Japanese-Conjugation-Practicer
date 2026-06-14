@@ -162,6 +162,8 @@ MonoBehaviour:
     Romaji: wo
   - Kana: "\u3093"
     Romaji: nn
+  - Kana: "\u3058\u3083"
+    Romaji: ja
   ThreeLetterPairs:
   - Kana: "\u304D\u3083"
     Romaji: kya

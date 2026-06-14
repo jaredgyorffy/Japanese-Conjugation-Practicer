@@ -18,10 +18,11 @@ public class Adjective : IWord
     public List<string> Meaning => meaning;
     [SerializeField] private List<string> meaning;
 
+    public string StandardNonpast => kana;
     public string PolitePast => ConjugatePolitePast(kana);
     [Foldout("Irregular Conjugation")][ShowIf("AdjectiveType", AdjectiveType.IRR)][SerializeField][AllowNesting] private string politePast;
 
-    public string StandardPast => ConjugatePolitePast(kana);
+    public string StandardPast => ConjugateStandardPast(kana);
     [Foldout("Irregular Conjugation")][ShowIf("AdjectiveType", AdjectiveType.IRR)][SerializeField][AllowNesting] private string standardPast;
 
     public string StandardNonpastNegative => ConjugateStandardNonpastNegative(kana);
@@ -29,14 +30,20 @@ public class Adjective : IWord
 
     public string PoliteNonpastNegative => ConjugatePoliteNonpastNegative(kana);
     [Foldout("Irregular Conjugation")][ShowIf("AdjectiveType", AdjectiveType.IRR)][SerializeField][AllowNesting] private string politeNonpastNegative;
-    public string StandardNonpast => kana;
+    
+    public string PolitePastNegative => ConjugateStandardPastNegative(kana);
+
+    [Foldout("Irregular Conjugation")][ShowIf("AdjectiveType", AdjectiveType.IRR)][SerializeField][AllowNesting] private string politePastNegative;
+
+    public string StandardPastNegative => ConjugatePolitePastNegative(kana);
+    [Foldout("Irregular Conjugation")][ShowIf("AdjectiveType", AdjectiveType.IRR)][SerializeField][AllowNesting] private string standardPastNegative;
 
     private string ConjugatePolitePast(string dictionaryForm)
     {
         string conjugatedForm = "";
         if (AdjectiveType == AdjectiveType.I)
         {
-            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "かったです";
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "かった";
         }
         else if (AdjectiveType == AdjectiveType.NA)
         {
@@ -72,7 +79,7 @@ public class Adjective : IWord
         string conjugatedForm = "";
         if (AdjectiveType == AdjectiveType.I)
         {
-            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + " じゃない";
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "くない";
         }
         else if (AdjectiveType == AdjectiveType.NA)
         {
@@ -90,11 +97,47 @@ public class Adjective : IWord
         string conjugatedForm = "";
         if (AdjectiveType == AdjectiveType.I)
         {
-            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + " くない";
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "くありません";
         }
         else if (AdjectiveType == AdjectiveType.NA)
         {
             conjugatedForm = dictionaryForm + "じゃありません";
+        }
+        else if (AdjectiveType == AdjectiveType.IRR)
+        {
+            return standardNonpastNegative;
+        }
+        return conjugatedForm;
+    }
+
+    private string ConjugatePolitePastNegative(string dictionaryForm)
+    {
+        string conjugatedForm = "";
+        if (AdjectiveType == AdjectiveType.I)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "くありませんでした";
+        }
+        else if (AdjectiveType == AdjectiveType.NA)
+        {
+            conjugatedForm = dictionaryForm + "じゃありませんでした";
+        }
+        else if (AdjectiveType == AdjectiveType.IRR)
+        {
+            return standardNonpastNegative;
+        }
+        return conjugatedForm;
+    }
+
+    private string ConjugateStandardPastNegative(string dictionaryForm)
+    {
+        string conjugatedForm = "";
+        if (AdjectiveType == AdjectiveType.I)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "くなかった";
+        }
+        else if (AdjectiveType == AdjectiveType.NA)
+        {
+            conjugatedForm = dictionaryForm + "じゃなかった";
         }
         else if (AdjectiveType == AdjectiveType.IRR)
         {
@@ -110,16 +153,4 @@ public enum AdjectiveType
     I, //i-adjective
     NA, // na-adjective
     IRR, // irregular
-}
-
-public enum AdjectiveConjugation
-{
-    StandardNonpast,
-    PoliteNonpast,
-    PoliteNonpastNegative,
-    PolitePast,
-    PolitePastNegative,
-    StandardNonpastNegative,
-    StandardPast,
-    StandardPastNegative,
 }

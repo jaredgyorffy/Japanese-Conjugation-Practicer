@@ -567,7 +567,7 @@ public enum VerbType
     IRR, // Irregular
 }
 
-public enum VerbConjugation
+public enum ConjugationType
 {
     StandardNonpast,
     PoliteNonpast,

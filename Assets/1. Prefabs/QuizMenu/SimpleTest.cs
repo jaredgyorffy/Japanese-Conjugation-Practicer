@@ -19,7 +19,8 @@ public class SimpleTest : MonoBehaviour
     private string currentAnswer;
     private int amountCorrect;
 
-    private List<VerbConjugation> questionTypes;
+    private List<ConjugationType> VerbConjugationTypes;
+    private List<ConjugationType> AdjectiveConjugationTypes;
 
     [CreateProperty] public string QuestionType => questionType;
     private string questionType;
@@ -39,11 +40,13 @@ public class SimpleTest : MonoBehaviour
     [CreateProperty] public string TotalQuestions => totalQuestions.ToString();
     private int totalQuestions;
 
-    public List<Verb> quizQuestions;
+    public List<Verb> Verbs;
+    public List<Adjective> Adjectives;
 
-    private List<(string, VerbConjugation)> askedQuestions = new();
+    private List<(string, ConjugationType)> askedQuestions = new();
 
     [SerializeField] private InputManager inputManager;
+    //TODO: Add toggles to MainMenu to control these
     private bool confirmAnswer = false;
     public bool StrictMode = false;
     void Start()
@@ -74,52 +77,79 @@ public class SimpleTest : MonoBehaviour
 
     private void InitializeQuestionTypes(QuizConfiguration config)
     {
-        questionTypes = new List<VerbConjugation>();
-        if (config.PoliteNonpastForm)
+        VerbConjugationTypes = new List<ConjugationType>();
+        if (config.VerbPoliteNonpastForm)
         {
-            questionTypes.Add(VerbConjugation.PoliteNonpast);
+            VerbConjugationTypes.Add(ConjugationType.PoliteNonpast);
         }
-        if (config.PoliteNonpastNegativeForm)
+        if (config.VerbPoliteNonpastNegativeForm)
         {
-            questionTypes.Add(VerbConjugation.PoliteNonpastNegative);
+            VerbConjugationTypes.Add(ConjugationType.PoliteNonpastNegative);
         }
-        if (config.PolitePastForm)
+        if (config.VerbPolitePastForm)
         {
-            questionTypes.Add(VerbConjugation.PolitePast);
+            VerbConjugationTypes.Add(ConjugationType.PolitePast);
         }
-        if (config.PolitePastNegativeForm)
+        if (config.VerbPolitePastNegativeForm)
         {
-            questionTypes.Add(VerbConjugation.PolitePastNegative);
+            VerbConjugationTypes.Add(ConjugationType.PolitePastNegative);
         }
-        if (config.StandardPastForm)
+        if (config.VerbStandardPastForm)
         {
-            questionTypes.Add(VerbConjugation.StandardPast);
+            VerbConjugationTypes.Add(ConjugationType.StandardPast);
         }
-        if (config.StandardNonpastNegativeForm)
+        if (config.VerbStandardNonpastNegativeForm)
         {
-            questionTypes.Add(VerbConjugation.StandardNonpastNegative);
+            VerbConjugationTypes.Add(ConjugationType.StandardNonpastNegative);
         }
-        if (config.StandardPastNegativeForm)
+        if (config.VerbStandardPastNegativeForm)
         {
-            questionTypes.Add(VerbConjugation.StandardPastNegative);
+            VerbConjugationTypes.Add(ConjugationType.StandardPastNegative);
         }
-        if (config.PoliteVolitionalForm)
+        if (config.VerbPoliteVolitionalForm)
         {
-            questionTypes.Add(VerbConjugation.PoliteVolitional);
+            VerbConjugationTypes.Add(ConjugationType.PoliteVolitional);
         }
-        if (config.CasualVolitionalForm)
+        if (config.VerbCasualVolitionalForm)
         {
-            questionTypes.Add(VerbConjugation.CasualVolitional);
+            VerbConjugationTypes.Add(ConjugationType.CasualVolitional);
         }
-        if (config.TeForm)
+        if (config.VerbTeForm)
         {
-            questionTypes.Add(VerbConjugation.TeForm);
+            VerbConjugationTypes.Add(ConjugationType.TeForm);
+        }
+
+        AdjectiveConjugationTypes = new List<ConjugationType>();
+        if (config.AdjectivePoliteNonpastNegativeForm)
+        {
+            AdjectiveConjugationTypes.Add(ConjugationType.PoliteNonpastNegative);
+        }
+        if (config.AdjectivePolitePastForm)
+        {
+            AdjectiveConjugationTypes.Add(ConjugationType.PolitePast);
+        }
+        if (config.AdjectivePolitePastNegativeForm)
+        {
+            AdjectiveConjugationTypes.Add(ConjugationType.PolitePastNegative);
+        }
+        if (config.AdjectiveStandardPastForm)
+        {
+            AdjectiveConjugationTypes.Add(ConjugationType.StandardPast);
+        }
+        if (config.AdjectiveStandardNonpastNegativeForm)
+        {
+            AdjectiveConjugationTypes.Add(ConjugationType.StandardNonpastNegative);
+        }
+        if (config.AdjectiveStandardPastNegativeForm)
+        {
+            VerbConjugationTypes.Add(ConjugationType.StandardPastNegative);
         }
     }
 
     public void InitializeQuiz(QuizConfiguration config, int QuestionCount = 0, Action restartAction = null)
     {
-        quizQuestions = config.words;
+        Verbs = config.Verbs;
+        Adjectives = config.Adjectives;
 
         askedQuestions = new();
         restartButton.SetEnabled(true);
@@ -132,7 +162,7 @@ public class SimpleTest : MonoBehaviour
         }
         else
         {
-            totalQuestions = quizQuestions.Count;
+            totalQuestions = Verbs.Count;
         }
         currentQuestion = 0;
         amountCorrect = 0;
@@ -141,10 +171,24 @@ public class SimpleTest : MonoBehaviour
         PrepareNextQuestion();
     }
 
-    private VerbConjugation GetQuestionType()
+    private ConjugationType GetQuestionType(WordType wordtype)
     {
-        int index = UnityEngine.Random.Range(0, questionTypes.Count);
-        return questionTypes[index];
+        if (wordtype == WordType.Verb)
+        {
+            int index = UnityEngine.Random.Range(0, VerbConjugationTypes.Count);
+            return VerbConjugationTypes[index];
+        }
+        else if (wordtype == WordType.Adjective)
+        {
+            int index = UnityEngine.Random.Range(0, AdjectiveConjugationTypes.Count);
+            return AdjectiveConjugationTypes[index];
+        }
+        else
+        {
+            Debug.LogWarning("Unable to select question type because invalid wordtype was supplied");
+            return 0;
+        }
+
     }
 
     private void OnInputChanged()
@@ -187,7 +231,7 @@ public class SimpleTest : MonoBehaviour
             if (textField.value == currentAnswer)
             {
                 feedbackText = "";
-                //Play Correct VFX
+                //TODO: Add Correct VFX
                 amountCorrect += 1;
             }
             else
@@ -218,76 +262,144 @@ public class SimpleTest : MonoBehaviour
             return;
         }
 
-        (int, VerbConjugation) question = GetQuestion();
+        (int, WordType wordtype, ConjugationType) question = GetQuestion();
 
         int wordIndex = question.Item1;
-        VerbConjugation form = question.Item2;
+        ConjugationType form = question.Item3;
+        WordType wordType = question.wordtype;
 
-        switch (form)
+        if (wordType == WordType.Verb)
         {
-        case VerbConjugation.PoliteNonpast:
-            currentAnswer = quizQuestions[wordIndex].PoliteNonpast;
-            questionType = "Polite Non-past Form";
-            break;
-        case VerbConjugation.PoliteNonpastNegative:
-            currentAnswer = quizQuestions[wordIndex].PoliteNonPastNegative;
-            questionType = "Polite Non-past Negative Form";
-            break;
-        case VerbConjugation.PolitePast:
-            currentAnswer = quizQuestions[wordIndex].PolitePast;
-            questionType = "Polite Past Form";
-            break;
-        case VerbConjugation.PolitePastNegative:
-            currentAnswer = quizQuestions[wordIndex].PolitePastNegative;
-            questionType = "Polite Past Negative Form";
-            break;
-        case VerbConjugation.StandardPast:
-            currentAnswer = quizQuestions[wordIndex].StandardPast;
-            questionType = "Standard Past Form";
-            break;
-        case VerbConjugation.StandardNonpast:
-            currentAnswer = quizQuestions[wordIndex].StandardNonpast;
-            questionType = "Standard Past Form";
-            break;
-        case VerbConjugation.StandardNonpastNegative:
-            currentAnswer = quizQuestions[wordIndex].StandardNonpastNegative;
-            questionType = "Standard Non-past Negative Form";
-            break;
-        case VerbConjugation.StandardPastNegative:
-            currentAnswer = quizQuestions[wordIndex].StandardPastNegative;
-            questionType = "Standard Past Negative Form";
-            break;
-        case VerbConjugation.PoliteVolitional:
-            currentAnswer = quizQuestions[wordIndex].PoliteVolitional;
-            questionType = "Polite Volitional Form";
-            break;
-        case VerbConjugation.TeForm:
-            currentAnswer = quizQuestions[wordIndex].TeForm;
-            questionType = "Te-form";
-            break;
-        case VerbConjugation.CasualVolitional:
-            currentAnswer = quizQuestions[wordIndex].CasualVolitional;
-            questionType = "Casual Volitional Form";
-            break;
-        default:
-            Debug.LogWarning("Error: Question Type not valid");
-            break;
+            switch (form)
+            {
+            case ConjugationType.PoliteNonpast:
+                currentAnswer = Verbs[wordIndex].PoliteNonpast;
+                questionType = "Polite Non-past Form";
+                break;
+            case ConjugationType.PoliteNonpastNegative:
+                currentAnswer = Verbs[wordIndex].PoliteNonPastNegative;
+                questionType = "Polite Non-past Negative Form";
+                break;
+            case ConjugationType.PolitePast:
+                currentAnswer = Verbs[wordIndex].PolitePast;
+                questionType = "Polite Past Form";
+                break;
+            case ConjugationType.PolitePastNegative:
+                currentAnswer = Verbs[wordIndex].PolitePastNegative;
+                questionType = "Polite Past Negative Form";
+                break;
+            case ConjugationType.StandardPast:
+                currentAnswer = Verbs[wordIndex].StandardPast;
+                questionType = "Standard Past Form";
+                break;
+            case ConjugationType.StandardNonpast:
+                currentAnswer = Verbs[wordIndex].StandardNonpast;
+                questionType = "Standard Past Form";
+                break;
+            case ConjugationType.StandardNonpastNegative:
+                currentAnswer = Verbs[wordIndex].StandardNonpastNegative;
+                questionType = "Standard Non-past Negative Form";
+                break;
+            case ConjugationType.StandardPastNegative:
+                currentAnswer = Verbs[wordIndex].StandardPastNegative;
+                questionType = "Standard Past Negative Form";
+                break;
+            case ConjugationType.PoliteVolitional:
+                currentAnswer = Verbs[wordIndex].PoliteVolitional;
+                questionType = "Polite Volitional Form";
+                break;
+            case ConjugationType.TeForm:
+                currentAnswer = Verbs[wordIndex].TeForm;
+                questionType = "Te-form";
+                break;
+            case ConjugationType.CasualVolitional:
+                currentAnswer = Verbs[wordIndex].CasualVolitional;
+                questionType = "Casual Volitional Form";
+                break;
+            default:
+                Debug.LogWarning("Error: Question Type not valid");
+                break;
+            }
+            currentKanji = Verbs[wordIndex].Kanji;
+            currentKana = Verbs[wordIndex].Kana;
+            askedQuestions.Add((Verbs[wordIndex].Kana, form));
         }
-        currentKanji = quizQuestions[wordIndex].kanji;
-        currentKana = quizQuestions[wordIndex].Kana;
-        askedQuestions.Add((quizQuestions[wordIndex].Kana, form));
+        else if (wordType == WordType.Adjective)
+        {
+            switch (form)
+            {
+            case ConjugationType.PoliteNonpastNegative:
+                currentAnswer = Adjectives[wordIndex].PoliteNonpastNegative;
+                questionType = "Polite Non-past Negative Form";
+                break;
+            case ConjugationType.PolitePast:
+                currentAnswer = Adjectives[wordIndex].PolitePast;
+                questionType = "Polite Past Form";
+                break;
+            case ConjugationType.PolitePastNegative:
+                currentAnswer = Adjectives[wordIndex].PolitePastNegative;
+                questionType = "Polite Past Negative Form";
+                break;
+            case ConjugationType.StandardPast:
+                currentAnswer = Adjectives[wordIndex].StandardPast;
+                questionType = "Standard Past Form";
+                break;
+            case ConjugationType.StandardNonpastNegative:
+                currentAnswer = Adjectives[wordIndex].StandardNonpastNegative;
+                questionType = "Standard Non-past Negative Form";
+                break;
+            case ConjugationType.StandardPastNegative:
+                currentAnswer = Adjectives[wordIndex].StandardPastNegative;
+                questionType = "Standard Past Negative Form";
+                break;
+            default:
+                Debug.LogWarning("Error: Question Type not valid");
+                break;
+            }
+            currentKanji = Adjectives[wordIndex].Kanji;
+            currentKana = Adjectives[wordIndex].Kana;
+            askedQuestions.Add((Adjectives[wordIndex].Kana, form));
+        }
+        
+
         textField.Focus();
     }
 
-    private (int, VerbConjugation) GetQuestion()
+    private (int, WordType wordtype, ConjugationType) GetQuestion()
     {
-        VerbConjugation form = GetQuestionType();
-        int wordIndex = UnityEngine.Random.Range(0, quizQuestions.Count);
-        if (askedQuestions.Contains((quizQuestions[wordIndex].Kana, form)))
+        WordType wordtype;
+        if (Verbs.Count > 0 && Adjectives.Count == 0)
         {
-            return GetQuestion();
+            wordtype = WordType.Verb;
         }
-        return (wordIndex, form);
+        else if (Verbs.Count == 0 && Adjectives.Count > 0)
+        {
+            wordtype = WordType.Adjective;
+        }
+        else
+        {
+            wordtype = RandomUtility.PercentageChanceOfTrue(0.5f)? WordType.Verb : WordType.Adjective;
+        }
+        ConjugationType form = GetQuestionType(wordtype);
+
+        int wordIndex = 0;
+        if (wordtype == WordType.Verb)
+        {
+            wordIndex = UnityEngine.Random.Range(0, Verbs.Count);
+            if (askedQuestions.Contains((Verbs[wordIndex].Kana, form)))
+            {
+                return GetQuestion();
+            }
+        }
+        else if (wordtype == WordType.Adjective)
+        {
+            wordIndex = UnityEngine.Random.Range(0, Adjectives.Count);
+            if (askedQuestions.Contains((Adjectives[wordIndex].Kana, form)))
+            {
+                return GetQuestion();
+            }
+        }
+        return (wordIndex, wordtype, form);
     }
 
     private void EndQuiz()

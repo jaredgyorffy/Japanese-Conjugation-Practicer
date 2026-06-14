@@ -189,8 +189,20 @@ MonoBehaviour:
     adjectiveType: 2
     meaning:
     - good
+    politePast: "\u3088\u304F\u3042\u308A\u307E\u3057\u305F"
+    standardPast: "\u3088\u304B\u3063\u305F"
+    standardNonpastNegative: "\u3088\u304F\u306A\u3044"
+    politeNonpastNegative: "\u3088\u304F\u3042\u308A\u307E\u305B\u3093"
+    politePastNegative: "\u3088\u304F\u3042\u308A\u307E\u305B\u3093\u3067\u3057\u305F"
+    standardPastNegative: "\u3088\u304F\u306A\u304B\u3063\u305F"
   - kana: "\u306F\u3084\u3044"
     kanji: "\u65E9\u3044"
     adjectiveType: 0
     meaning:
     - early
+    politePast: 
+    standardPast: 
+    standardNonpastNegative: 
+    politeNonpastNegative: 
+    politePastNegative: 
+    standardPastNegative: 
