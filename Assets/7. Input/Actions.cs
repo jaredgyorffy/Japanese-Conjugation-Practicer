@@ -1101,6 +1101,15 @@ public partial class @Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Exit"",
+                    ""type"": ""Button"",
+                    ""id"": ""e09ca964-0812-4e8c-baae-c357360122ea"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1112,6 +1121,28 @@ public partial class @Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Submit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1d908e5f-adab-45bc-959b-362b868999db"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d87419cc-f860-4319-a447-ccd86b6dd3a0"",
+                    ""path"": ""<Keyboard>/backquote"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Exit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1207,6 +1238,7 @@ public partial class @Actions: IInputActionCollection2, IDisposable
         // Quiz
         m_Quiz = asset.FindActionMap("Quiz", throwIfNotFound: true);
         m_Quiz_Submit = m_Quiz.FindAction("Submit", throwIfNotFound: true);
+        m_Quiz_Exit = m_Quiz.FindAction("Exit", throwIfNotFound: true);
     }
 
     ~@Actions()
@@ -1669,6 +1701,7 @@ public partial class @Actions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Quiz;
     private List<IQuizActions> m_QuizActionsCallbackInterfaces = new List<IQuizActions>();
     private readonly InputAction m_Quiz_Submit;
+    private readonly InputAction m_Quiz_Exit;
     /// <summary>
     /// Provides access to input actions defined in input action map "Quiz".
     /// </summary>
@@ -1684,6 +1717,10 @@ public partial class @Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Quiz/Submit".
         /// </summary>
         public InputAction @Submit => m_Wrapper.m_Quiz_Submit;
+        /// <summary>
+        /// Provides access to the underlying input action "Quiz/Exit".
+        /// </summary>
+        public InputAction @Exit => m_Wrapper.m_Quiz_Exit;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1713,6 +1750,9 @@ public partial class @Actions: IInputActionCollection2, IDisposable
             @Submit.started += instance.OnSubmit;
             @Submit.performed += instance.OnSubmit;
             @Submit.canceled += instance.OnSubmit;
+            @Exit.started += instance.OnExit;
+            @Exit.performed += instance.OnExit;
+            @Exit.canceled += instance.OnExit;
         }
 
         /// <summary>
@@ -1727,6 +1767,9 @@ public partial class @Actions: IInputActionCollection2, IDisposable
             @Submit.started -= instance.OnSubmit;
             @Submit.performed -= instance.OnSubmit;
             @Submit.canceled -= instance.OnSubmit;
+            @Exit.started -= instance.OnExit;
+            @Exit.performed -= instance.OnExit;
+            @Exit.canceled -= instance.OnExit;
         }
 
         /// <summary>
@@ -1988,5 +2031,12 @@ public partial class @Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSubmit(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Exit" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnExit(InputAction.CallbackContext context);
     }
 }

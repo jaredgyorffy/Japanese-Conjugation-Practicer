@@ -44,8 +44,6 @@ public class SimpleTest : MonoBehaviour
     public List<Adjective> Adjectives;
 
     private List<(string, ConjugationType)> askedQuestions = new();
-
-    [SerializeField] private InputManager inputManager;
     //TODO: Add toggles to MainMenu to control these
     private bool confirmAnswer = false;
     public bool StrictMode = false;

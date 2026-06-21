@@ -1,0 +1,201 @@
+:root {
+}
+
+.panel {
+}
+
+.text {
+    font-size: 300%;
+    -unity-font-style: normal;
+    -unity-text-outline-width: 1px;
+    -unity-text-outline-color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 0 rgb(0, 0, 0);
+    white-space: nowrap;
+    letter-spacing: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-slice-type: sliced;
+    color: rgb(255, 255, 255);
+    flex-shrink: 0;
+    flex-grow: 1;
+    -unity-text-align: middle-left;
+    text-overflow: clip;
+}
+
+.Image {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/4.%20Art/Textures/angryFace.png?fileID=2800000&guid=6da573b8c0de35d4eb527fd0a41668cb&type=3#angryFace");
+    flex-shrink: 0;
+    flex-direction: column;
+    -unity-background-scale-mode: scale-to-fit;
+    width: 100%;
+    height: 100px;
+    justify-content: flex-end;
+    align-self: center;
+    align-items: center;
+    align-content: auto;
+}
+
+.FishIcon {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 10%;
+    background-image: url("project://database/Assets/4.%20Art/Textures/UI%20Textures/Fish%20Icons/caught_pod.png?fileID=2800000&guid=630cb1dd1770fe74c8901af289bb3398&type=3#caught_pod");
+    align-self: stretch;
+    background-size: contain;
+    height: 100px;
+}
+
+.FadeOut {
+    transition-duration: 0.25s;
+    opacity: 0;
+    transition-property: opacity;
+}
+
+.FadeIn {
+    transition-duration: 0.25s;
+    opacity: 1;
+    transition-property: opacity;
+}
+
+.BounceStart {
+    transition-property: scale;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out-cubic;
+    scale: 1 0.5;
+}
+
+.BounceEnd {
+    transition-property: scale;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out-back;
+    scale: 1 1;
+}
+
+.ScaleStart {
+    transition-property: scale;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out-back;
+    scale: 1 1;
+}
+
+.ScaleEnd {
+    transition-property: scale;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out-cubic;
+    scale: 0 0 0;
+}
+
+.ButtonPressed {
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 15px;
+    border-right-width: 15px;
+    border-bottom-width: 15px;
+    border-left-width: 15px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    transition-duration: 1s;
+    transition-property: border-width;
+    translate: 0% 5%;
+    transition-timing-function: linear;
+}
+
+.ButtonReleased {
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.h1 {
+    font-size: 400%;
+}
+
+.p {
+    font-size: 185%;
+}
+
+.Button:hover {
+    scale: 1.1 1.1;
+    background-color: rgb(221, 221, 221);
+    transition-duration: 0.25s;
+}
+
+.Button:active {
+    margin-top: 10px;
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.Button {
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-bottom-left-radius: 17px;
+}
+
+.Divider {
+    flex-grow: 0;
+    background-color: rgb(255, 255, 255);
+    height: 5px;
+    width: 80%;
+    align-items: center;
+    align-self: center;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 34px;
+    border-top-right-radius: 34px;
+    border-bottom-right-radius: 34px;
+    border-bottom-left-radius: 34px;
+    margin-top: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 2.5%;
+}
+
+.SlowFadeIn {
+    transition-delay: 0s;
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 1;
+}
+
+.SlowFadeOut {
+    transition-delay: 0s;
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 0;
+}

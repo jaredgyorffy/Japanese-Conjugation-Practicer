@@ -109,6 +109,7 @@ public class MainMenu : MonoBehaviour
             var toggleBox = togglePrefab.Instantiate();
             var toggleLayer = toggleBox.MQ<Label>().text = globalVariables.WordLists[i].listName;
 
+            toggleBox.MQ<Toggle>().value = true;
             contentToggles.Add(toggleBox.MQ<Toggle>());
             content.Add(toggleBox);
         }
