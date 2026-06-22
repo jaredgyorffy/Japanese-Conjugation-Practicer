@@ -5,15 +5,19 @@ VisualElement {
 }
 
 .Title {
-    font-size: 40px;
+    font-size: 124%;
     align-self: center;
     -unity-font-style: bold;
     align-items: center;
 }
 
 .Paragraph {
+    font-size: 50%;
 }
 
 .Subtitle {
-    font-size: 24px;
+    font-size: 24%;
+}
+
+.ToggleList {
 }

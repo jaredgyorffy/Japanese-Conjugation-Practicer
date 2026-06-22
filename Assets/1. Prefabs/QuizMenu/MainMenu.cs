@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
         //GlobalTuner globalTuner = asyncHandle.WaitForCompletion();
 
         uiDocument = GetComponent<UIDocument>();
-        root = uiDocument.rootVisualElement;
+        root = uiDocument.rootVisualElement.MQ<VisualElement>("StartScreen");
         root.dataSource = this;
         startButton = root.MQ<Button>("Start");
         questionCount = root.MQ<IntegerField>("QuestionCount");

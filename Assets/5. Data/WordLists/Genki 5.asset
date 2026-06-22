@@ -107,8 +107,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: 
-    kanji: "\u304D\u308C\u3044"
+  - kana: "\u304D\u308C\u3044"
+    kanji: 
     adjectiveType: 1
     meaning:
     - beautiful
@@ -119,8 +119,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u5143\u6C17"
-    kanji: "\u3052\u3093\u304D"
+  - kana: "\u3052\u3093\u304D"
+    kanji: "\u5143\u6C17"
     adjectiveType: 1
     meaning:
     - healthy
@@ -131,8 +131,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u9759\u304B"
-    kanji: "\u3057\u305A\u304B"
+  - kana: "\u3057\u305A\u304B"
+    kanji: "\u9759\u304B"
     adjectiveType: 1
     meaning:
     - quiet
@@ -142,8 +142,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u597D\u304D"
-    kanji: "\u3059\u304D"
+  - kana: "\u3059\u304D"
+    kanji: "\u597D\u304D"
     adjectiveType: 1
     meaning:
     - fond of
@@ -154,8 +154,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u5927\u5ACC\u3044"
-    kanji: "\u3060\u3044\u304D\u3089\u3044"
+  - kana: "\u3060\u3044\u304D\u3089\u3044"
+    kanji: "\u5927\u5ACC\u3044"
     adjectiveType: 1
     meaning:
     - to hate
@@ -165,8 +165,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u5927\u597D\u304D"
-    kanji: "\u3060\u3044\u3059\u304D"
+  - kana: "\u3060\u3044\u3059\u304D"
+    kanji: "\u5927\u597D\u304D"
     adjectiveType: 1
     meaning:
     - very fond of
@@ -177,8 +177,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: 
-    kanji: "\u306B\u304E\u3084\u304B"
+  - kana: "\u306B\u304E\u3084\u304B"
+    kanji: 
     adjectiveType: 1
     meaning:
     - lively
@@ -188,8 +188,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u6687"
-    kanji: "\u3072\u307E"
+  - kana: "\u3072\u307E"
+    kanji: "\u6687"
     adjectiveType: 1
     meaning:
     - not busy
@@ -200,8 +200,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u65B0\u3057\u3044"
-    kanji: "\u3042\u305F\u3089\u3057\u3044"
+  - kana: "\u3042\u305F\u3089\u3057\u3044"
+    kanji: "\u65B0\u3057\u3044"
     adjectiveType: 1
     meaning:
     - new
@@ -211,8 +211,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u65B0\u3057\u3044"
-    kanji: "\u3042\u305F\u3089\u3057\u3044"
+  - kana: "\u3042\u305F\u3089\u3057\u3044"
+    kanji: "\u65B0\u3057\u3044"
     adjectiveType: 0
     meaning:
     - new
@@ -222,8 +222,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u71B1\u3044"
-    kanji: "\u3042\u3064\u3044"
+  - kana: "\u3042\u3064\u3044"
+    kanji: "\u71B1\u3044"
     adjectiveType: 0
     meaning:
     - hot (thing)
@@ -233,8 +233,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u6691\u3044"
-    kanji: "\u3042\u3064\u3044"
+  - kana: "\u3042\u3064\u3044"
+    kanji: "\u6691\u3044"
     adjectiveType: 0
     meaning:
     - hot (weather)
@@ -244,8 +244,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u5FD9\u3057\u3044"
-    kanji: "\u3044\u305D\u304C\u3057\u3044"
+  - kana: "\u3044\u305D\u304C\u3057\u3044"
+    kanji: "\u5FD9\u3057\u3044"
     adjectiveType: 0
     meaning:
     - busy (people/days)
@@ -255,8 +255,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u5927\u304D\u3044"
-    kanji: "\u304A\u304A\u304D\u3044"
+  - kana: "\u304A\u304A\u304D\u3044"
+    kanji: "\u5927\u304D\u3044"
     adjectiveType: 0
     meaning:
     - large
@@ -266,8 +266,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u9762\u767D\u3044"
-    kanji: "\u304A\u3082\u3057\u308D\u3044"
+  - kana: "\u304A\u3082\u3057\u308D\u3044"
+    kanji: "\u9762\u767D\u3044"
     adjectiveType: 0
     meaning:
     - interesting
@@ -278,21 +278,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u304B\u3063\u3053\u3044\u3044"
-    kanji: "\u304A\u3082\u3057\u308D\u3044"
-    adjectiveType: 2
-    meaning:
-    - good-looking
-    - cool
-    - attractive
-    politePast: 
-    standardPast: 
-    standardNonpastNegative: 
-    politeNonpastNegative: 
-    politePastNegative: 
-    standardPastNegative: 
-  - kana: "\u6016\u3044"
-    kanji: "\u3053\u308F\u3044"
+  - kana: "\u3053\u308F\u3044"
+    kanji: "\u6016\u3044"
     adjectiveType: 0
     meaning:
     - frightening
@@ -302,8 +289,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u5BD2\u3044"
-    kanji: "\u3055\u3080\u3044"
+  - kana: "\u3055\u3080\u3044"
+    kanji: "\u5BD2\u3044"
     adjectiveType: 0
     meaning:
     - cold (weather)
@@ -313,8 +300,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u697D\u3057\u3044"
-    kanji: "\u305F\u306E\u3057\u3044"
+  - kana: "\u305F\u306E\u3057\u3044"
+    kanji: "\u697D\u3057\u3044"
     adjectiveType: 0
     meaning:
     - fun
@@ -324,8 +311,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u5C0F\u3055\u3044"
-    kanji: "\u3061\u3044\u3055\u3044"
+  - kana: "\u3061\u3044\u3055\u3044"
+    kanji: "\u5C0F\u3055\u3044"
     adjectiveType: 0
     meaning:
     - small
@@ -335,8 +322,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: 
-    kanji: "\u3064\u307E\u3089\u306A\u3044"
+  - kana: "\u3064\u307E\u3089\u306A\u3044"
+    kanji: 
     adjectiveType: 0
     meaning:
     - boring
@@ -346,8 +333,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u53E4\u3044"
-    kanji: "\u3075\u308B\u3044"
+  - kana: "\u3075\u308B\u3044"
+    kanji: "\u53E4\u3044"
     adjectiveType: 0
     meaning:
     - old (thing)
@@ -357,8 +344,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: 
-    kanji: "\u3084\u3055\u3057\u3044"
+  - kana: "\u3084\u3055\u3057\u3044"
+    kanji: 
     adjectiveType: 0
     meaning:
     - easy (problem)
@@ -369,8 +356,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: 
-    kanji: "\u3080\u305A\u304B\u3057\u3044"
+  - kana: "\u3080\u305A\u304B\u3057\u3044"
+    kanji: 
     adjectiveType: 0
     meaning:
     - difficult
@@ -380,8 +367,8 @@ MonoBehaviour:
     politeNonpastNegative: 
     politePastNegative: 
     standardPastNegative: 
-  - kana: "\u5B89\u3044"
-    kanji: "\u3084\u3059\u3044"
+  - kana: "\u3084\u3059\u3044"
+    kanji: "\u5B89\u3044"
     adjectiveType: 0
     meaning:
     - inexpensive
