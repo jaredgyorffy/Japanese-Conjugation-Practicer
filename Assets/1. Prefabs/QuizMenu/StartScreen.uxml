@@ -2,6 +2,7 @@
     <Style src="project://database/Assets/1.%20Prefabs/QuizMenu/Style.uss?fileID=7433441132597879392&amp;guid=2a25d9aa4030f1f42a59a0d75a5e1857&amp;type=3#Style"/>
     <ui:ScrollView name="StartScreen" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" style="display: flex; visibility: visible; overflow: visible; align-items: stretch; justify-content: flex-start;">
         <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgb(255, 255, 255); padding-top: 5%; padding-right: 5%; padding-bottom: 5%; padding-left: 5%; flex-shrink: 0; width: auto; height: auto; flex-direction: column; flex-wrap: nowrap; align-self: auto; justify-content: flex-start; align-content: auto;">
+            <ui:IntegerField label="Number of Questions" value="12" name="QuestionCount" keyboard-type="NumberPad" style="width: 100%; align-self: center;"/>
             <ui:VisualElement name="Options" style="flex-grow: 0; flex-direction: column; white-space: normal; flex-shrink: 0;">
                 <ui:VisualElement name="VerbForms" class="ToggleList">
                     <ui:Label text="Verb Forms&#10;" name="VerbFormsTitle" class="Title"/>
@@ -12,10 +13,12 @@
                 <ui:VisualElement name="Content" class="ToggleList" style="flex-grow: 0; flex-direction: column; flex-wrap: nowrap; flex-shrink: 1; width: 100%; align-items: stretch; justify-content: center; align-self: center; align-content: auto;">
                     <ui:Label text="Content" name="ContentTitle" class="Title" style="flex-wrap: nowrap;"/>
                 </ui:VisualElement>
+                <ui:VisualElement name="Spacer" style="flex-grow: 0; height: 5%;"/>
+                <ui:VisualElement name="Options" class="ToggleList" style="flex-grow: 0; flex-direction: column; flex-wrap: nowrap; flex-shrink: 1; width: 100%; align-items: stretch; justify-content: center; align-self: center; align-content: auto;">
+                    <ui:Label text="Options&#10;" name="Options" class="Title" style="flex-wrap: nowrap;"/>
+                </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="Spacer" style="flex-grow: 0; height: 5%;"/>
-            <ui:IntegerField label="Number of Questions" value="12" name="QuestionCount" style="width: 100%; align-self: center;"/>
-            <ui:Button name="Start" class="Button" style="flex-grow: 0; flex-shrink: 0; margin-top: 10%; margin-right: 10%; margin-bottom: 10%; margin-left: 10%; width: 33%; align-items: center; justify-content: center; align-self: center;">
+            <ui:Button name="Start" double-click-selects-word="false" triple-click-selects-line="false" display-tooltip-when-elided="false" class="Button" style="flex-grow: 0; flex-shrink: 0; margin-top: 10%; margin-right: 10%; margin-bottom: 10%; margin-left: 10%; width: 33%; align-items: center; justify-content: center; align-self: center;">
                 <ui:Label text="Begin Quiz" class="Title"/>
             </ui:Button>
             <ui:Label text="Label" name="Warning" class="Title" style="align-self: center; color: rgb(255, 0, 0); visibility: hidden;"/>

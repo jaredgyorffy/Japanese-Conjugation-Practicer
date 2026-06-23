@@ -211,6 +211,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3106006446578892516, guid: 4f89c3e25444b574daa26671063e9949, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965276859552169432, guid: 4f89c3e25444b574daa26671063e9949, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357614995797587108, guid: 4f89c3e25444b574daa26671063e9949, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357614995797587108, guid: 4f89c3e25444b574daa26671063e9949, type: 3}
+      propertyPath: uiDocument
+      value: 
+      objectReference: {fileID: 201653546}
     - target: {fileID: 7357614995797587108, guid: 4f89c3e25444b574daa26671063e9949, type: 3}
       propertyPath: inputManager
       value: 
@@ -220,6 +236,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f89c3e25444b574daa26671063e9949, type: 3}
+--- !u!114 &201653546 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4965276859552169432, guid: 4f89c3e25444b574daa26671063e9949, type: 3}
+  m_PrefabInstance: {fileID: 201653545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e805e3fd445264e9f42379eec403ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  tickRate: 5
   KanaRomajiList: {fileID: 11400000, guid: fbf3c020122df7444bccb570f8415f17, type: 2}
 --- !u!114 &543165421
 MonoBehaviour:
@@ -566,9 +594,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb58b2e8b86d0814e92ed383bec3a2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTest
+  StrictMode: 0
   Verbs: []
   Adjectives: []
-  StrictMode: 0
 --- !u!1 &742139356
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +771,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478899878}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
@@ -758,7 +786,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478899878}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 

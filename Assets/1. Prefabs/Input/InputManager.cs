@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour, Actions.IQuizActions
     public event InputDelegate Submit_Cancelled;
     public event InputDelegate Exit_Performed;
     public event InputDelegate Exit_Cancelled;
+    
     private void Awake()
     {
        actions = new Actions();

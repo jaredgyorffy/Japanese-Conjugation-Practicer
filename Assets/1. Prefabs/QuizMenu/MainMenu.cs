@@ -19,6 +19,7 @@ public class MainMenu : MonoBehaviour
     private List<Toggle> verbFormToggles = new();
     private List<Toggle> adjectiveFormToggles = new();
     private List<Toggle> contentToggles = new();
+    private List<Toggle> optionsToggles = new();
 
     void Start()
     {
@@ -85,7 +86,7 @@ public class MainMenu : MonoBehaviour
         for (int i = 0; i < listOfVerbForms.Count; i++)
         {
             var toggleBox = togglePrefab.Instantiate();
-            var toggleLayer = toggleBox.MQ<Label>().text = listOfVerbForms[i].name;
+            toggleBox.MQ<Label>().text = listOfVerbForms[i].name;
 
             verbFormToggles.Add(toggleBox.MQ<Toggle>());
             verbForms.Add(toggleBox);
@@ -96,7 +97,7 @@ public class MainMenu : MonoBehaviour
         for (int i = 0; i < listOfAdjectiveForms.Count; i++)
         {
             var toggleBox = togglePrefab.Instantiate();
-            var toggleLayer = toggleBox.MQ<Label>().text = listOfAdjectiveForms[i].name;
+            toggleBox.MQ<Label>().text = listOfAdjectiveForms[i].name;
 
             adjectiveFormToggles.Add(toggleBox.MQ<Toggle>());
             adjectiveForms.Add(toggleBox);
@@ -107,12 +108,20 @@ public class MainMenu : MonoBehaviour
         for (int i = 0; i < globalVariables.WordLists.Count; i++)
         {
             var toggleBox = togglePrefab.Instantiate();
-            var toggleLayer = toggleBox.MQ<Label>().text = globalVariables.WordLists[i].listName;
+            toggleBox.MQ<Label>().text = globalVariables.WordLists[i].listName;
 
             toggleBox.MQ<Toggle>().value = true;
             contentToggles.Add(toggleBox.MQ<Toggle>());
             content.Add(toggleBox);
         }
+        
+        VisualElement option = root.MQ<VisualElement>("Options");
+        
+        var strictModeOption = togglePrefab.Instantiate();
+        strictModeOption.MQ<Label>().text = "Strict mode";
+        
+        optionsToggles.Add(strictModeOption.MQ<Toggle>());
+        option.Add(strictModeOption);
     }
 
     private QuizConfiguration InitializeQuiz()
@@ -149,6 +158,8 @@ public class MainMenu : MonoBehaviour
             }
         }
 
+        config.Strictmode = optionsToggles[0].value;
+
         return config;
     }
 
@@ -178,6 +189,8 @@ public class QuizConfiguration
     public bool AdjectiveStandardPastForm;
     public bool AdjectiveStandardNonpastNegativeForm;
     public bool AdjectiveStandardPastNegativeForm;
+
+    public bool Strictmode = false;
 
 
     public List<Verb> Verbs = new();

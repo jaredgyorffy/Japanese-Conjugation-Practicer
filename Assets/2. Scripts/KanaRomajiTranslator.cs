@@ -3,16 +3,19 @@ using UnityEngine.UIElements;
 
 public class KanaRomajiTranslator : MonoBehaviour
 {
+    [SerializeField] private int tickRate = 1;
     private Observable<string> input;
 
     public delegate void InputChangedEventHandler();
     public event InputChangedEventHandler InputChanged;
 
-    UIDocument uiDocument;
-    VisualElement root;
-    TextField textField;
+    private UIDocument uiDocument;
+    private VisualElement root;
+    private TextField textField;
 
     [SerializeField] KanaRomajiList KanaRomajiList;
+
+    private int tickCount = 0;
 
 
     private void Start()
@@ -23,15 +26,19 @@ public class KanaRomajiTranslator : MonoBehaviour
         input = new Observable<string>();
         BindInputChanged(input);
     }
-
     private void Update()
     {
-        input.Value = textField.value;
+        tickCount++;
+        if (tickCount >= tickRate)
+        {
+            input.Value = textField.value;
+            tickCount = 0;
+        }
     }
 
     private void InvokeStateChangedEvent()
     {
-        InputChanged.Invoke();
+        InputChanged?.Invoke();
         foreach (var pair in KanaRomajiList.ThreeLetterPairs)
         {
             FindAndReplaceRomaji(pair);

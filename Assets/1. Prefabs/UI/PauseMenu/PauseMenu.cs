@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private InputManager inputManager;
     
-    private UIDocument uiDocument;
+    [SerializeField] private  UIDocument uiDocument;
     private VisualElement root;
 
     private VisualElement pauseMenuElement;
@@ -32,7 +32,6 @@ public class PauseMenu : MonoBehaviour
 
     private void Awake()
     {
-        uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
         pauseMenuElement = root.MQ("PauseMenu");
         settingsMenuElement = root.MQ("SettingsMenu");

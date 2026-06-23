@@ -47,6 +47,7 @@ public class SimpleTest : MonoBehaviour
     //TODO: Add toggles to MainMenu to control these
     private bool confirmAnswer = false;
     public bool StrictMode = false;
+    
     void Start()
     {
         GetReferences();
@@ -66,6 +67,16 @@ public class SimpleTest : MonoBehaviour
 
         textConverter = GetComponent<KanaRomajiTranslator>();
         textConverter.InputChanged += OnInputChanged;
+        
+        textField.RegisterCallback<BlurEvent>(evt =>
+        {
+            if (MobileKeyboardInput.CheckInput() == TouchScreenKeyboard.Status.Done)
+            {
+                evt.StopImmediatePropagation();
+                OnPressSubmit();
+            }
+        });
+        
         textField.RegisterCallback<NavigationSubmitEvent>(evt =>
         {
             evt.StopImmediatePropagation();
@@ -164,6 +175,8 @@ public class SimpleTest : MonoBehaviour
         }
         currentQuestion = 0;
         amountCorrect = 0;
+        
+        StrictMode = config.Strictmode;
 
         this.restartAction = restartAction;
         PrepareNextQuestion();
@@ -228,7 +241,7 @@ public class SimpleTest : MonoBehaviour
         {
             if (textField.value == currentAnswer)
             {
-                feedbackText = "";
+                feedbackText = "Correct!";
                 //TODO: Add Correct VFX
                 amountCorrect += 1;
             }
