@@ -12,6 +12,7 @@ public class SimpleTest : MonoBehaviour
     private VisualElement root;
     private Button submitButton;
     private Button restartButton;
+    private Button hintButton;
     private TextField textField;
     private Action restartAction;
     private KanaRomajiTranslator textConverter;
@@ -24,6 +25,10 @@ public class SimpleTest : MonoBehaviour
 
     [CreateProperty] public string QuestionType => questionType;
     private string questionType;
+
+    private IWord currentWord;
+    private ConjugationType currentConjugationType;
+    private WordType currentWordType;
 
     [CreateProperty] public string PreviousAnswer => feedbackText;
     private string feedbackText;
@@ -44,8 +49,10 @@ public class SimpleTest : MonoBehaviour
     public List<Adjective> Adjectives;
 
     private List<(string, ConjugationType)> askedQuestions = new();
-    //TODO: Add toggles to MainMenu to control these
+    
     private bool confirmAnswer = false;
+    private bool hintVisible = false;
+        
     public bool StrictMode = false;
     
     void Start()
@@ -64,7 +71,11 @@ public class SimpleTest : MonoBehaviour
 
         restartButton = root.MQ<Button>("Restart");
         restartButton.clicked += RestartQuiz;
+        
 
+        hintButton = root.MQ<Button>("Hint");
+        hintButton.clicked += ToggleHint;
+        
         textConverter = GetComponent<KanaRomajiTranslator>();
         textConverter.InputChanged += OnInputChanged;
         
@@ -210,12 +221,25 @@ public class SimpleTest : MonoBehaviour
 
     private void OnPressSubmit()
     {
+        if (textField.value == "")
+        {
+            feedbackText = $"Please submit an Answer";
+            textField.style.color = Color.maroon;
+            textField.Focus();
+            return;
+        }
+        
         if (textField.value.ContainsInvalidCharacters())
         {
             feedbackText = $"Text must only contain japanese characters";
             textField.style.color = Color.maroon;
             textField.Focus();
             return;
+        }
+
+        if (hintVisible)
+        {
+            ToggleHint();
         }
 
         if (shouldConfirmAnswer == false)
@@ -391,8 +415,12 @@ public class SimpleTest : MonoBehaviour
         {
             wordtype = RandomUtility.PercentageChanceOfTrue(0.5f)? WordType.Verb : WordType.Adjective;
         }
+        
         ConjugationType form = GetQuestionType(wordtype);
-
+        
+        currentWordType = wordtype;
+        currentConjugationType = form;
+        
         int wordIndex = 0;
         if (wordtype == WordType.Verb)
         {
@@ -401,6 +429,7 @@ public class SimpleTest : MonoBehaviour
             {
                 return GetQuestion();
             }
+            currentWord = Verbs[wordIndex];
         }
         else if (wordtype == WordType.Adjective)
         {
@@ -409,7 +438,9 @@ public class SimpleTest : MonoBehaviour
             {
                 return GetQuestion();
             }
+            currentWord = Adjectives[wordIndex];
         }
+        
         return (wordIndex, wordtype, form);
     }
 
@@ -428,6 +459,417 @@ public class SimpleTest : MonoBehaviour
             submitButton.SetEnabled(true);
             restartAction.Invoke();
         }
+    }
+
+    private void ToggleHint()
+    {
+        if (hintVisible)
+        {
+            hintVisible = false;
+            hintButton.RemoveFromClassList("Pressed");
+            feedbackText = "";
+        }
+        else
+        {
+            hintVisible = true;
+            hintButton.AddToClassList("Pressed");
+            feedbackText = Hint(currentWord, currentConjugationType);
+        }
+    }
+    
+    string Hint(IWord word, ConjugationType conjugationType)
+    {
+        string hint = "";
+        
+        if (word.WordType == WordType.Verb)
+        {
+            VerbType vType = ((Verb)word).VerbType;
+            return VerbHint(vType, conjugationType);
+        }
+        
+        if (word.WordType == WordType.Adjective)
+        {
+            AdjectiveType aType = ((Adjective)word).AdjectiveType;
+            return AdjectiveHint(aType, conjugationType);
+        }
+
+        return hint;
+    }
+
+    private string AdjectiveHint(AdjectiveType aType, ConjugationType conjugationType)
+    {
+       string hint = "";
+        switch (conjugationType)
+        {
+            case ConjugationType.PoliteNonpast:
+            {
+                if (aType == AdjectiveType.I)
+                {
+            
+                }
+                else if (aType == AdjectiveType.NA)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "PoliteNonpast";
+                break;
+            }
+            case  ConjugationType.PoliteNonpastNegative:
+            {
+                if (aType == AdjectiveType.I)
+                {
+            
+                }
+                else if (aType == AdjectiveType.NA)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "PoliteNonpastNegative";
+                break;
+            }
+            case ConjugationType.PolitePast:
+            {
+                if (aType == AdjectiveType.I)
+                {
+            
+                }
+                else if (aType == AdjectiveType.NA)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "PolitePast";
+                break;
+            }
+
+            case ConjugationType.PolitePastNegative:
+            {
+                if (aType == AdjectiveType.I)
+                {
+            
+                }
+                else if (aType == AdjectiveType.NA)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "PolitePastNegative";
+                break;
+            }
+            case ConjugationType.PoliteVolitional:
+            {
+                if (aType == AdjectiveType.I)
+                {
+            
+                }
+                else if (aType == AdjectiveType.NA)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "PoliteVolitional";
+                break;
+            }
+
+            case ConjugationType.StandardNonpast:
+            {
+                if (aType == AdjectiveType.I)
+                {
+            
+                }
+                else if (aType == AdjectiveType.NA)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "StandardNonpast";
+                break;
+            }
+            case ConjugationType.StandardNonpastNegative:
+            {
+                if (aType == AdjectiveType.I)
+                {
+            
+                }
+                else if (aType == AdjectiveType.NA)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "StandardNonpastNegative";
+                break;
+            }
+            case ConjugationType.StandardPast:
+            {
+                if (aType == AdjectiveType.I)
+                {
+            
+                }
+                else if (aType == AdjectiveType.NA)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "StandardPast";
+                break;
+            }
+            case ConjugationType.StandardPastNegative:
+            {
+                if (aType == AdjectiveType.I)
+                {
+            
+                }
+                else if (aType == AdjectiveType.NA)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "StandardPastNegative";
+                break;
+            }
+            
+            default:
+            {
+                hint = "conjugationType Hint not Supported";
+                throw new Exception("conjugationType Hint not Supported");
+            }
+        }
+
+        return hint;
+    }
+
+    string VerbHint(VerbType vType, ConjugationType conjugationType)
+    {
+        string hint = "";
+        switch (conjugationType)
+        {
+            case ConjugationType.PoliteNonpast:
+            {
+                if (vType == VerbType.RU)
+                {
+            
+                }
+                else if (vType == VerbType.U)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "PoliteNonpast";
+                break;
+            }
+            case  ConjugationType.PoliteNonpastNegative:
+            {
+                if (vType == VerbType.RU)
+                {
+            
+                }
+                else if (vType == VerbType.U)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "PoliteNonpastNegative";
+                break;
+            }
+            case ConjugationType.PolitePast:
+            {
+                if (vType == VerbType.RU)
+                {
+            
+                }
+                else if (vType == VerbType.U)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "PolitePast";
+                break;
+            }
+
+            case ConjugationType.PolitePastNegative:
+            {
+                if (vType == VerbType.RU)
+                {
+            
+                }
+                else if (vType == VerbType.U)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "PolitePastNegative";
+                break;
+            }
+            case ConjugationType.PoliteVolitional:
+            {
+                if (vType == VerbType.RU)
+                {
+            
+                }
+                else if (vType == VerbType.U)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "PoliteVolitional";
+                break;
+            }
+
+            case ConjugationType.StandardNonpast:
+            {
+                if (vType == VerbType.RU)
+                {
+            
+                }
+                else if (vType == VerbType.U)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "StandardNonpast";
+                break;
+            }
+            case ConjugationType.StandardNonpastNegative:
+            {
+                if (vType == VerbType.RU)
+                {
+            
+                }
+                else if (vType == VerbType.U)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                return hint = "StandardNonpastNegative";
+                break;
+            }
+            case ConjugationType.StandardPast:
+            {
+                if (vType == VerbType.RU)
+                {
+            
+                }
+                else if (vType == VerbType.U)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "StandardPast";
+                break;
+            }
+            case ConjugationType.StandardPastNegative:
+            {
+                if (vType == VerbType.RU)
+                {
+            
+                }
+                else if (vType == VerbType.U)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "StandardPastNegative";
+                break;
+            }
+            case ConjugationType.TeForm:
+            {
+                if (vType == VerbType.RU)
+                {
+            
+                }
+                else if (vType == VerbType.U)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "TeForm";
+                break;
+            }
+            case ConjugationType.CasualVolitional:
+            {
+                if (vType == VerbType.RU)
+                {
+
+                }
+                else if (vType == VerbType.U)
+                {
+            
+                }
+                else
+                {
+            
+                }
+                hint = "CasualVolitional";
+                break;
+            }
+            
+            default:
+            {
+                hint = "conjugationType Hint not Supported";
+                throw new Exception("conjugationType Hint not Supported");
+            }
+        }
+
+        return hint;
     }
 
     private void OnDestroy()

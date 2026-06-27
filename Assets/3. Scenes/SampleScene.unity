@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e805e3fd445264e9f42379eec403ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  tickRate: 5
+  tickRate: 1
   KanaRomajiList: {fileID: 11400000, guid: fbf3c020122df7444bccb570f8415f17, type: 2}
 --- !u!114 &543165421
 MonoBehaviour:
@@ -594,9 +594,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb58b2e8b86d0814e92ed383bec3a2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTest
-  StrictMode: 0
   Verbs: []
   Adjectives: []
+  StrictMode: 0
 --- !u!1 &742139356
 GameObject:
   m_ObjectHideFlags: 0
