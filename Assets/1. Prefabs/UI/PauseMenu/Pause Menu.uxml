@@ -6,7 +6,7 @@
                 <ui:Label text="Pause" class="h1 text" style="align-items: auto; justify-content: flex-start; align-self: center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; -unity-text-align: middle-left; white-space: nowrap; text-overflow: clip; flex-grow: 0;"/>
                 <ui:VisualElement name="Buttons" style="flex-grow: 1; align-self: auto; justify-content: center;">
                     <ui:Button text="Resume " name="Resume" display-tooltip-when-elided="false" class="p Button unity-button"/>
-                    <ui:Button text="Settings" name="Settings" class="p Button"/>
+                    <ui:Button text="Settings" name="Settings" class="p Button" style="display: none; visibility: visible;"/>
                     <ui:Button text="Exit To Menu" name="Exit" class="p Button"/>
                     <ui:Button text="Quit" name="Quit" class="p Button"/>
                 </ui:VisualElement>

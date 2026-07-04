@@ -180,7 +180,6 @@ public class QuizConfiguration
     public bool VerbStandardNonpastNegativeForm;
     public bool VerbStandardPastNegativeForm;
     public bool VerbPoliteVolitionalForm;
-    public bool VerbCasualVolitionalForm;
     public bool VerbTeForm;
 
     public bool AdjectivePoliteNonpastNegativeForm;
@@ -210,7 +209,6 @@ public class QuizConfiguration
         || VerbStandardNonpastNegativeForm
         || VerbStandardPastNegativeForm
         || VerbPoliteVolitionalForm
-        || VerbCasualVolitionalForm
         || VerbTeForm;
     }
 
@@ -235,7 +233,6 @@ public class QuizConfiguration
         (VerbStandardNonpastNegativeForm ? 1 : 0) +
         (VerbStandardPastNegativeForm ? 1 : 0) +
         (VerbPoliteVolitionalForm ? 1 : 0) +
-        (VerbCasualVolitionalForm ? 1 : 0) +
         (VerbTeForm ? 1 : 0);
     }
 
@@ -262,7 +259,6 @@ public class QuizConfiguration
             ("Standard Nonpast Negative Form", false),
             ("Standard Past Negative Form", false),
             ("Polite Volitional Form", false),
-            ("Casual Volitional Form", false),
             ("Te-Form", false),
         };
     }
@@ -282,7 +278,7 @@ public class QuizConfiguration
 
     public void SetVerbForms(List<(string name, bool on)> formsEnabled)
     {
-        if (formsEnabled.Count < 10)
+        if (formsEnabled.Count < 9)
             throw new ArgumentException("formsEnabled must have at least 11 elements.");
 
         VerbPoliteNonpastForm = formsEnabled[0].on;
@@ -293,8 +289,7 @@ public class QuizConfiguration
         VerbStandardNonpastNegativeForm = formsEnabled[5].on;
         VerbStandardPastNegativeForm = formsEnabled[6].on;
         VerbPoliteVolitionalForm = formsEnabled[7].on;
-        VerbCasualVolitionalForm = formsEnabled[8].on;
-        VerbTeForm = formsEnabled[9].on;
+        VerbTeForm = formsEnabled[8].on;
     }
 
     public void SetAdjectiveForms(List<(string name, bool on)> formsEnabled)
