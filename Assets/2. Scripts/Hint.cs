@@ -47,11 +47,11 @@ public static class Hint
             {
                 if (aType == AdjectiveType.I)
                 {
-                    hint = "To conjugate the I-adjective Polite Nonpast Negative form, replace い with くない. If used at the end of a sentence, use the pattern [Adjective + です].";
+                    hint = "To conjugate the I-adjective Polite Nonpast Negative form, replace い with くありません.";
                 }
                 else if (aType == AdjectiveType.NA)
                 {
-                    hint = "To conjugate the NA-adjective Polite Nonpast Negative form, Add じゃない. If used at the end of a sentence, use the pattern [Adjective + です].";
+                    hint = "To conjugate the NA-adjective Polite Nonpast Negative form, Add じゃありません.";
                 }
                 else
                 {
@@ -315,7 +315,9 @@ public static class Hint
                 }
                 else
                 {
-                    hint = "In the plain negative form, ない simply replaces ある altogether. Conjugate the other irregular forms as if they were る verbs";
+                    hint = "Although ある is not irregular, in the plain negative form, ない simply replaces ある altogether. Otherwise: " +
+                        "\n する　＞　しない" +
+                        "\n 来る ＞ こない";
                 }
                 break;
             }
@@ -328,18 +330,18 @@ public static class Hint
                 else if (vType == VerbType.U)
                 {
                     hint = "U-verb: Replace the /う/ from the end of the plain form according to the following rules: " +
-                        "［る］［う］［つ］Verb ￫ った\r\n\r\n" +
-                        "［く］［ぐ］￫ いだ\r\n\r\n" +
-                        "［ぬ］［ぶ］［む］￫ んだ\r\n" +
+                        "［る］［う］［つ］Verb ￫ った \n" +
+                        "［く］［ぐ］￫ いだ \n" +
+                        "［ぬ］［ぶ］［む］￫ んだ \n" +
                         "［す］￫ 話す + した";
                 }
                 else
                 {
-                    hint = 
-                        "行く ￫ 行った\r\n" +
-                        "する ￫ した\r\n" +
-                        "くる ￫ きた\r\n" +
-                        "問う ￫ 問うた\r\n" +
+                    hint =
+                        "行く ￫ 行った\n" +
+                        "する ￫ した\n" +
+                        "くる ￫ きた\n" +
+                        "問う ￫ 問うた\n" +
                         "請う ￫ 請うた";
                 }
                 break;
@@ -352,7 +354,7 @@ public static class Hint
                 }
                 else if (vType == VerbType.U)
                 {
-                    hint = "Convert the う sound into it's あ column equivilent, then add _ + なかった" +
+                    hint = "Convert the う sound into it's あ column equivilent, then add なかった \r\n" +
                         "る ￫ らなかった\r\n" +
                         "う ￫ わなかった\r\n" +
                         "く ￫ かなかった\r\n" +

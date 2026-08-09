@@ -217,6 +217,11 @@ public class SimpleTest : MonoBehaviour
 
     private void OnPressSubmit()
     {
+        if (hintVisible)
+        {
+            ToggleHint();
+        }
+
         if (textField.value == "")
         {
             feedbackText = $"Please submit an Answer";
@@ -231,11 +236,6 @@ public class SimpleTest : MonoBehaviour
             textField.style.color = Color.maroon;
             textField.Focus();
             return;
-        }
-
-        if (hintVisible)
-        {
-            ToggleHint();
         }
 
         if (shouldConfirmAnswer == false)
@@ -442,7 +442,7 @@ public class SimpleTest : MonoBehaviour
 
     private void EndQuiz()
     {
-        feedbackText += $" Quiz Complete! {amountCorrect} / {totalQuestions}.";
+        feedbackText += $" \n \n Quiz Complete! \n {amountCorrect} / {totalQuestions}.";
         restartButton.SetEnabled(true);
         submitButton.SetEnabled(false);
         textField.SetEnabled(false);

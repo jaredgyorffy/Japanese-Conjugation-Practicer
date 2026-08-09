@@ -47,7 +47,7 @@ public class Adjective : IWord
         }
         else if (AdjectiveType == AdjectiveType.NA)
         {
-            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "でした";
+            conjugatedForm = dictionaryForm + "でした";
         }
         else if (AdjectiveType == AdjectiveType.IRR)
         {
