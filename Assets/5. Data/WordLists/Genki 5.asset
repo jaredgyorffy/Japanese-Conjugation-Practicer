@@ -95,8 +95,8 @@ MonoBehaviour:
     casualVolitional: 
     teForm: 
   adjectiveList:
-  - kana: "\u5ACC\u3044"
-    kanji: "\u304D\u3089\u3044"
+  - kana: "\u304D\u3089\u3044"
+    kanji: "\u5ACC\u3044"
     adjectiveType: 1
     meaning:
     - disgusted with
@@ -194,17 +194,6 @@ MonoBehaviour:
     meaning:
     - not busy
     - free (time)
-    politePast: 
-    standardPast: 
-    standardNonpastNegative: 
-    politeNonpastNegative: 
-    politePastNegative: 
-    standardPastNegative: 
-  - kana: "\u3042\u305F\u3089\u3057\u3044"
-    kanji: "\u65B0\u3057\u3044"
-    adjectiveType: 1
-    meaning:
-    - new
     politePast: 
     standardPast: 
     standardNonpastNegative: 

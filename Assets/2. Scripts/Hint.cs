@@ -41,39 +41,41 @@ public static class Hint
                 {
                     hint = "No additional conjugation is needed to derive the Irregular Polite non-past form from the dictionary form. When used at the end of a sentence, use the pattern [Adjective + です].  When used to describe a noun, use the pattern [Adjective + Noun]";
                 }
+
                 break;
             }
             case  ConjugationType.PoliteNonpastNegative:
             {
                 if (aType == AdjectiveType.I)
                 {
-                    hint = "To conjugate the I-adjective Polite Nonpast Negative form, replace い with くありません.";
+                    hint = "い-adjective: replace い with くありません.";
                 }
                 else if (aType == AdjectiveType.NA)
                 {
-                    hint = "To conjugate the NA-adjective Polite Nonpast Negative form, Add じゃありません.";
+                    hint = "な-adjective: Take the dictionary form and add じゃありません \n (じ is itself a contraction of では).";
                 }
                 else
                 {
-                    hint = "いい conjugates to よ. Then we apply the polite nonpast negative conjugation rules: add くない.";
+                    hint = "Irregular: いい conjugates to よ. Then add くない.";
                 }
+
                 break;
             }
             case ConjugationType.PolitePast:
             {
                 if (aType == AdjectiveType.I)
                 {
-            
+                    hint = "い-adjective: replace い with かった. Use です when appropriate to indicate politeness.";
                 }
                 else if (aType == AdjectiveType.NA)
                 {
-            
+                    hint = "な-adjective: Take the dictionary form and add でした.";
                 }
                 else
                 {
-            
+                    hint = "Irregular: いい conjugates to よ. Then add かった. Use です when appropriate to indicate politeness.";
                 }
-                hint = "PolitePast";
+
                 break;
             }
 
@@ -81,34 +83,16 @@ public static class Hint
             {
                 if (aType == AdjectiveType.I)
                 {
-            
+                    hint = "い-adjective: replace い with くありませんでした";
                 }
                 else if (aType == AdjectiveType.NA)
                 {
-            
+                    hint = "な-adjective: Take the dictionary form and add じゃありませんでした \n (じ is itself a contraction of では).";
                 }
                 else
                 {
-            
+                    hint = "Irregular: いい conjugates to よ. Then add くありませんでした";
                 }
-                hint = "PolitePastNegative";
-                break;
-            }
-            case ConjugationType.PoliteVolitional:
-            {
-                if (aType == AdjectiveType.I)
-                {
-            
-                }
-                else if (aType == AdjectiveType.NA)
-                {
-            
-                }
-                else
-                {
-            
-                }
-                hint = "PoliteVolitional";
                 break;
             }
 
@@ -124,60 +108,59 @@ public static class Hint
                 }
                 else
                 {
-            
+                    hint = "Irregular: いい conjugates to よい";
                 }
-                hint = "StandardNonpast";
                 break;
             }
             case ConjugationType.StandardNonpastNegative:
             {
                 if (aType == AdjectiveType.I)
                 {
-            
+                    hint = "い-adjective: replace い with くない";
                 }
                 else if (aType == AdjectiveType.NA)
                 {
-            
+                    hint = "な-adjective: Take the dictionary form and add だった";
                 }
                 else
                 {
-            
+                    hint = "Irregular: いい conjugates to よ. Then add くない";
                 }
-                hint = "StandardNonpastNegative";
+
                 break;
             }
             case ConjugationType.StandardPast:
             {
                 if (aType == AdjectiveType.I)
                 {
-            
+                    hint = "い-adjective: replace い with かった";
                 }
                 else if (aType == AdjectiveType.NA)
                 {
-            
+                    hint = "な-adjective: Take the dictionary form and add だった";
                 }
                 else
                 {
-            
+                    hint = "Irregular: いい conjugates to よ. Then add かった";
                 }
-                hint = "StandardPast";
+
                 break;
             }
             case ConjugationType.StandardPastNegative:
             {
                 if (aType == AdjectiveType.I)
                 {
-            
+                    hint = "い-adjective: replace い with くなかった";
                 }
                 else if (aType == AdjectiveType.NA)
                 {
-            
+                    hint = "な-adjective: Take the dictionary form and add じゃなかった　\n (じ is itself a contraction of では).";
                 }
                 else
                 {
-            
+                    hint = "Irregular: いい conjugates to よ. Then add かった";
                 }
-                hint = "StandardPastNegative";
+
                 break;
             }
             
@@ -200,11 +183,11 @@ public static class Hint
             {
                 if (vType == VerbType.RU)
                 {
-                    hint = "Ru-verb: Removing the る from the end of the plain form, then add ます.";
+                    hint = "る-verb: Removing the る from the end of the dictionary form, then add ます.";
                 }
                 else if (vType == VerbType.U)
                 {
-                    hint = "U-Verb: Remove the う hiragana from the end of the plain form, then add ます.";
+                    hint = "う-Verb: Remove the う hiragana from the end of the dictionary form, then add ます.";
                 }
                 else
                 {
@@ -216,11 +199,11 @@ public static class Hint
             {
                 if (vType == VerbType.RU)
                 {
-                    hint = "Ru-verb: Removing the る from the end of the plain form, then add ません.";
+                    hint = "る-verb: Removing the る from the end of the dictionary form, then add ません.";
                 }
                 else if (vType == VerbType.U)
                 {
-                    hint = "U-Verb: Remove the う hiragana from the end of the plain form, then add ません.";
+                    hint = "う-Verb: Remove the う hiragana from the end of the dictionary form, then add ません.";
                 }
                 else
                 {
@@ -232,11 +215,11 @@ public static class Hint
             {
                 if (vType == VerbType.RU)
                 {
-                    hint = "Ru-verb: Removing the る from the end of the plain form, then add ました.";
+                    hint = "る-verb: Removing the る from the end of the dictionary form, then add ました.";
                 }
                 else if (vType == VerbType.U)
                 {
-                    hint = "U-Verb: Remove the う hiragana from the end of the plain form, then add ました.";
+                    hint = "う-Verb: Remove the う hiragana from the end of the dictionary form, then add ました.";
                 }
                 else
                 {
@@ -249,11 +232,11 @@ public static class Hint
             {
                 if (vType == VerbType.RU)
                 {
-                    hint = "Ru-verb: Removing the る from the end of the plain form, then add ませんでした.";
+                    hint = "る-verb: Removing the る from the end of the dictionary form, then add ませんでした.";
                 }
                 else if (vType == VerbType.U)
                 {
-                    hint = "U-Verb: Remove the う hiragana from the end of the plain form, then add ませんでした.";
+                    hint = "う-Verb: Remove the う hiragana from the end of the dictionary form, then add ませんでした.";
                 }
                 else
                 {
@@ -265,11 +248,11 @@ public static class Hint
             {
                 if (vType == VerbType.RU)
                 {
-                    hint = "Ru-verb: Removing the る from the end of the plain form to get the verb stem, then add ましょう.";
+                    hint = "る-verb: Removing the る from the end of the dictionary form to get the verb stem, then add ましょう.";
                 }
                 else if (vType == VerbType.U)
                 {
-                    hint = "U-Verb: replace the /う/ hiragana from the end of the plain form with the appropriate /い/ column hiragana:" +
+                    hint = "う-Verb: replace the /う/ hiragana from the end of the dictionary form with the appropriate /い/ column hiragana:" +
                         "'う':いましょう\r\n" +
                         "'く':きましょう\r\n" +
                         "'す':しましょう\r\n" +
@@ -291,15 +274,15 @@ public static class Hint
             {
                 if (vType == VerbType.RU)
                 {
-                    hint = "No conjugation needed here, standard nonpast is the same as the plain (dictionary) form";
+                    hint = "る-verb: No conjugation needed here, standard nonpast is the same as the plain (dictionary) form";
                 }
                 else if (vType == VerbType.U)
                 {
-                    hint = "No conjugation needed here, standard nonpast is the same as the plain (dictionary) form";
+                    hint = "う-Verb: No conjugation needed here, standard nonpast is the same as the plain (dictionary) form";
                 }
                 else
                 {
-                    hint = "No conjugation needed here, standard nonpast is the same as the plain (dictionary) form";
+                    hint = "Irregular: No conjugation needed here, standard nonpast is the same as the plain (dictionary) form";
                 }
                 break;
             }
@@ -307,15 +290,15 @@ public static class Hint
             {
                 if (vType == VerbType.RU)
                 {
-                    hint = "Ru-verb: Removing the る from the end of the plain form to get the verb stem, then add ない.";
+                    hint = "る-verb: Removing the る from the end of the dictionary form to get the verb stem, then add ない.";
                 }
                 else if (vType == VerbType.U)
                 {
-                    hint = "Ru-verb: Replace the /う/ column with it's /あ/ column equivilient (ex. く becomes か). Then add ない.";
+                    hint = "る-verb: Replace the /う/ column with it's /あ/ column equivilient (ex. く becomes か). Then add ない.";
                 }
                 else
                 {
-                    hint = "Although ある is not irregular, in the plain negative form, ない simply replaces ある altogether. Otherwise: " +
+                    hint = "irregular: Although ある is not irregular, in the plain negative form, ない simply replaces ある altogether. Otherwise: " +
                         "\n する　＞　しない" +
                         "\n 来る ＞ こない";
                 }
@@ -325,11 +308,11 @@ public static class Hint
             {
                 if (vType == VerbType.RU)
                 {
-                    hint = "Ru-verb: Removing the る from the end of the plain form to get the verb stem, then add た.";
+                    hint = "る-verb: Removing the る from the end of the dictionary form to get the verb stem, then add た.";
                 }
                 else if (vType == VerbType.U)
                 {
-                    hint = "U-verb: Replace the /う/ from the end of the plain form according to the following rules: " +
+                    hint = "う-Verb: Replace the /う/ from the end of the dictionary form according to the following rules: " +
                         "［る］［う］［つ］Verb ￫ った \n" +
                         "［く］［ぐ］￫ いだ \n" +
                         "［ぬ］［ぶ］［む］￫ んだ \n" +
@@ -350,7 +333,7 @@ public static class Hint
             {
                 if (vType == VerbType.RU)
                 {
-                    hint = "Ru-verb: Removing the る from the end of the plain form to get the verb stem, then add なかった.";
+                    hint = "る-verb: Removing the る from the end of the dictionary form to get the verb stem, then add なかった.";
                 }
                 else if (vType == VerbType.U)
                 {
@@ -367,7 +350,9 @@ public static class Hint
                 }
                 else
                 {
-                    hint = "Exceptions: ある ￫ なかった";
+                    hint = "Irregular: ある ￫ なかった \n" +
+                        "する ￫ しなかった \n" +
+                        "くる ￫ こなかった";
                 }
                 break;
             }
@@ -375,11 +360,11 @@ public static class Hint
             {
                 if (vType == VerbType.RU)
                 {
-                    hint = "Ru-verb: Removing the る from the end of the plain form to get the verb stem, then add て.";
+                    hint = "る-verb: Removing the る from the end of the dictionary form to get the verb stem, then add て.";
                 }
                 else if (vType == VerbType.U)
                 {
-                    hint = "Ru-verb: replacing the /う/ from the end of the plain form according to the following rules:" +
+                    hint = "る-verb: replacing the /う/ from the end of the dictionary form according to the following rules:" +
                         "\r\n［る］［う］［つ］￫ って\r\n" +
                         "［く］［ぐ］￫ いて\r\n" +
                         "［ぬ］［ぶ］［む］￫ んで\r\n" +
@@ -387,11 +372,12 @@ public static class Hint
                 }
                 else
                 {
-                    hint = "行く ￫ 行って\r\n" +
+                    hint = "irregular: \n" +
+                        "いく ￫ 行って\r\n" +
                         "する ￫ して\r\n" +
                         "くる ￫ きて\r\n" +
-                        "問う ￫ 問うて\r\n" +
-                        "請う ￫ 請うて";
+                        "問う (とう) ￫ とうて\r\n" +
+                        "請う (こう)￫ こうて";
                 }
                 hint = "TeForm";
                 break;
