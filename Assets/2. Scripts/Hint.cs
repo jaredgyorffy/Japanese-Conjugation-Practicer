@@ -409,4 +409,50 @@ public static class Hint
 
         return hint;
     }
+
+    private static string NounHint(ConjugationType conjugationType)
+    {
+        switch (conjugationType)
+        {
+        case ConjugationType.PoliteNonpast:
+            {
+                return "Take the dictionary form and add です";
+            }
+        case ConjugationType.PoliteNonpastNegative:
+            {
+                return "Take the dictionary form and add じゃありません";
+            }
+        case ConjugationType.PolitePast:
+            {
+                return "Take the dictionary form and add でした";
+            }
+
+        case ConjugationType.PolitePastNegative:
+            {
+                return "Take the dictionary form and add じゃありませんでした";
+            }
+
+        case ConjugationType.StandardNonpast:
+            {
+                return "Take the dictionary form and add だ";
+            }
+        case ConjugationType.StandardNonpastNegative:
+            {
+                return "Take the dictionary form and add じゃない";
+            }
+        case ConjugationType.StandardPast:
+            {
+                return "Take the dictionary form and add だった";
+            }
+        case ConjugationType.StandardPastNegative:
+            {
+                return "Take the dictionary form and add じゃなかった";
+            }
+        default:
+            {
+                return "conjugationType Hint not Supported";
+                throw new Exception("conjugationType Hint not Supported");
+            }
+        }
+    }
 }
