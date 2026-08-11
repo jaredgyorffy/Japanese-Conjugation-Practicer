@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
 
     private List<Toggle> verbFormToggles = new();
     private List<Toggle> adjectiveFormToggles = new();
+    private List<Toggle> nounFormToggles = new();
     private List<Toggle> contentToggles = new();
     private List<Toggle> optionsToggles = new();
 
@@ -29,10 +30,6 @@ public class MainMenu : MonoBehaviour
 
     private void GetReferences()
     {
-        //using UnityEngine.AddressableAssets;
-        //var asyncHandle = Addressables.LoadAssetAsync<GlobalTuner>("GlobalTuner.asset");
-        //GlobalTuner globalTuner = asyncHandle.WaitForCompletion();
-
         uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement.MQ<VisualElement>("StartScreen");
         root.dataSource = this;
@@ -53,7 +50,7 @@ public class MainMenu : MonoBehaviour
             return;
         }
 
-        if (config.Verbs.Count == 0 && config.Adjectives.Count == 0)
+        if (config.Verbs.Count == 0 && config.Adjectives.Count == 0 && config.Nouns.Count == 0)
         {
             warningText.visible = true;
             warningText.text = "No Content Types Selected";
@@ -66,7 +63,7 @@ public class MainMenu : MonoBehaviour
             questions = questionCount.value;
         }
 
-        if ((config.VerbQuestionTypes() * config.Verbs.Count) + (config.AdjectiveQuestionTypes() * config.Adjectives.Count) < questions)
+        if ((config.VerbQuestionTypes() * config.Verbs.Count) + (config.AdjectiveQuestionTypes() * config.Adjectives.Count + (config.NounQuestionTypes() * config.Nouns.Count)) < questions)
         {
             warningText.visible = true;
             warningText.text = "Not enough questions available with selected parameters";
@@ -101,6 +98,17 @@ public class MainMenu : MonoBehaviour
 
             adjectiveFormToggles.Add(toggleBox.MQ<Toggle>());
             adjectiveForms.Add(toggleBox);
+        }
+
+        VisualElement nounForms = root.MQ<VisualElement>("NounForms");
+        var listOfNounForms = config.GetNounForms();
+        for (int i = 0; i < listOfNounForms.Count; i++)
+        {
+            var toggleBox = togglePrefab.Instantiate();
+            toggleBox.MQ<Label>().text = listOfNounForms[i].name;
+
+            nounFormToggles.Add(toggleBox.MQ<Toggle>());
+            nounForms.Add(toggleBox);
         }
 
 
@@ -140,8 +148,15 @@ public class MainMenu : MonoBehaviour
             listOfAdjectiveForms[i] = (listOfAdjectiveForms[i].name, adjectiveFormToggles[i].value);
         }
 
+        var listOfNounForms = config.GetNounForms();
+        for (int i = 0; i < nounFormToggles.Count; i++)
+        {
+            listOfNounForms[i] = (listOfNounForms[i].name, nounFormToggles[i].value);
+        }
+
         config.SetVerbForms(listOfVerbForms);
         config.SetAdjectiveForms(listOfAdjectiveForms);
+        config.SetNounForms(listOfNounForms);
 
         for (int i = 0; i < contentToggles.Count; i++)
         {
@@ -154,6 +169,10 @@ public class MainMenu : MonoBehaviour
                 if (config.AdjectiveSelected())
                 {
                     config.Adjectives.AddRange(globalVariables.WordLists[i].adjectiveList);
+                }
+                if (config.NounSelected())
+                {
+                    config.Nouns.AddRange(globalVariables.WordLists[i].nounList);
                 }
             }
         }
@@ -189,14 +208,22 @@ public class QuizConfiguration
     public bool AdjectiveStandardNonpastNegativeForm;
     public bool AdjectiveStandardPastNegativeForm;
 
+    public bool NounPoliteNonpastNegativeForm;
+    public bool NounPolitePastForm;
+    public bool NounPolitePastNegativeForm;
+    public bool NounStandardPastForm;
+    public bool NounStandardNonpastNegativeForm;
+    public bool NounStandardPastNegativeForm;
+
     public bool Strictmode = false;
 
 
     public List<Verb> Verbs = new();
     public List<Adjective> Adjectives = new();
+    public List<Noun> Nouns = new();
     public bool IsValid()
     {
-        return AdjectiveSelected() || VerbsSelected();
+        return AdjectiveSelected() || VerbsSelected() || NounSelected();
     }
 
     public bool VerbsSelected()
@@ -220,6 +247,16 @@ public class QuizConfiguration
         || AdjectiveStandardPastForm
         || AdjectiveStandardNonpastNegativeForm
         || AdjectiveStandardPastNegativeForm;
+    }
+
+    public bool NounSelected()
+    {
+        return NounPoliteNonpastNegativeForm
+        || NounPolitePastForm
+        || NounPolitePastNegativeForm
+        || NounStandardPastForm
+        || NounStandardNonpastNegativeForm
+        || NounStandardPastNegativeForm;
     }
 
     public int VerbQuestionTypes()
@@ -247,6 +284,17 @@ public class QuizConfiguration
         (AdjectiveStandardPastNegativeForm ? 1 : 0);
     }
 
+    public int NounQuestionTypes()
+    {
+        return
+        (NounPoliteNonpastNegativeForm ? 1 : 0) +
+        (NounPolitePastForm ? 1 : 0) +
+        (NounPolitePastNegativeForm ? 1 : 0) +
+        (NounStandardPastForm ? 1 : 0) +
+        (NounStandardNonpastNegativeForm ? 1 : 0) +
+        (NounStandardPastNegativeForm ? 1 : 0);
+    }
+
     public List<(string name, bool on)> GetVerbForms()
     {
         return new List<(string name, bool on)>
@@ -264,6 +312,19 @@ public class QuizConfiguration
     }
 
     public List<(string name, bool on)> GetAdjectiveForms()
+    {
+        return new List<(string name, bool on)>
+        {
+            ("Polite Non-past Negative Form", false),
+            ("Polite Past Form", false),
+            ("Polite Past Negative Form", false),
+            ("Standard Past Form", false),
+            ("Standard Nonpast Negative Form", false),
+            ("Standard Past Negative Form", false),
+        };
+    }
+
+    public List<(string name, bool on)> GetNounForms()
     {
         return new List<(string name, bool on)>
         {
@@ -303,5 +364,18 @@ public class QuizConfiguration
         AdjectiveStandardPastForm = formsEnabled[3].on;
         AdjectiveStandardNonpastNegativeForm = formsEnabled[4].on;
         AdjectiveStandardPastNegativeForm = formsEnabled[5].on;
+    }
+
+    public void SetNounForms(List<(string name, bool on)> formsEnabled)
+    {
+        if (formsEnabled.Count < 6)
+            throw new ArgumentException("Noun Forms must have at least 6 elements.");
+
+        NounPoliteNonpastNegativeForm = formsEnabled[0].on;
+        NounPolitePastForm = formsEnabled[1].on;
+        NounPolitePastNegativeForm = formsEnabled[2].on;
+        NounStandardPastForm = formsEnabled[3].on;
+        NounStandardNonpastNegativeForm = formsEnabled[4].on;
+        NounStandardPastNegativeForm = formsEnabled[5].on;
     }
 }

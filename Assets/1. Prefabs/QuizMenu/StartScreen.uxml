@@ -5,10 +5,13 @@
             <ui:IntegerField label="Number of Questions" value="10" name="QuestionCount" keyboard-type="NumberPad" style="width: 100%; align-self: center;"/>
             <ui:VisualElement name="Options" style="flex-grow: 0; flex-direction: column; white-space: normal; flex-shrink: 0;">
                 <ui:VisualElement name="VerbForms" class="ToggleList" style="margin-top: 3%;">
-                    <ui:Label text="Verb Forms&#10;" name="VerbFormsTitle" class="Title"/>
+                    <ui:Label text="Verb Forms&#10;" name="VerbFormsTitle" class="Title" style="flex-grow: 0; flex-shrink: 1;"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="AdjectiveForms" class="ToggleList" style="flex-grow: 0; flex-direction: column; flex-wrap: nowrap; flex-shrink: 1; width: 100%; align-items: stretch; justify-content: center; align-self: center; align-content: auto; margin-top: 3%;">
                     <ui:Label text="Adjective Forms&#10;" name="AdjectiveFormsTitle" class="Title" style="flex-wrap: nowrap;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="NounForms" class="ToggleList" style="flex-grow: 0; flex-direction: column; flex-wrap: nowrap; flex-shrink: 1; width: 100%; align-items: stretch; justify-content: center; align-self: center; align-content: auto; margin-top: 3%;">
+                    <ui:Label text="Noun Forms" name="NounFormsTitle" class="Title" style="flex-wrap: nowrap;"/>
                 </ui:VisualElement>
                 <ui:VisualElement name="Content" class="ToggleList" style="flex-grow: 0; flex-direction: column; flex-wrap: nowrap; flex-shrink: 1; width: 100%; align-items: stretch; justify-content: center; align-self: center; align-content: auto; margin-top: 3%; padding-top: 0%;">
                     <ui:Label text="Content" name="ContentTitle" class="Title" style="flex-wrap: nowrap;"/>
@@ -19,7 +22,7 @@
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:Button name="Start" double-click-selects-word="false" triple-click-selects-line="false" display-tooltip-when-elided="false" text="Begin Quiz" class="Button" style="flex-grow: 0; flex-shrink: 0; margin-top: 1%; margin-right: 1%; margin-bottom: 1%; margin-left: 1%; width: auto; align-items: center; justify-content: center; align-self: center; padding-top: 2%; padding-right: 2%; padding-bottom: 2%; padding-left: 2%; font-size: 30%; -unity-font-style: bold; text-overflow: clip;"/>
-            <ui:Label text="Warning" name="Warning" class="Title" style="align-self: center; color: rgb(255, 0, 0); visibility: visible;"/>
+            <ui:Label text="Warning" name="Warning" class="Title" style="align-self: center; color: rgb(255, 0, 0); visibility: visible; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 30px;"/>
         </ui:VisualElement>
     </ui:ScrollView>
 </ui:UXML>

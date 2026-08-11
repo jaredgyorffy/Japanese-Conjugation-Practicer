@@ -20,6 +20,12 @@ MonoBehaviour:
     adjectiveType: 0
     meaning:
     - delicious
+    politePast: 
+    standardPast: 
+    standardNonpastNegative: 
+    politeNonpastNegative: 
+    politePastNegative: 
+    standardPastNegative: 
   - kana: "\u305F\u304B\u3044"
     kanji: "\u9AD8\u3044"
     adjectiveType: 0
@@ -27,3 +33,174 @@ MonoBehaviour:
     - expensive
     - high
     - tall
+    politePast: 
+    standardPast: 
+    standardNonpastNegative: 
+    politeNonpastNegative: 
+    politePastNegative: 
+    standardPastNegative: 
+  nounList:
+  - kana: "\u3042\u305D\u3053"
+    kanji: 
+    meaning:
+    - over there
+  - kana: "\u3042\u308C"
+    kanji: 
+    meaning:
+    - that one (over there)
+  - kana: "\u3044\u304F\u3089"
+    kanji: 
+    meaning:
+    - how much
+  - kana: "\u3048\u3044\u3054"
+    kanji: "\u82F1\u8A9E"
+    meaning:
+    - English language
+  - kana: "\u304B\u3055"
+    kanji: "\u5098"
+    meaning:
+    - umbrella
+  - kana: "\u304B\u3070\u3093"
+    kanji: 
+    meaning:
+    - bag
+  - kana: "\u304E\u3093\u3053\u3046"
+    kanji: "\u9280\u884C"
+    meaning:
+    - bank
+  - kana: "\u304F\u3064"
+    kanji: "\u9774"
+    meaning:
+    - shoes
+  - kana: "\u3053\u3053"
+    kanji: 
+    meaning:
+    - here
+  - kana: "\u3053\u308C"
+    kanji: 
+    meaning:
+    - this one
+  - kana: "\u30B3\u30F3\u30D3\u30CB"
+    kanji: 
+    meaning:
+    - convenience store
+  - kana: "\u3055\u3044\u3075"
+    kanji: "\u8CA1\u5E03"
+    meaning:
+    - wallet
+  - kana: "\u3055\u304B\u306A"
+    kanji: "\u9B5A"
+    meaning:
+    - fish
+  - kana: "\u30B8\u30FC\u30F3\u30BA"
+    kanji: 
+    meaning:
+    - jeans
+  - kana: "\u3058\u3066\u3093\u3057\u3083"
+    kanji: "\u81EA\u8EE2\u8ECA"
+    meaning:
+    - bicycle
+  - kana: "\u3057\u3093\u3076\u3093"
+    kanji: "\u65B0\u805E"
+    meaning:
+    - newspaper
+  - kana: "\u30B9\u30DE\u30DB"
+    kanji: 
+    meaning:
+    - smartphone; mobile
+  - kana: "\u305D\u3053"
+    kanji: 
+    meaning:
+    - there
+  - kana: "\u305D\u308C"
+    kanji: 
+    meaning:
+    - that one
+  - kana: "\u3060\u308C"
+    kanji: 
+    meaning:
+    - who
+  - kana: "\u30C6\u30A3\u30FC\u30B7\u30E3\u30C4"
+    kanji: "\uFF34\u30B7\u30E3\u30C4"
+    meaning:
+    - T-shirt
+  - kana: "\u30C8\u30A4\u30EC"
+    kanji: 
+    meaning:
+    - toilet; restroom
+  - kana: "\u3068\u3051\u3044"
+    kanji: "\u6642\u8A08"
+    meaning:
+    - watch; clock
+  - kana: "\u3069\u3053"
+    kanji: 
+    meaning:
+    - where
+  - kana: "\u3068\u3057\u3087\u304B\u3093"
+    kanji: "\u56F3\u66F8\u9928"
+    meaning:
+    - library
+  - kana: "\u3069\u308C"
+    kanji: 
+    meaning:
+    - which one
+  - kana: "\u3068\u3093\u304B\u3064"
+    kanji: 
+    meaning:
+    - pork cutlet
+  - kana: "\u306B\u304F"
+    kanji: "\u8089"
+    meaning:
+    - meat
+  - kana: "\u30CE\u30FC\u30C8"
+    kanji: 
+    meaning:
+    - notebook
+  - kana: "\u30DA\u30F3"
+    kanji: 
+    meaning:
+    - pen
+  - kana: "\u307C\u3046\u3057"
+    kanji: "\u5E3D\u5B50"
+    meaning:
+    - hat; cap
+  - kana: "\u30E1\u30CB\u30E5\u30FC"
+    kanji: 
+    meaning:
+    - menu
+  - kana: "\u3084\u3055\u3044"
+    kanji: "\u91CE\u83DC"
+    meaning:
+    - vegetable
+  - kana: "\u3086\u3046\u3073\u3093\u304D\u3087\u304F"
+    kanji: "\u90F5\u4FBF\u5C40"
+    meaning:
+    - post office
+  - kana: "\u307B\u3093"
+    kanji: "\u672C"
+    meaning:
+    - book
+  - kana: "\u3051\u3057\u30B4\u30E0"
+    kanji: "\u6D88\u3057\u30B4\u30E0"
+    meaning:
+    - eraser
+  - kana: "\u3053\u304F\u3070\u3093"
+    kanji: "\u9ED2\u677F"
+    meaning:
+    - blackboard
+  - kana: "\u3058\u3057\u3087"
+    kanji: "\u8F9E\u66F8"
+    meaning:
+    - dictionary
+  - kana: "\u30AB\u30FC\u30C6\u30F3"
+    kanji: 
+    meaning:
+    - curtain
+  - kana: "\u3044\u3059"
+    kanji: 
+    meaning:
+    - chair
+  - kana: "\u3064\u304F\u3048"
+    kanji: "\u673A"
+    meaning:
+    - desk

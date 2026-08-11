@@ -9,8 +9,8 @@ public interface IWord
 }
 public enum WordType
 {
-    Noun,
-    Adjective,
-    Verb,
-    Adverb
+    Noun = 0,
+    Adjective = 1,
+    Verb = 2,
+    Adverb = 3
 }

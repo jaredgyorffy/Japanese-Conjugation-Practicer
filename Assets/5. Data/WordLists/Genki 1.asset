@@ -1,0 +1,226 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478a6b45f4173a947984457165db4dad, type: 3}
+  m_Name: Genki 1
+  m_EditorClassIdentifier: Assembly-CSharp::VerbList
+  <listName>k__BackingField: Genki 1
+  verbList: []
+  adjectiveList: []
+  nounList:
+  - kana: "\u30A2\u30B8\u30A2\u3051\u3093\u304D\u3085\u3046"
+    kanji: "\u30A2\u30B8\u30A2\u7814\u7A76"
+    meaning:
+    - Asian studies
+  - kana: "\u30A2\u30E1\u30EA\u30AB"
+    kanji: 
+    meaning:
+    - U.S.A.
+  - kana: "\u3044\u3061\u306D\u3093\u305B\u3044"
+    kanji: "\u4E00\u5E74\u751F"
+    meaning:
+    - first-year student
+  - kana: "\u30A4\u30F3\u30C9"
+    kanji: 
+    meaning:
+    - India
+  - kana: "\u30A8\u30B8\u30D7\u30C8"
+    kanji: 
+    meaning:
+    - Egypt
+  - kana: "\u304C\u304F\u305B\u3044"
+    kanji: "\u5B66\u751F"
+    meaning:
+    - student
+  - kana: "\u30AB\u30CA\u30C0"
+    kanji: 
+    meaning:
+    - Canada
+  - kana: "\u3053\u3046\u3053\u3046"
+    kanji: "\u9AD8\u6821"
+    meaning:
+    - high school
+  - kana: "\u3053\u3046\u3053\u3046\u305B\u3044"
+    kanji: "\u9AD8\u6821\u751F"
+    meaning:
+    - high school student
+  - kana: "\u3053\u304F\u3055\u3044\u304B\u3093\u3051\u3044"
+    kanji: "\u56FD\u969B\u95A2\u4FC2"
+    meaning:
+    - international relations
+  - kana: "\u3054\u3054"
+    kanji: "\u5348\u5F8C"
+    meaning:
+    - p.m.
+  - kana: "\u3054\u305C\u3093"
+    kanji: "\u5348\u524D"
+    meaning:
+    - a.m.
+  - kana: "\u3057\u3085\u3075"
+    kanji: "\u4E3B\u5A66"
+    meaning:
+    - housewife
+  - kana: "\u305B\u3044\u3076\u3064\u304C\u304F"
+    kanji: "\u751F\u7269\u5B66"
+    meaning:
+    - biology
+  - kana: "\u305B\u3093\u3053\u3046"
+    kanji: "\u5C02\u653B"
+    meaning:
+    - major
+  - kana: "\u305B\u3093\u305B\u3044"
+    kanji: "\u5148\u751F"
+    meaning:
+    - teacher; Professor . . .
+  - kana: "\u3060\u3044\u304C\u304F"
+    kanji: "\u5927\u5B66"
+    meaning:
+    - college; university
+  - kana: "\u3060\u3044\u304C\u304F\u3044\u3093\u305B\u3044"
+    kanji: "\u5927\u5B66\u9662\u751F"
+    meaning:
+    - graduate student
+  - kana: "\u3060\u3044\u304C\u304F\u305B\u3044"
+    kanji: "\u5927\u5B66\u751F"
+    meaning:
+    - college student
+  - kana: "\u3067\u3093\u308F"
+    kanji: "\u96FB\u8A71"
+    meaning:
+    - telephone
+  - kana: "\u3068\u3082\u3060\u3061"
+    kanji: "\u53CB\u3060\u3061"
+    meaning:
+    - friend
+  - kana: "\u306A\u306B/\u306A\u3093"
+    kanji: "\u4F55"
+    meaning:
+    - what
+  - kana: "\u306A\u307E\u3048"
+    kanji: "\u540D\u524D"
+    meaning:
+    - name
+  - kana: "\u306A\u3093/\u306A\u306B"
+    kanji: "\u4F55"
+    meaning:
+    - what
+  - kana: "\u306B\u3058\u306F\u3093"
+    kanji: "\u4E8C\u6642\u534A"
+    meaning:
+    - half past two
+  - kana: "\u306B\u307B\u3093"
+    kanji: "\u65E5\u672C"
+    meaning:
+    - Japan
+  - kana: "\u306B\u307B\u3093\u3054"
+    kanji: "\u65E5\u672C\u8A9E"
+    meaning:
+    - Japanese language
+  - kana: "\u306B\u307B\u3093\u3058\u3093"
+    kanji: "\u65E5\u672C\u4EBA"
+    meaning:
+    - Japanese people
+  - kana: "\u3070\u3093\u3054\u3046"
+    kanji: "\u756A\u53F7"
+    meaning:
+    - number
+  - kana: "\u30D5\u30A3\u30EA\u30D4\u30F3"
+    kanji: 
+    meaning:
+    - Philippines
+  - kana: "\u308A\u3085\u3046\u304C\u304F\u305B\u3044"
+    kanji: "\u7559\u5B66\u751F"
+    meaning:
+    - international student
+  - kana: "\u308F\u305F\u3057"
+    kanji: "\u79C1"
+    meaning:
+    - I
+  - kana: "\u3044\u3061\u3058"
+    kanji: "\u4E00\u6642"
+    meaning:
+    - "one o\u2019clock"
+  - kana: "\u3044\u3057\u3083"
+    kanji: "\u533B\u8005"
+    meaning:
+    - doctor
+  - kana: "\u30AA\u30FC\u30B9\u30C8\u30E9\u30EA\u30A2"
+    kanji: 
+    meaning:
+    - Australia
+  - kana: "\u304B\u3093\u3054\u3057"
+    kanji: "\u770B\u8B77\u5E2B"
+    meaning:
+    - nurse
+  - kana: "\u305B\u3044\u3058"
+    kanji: "\u653F\u6CBB"
+    meaning:
+    - politics
+  - kana: "\u3079\u3093\u3054\u3057"
+    kanji: "\u5F01\u8B77\u58EB"
+    meaning:
+    - lawyer
+  - kana: "\u30A4\u30AE\u30EA\u30B9"
+    kanji: 
+    meaning:
+    - Britain
+  - kana: "\u304A\u304B\u3042\u3055\u3093"
+    kanji: "\u304A\u6BCD\u3055\u3093"
+    meaning:
+    - mother
+  - kana: "\u304A\u3068\u3046\u3055\u3093"
+    kanji: "\u304A\u7236\u3055\u3093"
+    meaning:
+    - father
+  - kana: "\u304B\u3093\u3053\u304F"
+    kanji: "\u97D3\u56FD"
+    meaning:
+    - Korea
+  - kana: "\u3051\u3044\u3056\u3044"
+    kanji: "\u7D4C\u6E08"
+    meaning:
+    - economics
+  - kana: "\u30B3\u30F3\u30D4\u30E5\u30FC\u30BF\u30FC"
+    kanji: 
+    meaning:
+    - computer
+  - kana: "\u3061\u3085\u3046\u3054\u304F"
+    kanji: "\u4E2D\u56FD"
+    meaning:
+    - China
+  - kana: "\u30D3\u30B8\u30CD\u30B9"
+    kanji: 
+    meaning:
+    - business
+  - kana: "\u308C\u304D\u3057"
+    kanji: "\u6B74\u53F2"
+    meaning:
+    - history
+  - kana: "\u3044\u3082\u3046\u3068"
+    kanji: "\u59B9"
+    meaning:
+    - younger sister
+  - kana: "\u304A\u3068\u3046\u3068"
+    kanji: "\u5F1F"
+    meaning:
+    - younger brother
+  - kana: "\u304A\u306B\u3044\u3055\u3093"
+    kanji: "\u304A\u5144\u3055\u3093"
+    meaning:
+    - older brother
+  - kana: "\u304A\u306D\u3048\u3055\u3093"
+    kanji: "\u304A\u59C9\u3055\u3093"
+    meaning:
+    - older sister
+  - kana: "\u304B\u3044\u3057\u3083\u3044\u3093"
+    kanji: "\u4F1A\u793E\u54E1"
+    meaning:
+    - office worker

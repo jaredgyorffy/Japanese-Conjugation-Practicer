@@ -22,6 +22,7 @@ public class SimpleTest : MonoBehaviour
 
     private List<ConjugationType> VerbConjugationTypes;
     private List<ConjugationType> AdjectiveConjugationTypes;
+    private List<ConjugationType> NounConjugationTypes;
 
     [CreateProperty] public string QuestionType => questionType;
     private string questionType;
@@ -47,6 +48,7 @@ public class SimpleTest : MonoBehaviour
 
     public List<Verb> Verbs;
     public List<Adjective> Adjectives;
+    public List<Noun> Nouns;
 
     private List<(string, ConjugationType)> askedQuestions = new();
     
@@ -158,7 +160,33 @@ public class SimpleTest : MonoBehaviour
         }
         if (config.AdjectiveStandardPastNegativeForm)
         {
-            VerbConjugationTypes.Add(ConjugationType.StandardPastNegative);
+            AdjectiveConjugationTypes.Add(ConjugationType.StandardPastNegative);
+        }
+
+        NounConjugationTypes = new List<ConjugationType>();
+        if (config.NounPoliteNonpastNegativeForm)
+        {
+            NounConjugationTypes.Add(ConjugationType.PoliteNonpastNegative);
+        }
+        if (config.NounPolitePastForm)
+        {
+            NounConjugationTypes.Add(ConjugationType.PolitePast);
+        }
+        if (config.NounPolitePastNegativeForm)
+        {
+            NounConjugationTypes.Add(ConjugationType.PolitePastNegative);
+        }
+        if (config.NounStandardPastForm)
+        {
+            NounConjugationTypes.Add(ConjugationType.StandardPast);
+        }
+        if (config.NounStandardNonpastNegativeForm)
+        {
+            NounConjugationTypes.Add(ConjugationType.StandardNonpastNegative);
+        }
+        if (config.NounStandardPastNegativeForm)
+        {
+            NounConjugationTypes.Add(ConjugationType.StandardPastNegative);
         }
     }
 
@@ -166,6 +194,7 @@ public class SimpleTest : MonoBehaviour
     {
         Verbs = config.Verbs;
         Adjectives = config.Adjectives;
+        Nouns = config.Nouns;
 
         askedQuestions = new();
         restartButton.SetEnabled(true);
@@ -199,7 +228,14 @@ public class SimpleTest : MonoBehaviour
         else if (wordtype == WordType.Adjective)
         {
             int index = UnityEngine.Random.Range(0, AdjectiveConjugationTypes.Count);
+            Debug.Log(index);
             return AdjectiveConjugationTypes[index];
+        }
+        else if (wordtype == WordType.Noun)
+        {
+            int index = UnityEngine.Random.Range(0, NounConjugationTypes.Count);
+            Debug.Log(index);
+            return NounConjugationTypes[index];
         }
         else
         {
@@ -391,7 +427,43 @@ public class SimpleTest : MonoBehaviour
             currentKana = Adjectives[wordIndex].Kana;
             askedQuestions.Add((Adjectives[wordIndex].Kana, form));
         }
-        
+        else if (wordType == WordType.Noun)
+        {
+            switch (form)
+            {
+            case ConjugationType.PoliteNonpastNegative:
+                currentAnswer = Nouns[wordIndex].PoliteNonpastNegative;
+                questionType = "Polite Non-past Negative Form";
+                break;
+            case ConjugationType.PolitePast:
+                currentAnswer = Nouns[wordIndex].PolitePast;
+                questionType = "Polite Past Form";
+                break;
+            case ConjugationType.PolitePastNegative:
+                currentAnswer = Nouns[wordIndex].PolitePastNegative;
+                questionType = "Polite Past Negative Form";
+                break;
+            case ConjugationType.StandardPast:
+                currentAnswer = Nouns[wordIndex].StandardPast;
+                questionType = "Standard Past Form";
+                break;
+            case ConjugationType.StandardNonpastNegative:
+                currentAnswer = Nouns[wordIndex].StandardNonpastNegative;
+                questionType = "Standard Non-past Negative Form";
+                break;
+            case ConjugationType.StandardPastNegative:
+                currentAnswer = Nouns[wordIndex].StandardPastNegative;
+                questionType = "Standard Past Negative Form";
+                break;
+            default:
+                Debug.LogWarning("Error: Question Type not valid");
+                break;
+            }
+            currentKanji = Nouns[wordIndex].Kanji;
+            currentKana = Nouns[wordIndex].Kana;
+            askedQuestions.Add((Nouns[wordIndex].Kana, form));
+        }
+
 
         textField.Focus();
     }
@@ -399,21 +471,51 @@ public class SimpleTest : MonoBehaviour
     private (int, WordType wordtype, ConjugationType) GetQuestion()
     {
         WordType wordtype;
-        if (Verbs.Count > 0 && Adjectives.Count == 0)
+        if (Verbs.Count > 0 && Adjectives.Count == 0 && Nouns.Count == 0)
         {
             wordtype = WordType.Verb;
         }
-        else if (Verbs.Count == 0 && Adjectives.Count > 0)
+        else if (Verbs.Count == 0 && Adjectives.Count > 0 && Nouns.Count == 0)
         {
             wordtype = WordType.Adjective;
         }
+        else if (Verbs.Count == 0 && Adjectives.Count == 0 && Nouns.Count > 0)
+        {
+            wordtype = WordType.Noun;
+        }
+        else if (Verbs.Count > 0 && Adjectives.Count > 0 && Nouns.Count == 0)
+        {
+            wordtype = RandomUtility.PercentageChanceOfTrue(0.5f) ? WordType.Verb : WordType.Adjective;
+        }
+        else if (Verbs.Count == 0 && Adjectives.Count > 0 && Nouns.Count > 0)
+        {
+            wordtype = RandomUtility.PercentageChanceOfTrue(0.5f) ? WordType.Noun : WordType.Adjective;
+        }
+        else if (Verbs.Count > 0 && Adjectives.Count == 0 && Nouns.Count > 0)
+        {
+            wordtype = RandomUtility.PercentageChanceOfTrue(0.5f) ? WordType.Noun : WordType.Verb;
+        }
         else
         {
-            wordtype = RandomUtility.PercentageChanceOfTrue(0.5f)? WordType.Verb : WordType.Adjective;
+            int random = UnityEngine.Random.Range(0, 3);
+            if (random == 0)
+            {
+                wordtype = WordType.Noun;
+            }
+            else if (random == 1)
+            {
+                wordtype = WordType.Verb;
+            }
+            else
+            {
+                wordtype = WordType.Adjective;
+            }
         }
-        
+
+        Debug.Log(wordtype);
+
         ConjugationType form = GetQuestionType(wordtype);
-        
+
         currentWordType = wordtype;
         currentConjugationType = form;
         
@@ -436,7 +538,16 @@ public class SimpleTest : MonoBehaviour
             }
             currentWord = Adjectives[wordIndex];
         }
-        
+        else if (wordtype == WordType.Noun)
+        {
+            wordIndex = UnityEngine.Random.Range(0, Nouns.Count);
+            if (askedQuestions.Contains((Nouns[wordIndex].Kana, form)))
+            {
+                return GetQuestion();
+            }
+            currentWord = Nouns[wordIndex];
+        }
+
         return (wordIndex, wordtype, form);
     }
 
@@ -475,6 +586,7 @@ public class SimpleTest : MonoBehaviour
             hintVisible = true;
             hintButton.AddToClassList("Pressed");
             feedbackText = Hint.GetHint(currentWord, currentConjugationType);
+            hintButton.Focus();
         }
     }
 

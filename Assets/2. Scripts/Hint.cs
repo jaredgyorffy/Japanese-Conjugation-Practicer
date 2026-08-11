@@ -19,6 +19,11 @@ public static class Hint
             return AdjectiveHint(aType, conjugationType);
         }
 
+        if (word.WordType == WordType.Noun)
+        {
+            return NounHint(conjugationType);
+        }
+
         return hint;
     }
 
