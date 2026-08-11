@@ -120,7 +120,7 @@ public static class Hint
                 }
                 else if (aType == AdjectiveType.NA)
                 {
-                    hint = "な-adjective: Take the dictionary form and add だった";
+                    hint = "な-adjective: Take the dictionary form and add じゃない";
                 }
                 else
                 {

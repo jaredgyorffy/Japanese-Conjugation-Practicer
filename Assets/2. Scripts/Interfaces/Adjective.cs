@@ -31,11 +31,11 @@ public class Adjective : IWord
     public string PoliteNonpastNegative => ConjugatePoliteNonpastNegative(kana);
     [Foldout("Irregular Conjugation")][ShowIf("AdjectiveType", AdjectiveType.IRR)][SerializeField][AllowNesting] private string politeNonpastNegative;
     
-    public string PolitePastNegative => ConjugateStandardPastNegative(kana);
+    public string PolitePastNegative => ConjugatePolitePastNegative(kana);
 
     [Foldout("Irregular Conjugation")][ShowIf("AdjectiveType", AdjectiveType.IRR)][SerializeField][AllowNesting] private string politePastNegative;
 
-    public string StandardPastNegative => ConjugatePolitePastNegative(kana);
+    public string StandardPastNegative => ConjugateStandardPastNegative(kana);
     [Foldout("Irregular Conjugation")][ShowIf("AdjectiveType", AdjectiveType.IRR)][SerializeField][AllowNesting] private string standardPastNegative;
 
     private string ConjugatePolitePast(string dictionaryForm)
@@ -65,7 +65,7 @@ public class Adjective : IWord
         }
         else if (AdjectiveType == AdjectiveType.NA)
         {
-            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 1) + "だった";
+            conjugatedForm = dictionaryForm + "だった";
         }
         else if (AdjectiveType == AdjectiveType.IRR)
         {
