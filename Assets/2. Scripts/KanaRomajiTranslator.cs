@@ -14,7 +14,7 @@ public class KanaRomajiTranslator : MonoBehaviour
     private TextField textField;
 
     [SerializeField] KanaRomajiList KanaRomajiList;
-
+    private bool translateText = true;
     private int tickCount = 0;
 
 
@@ -36,9 +36,19 @@ public class KanaRomajiTranslator : MonoBehaviour
         }
     }
 
+    public void SetEnabled(bool enabled)
+    {
+        translateText = enabled;
+    }
+
     private void InvokeStateChangedEvent()
     {
         InputChanged?.Invoke();
+        if (translateText == false)
+        {
+            return;
+        }
+
         foreach (var pair in KanaRomajiList.ThreeLetterPairs)
         {
             FindAndReplaceRomaji(pair);

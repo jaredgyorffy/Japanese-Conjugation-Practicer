@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     private IntegerField questionCount;
     private Label warningText;
 
+    private List<Toggle> meaningToggles = new();
     private List<Toggle> verbFormToggles = new();
     private List<Toggle> adjectiveFormToggles = new();
     private List<Toggle> nounFormToggles = new();
@@ -78,6 +79,18 @@ public class MainMenu : MonoBehaviour
     private void InitializeOptions()
     {
         QuizConfiguration config = new QuizConfiguration();
+
+        VisualElement meanings = root.MQ<VisualElement>("Meanings");
+        var listOfMeanings = config.GetMeanings();
+        for (int i = 0; i < listOfMeanings.Count; i++)
+        {
+            var toggleBox = togglePrefab.Instantiate();
+            toggleBox.MQ<Label>().text = listOfMeanings[i].name;
+
+            meaningToggles.Add(toggleBox.MQ<Toggle>());
+            meanings.Add(toggleBox);
+        }
+
         VisualElement verbForms = root.MQ<VisualElement>("VerbForms");
         var listOfVerbForms = config.GetVerbForms();
         for (int i = 0; i < listOfVerbForms.Count; i++)
@@ -136,6 +149,12 @@ public class MainMenu : MonoBehaviour
     {
         QuizConfiguration config = new QuizConfiguration();
 
+        var listOfMeanings = config.GetMeanings();
+        for (int i = 0; i < meaningToggles.Count; i++)
+        {
+            listOfMeanings[i] = (listOfMeanings[i].name, meaningToggles[i].value);
+        }
+
         var listOfVerbForms = config.GetVerbForms();
         for (int i = 0; i < verbFormToggles.Count; i++)
         {
@@ -154,6 +173,7 @@ public class MainMenu : MonoBehaviour
             listOfNounForms[i] = (listOfNounForms[i].name, nounFormToggles[i].value);
         }
 
+        config.SetMeanings(listOfMeanings);
         config.SetVerbForms(listOfVerbForms);
         config.SetAdjectiveForms(listOfAdjectiveForms);
         config.SetNounForms(listOfNounForms);
@@ -191,6 +211,7 @@ public class MainMenu : MonoBehaviour
 
 public class QuizConfiguration
 {
+    public bool VerbMeaning;
     public bool VerbPoliteNonpastForm;
     public bool VerbPoliteNonpastNegativeForm;
     public bool VerbPolitePastForm;
@@ -201,6 +222,7 @@ public class QuizConfiguration
     public bool VerbPoliteVolitionalForm;
     public bool VerbTeForm;
 
+    public bool AdjectiveMeaning;
     public bool AdjectivePoliteNonpastNegativeForm;
     public bool AdjectivePolitePastForm;
     public bool AdjectivePolitePastNegativeForm;
@@ -208,6 +230,7 @@ public class QuizConfiguration
     public bool AdjectiveStandardNonpastNegativeForm;
     public bool AdjectiveStandardPastNegativeForm;
 
+    public bool NounMeaning;
     public bool NounPoliteNonpastNegativeForm;
     public bool NounPolitePastForm;
     public bool NounPolitePastNegativeForm;
@@ -236,7 +259,8 @@ public class QuizConfiguration
         || VerbStandardNonpastNegativeForm
         || VerbStandardPastNegativeForm
         || VerbPoliteVolitionalForm
-        || VerbTeForm;
+        || VerbTeForm
+        || VerbMeaning;
     }
 
     public bool AdjectiveSelected()
@@ -246,7 +270,8 @@ public class QuizConfiguration
         || AdjectivePolitePastNegativeForm
         || AdjectiveStandardPastForm
         || AdjectiveStandardNonpastNegativeForm
-        || AdjectiveStandardPastNegativeForm;
+        || AdjectiveStandardPastNegativeForm
+        || AdjectiveMeaning;
     }
 
     public bool NounSelected()
@@ -256,7 +281,15 @@ public class QuizConfiguration
         || NounPolitePastNegativeForm
         || NounStandardPastForm
         || NounStandardNonpastNegativeForm
-        || NounStandardPastNegativeForm;
+        || NounStandardPastNegativeForm
+        || NounMeaning;
+    }
+
+    public bool MeaningSelected()
+    {
+        return NounMeaning
+        || VerbMeaning
+        || AdjectiveMeaning;
     }
 
     public int VerbQuestionTypes()
@@ -270,7 +303,8 @@ public class QuizConfiguration
         (VerbStandardNonpastNegativeForm ? 1 : 0) +
         (VerbStandardPastNegativeForm ? 1 : 0) +
         (VerbPoliteVolitionalForm ? 1 : 0) +
-        (VerbTeForm ? 1 : 0);
+        (VerbTeForm ? 1 : 0) +
+        (VerbMeaning ? 1 :0);
     }
 
     public int AdjectiveQuestionTypes()
@@ -281,7 +315,8 @@ public class QuizConfiguration
         (AdjectivePolitePastNegativeForm ? 1 : 0) +
         (AdjectiveStandardPastForm ? 1 : 0) +
         (AdjectiveStandardNonpastNegativeForm ? 1 : 0) +
-        (AdjectiveStandardPastNegativeForm ? 1 : 0);
+        (AdjectiveStandardPastNegativeForm ? 1 : 0) +
+        (AdjectiveMeaning ? 1 : 0);
     }
 
     public int NounQuestionTypes()
@@ -292,7 +327,8 @@ public class QuizConfiguration
         (NounPolitePastNegativeForm ? 1 : 0) +
         (NounStandardPastForm ? 1 : 0) +
         (NounStandardNonpastNegativeForm ? 1 : 0) +
-        (NounStandardPastNegativeForm ? 1 : 0);
+        (NounStandardPastNegativeForm ? 1 : 0) +
+        (NounMeaning ? 1 : 0);
     }
 
     public List<(string name, bool on)> GetVerbForms()
@@ -308,6 +344,16 @@ public class QuizConfiguration
             ("Standard Past Negative Form", false),
             ("Polite Volitional Form", false),
             ("Te-Form", false),
+        };
+    }
+
+    public List<(string name, bool on)> GetMeanings()
+    {
+        return new List<(string name, bool on)>
+        {
+            ("Noun Meanings", false),
+            ("Verb Meanings", false),
+            ("AdjectiveMeanings", false),
         };
     }
 
@@ -335,6 +381,16 @@ public class QuizConfiguration
             ("Standard Nonpast Negative Form", false),
             ("Standard Past Negative Form", false),
         };
+    }
+
+    public void SetMeanings(List<(string name, bool on)> formsEnabled)
+    {
+        if (formsEnabled.Count < 3)
+            throw new ArgumentException("formsEnabled must have at least 3 elements.");
+
+        VerbMeaning = formsEnabled[0].on;
+        AdjectiveMeaning = formsEnabled[1].on;
+        NounMeaning = formsEnabled[2].on;
     }
 
     public void SetVerbForms(List<(string name, bool on)> formsEnabled)

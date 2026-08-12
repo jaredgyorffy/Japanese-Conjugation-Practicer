@@ -7,6 +7,11 @@ public static class Hint
     {
         string hint = "";
         
+        if (conjugationType == ConjugationType.Meaning)
+        {
+            return "Hints for meaning is unavailable. Git Good and memorize your vocab";
+        }
+
         if (word.WordType == WordType.Verb)
         {
             VerbType vType = ((Verb)word).VerbType;

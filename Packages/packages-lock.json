@@ -7,6 +7,13 @@
       "dependencies": {},
       "hash": "8a8fa5a9659a6d63f196391c71e06c4286c8acd7"
     },
+    "com.hieki.fuzzy-search": {
+      "version": "https://github.com/hieki-chan/unity-search-fuzzy.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "bd7a68ed8d60b0fb5a2402b64d09615291de6a8a"
+    },
     "com.unity.adaptiveperformance": {
       "version": "6.0.0",
       "depth": 1,

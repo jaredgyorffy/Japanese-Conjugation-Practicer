@@ -28,6 +28,8 @@ MonoBehaviour:
     kanji: "\u4E00\u5E74\u751F"
     meaning:
     - first-year student
+    - first year student
+    - first year
   - kana: "\u30A4\u30F3\u30C9"
     kanji: 
     meaning:
@@ -60,10 +62,14 @@ MonoBehaviour:
     kanji: "\u5348\u5F8C"
     meaning:
     - p.m.
+    - pm
+    - afternoon
   - kana: "\u3054\u305C\u3093"
     kanji: "\u5348\u524D"
     meaning:
     - a.m.
+    - am
+    - morning
   - kana: "\u3057\u3085\u3075"
     kanji: "\u4E3B\u5A66"
     meaning:
@@ -79,11 +85,13 @@ MonoBehaviour:
   - kana: "\u305B\u3093\u305B\u3044"
     kanji: "\u5148\u751F"
     meaning:
-    - teacher; Professor . . .
+    - teacher
+    - Professor
   - kana: "\u3060\u3044\u304C\u304F"
     kanji: "\u5927\u5B66"
     meaning:
-    - college; university
+    - college
+    - university
   - kana: "\u3060\u3044\u304C\u304F\u3044\u3093\u305B\u3044"
     kanji: "\u5927\u5B66\u9662\u751F"
     meaning:
@@ -116,6 +124,8 @@ MonoBehaviour:
     kanji: "\u4E8C\u6642\u534A"
     meaning:
     - half past two
+    - 2:30
+    - two thirthy
   - kana: "\u306B\u307B\u3093"
     kanji: "\u65E5\u672C"
     meaning:
@@ -124,10 +134,12 @@ MonoBehaviour:
     kanji: "\u65E5\u672C\u8A9E"
     meaning:
     - Japanese language
+    - Japanese
   - kana: "\u306B\u307B\u3093\u3058\u3093"
     kanji: "\u65E5\u672C\u4EBA"
     meaning:
     - Japanese people
+    - Japanese
   - kana: "\u3070\u3093\u3054\u3046"
     kanji: "\u756A\u53F7"
     meaning:
@@ -144,10 +156,13 @@ MonoBehaviour:
     kanji: "\u79C1"
     meaning:
     - I
+    - Me
   - kana: "\u3044\u3061\u3058"
     kanji: "\u4E00\u6642"
     meaning:
     - "one o\u2019clock"
+    - 1 o clock
+    - 1 oclock
   - kana: "\u3044\u3057\u3083"
     kanji: "\u533B\u8005"
     meaning:

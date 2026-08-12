@@ -569,6 +569,7 @@ public enum VerbType
 
 public enum ConjugationType
 {
+    Meaning,
     StandardNonpast,
     PoliteNonpast,
     PoliteNonpastNegative,

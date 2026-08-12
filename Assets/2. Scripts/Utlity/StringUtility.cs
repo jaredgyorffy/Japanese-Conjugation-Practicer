@@ -3,7 +3,7 @@ using UnityEngine;
 
 public static class StringUtility
 {
-    public static bool ContainsInvalidCharacters(this string text)
+    public static bool ContainsEnglishCharacters(this string text)
     {
         bool isEnglishCharacter = text.Any(c =>
         (c >= 'a' && c <= 'z') ||
