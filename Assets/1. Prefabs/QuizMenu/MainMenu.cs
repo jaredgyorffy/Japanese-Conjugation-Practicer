@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     private IntegerField questionCount;
     private Label warningText;
 
+    private Toggle adventureMode;
     private List<Toggle> meaningToggles = new();
     private List<Toggle> verbFormToggles = new();
     private List<Toggle> adjectiveFormToggles = new();
@@ -72,13 +73,27 @@ public class MainMenu : MonoBehaviour
         }
 
         warningText.visible = false;
-        test.InitializeQuiz(config, questions, Restart);
+        if (config.AdventureMode)
+        {
+
+        }
+        else
+        {
+            test.InitializeQuiz(config, questions, Restart);
+        }
         root.visible = false;
     }
 
     private void InitializeOptions()
     {
         QuizConfiguration config = new QuizConfiguration();
+
+        VisualElement gamemode = root.MQ<VisualElement>("Gamemode");
+        var toggle = togglePrefab.Instantiate();
+        toggle.MQ<Label>().text = "AdventureMode";
+        adventureMode = toggle.MQ<Toggle>();
+        gamemode.Add(toggle);
+
 
         VisualElement meanings = root.MQ<VisualElement>("Meanings");
         var listOfMeanings = config.GetMeanings();
@@ -149,6 +164,8 @@ public class MainMenu : MonoBehaviour
     {
         QuizConfiguration config = new QuizConfiguration();
 
+        config.AdventureMode = adventureMode.value;
+
         var listOfMeanings = config.GetMeanings();
         for (int i = 0; i < meaningToggles.Count; i++)
         {
@@ -211,6 +228,8 @@ public class MainMenu : MonoBehaviour
 
 public class QuizConfiguration
 {
+    public bool AdventureMode;
+
     public bool VerbMeaning;
     public bool VerbPoliteNonpastForm;
     public bool VerbPoliteNonpastNegativeForm;

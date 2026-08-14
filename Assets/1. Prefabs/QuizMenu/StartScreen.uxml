@@ -4,6 +4,9 @@
         <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgb(255, 255, 255); padding-top: 5%; padding-right: 5%; padding-bottom: 5%; padding-left: 5%; flex-shrink: 0; width: auto; height: auto; flex-direction: column; flex-wrap: nowrap; align-self: auto; justify-content: flex-start; align-content: auto;">
             <ui:IntegerField label="Number of Questions" value="10" name="QuestionCount" keyboard-type="NumberPad" style="width: 100%; align-self: center;"/>
             <ui:VisualElement name="Options" style="flex-grow: 0; flex-direction: column; white-space: normal; flex-shrink: 0;">
+                <ui:VisualElement name="Gamemode" class="ToggleList" style="margin-top: 3%;">
+                    <ui:Label text="Game Mode&#10;" name="GamemodeTitle" class="Title" style="flex-grow: 0; flex-shrink: 1;"/>
+                </ui:VisualElement>
                 <ui:VisualElement name="Meanings" class="ToggleList" style="margin-top: 3%;">
                     <ui:Label text="Meanings" name="MeaningsTitle" class="Title" style="flex-grow: 0; flex-shrink: 1;"/>
                 </ui:VisualElement>
