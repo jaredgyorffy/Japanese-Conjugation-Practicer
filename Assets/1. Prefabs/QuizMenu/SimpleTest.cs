@@ -17,6 +17,9 @@ public class SimpleTest : MonoBehaviour
     private Action restartAction;
     private KanaRomajiTranslator textConverter;
 
+    public event Action<bool> AnswerSubmitted;
+    public event Action NextQuestion;
+
     private List<string> currentAnswer = new();
     private int amountCorrect;
 
@@ -51,7 +54,7 @@ public class SimpleTest : MonoBehaviour
     private bool confirmAnswer = false;
     private bool hintVisible = false;
         
-    public bool StrictMode = false;
+    private bool StrictMode = false;
     
     void Start()
     {
@@ -171,6 +174,8 @@ public class SimpleTest : MonoBehaviour
             }
         }
 
+
+
         if (shouldConfirmAnswer == false)
         {
             if (CheckAnswer(textField.value))
@@ -196,10 +201,12 @@ public class SimpleTest : MonoBehaviour
             {
                 feedbackText = "Correct!";
                 amountCorrect += 1;
+                AnswerSubmitted.Invoke(true);
             }
             else
             {
                 feedbackText = $"The correct answer was {GetAnswer()}.";
+                AnswerSubmitted.Invoke(false);
             }
         }
 

@@ -1,0 +1,33 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/1.%20Prefabs/QuizMenu/Style.uss?fileID=7433441132597879392&amp;guid=2a25d9aa4030f1f42a59a0d75a5e1857&amp;type=3#Style"/>
+    <ui:VisualElement name="Panel" style="flex-grow: 1; margin-left: 0%; margin-top: 0%; margin-right: 0%; margin-bottom: 0%; background-color: rgba(202, 202, 202, 0.5); flex-shrink: 0; padding-top: 5%; padding-right: 5%; padding-bottom: 5%; padding-left: 5%; width: auto; align-content: auto; align-self: auto; justify-content: flex-start;">
+        <ui:VisualElement name="Enemy" style="flex-grow: 0; align-items: center; align-self: auto; justify-content: flex-start; align-content: flex-start; flex-direction: column; flex-wrap: nowrap; width: 100%; flex-shrink: 1;">
+            <ui:ProgressBar value="50" title="" name="EnemyHP" style="flex-grow: 0; width: 100%;">
+                <Bindings>
+                    <ui:DataBinding property="value" data-source-path="EnemyCurrentHP" binding-mode="ToTarget"/>
+                    <ui:DataBinding property="highValue" data-source-path="EnemyMaxHP" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:ProgressBar>
+            <ui:Image name="EnemySprite" style="background-image: url(&quot;project://database/Assets/4.%20Art/Textures/Slime_T.png?fileID=2800000&amp;guid=528460518fff6b946a20244488652e0a&amp;type=3#Slime_T&quot;); height: auto; flex-direction: column; align-items: center; flex-grow: 0; flex-shrink: 1; width: 75%; aspect-ratio: 1; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%; padding-top: 0%; padding-right: 0%; padding-bottom: 0%; padding-left: 0%;"/>
+            <ui:Label text="Test Enemy" name="EnemyName" class="Title">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="EnemyName" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+        <ui:Label text="Enemy hit for 25 damage!" name="BattleText" class="Title" style="align-items: auto; align-self: center; flex-grow: 0; flex-shrink: 1; white-space: normal; -unity-text-align: middle-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 25px 50px; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%;">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="BattleText" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+        <ui:VisualElement name="Player" style="flex-grow: 0; align-self: auto; align-content: auto; align-items: stretch; flex-direction: column; justify-content: flex-start; -unity-text-align: upper-left; position: relative; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%;">
+            <ui:Label text="Player HP" name="PlayerHPTitle" class="Title"/>
+            <ui:ProgressBar value="50" title="" name="PlayerHP" style="flex-direction: column-reverse; align-self: auto;">
+                <Bindings>
+                    <ui:DataBinding property="value" data-source-path="PlayerCurrentHP" binding-mode="ToTarget" update-trigger="OnSourceChanged"/>
+                    <ui:DataBinding property="highValue" data-source-path="PlayerMaxHP" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:ProgressBar>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
