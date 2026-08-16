@@ -42,16 +42,17 @@ public class SimpleTest : MonoBehaviour
     public WordLists WordLists;
 
     private List<(string, ConjugationType)> askedQuestions = new();
-    
+
     private bool confirmAnswer = false;
     private bool hintVisible = false;
-        
+
     private bool StrictMode = false;
 
-    private bool referencesAcquired;
+    public bool Initialized { get; private set; }
 
-    private void GetReferences()
+    private void TryInitialize()
     {
+        if (Initialized) return;
         quizMenuRoot = quizMenu.rootVisualElement;
         quizMenuRoot.dataSource = this;
         textField = quizMenuRoot.MQ<TextField>("TextField");
@@ -65,22 +66,39 @@ public class SimpleTest : MonoBehaviour
 
         textConverter = quizMenu.GetComponent<KanaRomajiTranslator>();
         textConverter.InputChanged += OnInputChanged;
-        
-        textField.RegisterCallback<BlurEvent>(evt =>
+
+        /*textField.RegisterCallback<BlurEvent>(evt =>
         {
             if (MobileKeyboardInput.CheckInput() == TouchScreenKeyboard.Status.Done)
             {
                 evt.StopImmediatePropagation();
                 OnPressSubmit();
             }
-        });
-        
-        textField.RegisterCallback<NavigationSubmitEvent>(evt =>
-        {
-            evt.StopImmediatePropagation();
-            OnPressSubmit();
-        }, TrickleDown.TrickleDown);
+        });*/
+
+        textField.RegisterCallback<NavigationSubmitEvent>(OnPressEnterToSubmit, TrickleDown.TrickleDown);
+        Initialized = true;
     }
+
+    public void Unsubscribe()
+    {
+        if (Initialized)
+        {
+            submitButton.clicked -= OnPressSubmit;
+            hintButton.clicked -= ToggleHint;
+            textConverter.InputChanged -= OnInputChanged;
+            textField.UnregisterCallback<NavigationSubmitEvent>(OnPressEnterToSubmit, TrickleDown.TrickleDown);
+            Initialized = false;
+        }
+    }
+
+    private void OnPressEnterToSubmit(NavigationSubmitEvent evt)
+    {
+        evt.StopImmediatePropagation();
+        OnPressSubmit();
+    }
+
+
 
     private void InitializeQuestionTypes(QuizConfiguration config)
     {
@@ -90,7 +108,7 @@ public class SimpleTest : MonoBehaviour
 
     public void InitializeQuiz(QuizConfiguration config)
     {
-        GetReferences();
+        TryInitialize();
         WordLists = new WordLists(config.Verbs, config.Adjectives, config.Nouns);
 
         askedQuestions = new();
@@ -176,18 +194,17 @@ public class SimpleTest : MonoBehaviour
             if (CheckAnswer(textField.value))
             {
                 feedbackText = "Correct!";
-                AnswerSubmitted.Invoke(true);
+                AnswerSubmitted?.Invoke(true);
             }
             else
             {
                 feedbackText = $"The correct answer was {GetAnswer()}.";
-                AnswerSubmitted.Invoke(false);
+                AnswerSubmitted?.Invoke(false);
             }
         }
 
         textField.value = "";
         confirmAnswer = false;
-        PrepareNextQuestion();
     }
 
     private bool CheckAnswer(string userAnswer)
@@ -202,7 +219,7 @@ public class SimpleTest : MonoBehaviour
 
     private bool shouldConfirmAnswer => StrictMode || confirmAnswer ? true : false;
 
-    private void PrepareNextQuestion()
+    public void PrepareNextQuestion()
     {
         Question question = GetQuestion();
 
@@ -302,7 +319,9 @@ public class SimpleTest : MonoBehaviour
 
     private void OnDestroy()
     {
-        submitButton.clicked -= OnPressSubmit;
-        textConverter.InputChanged -= OnInputChanged;
+        if (Initialized)
+        {
+            Unsubscribe();
+        }
     }
 }

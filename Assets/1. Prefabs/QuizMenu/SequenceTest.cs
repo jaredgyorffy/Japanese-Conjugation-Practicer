@@ -55,10 +55,12 @@ public class SequenceTest : MonoBehaviour
     private bool hintVisible = false;
         
     private bool StrictMode = false;
-    
 
-    private void GetReferences()
+    public bool Initialized { get; private set; }
+
+    private void TryInitialize()
     {
+        if (Initialized) return;
         quizMenuRoot = quizMenu.rootVisualElement;
         quizMenuRoot.dataSource = this;
         textField = quizMenuRoot.MQ<TextField>("TextField");
@@ -74,21 +76,34 @@ public class SequenceTest : MonoBehaviour
         
         textConverter = quizMenu.GetComponent<KanaRomajiTranslator>();
         textConverter.InputChanged += OnInputChanged;
-        
-        textField.RegisterCallback<BlurEvent>(evt =>
+
+        Initialized = true;
+        /*textField.RegisterCallback<BlurEvent>(evt =>
         {
             if (MobileKeyboardInput.CheckInput() == TouchScreenKeyboard.Status.Done)
             {
                 evt.StopImmediatePropagation();
                 OnPressSubmit();
             }
-        });
-        
-        textField.RegisterCallback<NavigationSubmitEvent>(evt =>
-        {
-            evt.StopImmediatePropagation();
-            OnPressSubmit();
-        }, TrickleDown.TrickleDown);
+        });*/
+
+        textField.RegisterCallback<NavigationSubmitEvent>(OnPressEnterToSubmit, TrickleDown.TrickleDown);
+    }
+
+    public void Unsubscribe()
+    {
+        submitButton.clicked -= OnPressSubmit;
+        restartButton.clicked -= RestartQuiz;
+        hintButton.clicked -= ToggleHint;
+        textConverter.InputChanged -= OnInputChanged;
+        Initialized = false;
+        textField.UnregisterCallback<NavigationSubmitEvent>(OnPressEnterToSubmit, TrickleDown.TrickleDown);
+    }
+
+    private void OnPressEnterToSubmit(NavigationSubmitEvent evt)
+    {
+        evt.StopImmediatePropagation();
+        OnPressSubmit();
     }
 
     private void InitializeQuestionTypes(QuizConfiguration config)
@@ -99,7 +114,7 @@ public class SequenceTest : MonoBehaviour
 
     public void InitializeQuiz(QuizConfiguration config, int QuestionCount = 0, Action restartAction = null)
     {
-        GetReferences();
+        TryInitialize();
         WordLists = new WordLists(config.Verbs, config.Adjectives, config.Nouns);
 
         askedQuestions = new();
@@ -197,12 +212,12 @@ public class SequenceTest : MonoBehaviour
             {
                 feedbackText = "Correct!";
                 amountCorrect += 1;
-                AnswerSubmitted.Invoke(true);
+                AnswerSubmitted?.Invoke(true);
             }
             else
             {
                 feedbackText = $"The correct answer was {GetAnswer()}.";
-                AnswerSubmitted.Invoke(false);
+                AnswerSubmitted?.Invoke(false);
             }
         }
 
@@ -358,7 +373,9 @@ public class SequenceTest : MonoBehaviour
 
     private void OnDestroy()
     {
-        submitButton.clicked -= OnPressSubmit;
-        textConverter.InputChanged -= OnInputChanged;
+        if (Initialized)
+        {
+            Unsubscribe();
+        }
     }
 }

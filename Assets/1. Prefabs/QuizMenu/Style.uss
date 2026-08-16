@@ -30,4 +30,5 @@ VisualElement {
 
 .unity-progress-bar__progress {
     background-color: rgb(255, 0, 0);
+    transition-duration: 1s;
 }

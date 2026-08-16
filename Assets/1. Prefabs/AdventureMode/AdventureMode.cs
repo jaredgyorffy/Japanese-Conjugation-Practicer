@@ -11,7 +11,7 @@ public class AdventureMode : MonoBehaviour
     [SerializeField] private UIDocument testScreen;
     private VisualElement testScreenRoot;
 
-    [SerializeField] private SimpleTest simpleTest;
+    [SerializeField] public SimpleTest SimpleTest;
 
     [SerializeField] private UIDocument battleMenu;
     private VisualElement battleMenuRoot;
@@ -35,6 +35,8 @@ public class AdventureMode : MonoBehaviour
 
     private ConjugationTypes conjugationTypes;
 
+    public bool Initialized { get; private set; }
+
     void Start()
     {
         battleMenuRoot = battleMenu.rootVisualElement;
@@ -49,7 +51,7 @@ public class AdventureMode : MonoBehaviour
         SetBattleScreenVisible(true);
         config.Strictmode = true;
 
-        simpleTest.InitializeQuiz(config);
+        SimpleTest.InitializeQuiz(config);
 
         Invoke("SetQuestion", inputDelay);
         battleMenu.enabled = true;
@@ -60,7 +62,24 @@ public class AdventureMode : MonoBehaviour
         this.restartAction = restartAction;
         battleText = $"A wild {enemyName} appears!";
 
-        simpleTest.AnswerSubmitted += ResolveBattle;
+        if (Initialized)
+        {
+            return;
+        }
+        SimpleTest.AnswerSubmitted += ResolveBattle;
+        Initialized = true;
+    }
+
+    public void Unsubscribe()
+    {
+        if (Initialized)
+        {
+            SimpleTest.AnswerSubmitted -= ResolveBattle;
+            SimpleTest.Unsubscribe();
+            SetBattleScreenVisible(false);
+            SetTestVisible(true);
+        }
+        Initialized = false;
     }
 
     private void SetBattleScreenVisible(bool visible)
@@ -102,8 +121,8 @@ public class AdventureMode : MonoBehaviour
             restartAction.Invoke();
             return;
         }
-
         SetTestVisible(true);
+        SimpleTest.PrepareNextQuestion();
     }
 
     private void ResolveBattle(bool answerCorrect)

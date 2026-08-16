@@ -76,10 +76,18 @@ public class MainMenu : MonoBehaviour
         warningText.visible = false;
         if (config.AdventureMode)
         {
+            if (sequenceTest.Initialized)
+            {
+                sequenceTest.Unsubscribe();
+            }
             adventure.InitializeAdventure(3, questionCount.value, config, Restart);
         }
         else
         {
+            if (adventure.Initialized)
+            {
+                adventure.Unsubscribe();
+            }
             sequenceTest.InitializeQuiz(config, questions, Restart);
         }
         root.visible = false;
@@ -147,7 +155,11 @@ public class MainMenu : MonoBehaviour
             var toggleBox = togglePrefab.Instantiate();
             toggleBox.MQ<Label>().text = globalVariables.WordLists[i].listName;
 
-            toggleBox.MQ<Toggle>().value = true;
+            if (globalVariables.WordLists[i].listName.Contains("Debug") == false)
+            {
+                toggleBox.MQ<Toggle>().value = true;
+            }
+
             contentToggles.Add(toggleBox.MQ<Toggle>());
             content.Add(toggleBox);
         }

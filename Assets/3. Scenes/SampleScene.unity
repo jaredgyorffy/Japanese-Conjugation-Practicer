@@ -671,7 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdventureMode
   testScreen: {fileID: 543165418}
-  simpleTest: {fileID: 689657737}
+  SimpleTest: {fileID: 689657737}
   battleMenu: {fileID: 1169017270}
   inputDelay: 3
 --- !u!4 &689657736
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9911097462e2d468468c35c3df65d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  test: {fileID: 543165421}
+  sequenceTest: {fileID: 543165421}
   adventure: {fileID: 689657735}
   togglePrefab: {fileID: 9197481963319205126, guid: 57db5c9776dabb6468ad1ea3148be33b, type: 3}
   inputManager: {fileID: 1478899879}

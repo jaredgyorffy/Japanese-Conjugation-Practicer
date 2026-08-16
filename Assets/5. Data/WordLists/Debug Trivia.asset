@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478a6b45f4173a947984457165db4dad, type: 3}
+  m_Name: Debug Trivia
+  m_EditorClassIdentifier: Assembly-CSharp::VerbList
+  <listName>k__BackingField: Debug Trivia
+  verbList: []
+  adjectiveList: []
+  nounList:
+  - kana: "What is the only U.S. state that can be typed in using only one row of
+      a standard \u201CQWERTY\u201D keyboard? "
+    kanji: 
+    meaning:
+    - Alaska
+    - alaska
+  - kana: How many cards are in a standard deck of playing cards
+    kanji: 
+    meaning:
+    - GoldenEye
+    - goldeneye
+    - goldeneye 007
+  - kana: How many cards are in a standard deck of playing cards
+    kanji: 
+    meaning:
+    - 52
+  - kana: What is the name for the plastic or metal tube found on the ends of shoelaces?
+    kanji: 
+    meaning:
+    - aglet
+    - an aglet
+    - the aglet
+  - kana: Weighing around eight pounds, this is the human body's largest organ
+    kanji: 
+    meaning:
+    - skin
+    - the skin
+  - kana: "Relative to the internet, what does \u201CURL\u201D stand for"
+    kanji: 
+    meaning:
+    - Uniform resource locator
+  - kana: "M&M\u2019S Fruit Chews would eventually become what popular candy? "
+    kanji: 
+    meaning:
+    - Starburst
+  - kana: "What is the name of the pet dinosaur on the TV cartoon \u201CThe Flintstones\u201D? "
+    kanji: 
+    meaning:
+    - Dino
+  - kana: "What is August\u2019s birthstone?"
+    kanji: 
+    meaning:
+    - Peridot
+  - kana: "Who is Barbie\u2019s little sister?"
+    kanji: 
+    meaning:
+    - Skipper
+  - kana: 'The first iPhone was released in what year? '
+    kanji: 
+    meaning:
+    - 2007
