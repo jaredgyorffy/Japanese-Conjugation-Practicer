@@ -43,10 +43,13 @@ public class AdventureMode : MonoBehaviour
         SetBattleScreenVisible(false);
     }
 
-    public void InitializeAdventure(float playerMaxHP, float enemyMaxHP, Action restartAction = null)
+    public void InitializeAdventure(float playerMaxHP, float enemyMaxHP, QuizConfiguration config, Action restartAction = null)
     {
         SetTestVisible(false);
         SetBattleScreenVisible(true);
+        config.Strictmode = true;
+
+        simpleTest.InitializeQuiz(config);
 
         Invoke("SetQuestion", inputDelay);
         battleMenu.enabled = true;
@@ -77,12 +80,10 @@ public class AdventureMode : MonoBehaviour
     {
         if (visible)
         {
-            testScreenRoot.SetEnabled(true);
             testScreenRoot.visible = true;
         }
         else
         {
-            testScreenRoot.SetEnabled(false);
             testScreenRoot.visible = false;
         }
 
@@ -122,13 +123,11 @@ public class AdventureMode : MonoBehaviour
         if (enemyCurrentHP <= 0)
         {
             battleText = $"You defeated the {enemyName}!";
-            return;
         }
 
         if (playerCurrentHP <= 0)
         {
             battleText = $"Defeat: You have been Conjugated.";
-            return;
         }
 
         Invoke("SetQuestion", inputDelay);

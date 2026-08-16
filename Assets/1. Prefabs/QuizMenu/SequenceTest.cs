@@ -6,7 +6,7 @@ using Hieki.Search;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class SimpleTest : MonoBehaviour
+public class SequenceTest : MonoBehaviour
 {
     [SerializeField] private UIDocument quizMenu;
     private VisualElement quizMenuRoot;
@@ -14,12 +14,14 @@ public class SimpleTest : MonoBehaviour
     private Button restartButton;
     private Button hintButton;
     private TextField textField;
+    private Action restartAction;
     private KanaRomajiTranslator textConverter;
 
     public event Action<bool> AnswerSubmitted;
     public event Action NextQuestion;
 
     private List<string> currentAnswer = new();
+    private int amountCorrect;
 
     private ConjugationTypes conjugationTypes;
 
@@ -39,6 +41,12 @@ public class SimpleTest : MonoBehaviour
     [CreateProperty] public string CurrentKana => currentKana;
     private string currentKana;
 
+    [CreateProperty] public string CurrentQuestion => (currentQuestion + 1).ToString();
+    private int currentQuestion;
+
+    [CreateProperty] public string TotalQuestions => totalQuestions.ToString();
+    private int totalQuestions;
+
     public WordLists WordLists;
 
     private List<(string, ConjugationType)> askedQuestions = new();
@@ -47,8 +55,7 @@ public class SimpleTest : MonoBehaviour
     private bool hintVisible = false;
         
     private bool StrictMode = false;
-
-    private bool referencesAcquired;
+    
 
     private void GetReferences()
     {
@@ -58,11 +65,13 @@ public class SimpleTest : MonoBehaviour
         submitButton = quizMenuRoot.MQ<Button>("Submit");
         submitButton.clicked += OnPressSubmit;
 
+        restartButton = quizMenuRoot.MQ<Button>("Restart");
+        restartButton.clicked += RestartQuiz;
+        
+
         hintButton = quizMenuRoot.MQ<Button>("Hint");
         hintButton.clicked += ToggleHint;
-
-        restartButton = quizMenuRoot.MQ<Button>("Restart");
-
+        
         textConverter = quizMenu.GetComponent<KanaRomajiTranslator>();
         textConverter.InputChanged += OnInputChanged;
         
@@ -88,7 +97,7 @@ public class SimpleTest : MonoBehaviour
         conjugationTypes = conjugation;
     }
 
-    public void InitializeQuiz(QuizConfiguration config)
+    public void InitializeQuiz(QuizConfiguration config, int QuestionCount = 0, Action restartAction = null)
     {
         GetReferences();
         WordLists = new WordLists(config.Verbs, config.Adjectives, config.Nouns);
@@ -98,9 +107,20 @@ public class SimpleTest : MonoBehaviour
         restartButton.visible = false;
         feedbackText = "";
         InitializeQuestionTypes(config);
+        if (QuestionCount > 0)
+        {
+            totalQuestions = QuestionCount;
+        }
+        else
+        {
+            totalQuestions = WordLists.Verbs.Count;
+        }
+        currentQuestion = 0;
+        amountCorrect = 0;
         
         StrictMode = config.Strictmode;
 
+        this.restartAction = restartAction;
         PrepareNextQuestion();
     }
 
@@ -176,6 +196,7 @@ public class SimpleTest : MonoBehaviour
             if (CheckAnswer(textField.value))
             {
                 feedbackText = "Correct!";
+                amountCorrect += 1;
                 AnswerSubmitted.Invoke(true);
             }
             else
@@ -187,6 +208,13 @@ public class SimpleTest : MonoBehaviour
 
         textField.value = "";
         confirmAnswer = false;
+
+        if (currentQuestion >= totalQuestions - 1)
+        {
+            EndQuiz();
+            return;
+        }
+        currentQuestion++;
         PrepareNextQuestion();
     }
 
@@ -204,6 +232,12 @@ public class SimpleTest : MonoBehaviour
 
     private void PrepareNextQuestion()
     {
+        if (currentQuestion >= totalQuestions) 
+        {
+            EndQuiz();
+            return;
+        }
+
         Question question = GetQuestion();
 
         (List<string> answer, string type) questionData = QuizUtility.GetQuestionAndAnswer(question, WordLists);
@@ -281,6 +315,28 @@ public class SimpleTest : MonoBehaviour
         }
 
         return new Question(wordIndex, wordType, form);
+    }
+
+    private void EndQuiz()
+    {
+        feedbackText += $" \n \n Quiz Complete! \n {amountCorrect} / {totalQuestions}.";
+        restartButton.SetEnabled(true);
+        submitButton.SetEnabled(false);
+        textField.SetEnabled(false);
+        restartButton.visible = true;
+        hintButton.SetEnabled(false);
+    }
+
+    private void RestartQuiz()
+    {
+        if (restartAction != null)
+        {
+            submitButton.SetEnabled(true);
+            textField.SetEnabled(true);
+            restartAction.Invoke();
+            hintButton.SetEnabled(true);
+            restartButton.visible = false;
+        }
     }
 
     private void ToggleHint()

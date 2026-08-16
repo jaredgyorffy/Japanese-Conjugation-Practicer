@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private SimpleTest test;
+    [SerializeField] private SequenceTest sequenceTest;
     [SerializeField] private AdventureMode adventure;
     [SerializeField] private VisualTreeAsset togglePrefab;
     [SerializeField] private InputManager inputManager;
@@ -76,12 +76,11 @@ public class MainMenu : MonoBehaviour
         warningText.visible = false;
         if (config.AdventureMode)
         {
-            adventure.InitializeAdventure(3, questionCount.value);
-            test.InitializeQuiz(config, questions, Restart);
+            adventure.InitializeAdventure(3, questionCount.value, config, Restart);
         }
         else
         {
-            test.InitializeQuiz(config, questions, Restart);
+            sequenceTest.InitializeQuiz(config, questions, Restart);
         }
         root.visible = false;
     }
