@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     private UIDocument uiDocument;
     private VisualElement root;
     private Button startButton;
+    private Button adventureButton;
     private IntegerField questionCount;
     private Label warningText;
 
@@ -39,8 +40,21 @@ public class MainMenu : MonoBehaviour
         startButton = root.MQ<Button>("Start");
         questionCount = root.MQ<IntegerField>("QuestionCount");
         warningText = root.MQ<Label>("Warning");
+        adventureButton = root.MQ<Button>("Adventure");
         startButton.clicked += OnPressStart;
+        adventureButton.clicked += Adventure;
         warningText.visible = false;
+    }
+
+    private void Adventure()
+    {
+        QuizConfiguration config = InitializeQuiz();
+        if (sequenceTest.Initialized)
+        {
+            sequenceTest.Unsubscribe();
+        }
+        adventure.InitializeAdventure(3, questionCount.value, config, Restart);
+        root.visible = false;
     }
 
     private void OnPressStart()
@@ -74,22 +88,12 @@ public class MainMenu : MonoBehaviour
         }
 
         warningText.visible = false;
-        if (config.AdventureMode)
+
+        if (adventure.Initialized)
         {
-            if (sequenceTest.Initialized)
-            {
-                sequenceTest.Unsubscribe();
-            }
-            adventure.InitializeAdventure(3, questionCount.value, config, Restart);
+            adventure.Unsubscribe();
         }
-        else
-        {
-            if (adventure.Initialized)
-            {
-                adventure.Unsubscribe();
-            }
-            sequenceTest.InitializeQuiz(config, questions, Restart);
-        }
+        sequenceTest.InitializeQuiz(config, questions, Restart);
         root.visible = false;
     }
 
@@ -212,18 +216,9 @@ public class MainMenu : MonoBehaviour
         {
             if (contentToggles[i] != null && contentToggles[i].value)
             {
-                if (config.VerbsSelected())
-                {
-                    config.Verbs.AddRange(globalVariables.WordLists[i].verbList);
-                }
-                if (config.AdjectiveSelected())
-                {
-                    config.Adjectives.AddRange(globalVariables.WordLists[i].adjectiveList);
-                }
-                if (config.NounSelected())
-                {
-                    config.Nouns.AddRange(globalVariables.WordLists[i].nounList);
-                }
+                config.Verbs.AddRange(globalVariables.WordLists[i].verbList);
+                config.Adjectives.AddRange(globalVariables.WordLists[i].adjectiveList);
+                config.Nouns.AddRange(globalVariables.WordLists[i].nounList);
             }
         }
 

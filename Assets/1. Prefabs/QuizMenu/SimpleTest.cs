@@ -106,11 +106,17 @@ public class SimpleTest : MonoBehaviour
         conjugationTypes = conjugation;
     }
 
+    public void SetQuestionTypes(ConjugationTypes types)
+    {
+        conjugationTypes = types;
+    }
+
     public void InitializeQuiz(QuizConfiguration config)
     {
         TryInitialize();
         WordLists = new WordLists(config.Verbs, config.Adjectives, config.Nouns);
 
+        quizMenuRoot.MQ<VisualElement>("Number").visible = false;
         askedQuestions = new();
         restartButton.SetEnabled(true);
         restartButton.visible = false;
@@ -118,8 +124,6 @@ public class SimpleTest : MonoBehaviour
         InitializeQuestionTypes(config);
         
         StrictMode = config.Strictmode;
-
-        PrepareNextQuestion();
     }
 
     private ConjugationType GetRandomQuestionType(WordType wordtype)
@@ -265,7 +269,7 @@ public class SimpleTest : MonoBehaviour
 
     private Question GetQuestion()
     {
-        WordType wordType = QuizUtility.GetRandomWordType(WordLists);
+        WordType wordType = QuizUtility.GetRandomWordType(conjugationTypes);
         ConjugationType form = GetRandomQuestionType(wordType);
 
         currentWordType = wordType;

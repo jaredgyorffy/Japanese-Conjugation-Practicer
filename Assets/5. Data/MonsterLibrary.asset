@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19da5d453a5496648a0ac62343ab07df, type: 3}
+  m_Name: MonsterLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterLibrary
+  EasyMonsters:
+  - Name: Respectful Randy
+    ConjugationTypes:
+      VerbConjugationTypes: 0200000003000000
+      AdjectiveConjugationTypes: 0400000003000000
+      NounConjugationTypes: 
+    MaxHP: 3
+    Tint: {r: 1, g: 1, b: 1, a: 1}
+  - Name: The Meaning Maverick
+    ConjugationTypes:
+      VerbConjugationTypes: 00000000
+      AdjectiveConjugationTypes: 00000000
+      NounConjugationTypes: 00000000
+    MaxHP: 2
+    Tint: {r: 1, g: 1, b: 1, a: 1}
+  - Name: Action Adam
+    ConjugationTypes:
+      VerbConjugationTypes: 02000000030000000400000005000000
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 
+    MaxHP: 3
+    Tint: {r: 1, g: 1, b: 1, a: 1}
+  - Name: Nancy Noun
+    ConjugationTypes:
+      VerbConjugationTypes: 
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 030000000400000005000000
+    MaxHP: 3
+    Tint: {r: 1, g: 1, b: 1, a: 1}
+  MediumMonsters:
+  - Name: Descriptive Daniel
+    ConjugationTypes:
+      VerbConjugationTypes: 
+      AdjectiveConjugationTypes: 080000000700000006000000
+      NounConjugationTypes: 
+    MaxHP: 3
+    Tint: {r: 0, g: 0, b: 0, a: 1}
+  - Name: Standard Stanley
+    ConjugationTypes:
+      VerbConjugationTypes: 060000000700000008000000
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 
+    MaxHP: 4
+    Tint: {r: 0, g: 0, b: 0, a: 1}
+  HardMonsters:
+  - Name: Multifarious Manny
+    ConjugationTypes:
+      VerbConjugationTypes: 02000000030000000400000005000000060000000700000008000000090000000a0000000b000000
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 
+    MaxHP: 5
+    Tint: {r: 1, g: 0, b: 0, a: 1}
+  BossMonsters: []

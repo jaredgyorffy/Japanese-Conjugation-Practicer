@@ -10,7 +10,112 @@ public static class QuizUtility
 {
     public static ConjugationTypes InitializeQuestionTypes(QuizConfiguration config)
     {
+        List<ConjugationType> verbConjugationTypes = new List<ConjugationType>();
+        if (config.VerbPoliteNonpastForm)
+        {
+            verbConjugationTypes.Add(ConjugationType.PoliteNonpast);
+        }
+        if (config.VerbPoliteNonpastNegativeForm)
+        {
+            verbConjugationTypes.Add(ConjugationType.PoliteNonpastNegative);
+        }
+        if (config.VerbPolitePastForm)
+        {
+            verbConjugationTypes.Add(ConjugationType.PolitePast);
+        }
+        if (config.VerbPolitePastNegativeForm)
+        {
+            verbConjugationTypes.Add(ConjugationType.PolitePastNegative);
+        }
+        if (config.VerbStandardPastForm)
+        {
+            verbConjugationTypes.Add(ConjugationType.StandardPast);
+        }
+        if (config.VerbStandardNonpastNegativeForm)
+        {
+            verbConjugationTypes.Add(ConjugationType.StandardNonpastNegative);
+        }
+        if (config.VerbStandardPastNegativeForm)
+        {
+            verbConjugationTypes.Add(ConjugationType.StandardPastNegative);
+        }
+        if (config.VerbPoliteVolitionalForm)
+        {
+            verbConjugationTypes.Add(ConjugationType.PoliteVolitional);
+        }
+        if (config.VerbTeForm)
+        {
+            verbConjugationTypes.Add(ConjugationType.TeForm);
+        }
+        if (config.VerbMeaning)
+        {
+            verbConjugationTypes.Add(ConjugationType.Meaning);
+        }
 
+        List<ConjugationType> adjectiveConjugationTypes = new List<ConjugationType>();
+        if (config.AdjectivePoliteNonpastNegativeForm)
+        {
+            adjectiveConjugationTypes.Add(ConjugationType.PoliteNonpastNegative);
+        }
+        if (config.AdjectivePolitePastForm)
+        {
+            adjectiveConjugationTypes.Add(ConjugationType.PolitePast);
+        }
+        if (config.AdjectivePolitePastNegativeForm)
+        {
+            adjectiveConjugationTypes.Add(ConjugationType.PolitePastNegative);
+        }
+        if (config.AdjectiveStandardPastForm)
+        {
+            adjectiveConjugationTypes.Add(ConjugationType.StandardPast);
+        }
+        if (config.AdjectiveStandardNonpastNegativeForm)
+        {
+            adjectiveConjugationTypes.Add(ConjugationType.StandardNonpastNegative);
+        }
+        if (config.AdjectiveStandardPastNegativeForm)
+        {
+            adjectiveConjugationTypes.Add(ConjugationType.StandardPastNegative);
+        }
+        if (config.AdjectiveMeaning)
+        {
+            adjectiveConjugationTypes.Add(ConjugationType.Meaning);
+        }
+
+        List<ConjugationType> nounConjugationTypes = new List<ConjugationType>();
+        if (config.NounPoliteNonpastNegativeForm)
+        {
+            nounConjugationTypes.Add(ConjugationType.PoliteNonpastNegative);
+        }
+        if (config.NounPolitePastForm)
+        {
+            nounConjugationTypes.Add(ConjugationType.PolitePast);
+        }
+        if (config.NounPolitePastNegativeForm)
+        {
+            nounConjugationTypes.Add(ConjugationType.PolitePastNegative);
+        }
+        if (config.NounStandardPastForm)
+        {
+            nounConjugationTypes.Add(ConjugationType.StandardPast);
+        }
+        if (config.NounStandardNonpastNegativeForm)
+        {
+            nounConjugationTypes.Add(ConjugationType.StandardNonpastNegative);
+        }
+        if (config.NounStandardPastNegativeForm)
+        {
+            nounConjugationTypes.Add(ConjugationType.StandardPastNegative);
+        }
+        if (config.NounMeaning)
+        {
+            nounConjugationTypes.Add(ConjugationType.Meaning);
+        }
+        return new ConjugationTypes(verbConjugationTypes, adjectiveConjugationTypes, nounConjugationTypes);
+    }
+
+    public static ConjugationTypes GenerateRandomConjugationTypes(QuizConfiguration config, int conjugationTypes)
+    {
         List<ConjugationType> verbConjugationTypes = new List<ConjugationType>();
         if (config.VerbPoliteNonpastForm)
         {
@@ -327,31 +432,30 @@ public static class QuizUtility
 
         return (answer, questionType);
     }
-
-    public static WordType GetRandomWordType(WordLists words)
+    public static WordType GetRandomWordType(ConjugationTypes words)
     {
         WordType wordtype;
-        if (words.Verbs.Count > 0 && words.Adjectives.Count == 0 && words.Nouns.Count == 0)
+        if (words.VerbConjugationTypes.Count > 0 && words.AdjectiveConjugationTypes.Count == 0 && words.NounConjugationTypes.Count == 0)
         {
             wordtype = WordType.Verb;
         }
-        else if (words.Verbs.Count == 0 && words.Adjectives.Count > 0 && words.Nouns.Count == 0)
+        else if (words.VerbConjugationTypes.Count == 0 && words.AdjectiveConjugationTypes.Count > 0 && words.NounConjugationTypes.Count == 0)
         {
             wordtype = WordType.Adjective;
         }
-        else if (words.Verbs.Count == 0 && words.Adjectives.Count == 0 && words.Nouns.Count > 0)
+        else if (words.VerbConjugationTypes.Count == 0 && words.AdjectiveConjugationTypes.Count == 0 && words.NounConjugationTypes.Count > 0)
         {
             wordtype = WordType.Noun;
         }
-        else if (words.Verbs.Count > 0 && words.Adjectives.Count > 0 && words.Nouns.Count == 0)
+        else if (words.VerbConjugationTypes.Count > 0 && words.AdjectiveConjugationTypes.Count > 0 && words.NounConjugationTypes.Count == 0)
         {
             wordtype = RandomUtility.PercentageChanceOfTrue(0.5f) ? WordType.Verb : WordType.Adjective;
         }
-        else if (words.Verbs.Count == 0 && words.Adjectives.Count > 0 && words.Nouns.Count > 0)
+        else if (words.VerbConjugationTypes.Count == 0 && words.AdjectiveConjugationTypes.Count > 0 && words.NounConjugationTypes.Count > 0)
         {
             wordtype = RandomUtility.PercentageChanceOfTrue(0.5f) ? WordType.Noun : WordType.Adjective;
         }
-        else if (words.Verbs.Count > 0 && words.Adjectives.Count == 0 && words.Nouns.Count > 0)
+        else if (words.VerbConjugationTypes.Count > 0 && words.AdjectiveConjugationTypes.Count == 0 && words.NounConjugationTypes.Count > 0)
         {
             wordtype = RandomUtility.PercentageChanceOfTrue(0.5f) ? WordType.Noun : WordType.Verb;
         }

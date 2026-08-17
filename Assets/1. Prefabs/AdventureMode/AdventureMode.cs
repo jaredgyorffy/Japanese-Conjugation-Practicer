@@ -11,7 +11,7 @@ public class AdventureMode : MonoBehaviour
     [SerializeField] private UIDocument testScreen;
     private VisualElement testScreenRoot;
 
-    [SerializeField] public SimpleTest SimpleTest;
+    [SerializeField] private SimpleTest simpleTest;
 
     [SerializeField] private UIDocument battleMenu;
     private VisualElement battleMenuRoot;
@@ -29,11 +29,18 @@ public class AdventureMode : MonoBehaviour
     [CreateProperty] public float PlayerMaxHP => playerMaxHP;
     private float playerMaxHP = 100;
 
+    private int enemiesRemaining;
+
     private Action restartAction;
 
     [SerializeField] private float inputDelay = 5;
 
-    private ConjugationTypes conjugationTypes;
+    private QuizConfiguration config;
+    private Monster currentMonster;
+    [SerializeField] private GameObject monster;
+    private Animator animator;
+    private SpriteRenderer monsterSprite;
+    [SerializeField] MonsterLibrary monsterLibrary;
 
     public bool Initialized { get; private set; }
 
@@ -41,32 +48,35 @@ public class AdventureMode : MonoBehaviour
     {
         battleMenuRoot = battleMenu.rootVisualElement;
         testScreenRoot = testScreen.rootVisualElement;
+        animator = monster.GetComponent<Animator>();
+        monsterSprite = monster.GetComponent<SpriteRenderer>();
         battleMenuRoot.dataSource = this;
         SetBattleScreenVisible(false);
+        monsterSprite.enabled = false;
     }
 
-    public void InitializeAdventure(float playerMaxHP, float enemyMaxHP, QuizConfiguration config, Action restartAction = null)
+    public void InitializeAdventure(float playerMaxHP, int enemies, QuizConfiguration config, Action restartAction = null)
     {
         SetTestVisible(false);
         SetBattleScreenVisible(true);
         config.Strictmode = true;
-
-        SimpleTest.InitializeQuiz(config);
-
-        Invoke("SetQuestion", inputDelay);
+        this.config = config;
+        enemiesRemaining = enemies;
+        simpleTest.InitializeQuiz(config);
         battleMenu.enabled = true;
         this.playerMaxHP = playerMaxHP;
         playerCurrentHP = playerMaxHP;
-        this.enemyMaxHP = enemyMaxHP;
-        enemyCurrentHP = enemyMaxHP;
+
+        GenerateMonster(MonsterDifficulty.Easy);
+        monsterSprite.enabled = true;
+        animator.SetBool("Spawned", true);
         this.restartAction = restartAction;
-        battleText = $"A wild {enemyName} appears!";
 
         if (Initialized)
         {
             return;
         }
-        SimpleTest.AnswerSubmitted += ResolveBattle;
+        simpleTest.AnswerSubmitted += ResolveBattle;
         Initialized = true;
     }
 
@@ -74,8 +84,8 @@ public class AdventureMode : MonoBehaviour
     {
         if (Initialized)
         {
-            SimpleTest.AnswerSubmitted -= ResolveBattle;
-            SimpleTest.Unsubscribe();
+            simpleTest.AnswerSubmitted -= ResolveBattle;
+            simpleTest.Unsubscribe();
             SetBattleScreenVisible(false);
             SetTestVisible(true);
         }
@@ -105,14 +115,13 @@ public class AdventureMode : MonoBehaviour
         {
             testScreenRoot.visible = false;
         }
-
     }
 
     private void SetQuestion()
     {
         if (enemyCurrentHP <= 0)
         {
-            restartAction.Invoke();
+            GenerateMonster(MonsterDifficulty.Easy);
             return;
         }
 
@@ -122,7 +131,34 @@ public class AdventureMode : MonoBehaviour
             return;
         }
         SetTestVisible(true);
-        SimpleTest.PrepareNextQuestion();
+        simpleTest.PrepareNextQuestion();
+    }
+    private void GenerateMonster(MonsterDifficulty difficulty)
+    {
+        if (enemiesRemaining <= 0)
+        {
+            battleText = $"You are the Conjugation Master!";
+            Invoke("VictoryCondition", inputDelay);
+        }
+        currentMonster = monsterLibrary.GetRandomMonsterByDifficulty(difficulty);
+        enemyMaxHP = currentMonster.MaxHP;
+        enemyCurrentHP = currentMonster.MaxHP;
+        enemyName = currentMonster.Name;
+        monsterSprite.color = currentMonster.Tint;
+        battleText = $"A wild {currentMonster.Name} appears!";
+        simpleTest.SetQuestionTypes(currentMonster.ConjugationTypes);
+        simpleTest.PrepareNextQuestion();
+        animator.SetBool("Death", false);
+        animator.SetBool("Spawned", true);
+        Invoke("SetQuestion", inputDelay);
+
+        enemiesRemaining -= 1;
+    }
+
+    private void VictoryCondition()
+    {
+
+        restartAction.Invoke();
     }
 
     private void ResolveBattle(bool answerCorrect)
@@ -132,15 +168,18 @@ public class AdventureMode : MonoBehaviour
         {
             enemyCurrentHP -= 1;
             battleText = $"Correct! Dealt damage to {enemyName}!";
+            animator.SetTrigger("Hurt");
         }
         else
         {
             playerCurrentHP -= 1;
             battleText = $"Incorrect! {enemyName} damaged you!";
+            animator.SetTrigger("Attack");
         }
 
         if (enemyCurrentHP <= 0)
         {
+            animator.SetBool("Death", true);
             battleText = $"You defeated the {enemyName}!";
         }
 

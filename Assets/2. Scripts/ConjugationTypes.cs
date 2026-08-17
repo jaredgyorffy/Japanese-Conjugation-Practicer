@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
+[Serializable]
 public class ConjugationTypes
 {
     public ConjugationTypes(List<ConjugationType> verbs, List<ConjugationType> adjectives, List<ConjugationType> nouns)

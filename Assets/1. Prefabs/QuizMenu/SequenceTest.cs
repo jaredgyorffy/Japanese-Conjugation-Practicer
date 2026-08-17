@@ -122,6 +122,7 @@ public class SequenceTest : MonoBehaviour
         restartButton.visible = false;
         feedbackText = "";
         InitializeQuestionTypes(config);
+        quizMenuRoot.MQ<VisualElement>("Number").visible = true;
         if (QuestionCount > 0)
         {
             totalQuestions = QuestionCount;
@@ -297,7 +298,7 @@ public class SequenceTest : MonoBehaviour
 
     private Question GetQuestion()
     {
-        WordType wordType = QuizUtility.GetRandomWordType(WordLists);
+        WordType wordType = QuizUtility.GetRandomWordType(conjugationTypes);
         ConjugationType form = GetRandomQuestionType(wordType);
 
         currentWordType = wordType;
