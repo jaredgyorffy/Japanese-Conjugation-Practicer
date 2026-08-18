@@ -40,6 +40,7 @@ public class AdventureMode : MonoBehaviour
     [SerializeField] private GameObject monster;
     private Animator animator;
     private SpriteRenderer monsterSprite;
+    private Image uiMonsterSprite;
     [SerializeField] MonsterLibrary monsterLibrary;
 
     public bool Initialized { get; private set; }
@@ -48,11 +49,17 @@ public class AdventureMode : MonoBehaviour
     {
         battleMenuRoot = battleMenu.rootVisualElement;
         testScreenRoot = testScreen.rootVisualElement;
+        uiMonsterSprite = battleMenuRoot.MQ<Image>("EnemySprite");
         animator = monster.GetComponent<Animator>();
         monsterSprite = monster.GetComponent<SpriteRenderer>();
         battleMenuRoot.dataSource = this;
         SetBattleScreenVisible(false);
         monsterSprite.enabled = false;
+    }
+
+    private void Update()
+    {
+        uiMonsterSprite.style.backgroundImage = new StyleBackground(monsterSprite.sprite);
     }
 
     public void InitializeAdventure(float playerMaxHP, int enemies, QuizConfiguration config, Action restartAction = null)

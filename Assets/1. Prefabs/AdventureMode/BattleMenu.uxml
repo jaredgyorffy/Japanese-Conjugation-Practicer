@@ -8,7 +8,7 @@
                     <ui:DataBinding property="highValue" data-source-path="EnemyMaxHP" binding-mode="ToTarget"/>
                 </Bindings>
             </ui:ProgressBar>
-            <ui:Image name="EnemySprite" style="background-image: url(&quot;project://database/Assets/4.%20Art/Textures/Slime_T.png?fileID=2800000&amp;guid=528460518fff6b946a20244488652e0a&amp;type=3#Slime_T&quot;); height: auto; flex-direction: column; align-items: center; flex-grow: 0; flex-shrink: 1; width: 75%; aspect-ratio: 1; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%; padding-top: 0%; padding-right: 0%; padding-bottom: 0%; padding-left: 0%; display: flex; visibility: hidden;"/>
+            <ui:Image name="EnemySprite" scale-mode="ScaleToFit" style="height: auto; flex-direction: column; align-items: center; flex-grow: 0; flex-shrink: 1; width: 75%; aspect-ratio: 1; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%; padding-top: 0%; padding-right: 0%; padding-bottom: 0%; padding-left: 0%; display: flex; visibility: visible; background-image: url(&quot;project://database/Assets/8.External/Slime/idle.png?fileID=139643974&amp;guid=e8a852d7500e4154bbfcc181bbbae9e9&amp;type=3#idle_0&quot;); background-size: 500% 500%;"/>
             <ui:Label text="Test Enemy" name="EnemyName" class="Title">
                 <Bindings>
                     <ui:DataBinding property="text" data-source-path="EnemyName" binding-mode="ToTarget"/>

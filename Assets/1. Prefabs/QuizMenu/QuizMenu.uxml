@@ -19,14 +19,14 @@
         </ui:VisualElement>
         <ui:VisualElement name="Question" style="flex-grow: 0; justify-content: flex-start; align-items: center; align-self: stretch; align-content: flex-start; flex-direction: row; flex-shrink: 0;">
             <ui:VisualElement style="flex-grow: 1;">
-                <ui:Label text="はなす" name="Kanji" class="Title" style="font-size: 30%; align-self: auto; flex-grow: 1; white-space: normal;">
-                    <Bindings>
-                        <ui:DataBinding property="text" data-source-path="CurrentKanji" binding-mode="ToTarget"/>
-                    </Bindings>
-                </ui:Label>
-                <ui:Label text="はなす" name="Kana" class="Title" style="font-size: 30%; align-self: auto; flex-grow: 1; white-space: normal;">
+                <ui:Label text="はなす" name="Kana" class="Title" style="font-size: 20%; align-self: auto; flex-grow: 0; white-space: normal; color: rgb(109, 0, 0); -unity-text-align: middle-left; flex-shrink: 1;">
                     <Bindings>
                         <ui:DataBinding property="text" data-source-path="CurrentKana" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:Label>
+                <ui:Label text="はなす" name="Kanji" class="Title" style="font-size: 30%; align-self: auto; flex-grow: 1; white-space: normal; -unity-text-align: lower-left;">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="CurrentKanji" binding-mode="ToTarget"/>
                     </Bindings>
                 </ui:Label>
             </ui:VisualElement>
