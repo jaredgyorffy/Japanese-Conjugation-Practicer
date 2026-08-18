@@ -56,6 +56,13 @@ MonoBehaviour:
       NounConjugationTypes: 
     MaxHP: 4
     Tint: {r: 0, g: 0, b: 0, a: 1}
+  - Name: Negative Nelson
+    ConjugationTypes:
+      VerbConjugationTypes: 06000000080000000300000005000000
+      AdjectiveConjugationTypes: 03000000050000000800000006000000
+      NounConjugationTypes: 03000000050000000800000006000000
+    MaxHP: 4
+    Tint: {r: 0, g: 0, b: 0, a: 1}
   HardMonsters:
   - Name: Multifarious Manny
     ConjugationTypes:
@@ -64,4 +71,18 @@ MonoBehaviour:
       NounConjugationTypes: 
     MaxHP: 5
     Tint: {r: 1, g: 0, b: 0, a: 1}
-  BossMonsters: []
+  - Name: Tricky Trevor
+    ConjugationTypes:
+      VerbConjugationTypes: 05000000060000000700000008000000
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 
+    MaxHP: 5
+    Tint: {r: 1, g: 0, b: 0, a: 1}
+  BossMonsters:
+  - Name: "\u30E9\u30B9\u30DC\u30B9"
+    ConjugationTypes:
+      VerbConjugationTypes: 0000000002000000030000000400000005000000060000000700000008000000090000000a0000000b000000
+      AdjectiveConjugationTypes: 0000000002000000030000000400000005000000060000000700000008000000
+      NounConjugationTypes: 00000000030000000400000005000000060000000700000008000000
+    MaxHP: 10
+    Tint: {r: 0, g: 0, b: 0, a: 0}

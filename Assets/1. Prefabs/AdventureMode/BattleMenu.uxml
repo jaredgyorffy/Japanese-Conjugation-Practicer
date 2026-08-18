@@ -9,13 +9,13 @@
                 </Bindings>
             </ui:ProgressBar>
             <ui:Image name="EnemySprite" scale-mode="ScaleToFit" style="height: auto; flex-direction: column; align-items: center; flex-grow: 0; flex-shrink: 1; width: 75%; aspect-ratio: 1; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%; padding-top: 0%; padding-right: 0%; padding-bottom: 0%; padding-left: 0%; display: flex; visibility: visible; background-image: url(&quot;project://database/Assets/8.External/Slime/idle.png?fileID=139643974&amp;guid=e8a852d7500e4154bbfcc181bbbae9e9&amp;type=3#idle_0&quot;); background-size: 500% 500%;"/>
-            <ui:Label text="Test Enemy" name="EnemyName" class="Title">
+            <ui:Label text="Test Enemy" name="EnemyName" class="Title" style="-unity-text-auto-size: best-fit 30px 50px; -unity-text-generator: advanced; font-size: 50px; -unity-font-style: bold; -unity-text-align: middle-center;">
                 <Bindings>
                     <ui:DataBinding property="text" data-source-path="EnemyName" binding-mode="ToTarget"/>
                 </Bindings>
             </ui:Label>
         </ui:VisualElement>
-        <ui:Label text="Enemy hit for 25 damage!" name="BattleText" class="Title" style="align-items: auto; align-self: center; flex-grow: 0; flex-shrink: 1; white-space: normal; -unity-text-align: middle-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 25px 50px; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%;">
+        <ui:Label text="Enemy hit for 25 damage!" name="BattleText" class="Title" style="align-items: auto; align-self: center; flex-grow: 0; flex-shrink: 1; white-space: normal; -unity-text-align: middle-center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 25px 50px; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%; -unity-font-style: bold; -unity-text-outline-width: 0; -unity-text-outline-color: rgb(255, 255, 255); text-shadow: 15px 15px 0 rgba(154, 154, 154, 0.23); font-size: 25px;">
             <Bindings>
                 <ui:DataBinding property="text" data-source-path="BattleText" binding-mode="ToTarget"/>
             </Bindings>

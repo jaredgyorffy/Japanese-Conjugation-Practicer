@@ -29,8 +29,6 @@ public class AdventureMode : MonoBehaviour
     [CreateProperty] public float PlayerMaxHP => playerMaxHP;
     private float playerMaxHP = 100;
 
-    private int enemiesRemaining;
-
     private Action restartAction;
 
     [SerializeField] private float inputDelay = 5;
@@ -41,6 +39,7 @@ public class AdventureMode : MonoBehaviour
     private Animator animator;
     private SpriteRenderer monsterSprite;
     private Image uiMonsterSprite;
+    private Queue<MonsterDifficulty> campaignOrder;
     [SerializeField] MonsterLibrary monsterLibrary;
 
     public bool Initialized { get; private set; }
@@ -68,13 +67,14 @@ public class AdventureMode : MonoBehaviour
         SetBattleScreenVisible(true);
         config.Strictmode = true;
         this.config = config;
-        enemiesRemaining = enemies;
         simpleTest.InitializeQuiz(config);
         battleMenu.enabled = true;
         this.playerMaxHP = playerMaxHP;
         playerCurrentHP = playerMaxHP;
 
-        GenerateMonster(MonsterDifficulty.Easy);
+        campaignOrder = GenerateMonsterOrder(enemies);
+
+        GenerateMonster();
         monsterSprite.enabled = true;
         animator.SetBool("Spawned", true);
         this.restartAction = restartAction;
@@ -85,6 +85,36 @@ public class AdventureMode : MonoBehaviour
         }
         simpleTest.AnswerSubmitted += ResolveBattle;
         Initialized = true;
+    }
+
+    private Queue<MonsterDifficulty> GenerateMonsterOrder(int monsterCount)
+    {
+        Queue<MonsterDifficulty> monsters = new Queue<MonsterDifficulty>();
+        if (monsterCount < 3)
+        {
+            monsters.Enqueue(MonsterDifficulty.Easy);
+            monsters.Enqueue(MonsterDifficulty.Easy);
+            return monsters;
+        }
+
+        for (int i = 0; i < monsterCount / 3; i++)
+        {
+            monsters.Enqueue(MonsterDifficulty.Easy);
+        }
+
+        for (int i = 0; i < monsterCount / 3; i++)
+        {
+            monsters.Enqueue(MonsterDifficulty.Medium);
+        }
+
+        for (int i = 0; i < monsterCount / 3; i++)
+        {
+            monsters.Enqueue(MonsterDifficulty.Hard);
+        }
+
+        monsters.Enqueue(MonsterDifficulty.Boss);
+
+        return monsters;
     }
 
     public void Unsubscribe()
@@ -128,7 +158,7 @@ public class AdventureMode : MonoBehaviour
     {
         if (enemyCurrentHP <= 0)
         {
-            GenerateMonster(MonsterDifficulty.Easy);
+            GenerateMonster();
             return;
         }
 
@@ -140,14 +170,20 @@ public class AdventureMode : MonoBehaviour
         SetTestVisible(true);
         simpleTest.PrepareNextQuestion();
     }
-    private void GenerateMonster(MonsterDifficulty difficulty)
+    private void GenerateMonster()
     {
-        if (enemiesRemaining <= 0)
+        if (campaignOrder.TryPeek(out _))
+        {
+            currentMonster = monsterLibrary.GetRandomMonsterByDifficulty(campaignOrder.Dequeue());
+        }
+        else
         {
             battleText = $"You are the Conjugation Master!";
             Invoke("VictoryCondition", inputDelay);
+            return;
         }
-        currentMonster = monsterLibrary.GetRandomMonsterByDifficulty(difficulty);
+
+
         enemyMaxHP = currentMonster.MaxHP;
         enemyCurrentHP = currentMonster.MaxHP;
         enemyName = currentMonster.Name;
@@ -158,8 +194,6 @@ public class AdventureMode : MonoBehaviour
         animator.SetBool("Death", false);
         animator.SetBool("Spawned", true);
         Invoke("SetQuestion", inputDelay);
-
-        enemiesRemaining -= 1;
     }
 
     private void VictoryCondition()
