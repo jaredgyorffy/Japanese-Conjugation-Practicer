@@ -47,7 +47,7 @@ public class AdventureMode : MonoBehaviour
     void Start()
     {
         battleMenuRoot = battleMenu.rootVisualElement;
-        testScreenRoot = testScreen.rootVisualElement;
+        testScreenRoot = testScreen.rootVisualElement.MQ<VisualElement>("Panel");
         uiMonsterSprite = battleMenuRoot.MQ<Image>("EnemySprite");
         animator = monster.GetComponent<Animator>();
         monsterSprite = monster.GetComponent<SpriteRenderer>();
@@ -146,11 +146,11 @@ public class AdventureMode : MonoBehaviour
     {
         if (visible)
         {
-            testScreenRoot.visible = true;
+            testScreenRoot.style.opacity = 1;
         }
         else
         {
-            testScreenRoot.visible = false;
+            testScreenRoot.style.opacity = 0;
         }
     }
 
@@ -183,11 +183,11 @@ public class AdventureMode : MonoBehaviour
             return;
         }
 
-
+        playerCurrentHP = 3;
         enemyMaxHP = currentMonster.MaxHP;
         enemyCurrentHP = currentMonster.MaxHP;
         enemyName = currentMonster.Name;
-        monsterSprite.color = currentMonster.Tint;
+        uiMonsterSprite.style.unityBackgroundImageTintColor = currentMonster.Tint;
         battleText = $"A wild {currentMonster.Name} appears!";
         simpleTest.SetQuestionTypes(currentMonster.ConjugationTypes);
         simpleTest.PrepareNextQuestion();

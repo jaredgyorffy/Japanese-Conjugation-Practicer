@@ -18,7 +18,6 @@ public class SequenceTest : MonoBehaviour
     private KanaRomajiTranslator textConverter;
 
     public event Action<bool> AnswerSubmitted;
-    public event Action NextQuestion;
 
     private List<string> currentAnswer = new();
     private int amountCorrect;

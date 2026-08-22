@@ -19,7 +19,9 @@ MonoBehaviour:
     verbType: 0
     meaning:
     - to meet
+    - to see
     - to see (a person)
+    - to encounter
     politeNonpast: 
     politePast: 
     politeNonPastNegative: 
@@ -37,7 +39,7 @@ MonoBehaviour:
     - to be
     - to exist
     - to live
-    - there is...
+    - there is
     politeNonpast: "\u3042\u308A\u307E\u3059"
     politePast: "\u3042\u308A\u307E\u3057\u305F"
     politeNonPastNegative: "\u3042\u308A\u307E\u305B\u3093"
@@ -83,6 +85,7 @@ MonoBehaviour:
     verbType: 2
     meaning:
     - "to exist\u200B"
+    - to be
     - to be (of animate objects)
     politeNonpast: "\u3044\u307E\u3059"
     politePast: "\u3044\u307E\u3057\u305F"
@@ -98,7 +101,9 @@ MonoBehaviour:
     kanji: "\u64AE\u308B"
     verbType: 0
     meaning:
+    - to take
     - to take (a picture)
+    - to record
     politeNonpast: 
     politePast: 
     politeNonPastNegative: 
@@ -145,6 +150,9 @@ MonoBehaviour:
     kanji: "\u9593"
     meaning:
     - between
+    - interval
+    - gap
+    - distance
   - kana: "\u3042\u306A\u305F"
     kanji: 
     meaning:
@@ -153,10 +161,13 @@ MonoBehaviour:
     kanji: 
     meaning:
     - part-time job
+    - parttime job
+    - parttime
   - kana: "\u3044\u3061\u3058\u304B\u3093"
     kanji: "\u4E00\u6642\u9593"
     meaning:
     - one hour
+    - 1 hour
   - kana: "\u3044\u306C"
     kanji: "\u72AC"
     meaning:
@@ -165,10 +176,15 @@ MonoBehaviour:
     kanji: "\u4E0A"
     meaning:
     - on
+    - above
+    - over
+    - up
   - kana: "\u3046\u3057\u308D"
     kanji: "\u5F8C\u308D"
     meaning:
     - back
+    - behind
+    - rear
   - kana: "\u304A\u3066\u3089"
     kanji: "\u304A\u5BFA"
     meaning:
@@ -202,6 +218,9 @@ MonoBehaviour:
     kanji: "\u4E0B"
     meaning:
     - under
+    - below
+    - down
+    - younger
   - kana: "\u3057\u3083\u3057\u3093"
     kanji: "\u5199\u771F"
     meaning:
@@ -216,6 +235,8 @@ MonoBehaviour:
     meaning:
     - near
     - nearby
+    - neighborhood
+    - vicinity
   - kana: "\u3066\u3089"
     kanji: "\u5BFA"
     meaning:
@@ -224,15 +245,24 @@ MonoBehaviour:
     kanji: "\u6642"
     meaning:
     - when
+    - time
+    - hour
+    - moment
     - at the time of
   - kana: "\u3068\u306A\u308A"
     kanji: "\u96A3"
     meaning:
     - next
+    - adjoining
+    - adjacent
+    - neighbour
   - kana: "\u306A\u304B"
     kanji: "\u4E2D"
     meaning:
     - inside
+    - interior
+    - middle
+    - center
   - kana: "\u306D\u3053"
     kanji: "\u732B"
     meaning:
@@ -273,10 +303,12 @@ MonoBehaviour:
     kanji: "\u524D"
     meaning:
     - front
+    - before
   - kana: "\u307E\u3061"
     kanji: "\u753A"
     meaning:
-    - town; city
+    - town
+    - city
   - kana: "\u307F\u304E"
     kanji: "\u53F3"
     meaning:

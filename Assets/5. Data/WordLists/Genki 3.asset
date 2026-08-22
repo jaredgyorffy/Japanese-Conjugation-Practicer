@@ -19,6 +19,8 @@ MonoBehaviour:
     verbType: 2
     meaning:
     - to come
+    - to approach
+    - to arrive
     politeNonpast: "\u304D\u307E\u3059"
     politePast: "\u304D\u307E\u3057\u305F"
     politeNonPastNegative: "\u304D\u307E\u305B\u3093"
@@ -94,6 +96,7 @@ MonoBehaviour:
     verbType: 2
     meaning:
     - to go
+    - to leave
     politeNonpast: "\u3044\u304D\u307E\u3059"
     politePast: "\u3044\u304D\u307E\u3057\u305F"
     politeNonPastNegative: "\u3044\u304D\u307E\u305B\u3093"
@@ -189,6 +192,10 @@ MonoBehaviour:
     adjectiveType: 2
     meaning:
     - good
+    - excellent
+    - fine
+    - sufficient
+    - OK
     politePast: "\u3088\u304F\u3042\u308A\u307E\u3057\u305F"
     standardPast: "\u3088\u304B\u3063\u305F"
     standardNonpastNegative: "\u3088\u304F\u306A\u3044"
@@ -200,6 +207,9 @@ MonoBehaviour:
     adjectiveType: 0
     meaning:
     - early
+    - soon
+    - fast
+    - quick
     politePast: 
     standardPast: 
     standardNonpastNegative: 
@@ -222,7 +232,8 @@ MonoBehaviour:
   - kana: "\u3044\u3048"
     kanji: "\u5BB6"
     meaning:
-    - home; house
+    - home
+    - house
   - kana: "\u3044\u3064"
     kanji: 
     meaning:
@@ -230,7 +241,10 @@ MonoBehaviour:
   - kana: "\u3046\u3061"
     kanji: 
     meaning:
-    - home; house; my place
+    - home
+    - house
+    - one's house
+    - one's household
   - kana: "\u3048\u3044\u304C"
     kanji: "\u6620\u753B"
     meaning:
@@ -238,7 +252,8 @@ MonoBehaviour:
   - kana: "\u304A\u3055\u3051"
     kanji: "\u304A\u9152"
     meaning:
-    - sake; alcoholic drink
+    - sake
+    - alcohol
   - kana: "\u304A\u3061\u3083"
     kanji: "\u304A\u8336"
     meaning:
@@ -263,10 +278,12 @@ MonoBehaviour:
     kanji: "\u4ECA\u6669"
     meaning:
     - tonight
+    - "this evening\u200B"
   - kana: "\u3055\u3051"
     kanji: "\u9152"
     meaning:
-    - sake; alcohol
+    - sake
+    - alcohol
   - kana: "\u3056\u3063\u3057"
     kanji: "\u96D1\u8A8C"
     meaning:
@@ -282,11 +299,12 @@ MonoBehaviour:
   - kana: "\u3061\u3083"
     kanji: "\u8336"
     meaning:
-    - green tea
+    - tea
   - kana: "\u30C7\u30FC\u30C8"
     kanji: 
     meaning:
-    - date (romantic, not calendar)
+    - 'date '
+    - romantic date
   - kana: "\u30C6\u30CB\u30B9"
     kanji: 
     meaning:
@@ -299,6 +317,8 @@ MonoBehaviour:
     kanji: "\u6669\u3054\u98EF"
     meaning:
     - dinner
+    - supper
+    - evening meal
   - kana: "\u30CF\u30F3\u30D0\u30FC\u30AC\u30FC"
     kanji: 
     meaning:

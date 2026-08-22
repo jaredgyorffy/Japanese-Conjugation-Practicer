@@ -20,6 +20,7 @@ MonoBehaviour:
     adjectiveType: 0
     meaning:
     - delicious
+    - tasty
     politePast: 
     standardPast: 
     standardNonpastNegative: 
@@ -44,10 +45,13 @@ MonoBehaviour:
     kanji: 
     meaning:
     - over there
+    - that over there
   - kana: "\u3042\u308C"
     kanji: 
     meaning:
-    - that one (over there)
+    - that
+    - That thing
+    - something distant from both speaker and listener
   - kana: "\u3044\u304F\u3089"
     kanji: 
     meaning:
@@ -56,6 +60,7 @@ MonoBehaviour:
     kanji: "\u82F1\u8A9E"
     meaning:
     - English language
+    - english
   - kana: "\u304B\u3055"
     kanji: "\u5098"
     meaning:
@@ -80,6 +85,7 @@ MonoBehaviour:
     kanji: 
     meaning:
     - this one
+    - this
   - kana: "\u30B3\u30F3\u30D3\u30CB"
     kanji: 
     meaning:
@@ -107,7 +113,9 @@ MonoBehaviour:
   - kana: "\u30B9\u30DE\u30DB"
     kanji: 
     meaning:
-    - smartphone; mobile
+    - smartphone
+    - mobile
+    - mobile phone
   - kana: "\u305D\u3053"
     kanji: 
     meaning:
@@ -115,6 +123,7 @@ MonoBehaviour:
   - kana: "\u305D\u308C"
     kanji: 
     meaning:
+    - that
     - that one
   - kana: "\u3060\u308C"
     kanji: 
@@ -127,11 +136,15 @@ MonoBehaviour:
   - kana: "\u30C8\u30A4\u30EC"
     kanji: 
     meaning:
-    - toilet; restroom
+    - toilet
+    - restroom
+    - washroom
+    - bathroom
   - kana: "\u3068\u3051\u3044"
     kanji: "\u6642\u8A08"
     meaning:
-    - watch; clock
+    - watch
+    - clock
   - kana: "\u3069\u3053"
     kanji: 
     meaning:
@@ -143,7 +156,9 @@ MonoBehaviour:
   - kana: "\u3069\u308C"
     kanji: 
     meaning:
+    - which
     - which one
+    - "which (of three or more)\u200B"
   - kana: "\u3068\u3093\u304B\u3064"
     kanji: 
     meaning:
@@ -163,7 +178,8 @@ MonoBehaviour:
   - kana: "\u307C\u3046\u3057"
     kanji: "\u5E3D\u5B50"
     meaning:
-    - hat; cap
+    - hat
+    - cap
   - kana: "\u30E1\u30CB\u30E5\u30FC"
     kanji: 
     meaning:

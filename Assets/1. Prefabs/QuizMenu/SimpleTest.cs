@@ -5,6 +5,7 @@ using Unity.Properties;
 using Hieki.Search;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.EventSystems;
 
 public class SimpleTest : MonoBehaviour
 {
@@ -149,6 +150,7 @@ public class SimpleTest : MonoBehaviour
             feedbackText = $"Please submit an Answer";
             textField.style.color = Color.maroon;
             textField.Focus();
+            TouchScreenKeyboard.Open("");
             return;
         }
         if (currentConjugationType != ConjugationType.Meaning)
@@ -199,11 +201,13 @@ public class SimpleTest : MonoBehaviour
             {
                 feedbackText = "Correct!";
                 AnswerSubmitted?.Invoke(true);
+                CloseKeyboard();
             }
             else
             {
                 feedbackText = $"The correct answer was {GetAnswer()}.";
                 AnswerSubmitted?.Invoke(false);
+                CloseKeyboard();
             }
         }
 
@@ -265,6 +269,15 @@ public class SimpleTest : MonoBehaviour
         }
 
         textField.Focus();
+        TouchScreenKeyboard.Open("");
+    }
+
+    public void CloseKeyboard()
+    {
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
     }
 
     private Question GetQuestion()
