@@ -45,8 +45,6 @@ VisualElement {
 }
 
 .DungeonText {
-    -unity-text-outline-width: 3px;
-    -unity-text-outline-color: rgb(255, 255, 255);
     font-size: 75px;
     -unity-font-definition: url("project://database/Assets/4.%20Art/Fonts/DungeonFont.ttf?fileID=12800000&guid=324225fbdef3e9a45828255415db0641&type=3#DungeonFont");
 }

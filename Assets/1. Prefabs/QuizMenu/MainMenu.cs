@@ -16,6 +16,8 @@ public class MainMenu : MonoBehaviour
     private Button startButton;
     private Button adventureButton;
     private IntegerField questionCount;
+    private IntegerField AdventureLength;
+    private IntegerField StartingHealth;
     private Label warningText;
 
     private Toggle adventureMode;
@@ -39,6 +41,8 @@ public class MainMenu : MonoBehaviour
         root.dataSource = this;
         startButton = root.MQ<Button>("Start");
         questionCount = root.MQ<IntegerField>("QuestionCount");
+        AdventureLength = root.MQ<IntegerField>("AdventureLength");
+        StartingHealth = root.MQ<IntegerField>("StartingHealth");
         warningText = root.MQ<Label>("Warning");
         adventureButton = root.MQ<Button>("Adventure");
         startButton.clicked += OnPressStart;
@@ -53,7 +57,26 @@ public class MainMenu : MonoBehaviour
         {
             sequenceTest.Unsubscribe();
         }
-        adventure.InitializeAdventure(3, questionCount.value, config, Restart);
+
+        int adventureLength = 3;
+        if (AdventureLength != null)
+        {
+            adventureLength = AdventureLength.value;
+        }
+
+
+        int startingHealth = 3;
+        if (AdventureLength != null)
+        {
+            startingHealth = StartingHealth.value;
+        }
+        if (startingHealth <= 0 || adventureLength <= 0)
+        {
+            warningText.visible = true;
+            warningText.text = "Invalid Adventure Configuration";
+            return;
+        }
+        adventure.InitializeAdventure(startingHealth, adventureLength, config, Restart);
         root.visible = false;
     }
 

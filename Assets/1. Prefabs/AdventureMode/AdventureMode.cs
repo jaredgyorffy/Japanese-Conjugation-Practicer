@@ -32,7 +32,7 @@ public class AdventureMode : MonoBehaviour
     private Action restartAction;
 
     [SerializeField] private float inputDelay = 5;
-
+    private int playerDefaultMaxHP;
     private QuizConfiguration config;
     private Monster currentMonster;
     [SerializeField] private GameObject monster;
@@ -90,29 +90,29 @@ public class AdventureMode : MonoBehaviour
     private Queue<MonsterDifficulty> GenerateMonsterOrder(int monsterCount)
     {
         Queue<MonsterDifficulty> monsters = new Queue<MonsterDifficulty>();
-        if (monsterCount < 3)
+        for (int i = 1; i <= monsterCount; i++)
         {
-            monsters.Enqueue(MonsterDifficulty.Easy);
-            monsters.Enqueue(MonsterDifficulty.Easy);
-            return monsters;
+            if (i <= monsterCount * 0.33f)
+            {
+                monsters.Enqueue(MonsterDifficulty.Easy);
+                Debug.Log("Easy");
+            }
+            else if (i <= monsterCount * 0.66f)
+            {
+                monsters.Enqueue(MonsterDifficulty.Medium);
+                Debug.Log("Medium");
+            }
+            else if (i < monsterCount)
+            {
+                monsters.Enqueue(MonsterDifficulty.Hard);
+                Debug.Log("Hard");
+            }
+            else if (i == monsterCount)
+            {
+                monsters.Enqueue(MonsterDifficulty.Boss);
+                Debug.Log("Boss");
+            }
         }
-
-        for (int i = 0; i < monsterCount / 3; i++)
-        {
-            monsters.Enqueue(MonsterDifficulty.Easy);
-        }
-
-        for (int i = 0; i < monsterCount / 3; i++)
-        {
-            monsters.Enqueue(MonsterDifficulty.Medium);
-        }
-
-        for (int i = 0; i < monsterCount / 3; i++)
-        {
-            monsters.Enqueue(MonsterDifficulty.Hard);
-        }
-
-        monsters.Enqueue(MonsterDifficulty.Boss);
 
         return monsters;
     }
@@ -183,7 +183,7 @@ public class AdventureMode : MonoBehaviour
             return;
         }
 
-        playerCurrentHP = 3;
+        playerCurrentHP = playerMaxHP;
         enemyMaxHP = currentMonster.MaxHP;
         enemyCurrentHP = currentMonster.MaxHP;
         enemyName = currentMonster.Name;

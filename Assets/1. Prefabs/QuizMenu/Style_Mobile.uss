@@ -1,0 +1,86 @@
+VisualElement {
+}
+
+.Pressed {
+    color: rgb(255, 255, 255);
+    transition-duration: 0.25s;
+    -unity-background-image-tint-color: rgb(127, 127, 127);
+}
+
+.Button {
+    font-size: 14%;
+}
+
+.Title {
+    font-size: 124%;
+    align-self: center;
+    -unity-font-style: bold;
+    align-items: center;
+    -unity-font-definition: url("project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&guid=3f1f45f3d7e637345b21c4ce748e2d38&type=3#EnkaDotGothic24");
+}
+
+.Paragraph {
+    font-size: 50%;
+    -unity-font-definition: url("project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&guid=3f1f45f3d7e637345b21c4ce748e2d38&type=3#EnkaDotGothic24");
+}
+
+.Subtitle {
+    -unity-font-definition: url("project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&guid=3f1f45f3d7e637345b21c4ce748e2d38&type=3#EnkaDotGothic24");
+}
+
+.ToggleList {
+}
+
+.unity-progress-bar__progress {
+    background-color: rgb(255, 0, 0);
+    transition-duration: 1s;
+    -unity-slice-left: 0;
+    -unity-slice-top: 0;
+    -unity-slice-right: 0;
+    -unity-slice-bottom: 0;
+    -unity-slice-type: sliced;
+}
+
+.Hidden {
+    opacity: 0;
+}
+
+.Visible {
+    opacity: 1;
+}
+
+.DungeonText {
+    -unity-text-outline-width: 3px;
+    -unity-text-outline-color: rgb(255, 255, 255);
+    font-size: 75px;
+    -unity-font-definition: url("project://database/Assets/4.%20Art/Fonts/DungeonFont.ttf?fileID=12800000&guid=324225fbdef3e9a45828255415db0641&type=3#DungeonFont");
+}
+
+.DungeonButton {
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    transition-duration: 0.25s;
+    background-image: url("project://database/Assets/4.%20Art/Textures/UI/Dialogue/Buttons/20240709dragonButtonA-Sheet.png?fileID=1039246304&guid=94895963f3638ee4e8fc32d4ac3687d6&type=3#20240709dragonButtonA-Sheet_0");
+    -unity-slice-scale: 1px;
+    -unity-slice-left: 0;
+    -unity-slice-top: 0;
+    -unity-slice-right: 0;
+    -unity-slice-bottom: 0;
+    -unity-slice-type: sliced;
+    padding-top: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 2.5%;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 15%;
+    -unity-font-definition: url("project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&guid=3f1f45f3d7e637345b21c4ce748e2d38&type=3#EnkaDotGothic24");
+}
+
+.unity-progress-bar {
+}

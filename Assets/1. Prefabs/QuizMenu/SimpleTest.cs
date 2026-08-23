@@ -269,7 +269,6 @@ public class SimpleTest : MonoBehaviour
         }
 
         textField.Focus();
-        TouchScreenKeyboard.Open("");
     }
 
     public void CloseKeyboard()
