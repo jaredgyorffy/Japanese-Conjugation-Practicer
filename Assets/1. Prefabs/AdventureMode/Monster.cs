@@ -8,6 +8,13 @@ public class Monster
     public ConjugationTypes ConjugationTypes;
     public float MaxHP;
     public Color Tint;
+    public MonsterType MonsterType;
+}
+
+public enum MonsterType
+{
+    Slime = 0,
+    Skeleton = 1,
 }
 
 public enum MonsterDifficulty

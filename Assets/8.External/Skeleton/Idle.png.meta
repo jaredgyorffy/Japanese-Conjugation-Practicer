@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94895963f3638ee4e8fc32d4ac3687d6
+guid: 5a5c7fdfc4db0bf4bace162d8b6091d1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,35 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: orange button
+      name: Idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 12, y: 9, z: 13, w: 8}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ee580db93d2f89438307896861bd8d0
-      internalID: 1039246304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cyanButton
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 35
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e69b1fc3e95b7845bb75633d3d5dd18
-      internalID: -949517551
+      spriteID: 2c8d9c82274edef46823817aeac8731f
+      internalID: -1603789032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mauveButton
+      name: Idle_1
       rect:
         serializedVersion: 2
-        x: 200
+        x: 150
         y: 0
-        width: 100
-        height: 35
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 549aba75156b19843998c2f34ee50208
-      internalID: 1441414339
+      spriteID: d5c7b8b11bb3b6348abc57b2cc151b16
+      internalID: -644341620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: purple button
+      name: Idle_2
       rect:
         serializedVersion: 2
         x: 300
         y: 0
-        width: 100
-        height: 35
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,8 +169,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31ce2241151ffd04b802afaaa6719fc5
-      internalID: 1347633611
+      spriteID: 9291d3ded95a3704288f4ebcb1539b58
+      internalID: 1139999481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d807ca05e3bf243a42473d62ec5ed4
+      internalID: -725619755
       vertices: []
       indices: 
       edges: []
@@ -201,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6530eceb83403d64e92f64b51d36dd99
+    spriteID: 5bd98c2e398fff54f9e6c492d1b08c6b
     internalID: 0
     vertices: []
     indices: 
@@ -211,12 +211,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":100.0,"y":35.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":150.0,"y":150.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      cyanButton: -949517551
-      mauveButton: 1441414339
-      orange button: 1039246304
-      purple button: 1347633611
+      Idle_0: -1603789032
+      Idle_1: -644341620
+      Idle_2: 1139999481
+      Idle_3: -725619755
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

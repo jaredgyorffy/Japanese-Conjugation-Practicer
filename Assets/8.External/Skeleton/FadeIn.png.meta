@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94895963f3638ee4e8fc32d4ac3687d6
+guid: 33c455a115aafe34abfd5bce0831f02b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,35 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: orange button
+      name: FadeIn_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 12, y: 9, z: 13, w: 8}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ee580db93d2f89438307896861bd8d0
-      internalID: 1039246304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cyanButton
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 35
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e69b1fc3e95b7845bb75633d3d5dd18
-      internalID: -949517551
+      spriteID: 2cf00d6906e0a5a4db1b04422c611032
+      internalID: -1341498431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mauveButton
+      name: FadeIn_1
       rect:
         serializedVersion: 2
-        x: 200
+        x: 150
         y: 0
-        width: 100
-        height: 35
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 549aba75156b19843998c2f34ee50208
-      internalID: 1441414339
+      spriteID: b36c572248868fc47af82ef954bcfa6a
+      internalID: -1611485187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: purple button
+      name: FadeIn_2
       rect:
         serializedVersion: 2
         x: 300
         y: 0
-        width: 100
-        height: 35
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,8 +169,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31ce2241151ffd04b802afaaa6719fc5
-      internalID: 1347633611
+      spriteID: 4ca079f7343d59449a391df9795e758f
+      internalID: 2065793133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FadeIn_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c719225e29cacf4b8dbb6aafec52c6a
+      internalID: 195341897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FadeIn_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f260edc3fd2c7a04eb8c0b91b79cc357
+      internalID: -1872158607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FadeIn_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf48c4dbef16fc941b32e7c6af8d724d
+      internalID: -1012070779
       vertices: []
       indices: 
       edges: []
@@ -201,7 +245,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6530eceb83403d64e92f64b51d36dd99
+    spriteID: 89b777c9611880e4e9e60044cd2af564
     internalID: 0
     vertices: []
     indices: 
@@ -211,12 +255,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":100.0,"y":35.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":150.0,"y":150.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":true,"isAlternate":false}'
     nameFileIdTable:
-      cyanButton: -949517551
-      mauveButton: 1441414339
-      orange button: 1039246304
-      purple button: 1347633611
+      FadeIn_0: -1341498431
+      FadeIn_1: -1611485187
+      FadeIn_2: 2065793133
+      FadeIn_3: 195341897
+      FadeIn_4: -1872158607
+      FadeIn_5: -1012070779
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

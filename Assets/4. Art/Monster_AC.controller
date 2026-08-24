@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Slime_Attack
+  m_Name: Attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -84,7 +84,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fade
+  m_Name: FadeOut
   m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
@@ -111,7 +111,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Slime_Idle
+  m_Name: Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -140,7 +140,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Slime_Death
+  m_Name: Death
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -249,7 +249,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Slime_AC
+  m_Name: Monster_AC
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Attack
@@ -289,6 +289,36 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+  - serializedVersion: 5
+    m_Name: Skeleton
+    m_StateMachine: {fileID: 4595176875198596855}
+    m_Mask: {fileID: 0}
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: -4274678746808417515}
+      m_Motion: {fileID: 7400000, guid: 1685754497c213b42b3c3f7be17caba0, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: -3915247013888172608}
+      m_Motion: {fileID: 7400000, guid: 45715bd078325fe4d97bf2b0f578abc7, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 2407328439627686310}
+      m_Motion: {fileID: 7400000, guid: 65a253054d17ad648a09154f1e34121b, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: -8758409106107373452}
+      m_Motion: {fileID: 7400000, guid: a39af0be6251461408dc5bc8c2af564b, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 4693863295576550693}
+      m_Motion: {fileID: 7400000, guid: b03ba582923b7874bbaa575780e4e6a2, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: -4713424767482705836}
+      m_Motion: {fileID: 7400000, guid: 51a6f63e8fe68b94cbda98905a45fa27, type: 2}
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: 0
+    m_DefaultWeight: 1
+    m_IKPass: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
 --- !u!1102 &2407328439627686310
 AnimatorState:
   serializedVersion: 6
@@ -296,8 +326,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Slime_Hurt
-  m_Speed: 1
+  m_Name: Hurt
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1325362336547191548}
@@ -382,6 +412,25 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 8670960437695314668}
+--- !u!1107 &4595176875198596855
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Skeleton
+  m_ChildStates: []
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: 0}
 --- !u!1102 &4693863295576550693
 AnimatorState:
   serializedVersion: 6
@@ -389,7 +438,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Slime_FadeIn
+  m_Name: FadeIn
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

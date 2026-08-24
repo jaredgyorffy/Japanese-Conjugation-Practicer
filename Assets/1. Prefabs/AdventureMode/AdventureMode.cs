@@ -167,8 +167,8 @@ public class AdventureMode : MonoBehaviour
             restartAction.Invoke();
             return;
         }
-        SetTestVisible(true);
         simpleTest.PrepareNextQuestion();
+        SetTestVisible(true);
     }
     private void GenerateMonster()
     {
@@ -190,10 +190,25 @@ public class AdventureMode : MonoBehaviour
         uiMonsterSprite.style.unityBackgroundImageTintColor = currentMonster.Tint;
         battleText = $"A wild {currentMonster.Name} appears!";
         simpleTest.SetQuestionTypes(currentMonster.ConjugationTypes);
-        simpleTest.PrepareNextQuestion();
+        SetMonsterSprite((int)currentMonster.MonsterType);
         animator.SetBool("Death", false);
         animator.SetBool("Spawned", true);
         Invoke("SetQuestion", inputDelay);
+    }
+
+    private void SetMonsterSprite(int monster)
+    {
+        for (int i = 0; i < animator.layerCount; i++)
+        {
+            if (monster == i)
+            {
+                animator.SetLayerWeight(i, 1);
+            }
+            else
+            {
+                animator.SetLayerWeight(i, 0);
+            }
+        }
     }
 
     private void VictoryCondition()
@@ -202,8 +217,9 @@ public class AdventureMode : MonoBehaviour
         restartAction.Invoke();
     }
 
-    private void ResolveBattle(bool answerCorrect)
+    private void ResolveBattle(bool answerCorrect, string answer)
     {
+        uiMonsterSprite.Focus();
         SetTestVisible(false);
         if (answerCorrect)
         {
@@ -214,7 +230,7 @@ public class AdventureMode : MonoBehaviour
         else
         {
             playerCurrentHP -= 1;
-            battleText = $"Incorrect! {enemyName} damaged you!";
+            battleText = $"Incorrect! The correct answer was {answer}.";
             animator.SetTrigger("Attack");
         }
 

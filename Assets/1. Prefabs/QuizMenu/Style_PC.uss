@@ -4,7 +4,7 @@ VisualElement {
 .Pressed {
     color: rgb(255, 255, 255);
     transition-duration: 0.25s;
-    -unity-background-image-tint-color: rgb(127, 127, 127);
+    background-image: url("project://database/Assets/4.%20Art/Textures/UI/Dialogue/Buttons/20240709dragonButtonA-Sheet.png?fileID=1441414339&guid=94895963f3638ee4e8fc32d4ac3687d6&type=3#20240709dragonButtonA-Sheet_2");
 }
 
 .Button {

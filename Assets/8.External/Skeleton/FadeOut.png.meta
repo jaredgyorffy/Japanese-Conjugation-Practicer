@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94895963f3638ee4e8fc32d4ac3687d6
+guid: a668b1a937fce2849aeb5feea8e33626
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,35 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: orange button
+      name: FadeOut_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 12, y: 9, z: 13, w: 8}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ee580db93d2f89438307896861bd8d0
-      internalID: 1039246304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cyanButton
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 35
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e69b1fc3e95b7845bb75633d3d5dd18
-      internalID: -949517551
+      spriteID: 72736922dbb9d424b9ffa33460abe2a6
+      internalID: -2089583337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mauveButton
+      name: FadeOut_1
       rect:
         serializedVersion: 2
-        x: 200
+        x: 150
         y: 0
-        width: 100
-        height: 35
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 549aba75156b19843998c2f34ee50208
-      internalID: 1441414339
+      spriteID: 5a11608779decc0499b1239dadf08b43
+      internalID: 1416648018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: purple button
+      name: FadeOut_2
       rect:
         serializedVersion: 2
         x: 300
         y: 0
-        width: 100
-        height: 35
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,8 +169,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31ce2241151ffd04b802afaaa6719fc5
-      internalID: 1347633611
+      spriteID: 68e9e802848a60348bb4bb3b86289edf
+      internalID: 2120568979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FadeOut_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352f66be0b5b0914091c19a822a2e2b6
+      internalID: 918689581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FadeOut_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeac641c1b60e694686633201bf02f88
+      internalID: -1021262807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FadeOut_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7e8aa0c97fcfd47b3d70f6b61e16fb
+      internalID: 923047272
       vertices: []
       indices: 
       edges: []
@@ -201,7 +245,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6530eceb83403d64e92f64b51d36dd99
+    spriteID: e19691a9c3ca72e4782af0a437603c8e
     internalID: 0
     vertices: []
     indices: 
@@ -211,12 +255,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":100.0,"y":35.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":150.0,"y":150.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":true,"isAlternate":false}'
     nameFileIdTable:
-      cyanButton: -949517551
-      mauveButton: 1441414339
-      orange button: 1039246304
-      purple button: 1347633611
+      FadeOut_0: -2089583337
+      FadeOut_1: 1416648018
+      FadeOut_2: 2120568979
+      FadeOut_3: 918689581
+      FadeOut_4: -1021262807
+      FadeOut_5: 923047272
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

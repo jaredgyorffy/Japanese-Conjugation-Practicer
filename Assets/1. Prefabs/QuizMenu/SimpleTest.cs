@@ -6,6 +6,7 @@ using Hieki.Search;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class SimpleTest : MonoBehaviour
 {
@@ -16,8 +17,9 @@ public class SimpleTest : MonoBehaviour
     private Button hintButton;
     private TextField textField;
     private KanaRomajiTranslator textConverter;
+    private VisualElement informationBox;
 
-    public event Action<bool> AnswerSubmitted;
+    public event Action<bool, string> AnswerSubmitted;
     public event Action NextQuestion;
 
     private List<string> currentAnswer = new();
@@ -31,8 +33,8 @@ public class SimpleTest : MonoBehaviour
     private ConjugationType currentConjugationType;
     private WordType currentWordType;
 
-    [CreateProperty] public string PreviousAnswer => feedbackText;
-    private string feedbackText;
+    [CreateProperty] public string PreviousAnswer => informationText;
+    private string informationText;
 
     [CreateProperty] public string CurrentKanji => currentKanji;
     private string currentKanji;
@@ -67,19 +69,11 @@ public class SimpleTest : MonoBehaviour
 
         textConverter = quizMenu.GetComponent<KanaRomajiTranslator>();
         textConverter.InputChanged += OnInputChanged;
-
-        /*textField.RegisterCallback<BlurEvent>(evt =>
-        {
-            if (MobileKeyboardInput.CheckInput() == TouchScreenKeyboard.Status.Done)
-            {
-                evt.StopImmediatePropagation();
-                OnPressSubmit();
-            }
-        });*/
-
+        informationBox = quizMenuRoot.MQ<VisualElement>("InformationBox");
         textField.RegisterCallback<NavigationSubmitEvent>(OnPressEnterToSubmit, TrickleDown.TrickleDown);
         Initialized = true;
     }
+
 
     public void Unsubscribe()
     {
@@ -97,6 +91,32 @@ public class SimpleTest : MonoBehaviour
     {
         evt.StopImmediatePropagation();
         OnPressSubmit();
+    }
+
+    private void OnPressEnterToSubmit(KeyDownEvent evt)
+    {
+        evt.StopImmediatePropagation();
+        OnPressSubmit();
+    }
+
+    private void Update()
+    {
+        if (Initialized == false)
+        {
+            return;
+        }
+
+        var keyboard = textField.touchScreenKeyboard;
+
+        if (keyboard == null)
+        {
+            return;
+        }
+
+        if (keyboard.status == TouchScreenKeyboard.Status.Done)
+        {
+            OnPressSubmit();
+        }
     }
 
 
@@ -121,10 +141,18 @@ public class SimpleTest : MonoBehaviour
         askedQuestions = new();
         restartButton.SetEnabled(true);
         restartButton.visible = false;
-        feedbackText = "";
+        SetInformationText("");
         InitializeQuestionTypes(config);
         
         StrictMode = config.Strictmode;
+    }
+
+    private void SetInformationText(string text)
+    {
+        informationText = text;
+        informationBox.style.visibility = string.IsNullOrEmpty(text)
+            ? Visibility.Hidden
+            : Visibility.Visible;
     }
 
     private ConjugationType GetRandomQuestionType(WordType wordtype)
@@ -147,17 +175,16 @@ public class SimpleTest : MonoBehaviour
 
         if (textField.value == "")
         {
-            feedbackText = $"Please submit an Answer";
+            SetInformationText("Please submit an Answer");
             textField.style.color = Color.maroon;
             textField.Focus();
-            TouchScreenKeyboard.Open("");
             return;
         }
         if (currentConjugationType != ConjugationType.Meaning)
         {
             if (textField.value.ContainsEnglishCharacters())
             {
-                feedbackText = $"Text must only contain japanese characters";
+                SetInformationText("Text must only contain japanese characters");
                 textField.style.color = Color.maroon;
                 textField.Focus();
                 return;
@@ -167,7 +194,7 @@ public class SimpleTest : MonoBehaviour
         {
             if (textField.value.ContainsEnglishCharacters() == false)
             {
-                feedbackText = $"please answer in english";
+                SetInformationText("please answer in english");
                 textField.style.color = Color.maroon;
                 textField.Focus();
                 return;
@@ -180,7 +207,7 @@ public class SimpleTest : MonoBehaviour
         {
             if (CheckAnswer(textField.value))
             {
-                feedbackText = "Correct!";
+                SetInformationText("Correct");
                 confirmAnswer = true;
                 textField.Focus();
                 textField.style.color = Color.forestGreen;
@@ -188,7 +215,7 @@ public class SimpleTest : MonoBehaviour
             }
             else
             {
-                feedbackText = $"Wrong! Try again?";
+                SetInformationText("Wrong! Try again?");
                 confirmAnswer = true;
                 textField.Focus();
                 textField.style.color = Color.maroon;
@@ -199,14 +226,14 @@ public class SimpleTest : MonoBehaviour
         {
             if (CheckAnswer(textField.value))
             {
-                feedbackText = "Correct!";
-                AnswerSubmitted?.Invoke(true);
+                SetInformationText("");
+                AnswerSubmitted?.Invoke(true, "");
                 CloseKeyboard();
             }
             else
             {
-                feedbackText = $"The correct answer was {GetAnswer()}.";
-                AnswerSubmitted?.Invoke(false);
+                informationText = "";
+                AnswerSubmitted?.Invoke(false, GetAnswer());
                 CloseKeyboard();
             }
         }
@@ -251,31 +278,47 @@ public class SimpleTest : MonoBehaviour
 
         if (wordType == WordType.Verb)
         {
-            currentKanji = WordLists.Verbs[wordIndex].Kanji;
-            currentKana = WordLists.Verbs[wordIndex].Kana;
+            SetKana(WordLists.Verbs[wordIndex].Kana, WordLists.Verbs[wordIndex].Kanji);
             askedQuestions.Add((WordLists.Verbs[wordIndex].Kana, form));
         }
         else if (wordType == WordType.Adjective)
         {
-            currentKanji = WordLists.Adjectives[wordIndex].Kanji;
-            currentKana = WordLists.Adjectives[wordIndex].Kana;
+            SetKana(WordLists.Adjectives[wordIndex].Kana, WordLists.Adjectives[wordIndex].Kanji);
             askedQuestions.Add((WordLists.Adjectives[wordIndex].Kana, form));
         }
         else if (wordType == WordType.Noun)
         {
-            currentKanji = WordLists.Nouns[wordIndex].Kanji;
-            currentKana = WordLists.Nouns[wordIndex].Kana;
+            SetKana(WordLists.Nouns[wordIndex].Kana, WordLists.Nouns[wordIndex].Kanji);
             askedQuestions.Add((WordLists.Nouns[wordIndex].Kana, form));
         }
 
         textField.Focus();
     }
 
+    private void SetKana(string kana, string Kanji)
+    {
+        if (string.IsNullOrEmpty(Kanji))
+        {
+            currentKanji = kana;
+            currentKana = "";
+        }
+        else
+        {
+            currentKanji = kana;
+            currentKana = Kanji;
+        }
+
+    }
+
     public void CloseKeyboard()
     {
-        if (EventSystem.current != null)
+        textField.Blur();
+        quizMenuRoot.Focus();
+        var keyboard = textField.touchScreenKeyboard;
+
+        if (keyboard != null)
         {
-            EventSystem.current.SetSelectedGameObject(null);
+            keyboard.active = false;
         }
     }
 
@@ -322,13 +365,13 @@ public class SimpleTest : MonoBehaviour
         {
             hintVisible = false;
             hintButton.RemoveFromClassList("Pressed");
-            feedbackText = "";
+            SetInformationText("");
         }
         else
         {
             hintVisible = true;
             hintButton.AddToClassList("Pressed");
-            feedbackText = Hint.GetHint(currentWord, currentConjugationType);
+            SetInformationText(Hint.GetHint(currentWord, currentConjugationType));
             hintButton.Focus();
         }
     }
