@@ -309,8 +309,9 @@ public class Verb : IWord
         }
         else if (VerbType == VerbType.U)
         {
-            string stem = dictionaryForm.Substring(0, dictionaryForm.Length - 1);
-            char lastChar = dictionaryForm[dictionaryForm.Length - 1];
+            char lastChar = dictionaryForm[^1];
+            string stem = dictionaryForm.Substring(0, dictionaryForm.Length -1);
+
             switch (lastChar)
             {
             case 'う':

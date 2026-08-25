@@ -25,7 +25,6 @@ public class SimpleTest : MonoBehaviour
     private List<string> currentAnswer = new();
 
     private ConjugationTypes conjugationTypes;
-
     [CreateProperty] public string QuestionType => questionType;
     private string questionType;
 
@@ -50,6 +49,7 @@ public class SimpleTest : MonoBehaviour
     private bool hintVisible = false;
 
     private bool StrictMode = false;
+    private bool useKanaKeyboard = true;
 
     public bool Initialized { get; private set; }
 
@@ -143,7 +143,9 @@ public class SimpleTest : MonoBehaviour
         restartButton.visible = false;
         SetInformationText("");
         InitializeQuestionTypes(config);
-        
+        useKanaKeyboard = config.UseKanaKeyboard;
+
+        textConverter.SetEnabled(useKanaKeyboard);
         StrictMode = config.Strictmode;
     }
 
@@ -270,7 +272,7 @@ public class SimpleTest : MonoBehaviour
         }
         else
         {
-            textConverter.SetEnabled(true);
+            textConverter.SetEnabled(useKanaKeyboard);
         }
 
         questionType = questionData.type;
@@ -304,8 +306,8 @@ public class SimpleTest : MonoBehaviour
         }
         else
         {
-            currentKanji = kana;
-            currentKana = Kanji;
+            currentKanji = Kanji;
+            currentKana = kana;
         }
 
     }
@@ -325,7 +327,7 @@ public class SimpleTest : MonoBehaviour
     private Question GetQuestion()
     {
         WordType wordType = QuizUtility.GetRandomWordType(conjugationTypes);
-        ConjugationType form = GetRandomQuestionType(wordType);
+        ConjugationType form = conjugationTypes.GetConjugationTypeByWordType(wordType);
 
         currentWordType = wordType;
         currentConjugationType = form;

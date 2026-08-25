@@ -389,22 +389,22 @@ public static class Hint
                         "問う (とう) ￫ とうて\r\n" +
                         "請う (こう)￫ こうて";
                 }
-                hint = "TeForm";
                 break;
             }
             case ConjugationType.CasualVolitional:
             {
                 if (vType == VerbType.RU)
                 {
-
+                    hint = "Remove the る from the dictionary form, then add よう.";
                 }
                 else if (vType == VerbType.U)
                 {
-            
+                    hint = "Replace the う sound according to the following rules, then add う." +
+                        "会う　→　会おう\r\n立つ　→　立とう\r\n写す　→　写そう\r\n割る　→　割ろう\r\n書く　→　書こう\r\n泳ぐ　→　泳ごう\r\n死ぬ　→　死のう\r\n学ぶ　→　学ぼう\r\n休む　→　休もう";
                 }
                 else
                 {
-            
+                    hint = " \t来る　→　 来よう\r\nする　→　しよう";
                 }
                 hint = "CasualVolitional";
                 break;

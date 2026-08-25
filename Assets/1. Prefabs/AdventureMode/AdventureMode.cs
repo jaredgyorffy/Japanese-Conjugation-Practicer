@@ -65,7 +65,6 @@ public class AdventureMode : MonoBehaviour
     {
         SetTestVisible(false);
         SetBattleScreenVisible(true);
-        config.Strictmode = true;
         this.config = config;
         simpleTest.InitializeQuiz(config);
         battleMenu.enabled = true;
@@ -225,7 +224,10 @@ public class AdventureMode : MonoBehaviour
         {
             enemyCurrentHP -= 1;
             battleText = $"Correct! Dealt damage to {enemyName}!";
-            animator.SetTrigger("Hurt");
+            if (enemyCurrentHP > 0)
+            {
+                animator.SetTrigger("Hurt");
+            }
         }
         else
         {

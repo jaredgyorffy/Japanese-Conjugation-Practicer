@@ -20,7 +20,6 @@ public class MainMenu : MonoBehaviour
     private IntegerField StartingHealth;
     private Label warningText;
 
-    private Toggle adventureMode;
     private List<Toggle> meaningToggles = new();
     private List<Toggle> verbFormToggles = new();
     private List<Toggle> adjectiveFormToggles = new();
@@ -124,11 +123,6 @@ public class MainMenu : MonoBehaviour
     {
         QuizConfiguration config = new QuizConfiguration();
 
-        VisualElement gamemode = root.MQ<VisualElement>("Gamemode");
-        var toggle = togglePrefab.Instantiate();
-        toggle.MQ<Label>().text = "AdventureMode";
-        adventureMode = toggle.MQ<Toggle>();
-        gamemode.Add(toggle);
 
 
         VisualElement meanings = root.MQ<VisualElement>("Meanings");
@@ -195,16 +189,21 @@ public class MainMenu : MonoBehaviour
         
         var strictModeOption = togglePrefab.Instantiate();
         strictModeOption.MQ<Label>().text = "Strict mode";
-        
-        optionsToggles.Add(strictModeOption.MQ<Toggle>());
+        Toggle strictModeToggle = strictModeOption.MQ<Toggle>();
+        strictModeToggle.value = true;
+        optionsToggles.Add(strictModeToggle);
         option.Add(strictModeOption);
+
+        var useAutoKeyboard = togglePrefab.Instantiate();
+        useAutoKeyboard.MQ<Label>().text = "Use Kana Keyboard";
+
+        optionsToggles.Add(useAutoKeyboard.MQ<Toggle>());
+        option.Add(useAutoKeyboard);
     }
 
     private QuizConfiguration InitializeQuiz()
     {
         QuizConfiguration config = new QuizConfiguration();
-
-        config.AdventureMode = adventureMode.value;
 
         var listOfMeanings = config.GetMeanings();
         for (int i = 0; i < meaningToggles.Count; i++)
@@ -246,6 +245,7 @@ public class MainMenu : MonoBehaviour
         }
 
         config.Strictmode = optionsToggles[0].value;
+        config.UseKanaKeyboard = optionsToggles[1].value;
 
         return config;
     }
@@ -289,6 +289,7 @@ public class QuizConfiguration
     public bool NounStandardPastNegativeForm;
 
     public bool Strictmode = false;
+    public bool UseKanaKeyboard = false;
 
 
     public List<Verb> Verbs = new();
