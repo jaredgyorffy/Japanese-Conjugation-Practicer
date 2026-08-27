@@ -18,6 +18,7 @@ MonoBehaviour:
     kanji: "\u6765\u308B"
     verbType: 2
     meaning:
+    - To come, to approach, to arrive.
     - to come
     - to approach
     - to arrive
@@ -95,6 +96,7 @@ MonoBehaviour:
     kanji: "\u884C\u304F"
     verbType: 2
     meaning:
+    - To go or to leave
     - to go
     - to leave
     politeNonpast: "\u3044\u304D\u307E\u3059"
@@ -111,6 +113,7 @@ MonoBehaviour:
     kanji: "\u5E30\u308B"
     verbType: 0
     meaning:
+    - To go back or to return
     - to go back
     - to return
     politeNonpast: 
@@ -127,6 +130,7 @@ MonoBehaviour:
     kanji: "\u805E\u304F"
     verbType: 0
     meaning:
+    - To listen, to hear, or to ask
     - to listen
     - to hear
     - to ask
@@ -159,6 +163,7 @@ MonoBehaviour:
     kanji: "\u8A71\u3059"
     verbType: 0
     meaning:
+    - To speak, to Talk
     - to speak
     - to talk
     politeNonpast: 
@@ -191,6 +196,7 @@ MonoBehaviour:
     kanji: "\u826F\u3044"
     adjectiveType: 2
     meaning:
+    - Good, excellent, fine, sufficient
     - good
     - excellent
     - fine
@@ -206,6 +212,7 @@ MonoBehaviour:
     kanji: "\u65E9\u3044"
     adjectiveType: 0
     meaning:
+    - Early, soon, fast, quick
     - early
     - soon
     - fast
@@ -232,6 +239,7 @@ MonoBehaviour:
   - kana: "\u3044\u3048"
     kanji: "\u5BB6"
     meaning:
+    - Home, house
     - home
     - house
   - kana: "\u3044\u3064"
@@ -241,6 +249,7 @@ MonoBehaviour:
   - kana: "\u3046\u3061"
     kanji: 
     meaning:
+    - A home, especially one's house or household
     - home
     - house
     - one's house
@@ -277,11 +286,13 @@ MonoBehaviour:
   - kana: "\u3053\u3093\u3070\u3093"
     kanji: "\u4ECA\u6669"
     meaning:
+    - Tonight or this evening
     - tonight
     - "this evening\u200B"
   - kana: "\u3055\u3051"
     kanji: "\u9152"
     meaning:
+    - Sake, alcohol
     - sake
     - alcohol
   - kana: "\u3056\u3063\u3057"
@@ -303,6 +314,7 @@ MonoBehaviour:
   - kana: "\u30C7\u30FC\u30C8"
     kanji: 
     meaning:
+    - date (romantic)
     - 'date '
     - romantic date
   - kana: "\u30C6\u30CB\u30B9"
@@ -312,10 +324,13 @@ MonoBehaviour:
   - kana: "\u30C6\u30EC\u30D3"
     kanji: 
     meaning:
+    - Television, TV
     - TV
+    - television
   - kana: "\u3070\u3093\u3054\u306F\u3093"
     kanji: "\u6669\u3054\u98EF"
     meaning:
+    - Dinner, Supper
     - dinner
     - supper
     - evening meal
@@ -323,6 +338,7 @@ MonoBehaviour:
     kanji: 
     meaning:
     - hamburger
+    - burger
   - kana: "\u3072\u308B\u3054\u306F\u3093"
     kanji: "\u663C\u3054\u98EF"
     meaning:

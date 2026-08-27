@@ -223,7 +223,8 @@ public class AdventureMode : MonoBehaviour
         if (answerCorrect)
         {
             enemyCurrentHP -= 1;
-            battleText = $"Correct! Dealt damage to {enemyName}!";
+            battleText = $"{answer} is Correct! Dealt damage to {enemyName}!";
+            
             if (enemyCurrentHP > 0)
             {
                 animator.SetTrigger("Hurt");

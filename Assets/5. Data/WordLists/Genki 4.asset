@@ -18,9 +18,9 @@ MonoBehaviour:
     kanji: "\u4F1A\u3046"
     verbType: 0
     meaning:
+    - to see, to meet (a person)
     - to meet
     - to see
-    - to see (a person)
     - to encounter
     politeNonpast: 
     politePast: 
@@ -84,9 +84,9 @@ MonoBehaviour:
     kanji: 
     verbType: 2
     meaning:
+    - to be, to exist (of animate objects)
     - "to exist\u200B"
     - to be
-    - to be (of animate objects)
     politeNonpast: "\u3044\u307E\u3059"
     politePast: "\u3044\u307E\u3057\u305F"
     politeNonPastNegative: "\u3044\u307E\u305B\u3093"
@@ -101,8 +101,8 @@ MonoBehaviour:
     kanji: "\u64AE\u308B"
     verbType: 0
     meaning:
+    - to take (a picture), to record
     - to take
-    - to take (a picture)
     - to record
     politeNonpast: 
     politePast: 
@@ -149,6 +149,7 @@ MonoBehaviour:
   - kana: "\u3042\u3044\u3060"
     kanji: "\u9593"
     meaning:
+    - between, interval, gap
     - between
     - interval
     - gap
@@ -175,6 +176,7 @@ MonoBehaviour:
   - kana: "\u3046\u3048"
     kanji: "\u4E0A"
     meaning:
+    - on, above, up, etc.
     - on
     - above
     - over
@@ -182,6 +184,7 @@ MonoBehaviour:
   - kana: "\u3046\u3057\u308D"
     kanji: "\u5F8C\u308D"
     meaning:
+    - back, behind
     - back
     - behind
     - rear
@@ -212,11 +215,13 @@ MonoBehaviour:
   - kana: "\u3054\u306F\u3093"
     kanji: "\u3054\u98EF"
     meaning:
+    - rice or meal
     - rice
     - meal
   - kana: "\u3057\u305F"
     kanji: "\u4E0B"
     meaning:
+    - under, below, down
     - under
     - below
     - down
@@ -224,6 +229,7 @@ MonoBehaviour:
   - kana: "\u3057\u3083\u3057\u3093"
     kanji: "\u5199\u771F"
     meaning:
+    - Picture, photograph
     - picture
     - photograph
   - kana: "\u30B9\u30FC\u30D1\u30FC"
@@ -233,6 +239,7 @@ MonoBehaviour:
   - kana: "\u3061\u304B\u304F"
     kanji: "\u8FD1\u304F"
     meaning:
+    - near, nearby, vicinity
     - near
     - nearby
     - neighborhood
@@ -244,6 +251,7 @@ MonoBehaviour:
   - kana: "\u3068\u304D"
     kanji: "\u6642"
     meaning:
+    - When, time
     - when
     - time
     - hour
@@ -252,6 +260,7 @@ MonoBehaviour:
   - kana: "\u3068\u306A\u308A"
     kanji: "\u96A3"
     meaning:
+    - next, adjacent
     - next
     - adjoining
     - adjacent
@@ -259,6 +268,7 @@ MonoBehaviour:
   - kana: "\u306A\u304B"
     kanji: "\u4E2D"
     meaning:
+    - inside, interior, middle, center
     - inside
     - interior
     - middle
@@ -302,11 +312,13 @@ MonoBehaviour:
   - kana: "\u307E\u3048"
     kanji: "\u524D"
     meaning:
+    - front, before
     - front
     - before
   - kana: "\u307E\u3061"
     kanji: "\u753A"
     meaning:
+    - Town, city
     - town
     - city
   - kana: "\u307F\u304E"
@@ -321,3 +333,4 @@ MonoBehaviour:
     kanji: 
     meaning:
     - (term) paper
+    - paper

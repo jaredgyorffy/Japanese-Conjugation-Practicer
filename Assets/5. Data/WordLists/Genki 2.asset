@@ -19,6 +19,7 @@ MonoBehaviour:
     kanji: 
     adjectiveType: 0
     meaning:
+    - Delicious or Tasty
     - delicious
     - tasty
     politePast: 
@@ -31,6 +32,7 @@ MonoBehaviour:
     kanji: "\u9AD8\u3044"
     adjectiveType: 0
     meaning:
+    - Expensive, high, or tall
     - expensive
     - high
     - tall
@@ -44,14 +46,14 @@ MonoBehaviour:
   - kana: "\u3042\u305D\u3053"
     kanji: 
     meaning:
-    - over there
     - that over there
+    - over there
   - kana: "\u3042\u308C"
     kanji: 
     meaning:
+    - That thing (something distant from both speaker and listener)
     - that
     - That thing
-    - something distant from both speaker and listener
   - kana: "\u3044\u304F\u3089"
     kanji: 
     meaning:
@@ -113,6 +115,7 @@ MonoBehaviour:
   - kana: "\u30B9\u30DE\u30DB"
     kanji: 
     meaning:
+    - Smartphone or Mobilephone
     - smartphone
     - mobile
     - mobile phone
@@ -123,8 +126,8 @@ MonoBehaviour:
   - kana: "\u305D\u308C"
     kanji: 
     meaning:
-    - that
     - that one
+    - that
   - kana: "\u3060\u308C"
     kanji: 
     meaning:
@@ -136,6 +139,7 @@ MonoBehaviour:
   - kana: "\u30C8\u30A4\u30EC"
     kanji: 
     meaning:
+    - Toilet, Restroom, or Washroom
     - toilet
     - restroom
     - washroom
@@ -143,6 +147,7 @@ MonoBehaviour:
   - kana: "\u3068\u3051\u3044"
     kanji: "\u6642\u8A08"
     meaning:
+    - Watch or Clock
     - watch
     - clock
   - kana: "\u3069\u3053"
@@ -156,9 +161,9 @@ MonoBehaviour:
   - kana: "\u3069\u308C"
     kanji: 
     meaning:
+    - "which (of three or more)\u200B"
     - which
     - which one
-    - "which (of three or more)\u200B"
   - kana: "\u3068\u3093\u304B\u3064"
     kanji: 
     meaning:

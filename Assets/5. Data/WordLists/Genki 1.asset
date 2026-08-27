@@ -62,12 +62,14 @@ MonoBehaviour:
   - kana: "\u3054\u3054"
     kanji: "\u5348\u5F8C"
     meaning:
+    - Afternoon or P.M.
     - p.m.
     - pm
     - afternoon
   - kana: "\u3054\u305C\u3093"
     kanji: "\u5348\u524D"
     meaning:
+    - Morning or A.M.
     - a.m.
     - am
     - morning
@@ -86,11 +88,13 @@ MonoBehaviour:
   - kana: "\u305B\u3093\u305B\u3044"
     kanji: "\u5148\u751F"
     meaning:
+    - Teacher or Professor
     - teacher
     - Professor
   - kana: "\u3060\u3044\u304C\u304F"
     kanji: "\u5927\u5B66"
     meaning:
+    - College or University
     - college
     - university
   - kana: "\u3060\u3044\u304C\u304F\u3044\u3093\u305B\u3044"
@@ -109,7 +113,7 @@ MonoBehaviour:
     kanji: "\u53CB\u3060\u3061"
     meaning:
     - friend
-  - kana: "\u306A\u306B/\u306A\u3093"
+  - kana: "\u306A\u306B"
     kanji: "\u4F55"
     meaning:
     - what
@@ -117,16 +121,20 @@ MonoBehaviour:
     kanji: "\u540D\u524D"
     meaning:
     - name
-  - kana: "\u306A\u3093/\u306A\u306B"
+  - kana: "\u306A\u3093"
     kanji: "\u4F55"
+    meaning:
+    - what
+  - kana: "\u306A\u3093"
+    kanji: 
     meaning:
     - what
   - kana: "\u306B\u3058\u306F\u3093"
     kanji: "\u4E8C\u6642\u534A"
     meaning:
+    - two thirthy
     - half past two
     - 2:30
-    - two thirthy
   - kana: "\u306B\u307B\u3093"
     kanji: "\u65E5\u672C"
     meaning:
@@ -156,6 +164,7 @@ MonoBehaviour:
   - kana: "\u308F\u305F\u3057"
     kanji: "\u79C1"
     meaning:
+    - I or Me (Polite)
     - I
     - Me
   - kana: "\u3044\u3061\u3058"

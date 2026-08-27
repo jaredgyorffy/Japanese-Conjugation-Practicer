@@ -262,30 +262,20 @@ public static class QuizUtility
         }
         else
         {
-            return (userAnswer == GetAnswer(correctAnswers));
+            foreach (string answer in correctAnswers)
+            {
+                if (userAnswer == answer)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 
     public static string GetAnswer(List<string> correctAnswers)
     {
-        if (correctAnswers.Count > 1)
-        {
-            string answers = "";
-            for (int i = 0; i < correctAnswers.Count; i++)
-            {
-                answers += correctAnswers[i];
-                if (i < correctAnswers.Count - 1)
-                {
-                    answers += " or ";
-                }
-            }
-
-            return answers;
-        }
-        else
-        {
             return correctAnswers[0];
-        }
     }
 
 
