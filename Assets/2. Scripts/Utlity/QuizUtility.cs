@@ -268,6 +268,10 @@ public static class QuizUtility
                 {
                     return true;
                 }
+                else if (userAnswer == StringUtility.KatakanaToHiragana(answer))
+                {
+                    return true;
+                }
             }
             return false;
         }

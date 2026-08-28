@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478a6b45f4173a947984457165db4dad, type: 3}
+  m_Name: Katakana Test
+  m_EditorClassIdentifier: Assembly-CSharp::WordList
+  <listName>k__BackingField: Katakana Test
+  verbList: []
+  adjectiveList: []
+  nounList:
+  - kana: "\u30A2\u30A4\u30B9\u30AF\u30EA\u30FC\u30E0"
+    kanji: 
+    meaning:
+    - ice cream
+  - kana: "\u30AB\u30D5\u30A7"
+    kanji: 
+    meaning:
+    - cafe
+  - kana: "\u30B3\u30FC\u30D2\u30FC"
+    kanji: 
+    meaning:
+    - coffee
+  - kana: "\u30B9\u30DD\u30FC\u30C4"
+    kanji: 
+    meaning:
+    - sports
+  - kana: "\u30C6\u30CB\u30B9"
+    kanji: 
+    meaning:
+    - tennis
+  - kana: "\u30C6\u30EC\u30D3"
+    kanji: 
+    meaning:
+    - Television, TV
+    - TV
+    - television

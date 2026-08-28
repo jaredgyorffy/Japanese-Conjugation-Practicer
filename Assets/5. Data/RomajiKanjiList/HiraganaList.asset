@@ -23,6 +23,8 @@ MonoBehaviour:
     Romaji: e
   - Kana: "\u304A"
     Romaji: o
+  - Kana: "\u30FC"
+    Romaji: '-'
   TwoLetterPairs:
   - Kana: "\u304B"
     Romaji: ka
@@ -164,6 +166,16 @@ MonoBehaviour:
     Romaji: nn
   - Kana: "\u3058\u3083"
     Romaji: ja
+  - Kana: "\u3047"
+    Romaji: "\u3048="
+  - Kana: "\u3041"
+    Romaji: "\u3042="
+  - Kana: "\u3045"
+    Romaji: "\u3046="
+  - Kana: "\u3049"
+    Romaji: "\u304A="
+  - Kana: "\u3043"
+    Romaji: "\u3044="
   ThreeLetterPairs:
   - Kana: "\u304D\u3083"
     Romaji: kya
