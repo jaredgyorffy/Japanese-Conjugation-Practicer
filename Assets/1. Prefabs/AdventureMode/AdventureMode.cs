@@ -59,6 +59,13 @@ public class AdventureMode : MonoBehaviour
     private void Update()
     {
         uiMonsterSprite.style.backgroundImage = new StyleBackground(monsterSprite.sprite);
+        if (currentMonster != null)
+        {
+            if (campaignOrder.Count <= 0)
+            {
+                uiMonsterSprite.style.unityBackgroundImageTintColor = Color.HSVToRGB((Time.time/2) % 1, 1, 1);
+            }
+        }
     }
 
     public void InitializeAdventure(float playerMaxHP, int enemies, QuizConfiguration config, Action restartAction = null)

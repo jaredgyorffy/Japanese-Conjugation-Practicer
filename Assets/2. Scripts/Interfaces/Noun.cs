@@ -24,11 +24,11 @@ public class Noun : IWord
 
     public string StandardNonpastNegative => ConjugateStandardNonpastNegative(kana);
 
+    public string StandardPastNegative => ConjugateStandardPastNegative(kana);
+
     public string PoliteNonpastNegative => ConjugatePoliteNonpastNegative(kana);
     
     public string PolitePastNegative => ConjugatePolitePastNegative(kana);
-
-    public string StandardPastNegative => ConjugateStandardPastNegative(kana);
 
     private string ConjugatePolitePast(string dictionaryForm)
     {

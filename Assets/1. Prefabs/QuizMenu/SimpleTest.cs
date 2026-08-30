@@ -93,12 +93,6 @@ public class SimpleTest : MonoBehaviour
         OnPressSubmit();
     }
 
-    private void OnPressEnterToSubmit(KeyDownEvent evt)
-    {
-        evt.StopImmediatePropagation();
-        OnPressSubmit();
-    }
-
     private void Update()
     {
         if (Initialized == false)
@@ -155,11 +149,6 @@ public class SimpleTest : MonoBehaviour
         informationBox.style.visibility = string.IsNullOrEmpty(text)
             ? Visibility.Hidden
             : Visibility.Visible;
-    }
-
-    private ConjugationType GetRandomQuestionType(WordType wordtype)
-    {
-        return QuizUtility.GetRandomQuestionType(wordtype, conjugationTypes);
     }
 
     private void OnInputChanged()
