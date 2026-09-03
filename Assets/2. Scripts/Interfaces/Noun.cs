@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using NaughtyAttributes;
-
 [Serializable]
 public class Noun : IWord
 {
@@ -13,6 +11,8 @@ public class Noun : IWord
     [SerializeField] public string kanji;
 
     public WordType WordType => WordType.Noun;
+    public string MeaningFull => meaningFull;
+    [SerializeField] private string meaningFull;
     public List<string> Meaning => meaning;
     [SerializeField] private List<string> meaning;
 

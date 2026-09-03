@@ -1,0 +1,4358 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: SpreadsheetContainer 1
+  m_EditorClassIdentifier: Assembly-CSharp::SpreadsheetContainer
+  foldoutImportGUI: 1
+  documentId: 1_4DyT5uDoSl6wbE6CMDT6D5fKIFAJrOM
+  selectedTogglesIds:
+  - adjectives
+  - nouns
+  - verbs
+  foldoutSerializationGUI: 0
+  serializationOutputPath: ../../Configs
+  serializationFileName: Configs.v0.1
+  serializationFormat: 0
+  content:
+    verbs:
+    - kana: "\u308F\u305F\u308B"
+      kanji: "\u6E21\u308B"
+      verbType: 0
+      meaningFull: to cross
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3046\u305D\u3092\u3064\u304F"
+      kanji: 
+      verbType: 0
+      meaningFull: to tell a lie
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304A\u306A\u304B\u304C\u3059\u304F"
+      kanji: 
+      verbType: 0
+      meaningFull: to become hungry
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u307E\u304C\u308B"
+      kanji: "\u66F2\u304C\u308B"
+      verbType: 0
+      meaningFull: 'to turn (right/left), to turn
+
+'
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304B\u3046"
+      kanji: "\u98FC\u3046"
+      verbType: 0
+      meaningFull: to own (a pet)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u30B5\u30DC\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: to cut (classes)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306A\u3089\u3046"
+      kanji: "\u7FD2\u3046"
+      verbType: 0
+      meaningFull: to learn
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306E\u307C\u308B"
+      kanji: "\u767B\u308B"
+      verbType: 0
+      meaningFull: to climb
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306F\u3057\u308B"
+      kanji: "\u8D70\u308B"
+      verbType: 0
+      meaningFull: to RUn
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3064\u304B\u308C\u308B"
+      kanji: "\u75B2\u308C\u308B"
+      verbType: 0
+      meaningFull: 'to get tired '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3084\u3081\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: 'to quit '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3051\u3093\u304B\u3059\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: 'to have a fight, to quarrel '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3057\u3087\u3046\u304B\u3044\u3059\u308B"
+      kanji: "\u7D39\u4ECB\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to introduce '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u30C0\u30A4\u30A8\u30C3\u30C8\u3059\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: 'to go on a diet '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3061\u3053\u304F\u3059\u308B"
+      kanji: "\u9045\u523B\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to be late (for an appointment) '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u308A\u3085\u3046\u304C\u304F\u3059\u308B"
+      kanji: "\u7559\u5B66\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to study abroad '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304B\u304B\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: to take (amount of time/money)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3068\u307E\u308B"
+      kanji: "\u6CCA\u307E\u308B"
+      verbType: 0
+      meaningFull: to stay (at a hotel, etc.)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306A\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: to become
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304D\u3081\u308B"
+      kanji: "\u6C7A\u3081\u308B"
+      verbType: 0
+      meaningFull: 'to decide '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3054\u308D\u3054\u308D\u3059\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: 'to chill out at home, to stay home do nothing '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u308A\u3087\u3053\u3046\u3059\u308B"
+      kanji: "\u65C5\u884C\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to travel '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u308C\u3093\u3057\u3085\u3046\u3059\u308B"
+      kanji: "\u7DF4\u7FD2\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to practice '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304A\u3069\u308B"
+      kanji: "\u8E0A\u308B"
+      verbType: 0
+      meaningFull: to dance
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304A\u308F\u308B"
+      kanji: "\u7D42\u308F\u308B"
+      verbType: 0
+      meaningFull: (something) ends
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304F\u3059\u308A\u3092\u306E\u3080"
+      kanji: "\u85AC\u3092\u98F2\u3080"
+      verbType: 0
+      meaningFull: to take medicine
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306B\u3093\u304D\u304C\u3042\u308B"
+      kanji: "\u4EBA\u6C17\u304C\u3042\u308B"
+      verbType: 0
+      meaningFull: to be popular
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306F\u3058\u307E\u308B"
+      kanji: "\u59CB\u307E\u308B"
+      verbType: 0
+      meaningFull: (something) begins
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3072\u304F"
+      kanji: "\u5F3E\u304F"
+      verbType: 0
+      meaningFull: to play (a string instRUment or piano)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3082\u3089\u3046"
+      kanji: 
+      verbType: 0
+      meaningFull: to get (from somebody)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304A\u307C\u3048\u308B"
+      kanji: "\u899A\u3048\u308B"
+      verbType: 0
+      meaningFull: 'to memorize '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3046\u3093\u3069\u3046\u3059\u308B"
+      kanji: "\u904B\u52D5\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to exercise '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3055\u3093\u307D\u3059\u308B"
+      kanji: "\u6563\u6B69\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to take a walk '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3042\u3089\u3046"
+      kanji: "\u6D17\u3046"
+      verbType: 0
+      meaningFull: to wash
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3044\u3046"
+      kanji: "\u8A00\u3046"
+      verbType: 0
+      meaningFull: to say
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3044\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: to need
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304A\u305D\u304F\u306A\u308B"
+      kanji: "\u9045\u304F\u306A\u308B"
+      verbType: 0
+      meaningFull: to be late
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304A\u3075\u308D\u306B\u306F\u3044\u308B"
+      kanji: "\u304A\u98A8\u5442\u306B\u5165\u308B"
+      verbType: 0
+      meaningFull: to take a bath
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304A\u3082\u3046"
+      kanji: "\u601D\u3046"
+      verbType: 0
+      meaningFull: to think
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3064\u304F\u308B"
+      kanji: "\u4F5C\u308B"
+      verbType: 0
+      meaningFull: to make
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3075\u308B\uFF08\u3042\u3081/\u3086\u304D\u304C\uFF09"
+      kanji: "\u964D\u308B\uFF08\u96E8/\u96EA\u304C\uFF09"
+      verbType: 0
+      meaningFull: (rain/snow) falls
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3075\u308D\u306B\u306F\u3044\u308B"
+      kanji: "\u98A8\u5442\u306B\u5165\u308B"
+      verbType: 0
+      meaningFull: to take a bath
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3082\u3063\u3066\u3044\u304F"
+      kanji: "\u6301\u3063\u3066\u3044\u304F"
+      verbType: 0
+      meaningFull: to take (a thing)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304D\u308B"
+      kanji: "\u5207\u308B"
+      verbType: 0
+      meaningFull: to cut
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3059\u3066\u308B"
+      kanji: "\u6368\u3066\u308B"
+      verbType: 0
+      meaningFull: 'to throw away '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306F\u3058\u3081\u308B"
+      kanji: "\u59CB\u3081\u308B"
+      verbType: 0
+      meaningFull: 'to begin '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3046\u3093\u3066\u3093\u3059\u308B"
+      kanji: "\u904B\u8EE2\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to drive '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u305B\u3093\u305F\u304F\u3059\u308B"
+      kanji: "\u6D17\u6FEF\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to do laundry '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u305D\u3046\u3058\u3059\u308B"
+      kanji: "\u6383\u9664\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to clean '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u308A\u3087\u3046\u308A\u3059\u308B"
+      kanji: "\u6599\u7406\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to cook '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3046\u305F\u3046"
+      kanji: "\u6B4C\u3046"
+      verbType: 0
+      meaningFull: to sing
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304B\u3076\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: to put on (a hat)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3057\u308B"
+      kanji: "\u77E5\u308B"
+      verbType: 0
+      meaningFull: to get to know
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3059\u3080"
+      kanji: "\u4F4F\u3080"
+      verbType: 0
+      meaningFull: to live
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306F\u304F"
+      kanji: 
+      verbType: 0
+      meaningFull: to put on (items below your waist)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306F\u305F\u3089\u304F"
+      kanji: "\u50CD\u304F"
+      verbType: 0
+      meaningFull: to work
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3075\u3068\u308B"
+      kanji: "\u592A\u308B"
+      verbType: 0
+      meaningFull: to gain weight, overweight
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304B\u3051\u308B\uFF08\u3081\u304C\u306D\u3092\uFF09"
+      kanji: "\u304B\u3051\u308B\uFF08\u773C\u93E1\u3092\uFF09"
+      verbType: 0
+      meaningFull: 'to put on (glasses) '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304D\u308B"
+      kanji: "\u7740\u308B"
+      verbType: 0
+      meaningFull: 'to put on (clothes above your waist) '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3084\u305B\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: 'to lose weight '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3051\u3063\u3053\u3093\u3059\u308B"
+      kanji: "\u7D50\u5A5A\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to get married '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3042\u305D\u3076"
+      kanji: "\u904A\u3076"
+      verbType: 0
+      meaningFull: to play, to spend time pleasantly
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3044\u305D\u3050"
+      kanji: "\u6025\u3050"
+      verbType: 0
+      meaningFull: to hurry
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304B\u3048\u3059"
+      kanji: "\u8FD4\u3059"
+      verbType: 0
+      meaningFull: to return (a thing)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3051\u3059"
+      kanji: "\u6D88\u3059"
+      verbType: 0
+      meaningFull: to turn off, to erase
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3057\u306C"
+      kanji: "\u6B7B\u306C"
+      verbType: 0
+      meaningFull: to die
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3059\u308F\u308B"
+      kanji: "\u5EA7\u308B"
+      verbType: 0
+      meaningFull: to sit down
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u305F\u3064"
+      kanji: "\u7ACB\u3064"
+      verbType: 0
+      meaningFull: to stand up
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u305F\u3070\u3053\u3092\u3059\u3046"
+      kanji: "\u305F\u3070\u3053\u3092\u5438\u3046"
+      verbType: 0
+      meaningFull: to smoke
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3064\u304B\u3046"
+      kanji: "\u4F7F\u3046"
+      verbType: 0
+      meaningFull: to use
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3066\u3064\u3060\u3046"
+      kanji: "\u624B\u4F1D\u3046"
+      verbType: 0
+      meaningFull: to help
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306F\u3044\u308B"
+      kanji: "\u5165\u308B"
+      verbType: 0
+      meaningFull: to enter
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3082\u3064"
+      kanji: "\u6301\u3064"
+      verbType: 0
+      meaningFull: to carry, to hold
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3084\u3059\u3080"
+      kanji: "\u4F11\u3080"
+      verbType: 0
+      meaningFull: to be absent (from), to rest
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3042\u3051\u308B"
+      kanji: "\u958B\u3051\u308B"
+      verbType: 0
+      meaningFull: 'to open (something) '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304A\u3057\u3048\u308B"
+      kanji: "\u6559\u3048\u308B"
+      verbType: 0
+      meaningFull: 'to teach, to instRUct '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304A\u308A\u308B"
+      kanji: "\u964D\u308A\u308B"
+      verbType: 0
+      meaningFull: 'to get off '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304B\u308A\u308B"
+      kanji: "\u501F\u308A\u308B"
+      verbType: 0
+      meaningFull: 'to borrow '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3057\u3081\u308B"
+      kanji: "\u9589\u3081\u308B"
+      verbType: 0
+      meaningFull: 'to close (something) '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u30B7\u30E3\u30EF\u30FC\u3092\u3042\u3073\u308B"
+      kanji: "\u30B7\u30E3\u30EF\u30FC\u3092\u6D74\u3073\u308B"
+      verbType: 0
+      meaningFull: 'to take a shower '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3064\u3051\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: 'to turn on '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u308F\u3059\u308C\u308B"
+      kanji: "\u5FD8\u308C\u308B"
+      verbType: 0
+      meaningFull: 'to forget, to leave behind '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3064\u308C\u3066\u304F\u308B"
+      kanji: "\u9023\u308C\u3066\u304F\u308B"
+      verbType: 0
+      meaningFull: 'to bring (a person) '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3067\u3093\u308F\u3059\u308B"
+      kanji: "\u96FB\u8A71\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to call '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3082\u3063\u3066\u304F\u308B"
+      kanji: "\u6301\u3063\u3066\u304F\u308B"
+      verbType: 0
+      meaningFull: 'to bring (a thing) '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304A\u3088\u3050"
+      kanji: "\u6CF3\u3050"
+      verbType: 0
+      meaningFull: to swim
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304D\u304F"
+      kanji: "\u805E\u304F"
+      verbType: 0
+      meaningFull: to ask
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306E\u308B"
+      kanji: "\u4E57\u308B"
+      verbType: 0
+      meaningFull: to ride, to board
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3084\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: to do, to perform
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3067\u304B\u3051\u308B"
+      kanji: "\u51FA\u304B\u3051\u308B"
+      verbType: 0
+      meaningFull: 'to go out '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3042\u3046"
+      kanji: "\u4F1A\u3046"
+      verbType: 0
+      meaningFull: to meet, to see (a person)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3042\u308B"
+      kanji: "\u6709\u308B"
+      verbType: 0
+      meaningFull: there is . . .
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304B\u3046"
+      kanji: "\u8CB7\u3046"
+      verbType: 0
+      meaningFull: to buy
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304B\u304F"
+      kanji: "\u66F8\u304F"
+      verbType: 0
+      meaningFull: to write
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3068\u308B"
+      kanji: "\u64AE\u308B"
+      verbType: 0
+      meaningFull: to take (a picture)
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u307E\u3064"
+      kanji: "\u5F85\u3064"
+      verbType: 0
+      meaningFull: to wait
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u308F\u304B\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: to understand
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3044\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: '(a person) is in . . . , stays at . . . '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3044\u304F"
+      kanji: "\u884C\u304F"
+      verbType: 0
+      meaningFull: to go
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304B\u3048\u308B"
+      kanji: "\u5E30\u308B"
+      verbType: 0
+      meaningFull: to go back, to return
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304D\u304F"
+      kanji: "\u805E\u304F"
+      verbType: 0
+      meaningFull: to listen, to hear
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306E\u3080"
+      kanji: "\u98F2\u3080"
+      verbType: 0
+      meaningFull: to drink
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306F\u306A\u3059"
+      kanji: "\u8A71\u3059"
+      verbType: 0
+      meaningFull: to speak, to talk
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3088\u3080"
+      kanji: "\u8AAD\u3080"
+      verbType: 0
+      meaningFull: to read
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304A\u304D\u308B"
+      kanji: "\u8D77\u304D\u308B"
+      verbType: 0
+      meaningFull: 'to get up '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u305F\u3079\u308B"
+      kanji: "\u98DF\u3079\u308B"
+      verbType: 0
+      meaningFull: 'to eat '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u306D\u308B"
+      kanji: "\u5BDD\u308B"
+      verbType: 0
+      meaningFull: 'to sleep, to go to sleep '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u307F\u308B"
+      kanji: "\u898B\u308B"
+      verbType: 0
+      meaningFull: 'to see, to look at, to watch '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u304F\u308B"
+      kanji: "\u6765\u308B"
+      verbType: 0
+      meaningFull: 'to come '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3059\u308B"
+      kanji: 
+      verbType: 0
+      meaningFull: 'to do '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    - kana: "\u3079\u3093\u304D\u3087\u3046\u3059\u308B"
+      kanji: "\u52C9\u5F37\u3059\u308B"
+      verbType: 0
+      meaningFull: 'to study '
+      meaning: []
+      politeNonpast: 
+      politePast: 
+      politeNonPastNegative: 
+      politePastNegative: 
+      standardPast: 
+      standardNonpastNegative: 
+      standardPastNegative: 
+      politeVolitional: 
+      casualVolitional: 
+      teForm: 
+    nouns:
+    - kana: "\u3046\u3061\u3085\u3046\u3072\u3053\u3046\u3057"
+      kanji: "\u5B87\u5B99\u98DB\u884C\u58EB"
+      meaningFull: astronaut
+      meaning: []
+    - kana: "\u304A\u304B\u3057"
+      kanji: "\u304A\u83D3\u5B50"
+      meaningFull: snack, sweets
+      meaning: []
+    - kana: "\u304A\u307E\u3064\u308A"
+      kanji: "\u304A\u796D\u308A"
+      meaningFull: festival
+      meaning: []
+    - kana: "\u304A\u3082\u3061\u3083"
+      kanji: 
+      meaningFull: toy
+      meaning: []
+    - kana: "\u304A\u3093\u305B\u3093"
+      kanji: "\u6E29\u6CC9"
+      meaningFull: spa, hot spring
+      meaning: []
+    - kana: "\u304C\u3044\u3053\u304F"
+      kanji: "\u5916\u56FD"
+      meaningFull: foreign country
+      meaning: []
+    - kana: "\u304B\u3057"
+      kanji: "\u83D3\u5B50"
+      meaningFull: snack, sweets
+      meaning: []
+    - kana: "\u304B\u3057\u3085"
+      kanji: "\u6B4C\u624B"
+      meaningFull: singer
+      meaning: []
+    - kana: "\u304B\u308F"
+      kanji: "\u5DDD"
+      meaningFull: river
+      meaning: []
+    - kana: "\u30AD\u30E3\u30F3\u30D7"
+      kanji: 
+      meaningFull: camp
+      meaning: []
+    - kana: "\u304D\u3087\u3046\u3057"
+      kanji: "\u6559\u5E2B"
+      meaningFull: schoolteacher
+      meaning: []
+    - kana: "\u3051\u3044\u3055\u3064\u304B\u3093"
+      kanji: "\u8B66\u5BDF\u5B98"
+      meaningFull: police officer
+      meaning: []
+    - kana: "\u3051\u3093\u304D\u3085\u3046\u3057\u3083"
+      kanji: "\u7814\u7A76\u8005"
+      meaningFull: researcher
+      meaning: []
+    - kana: "\u3053\u3061\u3089"
+      kanji: 
+      meaningFull: this person (polite)
+      meaning: []
+    - kana: "\u3053\u3093\u304C\u3063\u304D"
+      kanji: "\u4ECA\u5B66\u671F"
+      meaningFull: this semester
+      meaning: []
+    - kana: "\u3055\u3063\u304B"
+      kanji: "\u4F5C\u5BB6"
+      meaningFull: writer
+      meaning: []
+    - kana: "\u30B8\u30E3\u30FC\u30CA\u30EA\u30B9\u30C8"
+      kanji: 
+      meaningFull: journalist
+      meaning: []
+    - kana: "\u3057\u3083\u3061\u3087\u3046"
+      kanji: "\u793E\u9577"
+      meaningFull: president of a company
+      meaning: []
+    - kana: "\u3058\u3085\u304E\u3087\u3046"
+      kanji: "\u6388\u696D"
+      meaningFull: class
+      meaning: []
+    - kana: "\u3057\u3085\u3063\u3057\u3093"
+      kanji: "\u51FA\u8EAB"
+      meaningFull: coming from
+      meaning: []
+    - kana: "\u3057\u3087\u3046\u307C\u3046\u3057"
+      kanji: "\u6D88\u9632\u58EB"
+      meaningFull: firefighter
+      meaning: []
+    - kana: "\u3057\u3087\u3046\u3089\u3044"
+      kanji: "\u5C06\u6765"
+      meaningFull: future
+      meaning: []
+    - kana: "\u3058\u3093\u3058\u3083"
+      kanji: "\u795E\u793E"
+      meaningFull: shrine
+      meaning: []
+    - kana: "\u30B9\u30DD\u30FC\u30C4\u305B\u3093\u3057\u3085"
+      kanji: "\u30B9\u30DD\u30FC\u30C4\u9078\u624B"
+      meaningFull: athlete
+      meaning: []
+    - kana: "\u3060\u3044\u3068\u3046\u308A\u3087\u3046"
+      kanji: "\u5927\u7D71\u9818"
+      meaningFull: president of a country
+      meaning: []
+    - kana: "\u3064\u308A"
+      kanji: 
+      meaningFull: fishing
+      meaning: []
+    - kana: "\u30C9\u30E9\u30A4\u30D6"
+      kanji: 
+      meaningFull: drive
+      meaning: []
+    - kana: "\u306F\u3044\u3086\u3046"
+      kanji: "\u4FF3\u512A"
+      meaningFull: actor, actress
+      meaning: []
+    - kana: "\u30D3\u30FC\u30EB"
+      kanji: 
+      meaningFull: beer
+      meaning: []
+    - kana: "\u3073\u3058\u3085\u3064\u304B\u3093"
+      kanji: "\u7F8E\u8853\u9928"
+      meaningFull: art museum
+      meaning: []
+    - kana: "\u307E\u3064\u308A"
+      kanji: "\u796D\u308A"
+      meaningFull: festival
+      meaning: []
+    - kana: "\u307E\u3093\u304C\u304B"
+      kanji: "\u6F2B\u753B\u5BB6"
+      meaningFull: cartoonist
+      meaning: []
+    - kana: "\u307F\u305A\u3046\u307F"
+      kanji: "\u6E56"
+      meaningFull: lake
+      meaning: []
+    - kana: "\u3086\u3081"
+      kanji: "\u5922"
+      meaningFull: dream
+      meaning: []
+    - kana: "\u3089\u3044\u304C\u3063\u304D"
+      kanji: "\u6765\u5B66\u671F"
+      meaningFull: next semester
+      meaning: []
+    - kana: "\u30EB\u30FC\u30E0\u30E1\u30A4\u30C8"
+      kanji: 
+      meaningFull: roommate
+      meaning: []
+    - kana: "\u304B\u305F\u3044\u3044\u3044\u304B\u305F"
+      kanji: "\u304B\u305F\u3044\u8A00\u3044\u65B9"
+      meaningFull: bookish expression
+      meaning: []
+    - kana: "\u304B\u3063\u3053"
+      kanji: 
+      meaningFull: parenthesis
+      meaning: []
+    - kana: "\u304D\u3087\u3046\u3064\u3046\u3054"
+      kanji: "\u5171\u901A\u8A9E"
+      meaningFull: common language
+      meaning: []
+    - kana: "\u304F\u3060\u3051\u305F\u3044\u3044\u304B\u305F"
+      kanji: "\u304F\u3060\u3051\u305F\u8A00\u3044\u65B9"
+      meaningFull: colloquial expression
+      meaning: []
+    - kana: "\u3066\u3044\u306D\u3044\u306A\u3044\u3044\u304B\u305F"
+      kanji: "\u3066\u3044\u306D\u3044\u306A\u8A00\u3044\u65B9"
+      meaningFull: polite expression
+      meaning: []
+    - kana: "\u3070\u3064"
+      kanji: 
+      meaningFull: "\xD7 (wrong)"
+      meaning: []
+    - kana: "\u306F\u3064\u304A\u3093"
+      kanji: "\u767A\u97F3"
+      meaningFull: pronunciation
+      meaning: []
+    - kana: "\u307B\u3046\u3052\u3093"
+      kanji: "\u65B9\u8A00"
+      meaningFull: dialect
+      meaning: []
+    - kana: "\u307E\u308B"
+      kanji: 
+      meaningFull: "\u25CB (correct)"
+      meaning: []
+    - kana: "\u308C\u3044"
+      kanji: "\u4F8B"
+      meaningFull: example
+      meaning: []
+    - kana: "\u308C\u3093\u3057\u3085\u3046"
+      kanji: "\u7DF4\u7FD2"
+      meaningFull: exercise
+      meaning: []
+    - kana: "\u3044\u307F"
+      kanji: "\u610F\u5473"
+      meaningFull: meaning
+      meaning: []
+    - kana: "\u3076\u3093\u307D\u3046"
+      kanji: "\u6587\u6CD5"
+      meaningFull: grammar
+      meaning: []
+    - kana: "\u3057\u3081\u304D\u308A"
+      kanji: "\u7DE0\u3081\u5207\u308A"
+      meaningFull: deadline
+      meaning: []
+    - kana: "\u3057\u3064\u3082\u3093"
+      kanji: "\u8CEA\u554F"
+      meaningFull: question
+      meaning: []
+    - kana: "\u3053\u305F\u3048"
+      kanji: "\u7B54\uFF0F\u7B54\u3048"
+      meaningFull: answer
+      meaning: []
+    - kana: "\u3042\u304D"
+      kanji: "\u79CB"
+      meaningFull: fall
+      meaning: []
+    - kana: "\u304A\u304B\u306D\u3082\u3061"
+      kanji: "\u304A\u91D1\u6301\u3061"
+      meaningFull: rich person
+      meaning: []
+    - kana: "\u304B\u306D\u3082\u3061"
+      kanji: "\u91D1\u6301\u3061"
+      meaningFull: rich person
+      meaning: []
+    - kana: "\u304D\u305B\u3064"
+      kanji: "\u5B63\u7BC0"
+      meaningFull: season
+      meaning: []
+    - kana: "\u304E\u3085\u3046\u306B\u3085\u3046"
+      kanji: "\u725B\u4E73"
+      meaningFull: milk
+      meaning: []
+    - kana: "\u30B1\u30FC\u30AD"
+      kanji: 
+      meaningFull: cake
+      meaning: []
+    - kana: "\u30B5\u30C3\u30AB\u30FC"
+      kanji: 
+      meaningFull: soccer
+      meaning: []
+    - kana: "\u3058\u304B\u3093"
+      kanji: "\u6642\u9593"
+      meaningFull: time
+      meaning: []
+    - kana: "\u3057\u3093\u304B\u3093\u305B\u3093"
+      kanji: "\u65B0\u5E79\u7DDA"
+      meaningFull: "Shinkansen,  \u201CBullet Train\u201D"
+      meaning: []
+    - kana: "\u3059\u3057"
+      kanji: 
+      meaningFull: sushi
+      meaning: []
+    - kana: "\u30C4\u30A2\u30FC"
+      kanji: 
+      meaningFull: tour
+      meaning: []
+    - kana: "\u3066\u3076\u304F\u308D"
+      kanji: "\u624B\u888B"
+      meaningFull: gloves
+      meaning: []
+    - kana: "\u3066\u3093\u3077\u3089"
+      kanji: "\u5929\u3077\u3089"
+      meaningFull: tempura
+      meaning: []
+    - kana: "\u3069\u3046\u3076\u3064\u3048\u3093"
+      kanji: "\u52D5\u7269\u5712"
+      meaningFull: zoo
+      meaning: []
+    - kana: "\u3068\u3057\u3046\u3048"
+      kanji: "\u5E74\u4E0A"
+      meaningFull: someone older
+      meaning: []
+    - kana: "\u3069\u3061\u3089"
+      kanji: 
+      meaningFull: which
+      meaning: []
+    - kana: "\u3069\u3063\u3061"
+      kanji: 
+      meaningFull: which
+      meaning: []
+    - kana: "\u306F\u308B"
+      kanji: "\u6625"
+      meaningFull: spring
+      meaning: []
+    - kana: "\u3072\u3053\u3046\u304D"
+      kanji: "\u98DB\u884C\u6A5F"
+      meaningFull: airplane
+      meaning: []
+    - kana: "\u3073\u3088\u3046\u3044\u3093"
+      kanji: "\u7F8E\u5BB9\u9662"
+      meaningFull: beauty parlor
+      meaning: []
+    - kana: "\u3075\u306D"
+      kanji: "\u8239"
+      meaningFull: ship, boat
+      meaning: []
+    - kana: "\u3084\u304D\u3085\u3046"
+      kanji: "\u91CE\u7403"
+      meaningFull: baseball
+      meaning: []
+    - kana: "\u3086\u3046\u3081\u3044\u3058\u3093"
+      kanji: "\u6709\u540D\u4EBA"
+      meaningFull: celebrity
+      meaning: []
+    - kana: "\u3088\u3084\u304F"
+      kanji: "\u4E88\u7D04"
+      meaningFull: reservation
+      meaning: []
+    - kana: "\u3044\u3061\u3054\u3046\u3057\u3083"
+      kanji: "\u4E00\u53F7\u8ECA"
+      meaningFull: Car No. 1
+      meaning: []
+    - kana: "\u3044\u308A\u3050\u3061"
+      kanji: "\u5165\u53E3"
+      meaningFull: entrance
+      meaning: []
+    - kana: "\u304A\u3046\u3075\u304F"
+      kanji: "\u5F80\u5FA9"
+      meaningFull: round trip
+      meaning: []
+    - kana: "\u304B\u3044\u3055\u3064"
+      kanji: "\u6539\u672D"
+      meaningFull: gate
+      meaning: []
+    - kana: "\u304C\u304F\u308F\u308A"
+      kanji: "\u5B66\u5272"
+      meaningFull: student discount
+      meaning: []
+    - kana: "\u304B\u305F\u307F\u3061"
+      kanji: "\u7247\u9053"
+      meaningFull: one way
+      meaning: []
+    - kana: "\u304D\u3063\u3077\u3046\u308A\u3070"
+      kanji: "\u5207\u7B26\u58F2\u308A\u5834"
+      meaningFull: ticket vending area
+      meaning: []
+    - kana: "\u304D\u3085\u3046\u3053\u3046"
+      kanji: "\u6025\u884C"
+      meaningFull: express
+      meaning: []
+    - kana: "\u3053\u3046\u3064\u3046\u3051\u3044\u30A2\u30A4\u30B7\u30FC\u30AB\u30FC\u30C9"
+      kanji: "\u4EA4\u901A\u7CFBIC\u30AB\u30FC\u30C9"
+      meaningFull: rechargeable card such as Suica, Icoca, Pasmo, etc.
+      meaning: []
+    - kana: "\u3057\u3066\u3044\u305B\u304D"
+      kanji: "\u6307\u5B9A\u5E2D"
+      meaningFull: reserved seat
+      meaning: []
+    - kana: "\u3058\u306F\u3064"
+      kanji: "\u6B21\u767A"
+      meaningFull: departing second
+      meaning: []
+    - kana: "\u3058\u3086\u3046\u305B\u304D"
+      kanji: "\u81EA\u7531\u5E2D"
+      meaningFull: general admission seat
+      meaning: []
+    - kana: "\u3058\u3087\u3046\u3057\u3083\u3051\u3093"
+      kanji: "\u4E57\u8ECA\u5238"
+      meaningFull: (boarding) ticket
+      meaning: []
+    - kana: "\u305B\u3093\u3071\u3064"
+      kanji: "\u5148\u767A"
+      meaningFull: departing first
+      meaning: []
+    - kana: "\u3066\u3044\u304D\u3051\u3093"
+      kanji: "\u5B9A\u671F\u5238"
+      meaningFull: "commuter\u2019s pass"
+      meaning: []
+    - kana: "\u3067\u3050\u3061"
+      kanji: "\u51FA\u53E3"
+      meaningFull: exit
+      meaning: []
+    - kana: "\u3068\u3063\u304D\u3085\u3046"
+      kanji: "\u7279\u6025"
+      meaningFull: super express
+      meaning: []
+    - kana: "\u306E\u308A\u304B\u3048"
+      kanji: "\u4E57\u308A\u63DB\u3048"
+      meaningFull: transfer
+      meaning: []
+    - kana: "\u3070\u3044\u3066\u3093"
+      kanji: "\u58F2\u5E97"
+      meaningFull: shop, stand
+      meaning: []
+    - kana: "\u3075\u3064\u3046"
+      kanji: "\u666E\u901A"
+      meaningFull: local (train)
+      meaning: []
+    - kana: "\u3057\u3085\u3046\u3067\u3093"
+      kanji: "\u7D42\u96FB"
+      meaningFull: last train (of the day)
+      meaning: []
+    - kana: "\u304B\u3044\u3060\u3093"
+      kanji: "\u968E\u6BB5"
+      meaningFull: stairs
+      meaning: []
+    - kana: "\u30DB\u30FC\u30E0"
+      kanji: 
+      meaningFull: platform
+      meaning: []
+    - kana: "\u3044\u3044\u3053"
+      kanji: "\u3044\u3044\u5B50"
+      meaningFull: good child
+      meaning: []
+    - kana: "\u3044\u3064\u3064"
+      kanji: "\u4E94\u3064"
+      meaningFull: five
+      meaning: []
+    - kana: "\u3044\u308D"
+      kanji: "\u8272"
+      meaningFull: color
+      meaning: []
+    - kana: "\u304A\u3079\u3093\u3068\u3046"
+      kanji: "\u304A\u5F01\u5F53"
+      meaningFull: boxed lunch
+      meaning: []
+    - kana: "\u304B\u3076\u304D"
+      kanji: "\u6B4C\u821E\u4F0E"
+      meaningFull: Kabuki, traditional Japanese theatrical art
+      meaning: []
+    - kana: "\u30AE\u30BF\u30FC"
+      kanji: 
+      meaningFull: guitar
+      meaning: []
+    - kana: "\u304F\u3059\u308A"
+      kanji: "\u85AC"
+      meaningFull: medicine
+      meaning: []
+    - kana: "\u3053\u3053\u306E\u3064"
+      kanji: "\u4E5D\u3064"
+      meaningFull: nine
+      meaning: []
+    - kana: "\u30B3\u30F3\u30B5\u30FC\u30C8"
+      kanji: 
+      meaningFull: concert
+      meaning: []
+    - kana: "\u3053\u3093\u3069"
+      kanji: "\u4ECA\u5EA6"
+      meaningFull: near future
+      meaning: []
+    - kana: "\u3055\u304F\u3076\u3093"
+      kanji: "\u4F5C\u6587"
+      meaningFull: essay, composition
+      meaning: []
+    - kana: "\u3057\u3051\u3093"
+      kanji: "\u8A66\u9A13"
+      meaningFull: exam
+      meaning: []
+    - kana: "\u30B9\u30AD\u30FC"
+      kanji: 
+      meaningFull: ski
+      meaning: []
+    - kana: "\u305F\u3093\u3054"
+      kanji: "\u5358\u8A9E"
+      meaningFull: word, vocabulary
+      meaning: []
+    - kana: "\u30C1\u30B1\u30C3\u30C8"
+      kanji: 
+      meaningFull: ticket
+      meaning: []
+    - kana: "\u3066\u304C\u307F"
+      kanji: "\u624B\u7D19"
+      meaningFull: letter
+      meaning: []
+    - kana: "\u3068\u304A"
+      kanji: "\u5341"
+      meaningFull: ten
+      meaning: []
+    - kana: "\u306A\u306A\u3064"
+      kanji: "\u4E03\u3064"
+      meaningFull: seven
+      meaning: []
+    - kana: "\u30D4\u30A2\u30CE"
+      kanji: 
+      meaningFull: piano
+      meaning: []
+    - kana: "\u3072\u3068\u3064"
+      kanji: "\u4E00\u3064"
+      meaningFull: one
+      meaning: []
+    - kana: "\u3075\u305F\u3064"
+      kanji: "\u4E8C\u3064"
+      meaningFull: two
+      meaning: []
+    - kana: "\u3079\u3093\u3068\u3046"
+      kanji: "\u5F01\u5F53"
+      meaningFull: boxed lunch
+      meaning: []
+    - kana: "\u307F\u3063\u3064"
+      kanji: "\u4E09\u3064"
+      meaningFull: three
+      meaning: []
+    - kana: "\u3080\u3063\u3064"
+      kanji: "\u516D\u3064"
+      meaningFull: six
+      meaning: []
+    - kana: "\u30E1\u30FC\u30EB"
+      kanji: 
+      meaningFull: e-mail
+      meaning: []
+    - kana: "\u3084\u3063\u3064"
+      kanji: "\u516B\u3064"
+      meaningFull: eight
+      meaning: []
+    - kana: "\u3088\u3063\u3064"
+      kanji: "\u56DB\u3064"
+      meaningFull: four
+      meaning: []
+    - kana: "\u3073\u3087\u3046\u304D"
+      kanji: "\u75C5\u6C17"
+      meaningFull: illness, sickness
+      meaning: []
+    - kana: "\u3042\u304A\u3057\u3093\u3054\u3046"
+      kanji: "\u9752\u4FE1\u53F7"
+      meaningFull: green light
+      meaning: []
+    - kana: "\u30AA\u30EC\u30F3\u30B8"
+      kanji: 
+      meaningFull: orange
+      meaning: []
+    - kana: "\u304D\u3093\u3044\u308D"
+      kanji: "\u91D1\u8272"
+      meaningFull: gold
+      meaning: []
+    - kana: "\u304E\u3093\u3044\u308D"
+      kanji: "\u9280\u8272"
+      meaningFull: silver
+      meaning: []
+    - kana: "\u30B0\u30EA\u30FC\u30F3"
+      kanji: 
+      meaningFull: green
+      meaning: []
+    - kana: "\u30B0\u30EC\u30FC"
+      kanji: 
+      meaningFull: gray
+      meaning: []
+    - kana: "\u30B4\u30FC\u30EB\u30C9"
+      kanji: 
+      meaningFull: gold
+      meaning: []
+    - kana: "\u3053\u3093\u3044\u308D"
+      kanji: "\u7D3A\u8272"
+      meaningFull: navy
+      meaning: []
+    - kana: "\u30B7\u30EB\u30D0\u30FC"
+      kanji: 
+      meaningFull: silver
+      meaning: []
+    - kana: "\u3057\u308D\u304F\u308D"
+      kanji: "\u767D\u9ED2"
+      meaningFull: black and white
+      meaning: []
+    - kana: "\u306F\u3044\u3044\u308D"
+      kanji: "\u7070\u8272"
+      meaningFull: gray
+      meaning: []
+    - kana: "\u30D4\u30F3\u30AF"
+      kanji: 
+      meaningFull: pink
+      meaning: []
+    - kana: "\u30D9\u30FC\u30B8\u30E5"
+      kanji: 
+      meaningFull: beige
+      meaning: []
+    - kana: "\u307F\u305A\u3044\u308D"
+      kanji: "\u6C34\u8272"
+      meaningFull: light blue
+      meaning: []
+    - kana: "\u3080\u3089\u3055\u304D"
+      kanji: "\u7D2B"
+      meaningFull: purple
+      meaning: []
+    - kana: "\u307F\u3069\u308A"
+      kanji: "\u7DD1"
+      meaningFull: green
+      meaning: []
+    - kana: "\u3042\u3081"
+      kanji: "\u96E8"
+      meaningFull: rain
+      meaning: []
+    - kana: "\u304A\u3075\u308D"
+      kanji: "\u304A\u98A8\u5442"
+      meaningFull: bath
+      meaning: []
+    - kana: "\u30AB\u30E1\u30E9"
+      kanji: 
+      meaningFull: camera
+      meaning: []
+    - kana: "\u30AB\u30E9\u30AA\u30B1"
+      kanji: 
+      meaningFull: karaoke
+      meaning: []
+    - kana: "\u304D\u304A\u3093"
+      kanji: "\u6C17\u6E29"
+      meaningFull: temperature (weather)
+      meaning: []
+    - kana: "\u304F\u3082\u308A"
+      kanji: "\u66C7\u308A"
+      meaningFull: cloudy weather
+      meaning: []
+    - kana: "\u3051\u3055"
+      kanji: "\u4ECA\u671D"
+      meaningFull: this morning
+      meaning: []
+    - kana: "\u3057\u3054\u3068"
+      kanji: "\u4ED5\u4E8B"
+      meaningFull: job, work, occupation
+      meaning: []
+    - kana: "\u30B9\u30DA\u30A4\u30F3"
+      kanji: 
+      meaningFull: Spain
+      meaning: []
+    - kana: "\u3066\u3093\u304D\u3088\u307B\u3046"
+      kanji: "\u5929\u6C17\u4E88\u5831"
+      meaningFull: weather forecast
+      meaning: []
+    - kana: "\u3068\u3053\u308D"
+      kanji: "\u6240"
+      meaningFull: place
+      meaning: []
+    - kana: "\u30C8\u30DE\u30C8"
+      kanji: 
+      meaningFull: tomato
+      meaning: []
+    - kana: "\u306A\u3064"
+      kanji: "\u590F"
+      meaningFull: summer
+      meaning: []
+    - kana: "\u306A\u306B\u304B"
+      kanji: "\u4F55\u304B"
+      meaningFull: something
+      meaning: []
+    - kana: "\u30D1\u30FC\u30C6\u30A3\u30FC"
+      kanji: 
+      meaningFull: party
+      meaning: []
+    - kana: "\u30D0\u30FC\u30D9\u30AD\u30E5\u30FC"
+      kanji: 
+      meaningFull: barbecue
+      meaning: []
+    - kana: "\u306F\u3057"
+      kanji: 
+      meaningFull: chopsticks
+      meaning: []
+    - kana: "\u306F\u308C"
+      kanji: "\u6674\u308C"
+      meaningFull: sunny weather
+      meaning: []
+    - kana: "\u3075\u3086"
+      kanji: "\u51AC"
+      meaningFull: winter
+      meaning: []
+    - kana: "\u3075\u308D"
+      kanji: "\u98A8\u5442"
+      meaningFull: bath
+      meaning: []
+    - kana: "\u30DB\u30FC\u30E0\u30B9\u30C6\u30A4"
+      kanji: 
+      meaningFull: homestay, living with a local family
+      meaning: []
+    - kana: "\u307E\u3044\u3057\u3085\u3046"
+      kanji: "\u6BCE\u9031"
+      meaningFull: every week
+      meaning: []
+    - kana: "\u307F\u3093\u306A\u3067"
+      kanji: 
+      meaningFull: all (of the people) together
+      meaning: []
+    - kana: "\u30A2\u30DC\u30AB\u30C9"
+      kanji: 
+      meaningFull: avocado
+      meaning: []
+    - kana: "\u3044\u3061\u3054"
+      kanji: 
+      meaningFull: strawberry
+      meaning: []
+    - kana: "\u30AD\u30E3\u30D9\u30C4"
+      kanji: 
+      meaningFull: cabbage
+      meaning: []
+    - kana: "\u304E\u3085\u3046\u306B\u304F"
+      kanji: "\u725B\u8089"
+      meaningFull: beef
+      meaning: []
+    - kana: "\u304D\u3085\u3046\u308A"
+      kanji: 
+      meaningFull: cucumber
+      meaning: []
+    - kana: "\u3058\u3083\u304C\u3044\u3082"
+      kanji: 
+      meaningFull: potato
+      meaning: []
+    - kana: "\u3059\u3044\u304B"
+      kanji: 
+      meaningFull: watermelon
+      meaning: []
+    - kana: "\u305F\u307E\u306D\u304E"
+      kanji: 
+      meaningFull: onion
+      meaning: []
+    - kana: "\u3068\u308A\u306B\u304F"
+      kanji: "\u9D8F\u8089"
+      meaningFull: chicken
+      meaning: []
+    - kana: "\u306A\u3059"
+      kanji: 
+      meaningFull: eggplant
+      meaning: []
+    - kana: "\u306B\u3093\u3058\u3093"
+      kanji: 
+      meaningFull: carrot
+      meaning: []
+    - kana: "\u30CF\u30E9\u30EB\u30D5\u30FC\u30C9"
+      kanji: 
+      meaningFull: halal
+      meaning: []
+    - kana: "\u30D4\u30FC\u30CA\u30C3\u30C4"
+      kanji: 
+      meaningFull: peanut
+      meaning: []
+    - kana: "\u3076\u305F\u306B\u304F"
+      kanji: "\u8C5A\u8089"
+      meaningFull: pork
+      meaning: []
+    - kana: "\u3076\u3069\u3046"
+      kanji: 
+      meaningFull: grape
+      meaning: []
+    - kana: "\u3082\u3082"
+      kanji: 
+      meaningFull: peach
+      meaning: []
+    - kana: "\u308A\u3093\u3054"
+      kanji: 
+      meaningFull: apple
+      meaning: []
+    - kana: "\u30A2\u30EC\u30EB\u30AE\u30FC"
+      kanji: 
+      meaningFull: allergy
+      meaning: []
+    - kana: "\u307F\u304B\u3093"
+      kanji: 
+      meaningFull: mandarin orange
+      meaning: []
+    - kana: "\u3075\u304F\u308D"
+      kanji: "\u888B"
+      meaningFull: bag, sack, plastic/paper bag
+      meaning: []
+    - kana: "\u3042\u306B"
+      kanji: "\u5144"
+      meaningFull: (my) older brother
+      meaning: []
+    - kana: "\u3042\u306D"
+      kanji: "\u59C9"
+      meaningFull: (my) older sister
+      meaning: []
+    - kana: "\u3046\u305F"
+      kanji: "\u6B4C"
+      meaningFull: song
+      meaning: []
+    - kana: "\u304A\u3058\u3044\u3055\u3093"
+      kanji: 
+      meaningFull: grandfather, old man
+      meaning: []
+    - kana: "\u304A\u3070\u3042\u3055\u3093"
+      kanji: 
+      meaningFull: grandmother, old woman
+      meaning: []
+    - kana: "\u304B\u3044\u3057\u3083"
+      kanji: "\u4F1A\u793E"
+      meaningFull: company
+      meaning: []
+    - kana: "\u304B\u305E\u304F"
+      kanji: "\u5BB6\u65CF"
+      meaningFull: family
+      meaning: []
+    - kana: "\u304D\u3087\u3046\u3060\u3044"
+      kanji: "\u5144\u5F1F"
+      meaningFull: brothers and sisters
+      meaning: []
+    - kana: "\u304F\u308B\u307E"
+      kanji: "\u8ECA"
+      meaningFull: car
+      meaning: []
+    - kana: "\u30B5\u30FC\u30AF\u30EB"
+      kanji: 
+      meaningFull: club activity
+      meaning: []
+    - kana: "\u3057\u3087\u304F\u3069\u3046"
+      kanji: "\u98DF\u5802"
+      meaningFull: cafeteria, dining commons
+      meaning: []
+    - kana: "\u3061\u3061"
+      kanji: "\u7236"
+      meaningFull: (my) father
+      meaning: []
+    - kana: "\u30C7\u30D1\u30FC\u30C8"
+      kanji: 
+      meaningFull: department store
+      meaning: []
+    - kana: "\u306F\u306F"
+      kanji: "\u6BCD"
+      meaningFull: (my) mother
+      meaning: []
+    - kana: "\u3081\u304C\u306D"
+      kanji: "\u773C\u93E1"
+      meaningFull: glasses
+      meaning: []
+    - kana: "\u304B\u307F"
+      kanji: "\u9AEA"
+      meaningFull: hair
+      meaning: []
+    - kana: "\u304F\u3061"
+      kanji: "\u53E3"
+      meaningFull: mouth
+      meaning: []
+    - kana: "\u3081"
+      kanji: "\u76EE"
+      meaningFull: eye
+      meaning: []
+    - kana: "\u3042\u305F\u307E"
+      kanji: "\u982D"
+      meaningFull: head
+      meaning: []
+    - kana: "\u304A\u3057\u308A"
+      kanji: "\u304A\u5C3B"
+      meaningFull: buttocks
+      meaning: []
+    - kana: "\u304B\u305F"
+      kanji: "\u80A9"
+      meaningFull: shoulder
+      meaning: []
+    - kana: "\u304F\u3073"
+      kanji: "\u9996"
+      meaningFull: neck
+      meaning: []
+    - kana: "\u3057\u308A"
+      kanji: "\u5C3B"
+      meaningFull: buttocks
+      meaning: []
+    - kana: "\u305B\u306A\u304B"
+      kanji: "\u80CC\u4E2D"
+      meaningFull: back (body)
+      meaning: []
+    - kana: "\u3066"
+      kanji: "\u624B"
+      meaningFull: hand, arm
+      meaning: []
+    - kana: "\u306F\u306A"
+      kanji: "\u9F3B"
+      meaningFull: nose
+      meaning: []
+    - kana: "\u307E\u3086\u3052"
+      kanji: "\u7709\u6BDB"
+      meaningFull: eyebrow
+      meaning: []
+    - kana: "\u307F\u307F"
+      kanji: "\u8033"
+      meaningFull: ear
+      meaning: []
+    - kana: "\u3080\u306D"
+      kanji: "\u80F8"
+      meaningFull: breast
+      meaning: []
+    - kana: "\u3086\u3073"
+      kanji: "\u6307"
+      meaningFull: finger
+      meaning: []
+    - kana: "\u304B\u304A"
+      kanji: "\u9854"
+      meaningFull: face
+      meaning: []
+    - kana: "\u3042\u3057"
+      kanji: "\u8DB3"
+      meaningFull: leg, foot
+      meaning: []
+    - kana: "\u304A\u306A\u304B"
+      kanji: 
+      meaningFull: stomach
+      meaning: []
+    - kana: "\u306F"
+      kanji: "\u6B6F"
+      meaningFull: tooth
+      meaning: []
+    - kana: "\u30A8\u30A2\u30B3\u30F3"
+      kanji: 
+      meaningFull: air conditioner
+      meaning: []
+    - kana: "\u304A\u304B\u306D"
+      kanji: "\u304A\u91D1"
+      meaningFull: money
+      meaning: []
+    - kana: "\u304B\u306D"
+      kanji: "\u91D1"
+      meaningFull: money
+      meaning: []
+    - kana: "\u304B\u3093\u3058"
+      kanji: "\u6F22\u5B57"
+      meaningFull: kanji, Chinese character
+      meaning: []
+    - kana: "\u304D\u3087\u3046\u304B\u3057\u3087"
+      kanji: "\u6559\u79D1\u66F8"
+      meaningFull: textbook
+      meaning: []
+    - kana: "\u304F\u306B"
+      kanji: "\u56FD"
+      meaningFull: country, place of origin
+      meaning: []
+    - kana: "\u30B7\u30E3\u30EF\u30FC"
+      kanji: 
+      meaningFull: shower
+      meaning: []
+    - kana: "\u3064\u304E"
+      kanji: "\u6B21"
+      meaningFull: next
+      meaning: []
+    - kana: "\u3067\u3093\u3057\u3083"
+      kanji: "\u96FB\u8ECA"
+      meaningFull: train
+      meaning: []
+    - kana: "\u306B\u3082\u3064"
+      kanji: "\u8377\u7269"
+      meaningFull: baggage
+      meaning: []
+    - kana: "\u30D1\u30BD\u30B3\u30F3"
+      kanji: 
+      meaningFull: personal computer
+      meaning: []
+    - kana: "\u30DA\u30FC\u30B8"
+      kanji: 
+      meaningFull: page
+      meaning: []
+    - kana: "\u304D\u305F"
+      kanji: "\u5317"
+      meaningFull: north
+      meaning: []
+    - kana: "\u306B\u3057"
+      kanji: "\u897F"
+      meaningFull: west
+      meaning: []
+    - kana: "\u3072\u304C\u3057"
+      kanji: "\u6771"
+      meaningFull: east
+      meaning: []
+    - kana: "\u3072\u3060\u308A\u304C\u308F"
+      kanji: "\u5DE6\u5074"
+      meaningFull: left side
+      meaning: []
+    - kana: "\u3072\u3068\u3064\u3081"
+      kanji: "\u4E00\u3064\u76EE"
+      meaningFull: first
+      meaning: []
+    - kana: "\u3075\u305F\u3064\u3081"
+      kanji: "\u4E8C\u3064\u76EE"
+      meaningFull: second
+      meaning: []
+    - kana: "\u307F\u304E\u304C\u308F"
+      kanji: "\u53F3\u5074"
+      meaningFull: right side
+      meaning: []
+    - kana: "\u307F\u3063\u3064\u3081"
+      kanji: "\u4E09\u3064\u76EE"
+      meaningFull: third
+      meaning: []
+    - kana: "\u304B\u3069"
+      kanji: "\u89D2"
+      meaningFull: corner
+      meaning: []
+    - kana: "\u3057\u3093\u3054\u3046"
+      kanji: "\u4FE1\u53F7"
+      meaningFull: traffic light
+      meaning: []
+    - kana: "\u307F\u306A\u307F"
+      kanji: "\u5357"
+      meaningFull: south
+      meaning: []
+    - kana: "\u3046\u307F"
+      kanji: "\u6D77"
+      meaningFull: sea
+      meaning: []
+    - kana: "\u30A8\u30EB\u30B5\u30A4\u30BA"
+      kanji: "\uFF2C\u30B5\u30A4\u30BA"
+      meaningFull: size L
+      meaning: []
+    - kana: "\u304A\u307F\u3084\u3052"
+      kanji: "\u304A\u571F\u7523"
+      meaningFull: souvenir
+      meaning: []
+    - kana: "\u304F\u3060\u3082\u306E"
+      kanji: "\u679C\u7269"
+      meaningFull: fRUit
+      meaning: []
+    - kana: "\u30B5\u30FC\u30D5\u30A3\u30F3"
+      kanji: 
+      meaningFull: surfing
+      meaning: []
+    - kana: "\u3057\u3085\u304F\u3060\u3044"
+      kanji: "\u5BBF\u984C"
+      meaningFull: homework
+      meaning: []
+    - kana: "\u305F\u3079\u3082\u306E"
+      kanji: "\u98DF\u3079\u7269"
+      meaningFull: food
+      meaning: []
+    - kana: "\u305F\u3093\u3058\u3087\u3046\u3073"
+      kanji: "\u8A95\u751F\u65E5"
+      meaningFull: birthday
+      meaning: []
+    - kana: "\u30C6\u30B9\u30C8"
+      kanji: 
+      meaningFull: test
+      meaning: []
+    - kana: "\u3066\u3093\u304D"
+      kanji: "\u5929\u6C17"
+      meaningFull: weather
+      meaning: []
+    - kana: "\u306E\u307F\u3082\u306E"
+      kanji: "\u98F2\u307F\u7269"
+      meaningFull: drink
+      meaning: []
+    - kana: "\u30D0\u30B9"
+      kanji: 
+      meaningFull: bus
+      meaning: []
+    - kana: "\u3078\u3084"
+      kanji: "\u90E8\u5C4B"
+      meaningFull: room
+      meaning: []
+    - kana: "\u307C\u304F"
+      kanji: "\u50D5"
+      meaningFull: I (used by men)
+      meaning: []
+    - kana: "\u307F\u3084\u3052"
+      kanji: "\u571F\u7523"
+      meaningFull: souvenir
+      meaning: []
+    - kana: "\u3084\u3059\u307F"
+      kanji: "\u4F11\u307F"
+      meaningFull: holiday, day off, absence
+      meaning: []
+    - kana: "\u308A\u3087\u3053\u3046"
+      kanji: "\u65C5\u884C"
+      meaningFull: travel
+      meaning: []
+    - kana: "\u3042\u3044\u3060"
+      kanji: "\u9593"
+      meaningFull: between
+      meaning: []
+    - kana: "\u3042\u306A\u305F"
+      kanji: 
+      meaningFull: you
+      meaning: []
+    - kana: "\u30A2\u30EB\u30D0\u30A4\u30C8"
+      kanji: 
+      meaningFull: part-time job
+      meaning: []
+    - kana: "\u3044\u3061\u3058\u304B\u3093"
+      kanji: "\u4E00\u6642\u9593"
+      meaningFull: one hour
+      meaning: []
+    - kana: "\u3044\u306C"
+      kanji: "\u72AC"
+      meaningFull: dog
+      meaning: []
+    - kana: "\u3046\u3048"
+      kanji: "\u4E0A"
+      meaningFull: on
+      meaning: []
+    - kana: "\u3046\u3057\u308D"
+      kanji: "\u5F8C\u308D"
+      meaningFull: back
+      meaning: []
+    - kana: "\u304A\u3066\u3089"
+      kanji: "\u304A\u5BFA"
+      meaningFull: temple
+      meaning: []
+    - kana: "\u304B\u3044\u3082\u306E"
+      kanji: "\u8CB7\u3044\u7269"
+      meaningFull: shopping
+      meaning: []
+    - kana: "\u30AF\u30E9\u30B9"
+      kanji: 
+      meaningFull: class
+      meaning: []
+    - kana: "\u30B2\u30FC\u30E0"
+      kanji: 
+      meaningFull: game
+      meaning: []
+    - kana: "\u3053\u3046\u3048\u3093"
+      kanji: "\u516C\u5712"
+      meaningFull: park
+      meaning: []
+    - kana: "\u3053\u3069\u3082"
+      kanji: "\u5B50\u4F9B"
+      meaningFull: child
+      meaning: []
+    - kana: "\u3054\u306F\u3093"
+      kanji: "\u3054\u98EF"
+      meaningFull: rice, meal
+      meaning: []
+    - kana: "\u3057\u305F"
+      kanji: "\u4E0B"
+      meaningFull: under
+      meaning: []
+    - kana: "\u3057\u3083\u3057\u3093"
+      kanji: "\u5199\u771F"
+      meaningFull: picture, photograph
+      meaning: []
+    - kana: "\u30B9\u30FC\u30D1\u30FC"
+      kanji: 
+      meaningFull: supermarket
+      meaning: []
+    - kana: "\u3061\u304B\u304F"
+      kanji: "\u8FD1\u304F"
+      meaningFull: near, nearby
+      meaning: []
+    - kana: "\u3066\u3089"
+      kanji: "\u5BFA"
+      meaningFull: temple
+      meaning: []
+    - kana: "\u3068\u304D"
+      kanji: "\u6642"
+      meaningFull: when . . . , at the time of . . .
+      meaning: []
+    - kana: "\u3068\u306A\u308A"
+      kanji: "\u96A3"
+      meaningFull: next
+      meaning: []
+    - kana: "\u306A\u304B"
+      kanji: "\u4E2D"
+      meaningFull: inside
+      meaning: []
+    - kana: "\u306D\u3053"
+      kanji: "\u732B"
+      meaningFull: cat
+      meaning: []
+    - kana: "\u30D0\u30B9\u3066\u3044"
+      kanji: "\u30D0\u30B9\u505C"
+      meaningFull: bus stop
+      meaning: []
+    - kana: "\u306F\u306A"
+      kanji: "\u82B1"
+      meaningFull: flower
+      meaning: []
+    - kana: "\u30D1\u30F3"
+      kanji: 
+      meaningFull: bread
+      meaning: []
+    - kana: "\u3072\u3060\u308A"
+      kanji: "\u5DE6"
+      meaningFull: left
+      meaning: []
+    - kana: "\u3072\u3068"
+      kanji: "\u4EBA"
+      meaningFull: person
+      meaning: []
+    - kana: "\u3073\u3087\u3046\u3044\u3093"
+      kanji: "\u75C5\u9662"
+      meaningFull: hospital
+      meaning: []
+    - kana: "\u30DB\u30C6\u30EB"
+      kanji: 
+      meaningFull: hotel
+      meaning: []
+    - kana: "\u307B\u3093\u3084"
+      kanji: "\u672C\u5C4B"
+      meaningFull: bookstore
+      meaning: []
+    - kana: "\u307E\u3048"
+      kanji: "\u524D"
+      meaningFull: front
+      meaning: []
+    - kana: "\u307E\u3061"
+      kanji: "\u753A"
+      meaningFull: town, city
+      meaning: []
+    - kana: "\u307F\u304E"
+      kanji: "\u53F3"
+      meaningFull: right
+      meaning: []
+    - kana: "\u30EC\u30B9\u30C8\u30E9\u30F3"
+      kanji: 
+      meaningFull: restaurant
+      meaning: []
+    - kana: "\u30EC\u30DD\u30FC\u30C8"
+      kanji: 
+      meaningFull: (term) paper
+      meaning: []
+    - kana: "\u304B\u3088\u3046\u3073"
+      kanji: "\u706B\u66DC\u65E5"
+      meaningFull: Tuesday
+      meaning: []
+    - kana: "\u304D\u306E\u3046"
+      kanji: "\u6628\u65E5"
+      meaningFull: yesterday
+      meaning: []
+    - kana: "\u304D\u3093\u3088\u3046\u3073"
+      kanji: "\u91D1\u66DC\u65E5"
+      meaningFull: Friday
+      meaning: []
+    - kana: "\u3052\u3064\u3088\u3046\u3073"
+      kanji: "\u6708\u66DC\u65E5"
+      meaningFull: Monday
+      meaning: []
+    - kana: "\u3059\u3044\u3088\u3046\u3073"
+      kanji: "\u6C34\u66DC\u65E5"
+      meaningFull: Wednesday
+      meaning: []
+    - kana: "\u305B\u3093\u3057\u3085\u3046"
+      kanji: "\u5148\u9031"
+      meaningFull: last week
+      meaning: []
+    - kana: "\u3082\u304F\u3088\u3046\u3073"
+      kanji: "\u6728\u66DC\u65E5"
+      meaningFull: Thursday
+      meaning: []
+    - kana: "\u3044\u3061\u304C\u3064"
+      kanji: "\u4E00\u6708"
+      meaningFull: January
+      meaning: []
+    - kana: "\u3044\u3064\u304B"
+      kanji: "\u4E94\u65E5"
+      meaningFull: the fifth day of a month
+      meaning: []
+    - kana: "\u304A\u3068\u3068\u3057"
+      kanji: 
+      meaningFull: the year before last
+      meaning: []
+    - kana: "\u304F\u304C\u3064"
+      kanji: "\u4E5D\u6708"
+      meaningFull: September
+      meaning: []
+    - kana: "\u3054\u304C\u3064"
+      kanji: "\u4E94\u6708"
+      meaningFull: May
+      meaning: []
+    - kana: "\u3053\u3053\u306E\u304B"
+      kanji: "\u4E5D\u65E5"
+      meaningFull: the ninth day of a month
+      meaning: []
+    - kana: "\u3055\u3089\u3044\u3052\u3064"
+      kanji: "\u518D\u6765\u6708"
+      meaningFull: the month after next
+      meaning: []
+    - kana: "\u3055\u3089\u3044\u3057\u3085\u3046"
+      kanji: "\u518D\u6765\u9031"
+      meaningFull: the week after next
+      meaning: []
+    - kana: "\u3055\u3089\u3044\u306D\u3093"
+      kanji: "\u518D\u6765\u5E74"
+      meaningFull: the year after next
+      meaning: []
+    - kana: "\u3055\u3093\u304C\u3064"
+      kanji: "\u4E09\u6708"
+      meaningFull: March
+      meaning: []
+    - kana: "\u3057\u304C\u3064"
+      kanji: "\u56DB\u6708"
+      meaningFull: April
+      meaning: []
+    - kana: "\u3057\u3061\u304C\u3064"
+      kanji: "\u4E03\u6708"
+      meaningFull: July
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u3044\u3061\u304C\u3064"
+      kanji: "\u5341\u4E00\u6708"
+      meaningFull: November
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u3044\u3061\u306B\u3061"
+      kanji: "\u5341\u4E00\u65E5"
+      meaningFull: the eleventh day of a month
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u304C\u3064"
+      kanji: "\u5341\u6708"
+      meaningFull: October
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u306B\u304C\u3064"
+      kanji: "\u5341\u4E8C\u6708"
+      meaningFull: December
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u3088\u3063\u304B"
+      kanji: "\u5341\u56DB\u65E5"
+      meaningFull: the fourteenth day of a month
+      meaning: []
+    - kana: "\u3064\u3044\u305F\u3061"
+      kanji: "\u4E00\u65E5"
+      meaningFull: the first day of a month
+      meaning: []
+    - kana: "\u3068\u304A\u304B"
+      kanji: "\u5341\u65E5"
+      meaningFull: the tenth day of a month
+      meaning: []
+    - kana: "\u306A\u306E\u304B"
+      kanji: "\u4E03\u65E5"
+      meaningFull: the seventh day of a month
+      meaning: []
+    - kana: "\u306B\u304B\u3052\u3064\u307E\u3048"
+      kanji: "\u4E8C\u304B\u6708\u524D"
+      meaningFull: two months ago
+      meaning: []
+    - kana: "\u306B\u304C\u3064"
+      kanji: "\u4E8C\u6708"
+      meaningFull: FebRUary
+      meaning: []
+    - kana: "\u306B\u3057\u3085\u3046\u304B\u3093\u307E\u3048"
+      kanji: "\u4E8C\u9031\u9593\u524D"
+      meaningFull: two weeks ago
+      meaning: []
+    - kana: "\u306B\u3058\u3085\u3046\u3088\u3063\u304B"
+      kanji: "\u4E8C\u5341\u56DB\u65E5"
+      meaningFull: the twenty-fourth day of a month
+      meaning: []
+    - kana: "\u306F\u3061\u304C\u3064"
+      kanji: "\u516B\u6708"
+      meaningFull: August
+      meaning: []
+    - kana: "\u306F\u3064\u304B"
+      kanji: "\u4E8C\u5341\u65E5"
+      meaningFull: the twentieth day of a month
+      meaning: []
+    - kana: "\u3075\u3064\u304B"
+      kanji: "\u4E8C\u65E5"
+      meaningFull: the second day of a month
+      meaning: []
+    - kana: "\u307F\u3063\u304B"
+      kanji: "\u4E09\u65E5"
+      meaningFull: the third day of a month
+      meaning: []
+    - kana: "\u3080\u3044\u304B"
+      kanji: "\u516D\u65E5"
+      meaningFull: the sixth day of a month
+      meaning: []
+    - kana: "\u3088\u3046\u304B"
+      kanji: "\u516B\u65E5"
+      meaningFull: the eighth day of a month
+      meaning: []
+    - kana: "\u3088\u3063\u304B"
+      kanji: "\u56DB\u65E5"
+      meaningFull: the fourth day of a month
+      meaning: []
+    - kana: "\u308D\u304F\u304C\u3064"
+      kanji: "\u516D\u6708"
+      meaningFull: June
+      meaning: []
+    - kana: "\u3053\u3068\u3057"
+      kanji: "\u4ECA\u5E74"
+      meaningFull: this year
+      meaning: []
+    - kana: "\u304A\u3068\u3068\u3044"
+      kanji: 
+      meaningFull: the day before yesterday
+      meaning: []
+    - kana: "\u3053\u3093\u3057\u3085\u3046"
+      kanji: "\u4ECA\u9031"
+      meaningFull: this week
+      meaning: []
+    - kana: "\u3089\u3044\u3057\u3085\u3046"
+      kanji: "\u6765\u9031"
+      meaningFull: next week
+      meaning: []
+    - kana: "\u3089\u3044\u306D\u3093"
+      kanji: "\u6765\u5E74"
+      meaningFull: next year
+      meaning: []
+    - kana: "\u3042\u3055\u3063\u3066"
+      kanji: 
+      meaningFull: the day after tomorrow
+      meaning: []
+    - kana: "\u3053\u3093\u3052\u3064"
+      kanji: "\u4ECA\u6708"
+      meaningFull: this month
+      meaning: []
+    - kana: "\u3089\u3044\u3052\u3064"
+      kanji: "\u6765\u6708"
+      meaningFull: next month
+      meaning: []
+    - kana: "\u304D\u3087\u306D\u3093"
+      kanji: "\u53BB\u5E74"
+      meaningFull: last year
+      meaning: []
+    - kana: "\u305B\u3093\u3052\u3064"
+      kanji: "\u5148\u6708"
+      meaningFull: last month
+      meaning: []
+    - kana: "\u30A2\u30A4\u30B9\u30AF\u30EA\u30FC\u30E0"
+      kanji: 
+      meaningFull: ice cream
+      meaning: []
+    - kana: "\u3042\u3055"
+      kanji: "\u671D"
+      meaningFull: morning
+      meaning: []
+    - kana: "\u3042\u3055\u3054\u306F\u3093"
+      kanji: "\u671D\u3054\u98EF"
+      meaningFull: breakfast
+      meaning: []
+    - kana: "\u3044\u3048"
+      kanji: "\u5BB6"
+      meaningFull: home, house
+      meaning: []
+    - kana: "\u3044\u3064"
+      kanji: 
+      meaningFull: when
+      meaning: []
+    - kana: "\u3046\u3061"
+      kanji: 
+      meaningFull: home, house, my place
+      meaning: []
+    - kana: "\u3048\u3044\u304C"
+      kanji: "\u6620\u753B"
+      meaningFull: movie
+      meaning: []
+    - kana: "\u304A\u3055\u3051"
+      kanji: "\u304A\u9152"
+      meaningFull: sake, alcoholic drink
+      meaning: []
+    - kana: "\u304A\u3061\u3083"
+      kanji: "\u304A\u8336"
+      meaningFull: green tea
+      meaning: []
+    - kana: "\u304A\u3093\u304C\u304F"
+      kanji: "\u97F3\u697D"
+      meaningFull: music
+      meaning: []
+    - kana: "\u304C\u3063\u3053\u3046"
+      kanji: "\u5B66\u6821"
+      meaningFull: school
+      meaning: []
+    - kana: "\u30AB\u30D5\u30A7"
+      kanji: 
+      meaningFull: cafe
+      meaning: []
+    - kana: "\u30B3\u30FC\u30D2\u30FC"
+      kanji: 
+      meaningFull: coffee
+      meaning: []
+    - kana: "\u3053\u3093\u3070\u3093"
+      kanji: "\u4ECA\u6669"
+      meaningFull: tonight
+      meaning: []
+    - kana: "\u3055\u3051"
+      kanji: "\u9152"
+      meaningFull: sake, alcohol
+      meaning: []
+    - kana: "\u3056\u3063\u3057"
+      kanji: "\u96D1\u8A8C"
+      meaningFull: magazine
+      meaning: []
+    - kana: "\u3057\u3085\u3046\u307E\u3064"
+      kanji: "\u9031\u672B"
+      meaningFull: weekend
+      meaning: []
+    - kana: "\u30B9\u30DD\u30FC\u30C4"
+      kanji: 
+      meaningFull: sports
+      meaning: []
+    - kana: "\u3061\u3083"
+      kanji: "\u8336"
+      meaningFull: green tea
+      meaning: []
+    - kana: "\u30C7\u30FC\u30C8"
+      kanji: 
+      meaningFull: date (romantic, not calendar)
+      meaning: []
+    - kana: "\u30C6\u30CB\u30B9"
+      kanji: 
+      meaningFull: tennis
+      meaning: []
+    - kana: "\u30C6\u30EC\u30D3"
+      kanji: 
+      meaningFull: TV
+      meaning: []
+    - kana: "\u3070\u3093\u3054\u306F\u3093"
+      kanji: "\u6669\u3054\u98EF"
+      meaningFull: dinner
+      meaning: []
+    - kana: "\u30CF\u30F3\u30D0\u30FC\u30AC\u30FC"
+      kanji: 
+      meaningFull: hamburger
+      meaning: []
+    - kana: "\u3072\u308B\u3054\u306F\u3093"
+      kanji: "\u663C\u3054\u98EF"
+      meaningFull: lunch
+      meaning: []
+    - kana: "\u307E\u3044\u306B\u3061"
+      kanji: "\u6BCE\u65E5"
+      meaningFull: every day
+      meaning: []
+    - kana: "\u307E\u3044\u3070\u3093"
+      kanji: "\u6BCE\u6669"
+      meaningFull: every night
+      meaning: []
+    - kana: "\u307F\u305A"
+      kanji: "\u6C34"
+      meaningFull: water
+      meaning: []
+    - kana: "\u3042\u3057\u305F"
+      kanji: "\u660E\u65E5"
+      meaningFull: tomorrow
+      meaning: []
+    - kana: "\u304D\u3087\u3046"
+      kanji: "\u4ECA\u65E5"
+      meaningFull: today
+      meaning: []
+    - kana: "\u3069\u3088\u3046\u3073"
+      kanji: "\u571F\u66DC\u65E5"
+      meaningFull: Saturday
+      meaning: []
+    - kana: "\u306B\u3061\u3088\u3046\u3073"
+      kanji: "\u65E5\u66DC\u65E5"
+      meaningFull: Sunday
+      meaning: []
+    - kana: "\u3042\u305D\u3053"
+      kanji: 
+      meaningFull: over there
+      meaning: []
+    - kana: "\u3042\u308C"
+      kanji: 
+      meaningFull: that one (over there)
+      meaning: []
+    - kana: "\u3044\u304F\u3089"
+      kanji: 
+      meaningFull: how much
+      meaning: []
+    - kana: "\u3048\u3044\u3054"
+      kanji: "\u82F1\u8A9E"
+      meaningFull: English language
+      meaning: []
+    - kana: "\u304B\u3055"
+      kanji: "\u5098"
+      meaningFull: umbrella
+      meaning: []
+    - kana: "\u304B\u3070\u3093"
+      kanji: 
+      meaningFull: bag
+      meaning: []
+    - kana: "\u304E\u3093\u3053\u3046"
+      kanji: "\u9280\u884C"
+      meaningFull: bank
+      meaning: []
+    - kana: "\u304F\u3064"
+      kanji: "\u9774"
+      meaningFull: shoes
+      meaning: []
+    - kana: "\u3053\u3053"
+      kanji: 
+      meaningFull: here
+      meaning: []
+    - kana: "\u3053\u308C"
+      kanji: 
+      meaningFull: this one
+      meaning: []
+    - kana: "\u30B3\u30F3\u30D3\u30CB"
+      kanji: 
+      meaningFull: convenience store
+      meaning: []
+    - kana: "\u3055\u3044\u3075"
+      kanji: "\u8CA1\u5E03"
+      meaningFull: wallet
+      meaning: []
+    - kana: "\u3055\u304B\u306A"
+      kanji: "\u9B5A"
+      meaningFull: fish
+      meaning: []
+    - kana: "\u30B8\u30FC\u30F3\u30BA"
+      kanji: 
+      meaningFull: jeans
+      meaning: []
+    - kana: "\u3058\u3066\u3093\u3057\u3083"
+      kanji: "\u81EA\u8EE2\u8ECA"
+      meaningFull: bicycle
+      meaning: []
+    - kana: "\u3057\u3093\u3076\u3093"
+      kanji: "\u65B0\u805E"
+      meaningFull: newspaper
+      meaning: []
+    - kana: "\u30B9\u30DE\u30DB"
+      kanji: 
+      meaningFull: smartphone, mobile
+      meaning: []
+    - kana: "\u305D\u3053"
+      kanji: 
+      meaningFull: there
+      meaning: []
+    - kana: "\u305D\u308C"
+      kanji: 
+      meaningFull: that one
+      meaning: []
+    - kana: "\u3060\u308C"
+      kanji: 
+      meaningFull: who
+      meaning: []
+    - kana: "\u30C6\u30A3\u30FC\u30B7\u30E3\u30C4"
+      kanji: "\uFF34\u30B7\u30E3\u30C4"
+      meaningFull: T-shirt
+      meaning: []
+    - kana: "\u30C8\u30A4\u30EC"
+      kanji: 
+      meaningFull: toilet, restroom
+      meaning: []
+    - kana: "\u3068\u3051\u3044"
+      kanji: "\u6642\u8A08"
+      meaningFull: watch, clock
+      meaning: []
+    - kana: "\u3069\u3053"
+      kanji: 
+      meaningFull: where
+      meaning: []
+    - kana: "\u3068\u3057\u3087\u304B\u3093"
+      kanji: "\u56F3\u66F8\u9928"
+      meaningFull: library
+      meaning: []
+    - kana: "\u3069\u308C"
+      kanji: 
+      meaningFull: which one
+      meaning: []
+    - kana: "\u3068\u3093\u304B\u3064"
+      kanji: 
+      meaningFull: pork cutlet
+      meaning: []
+    - kana: "\u306B\u304F"
+      kanji: "\u8089"
+      meaningFull: meat
+      meaning: []
+    - kana: "\u30CE\u30FC\u30C8"
+      kanji: 
+      meaningFull: notebook
+      meaning: []
+    - kana: "\u30DA\u30F3"
+      kanji: 
+      meaningFull: pen
+      meaning: []
+    - kana: "\u307C\u3046\u3057"
+      kanji: "\u5E3D\u5B50"
+      meaningFull: hat, cap
+      meaning: []
+    - kana: "\u30E1\u30CB\u30E5\u30FC"
+      kanji: 
+      meaningFull: menu
+      meaning: []
+    - kana: "\u3084\u3055\u3044"
+      kanji: "\u91CE\u83DC"
+      meaningFull: vegetable
+      meaning: []
+    - kana: "\u3086\u3046\u3073\u3093\u304D\u3087\u304F"
+      kanji: "\u90F5\u4FBF\u5C40"
+      meaningFull: post office
+      meaning: []
+    - kana: "\u307B\u3093"
+      kanji: "\u672C"
+      meaningFull: book
+      meaning: []
+    - kana: "\u3051\u3057\u30B4\u30E0"
+      kanji: "\u6D88\u3057\u30B4\u30E0"
+      meaningFull: eraser
+      meaning: []
+    - kana: "\u3053\u304F\u3070\u3093"
+      kanji: "\u9ED2\u677F"
+      meaningFull: blackboard
+      meaning: []
+    - kana: "\u3058\u3057\u3087"
+      kanji: "\u8F9E\u66F8"
+      meaningFull: dictionary
+      meaning: []
+    - kana: "\u30AB\u30FC\u30C6\u30F3"
+      kanji: 
+      meaningFull: curtain
+      meaning: []
+    - kana: "\u3044\u3059"
+      kanji: 
+      meaningFull: chair
+      meaning: []
+    - kana: "\u3064\u304F\u3048"
+      kanji: "\u673A"
+      meaningFull: desk
+      meaning: []
+    - kana: "\u3067\u3093\u304D"
+      kanji: "\u96FB\u6C17"
+      meaningFull: electricity, light
+      meaning: []
+    - kana: "\u307E\u3069"
+      kanji: "\u7A93"
+      meaningFull: window
+      meaning: []
+    - kana: "\u30C9\u30A2"
+      kanji: 
+      meaningFull: door
+      meaning: []
+    - kana: "\u30A2\u30B8\u30A2\u3051\u3093\u304D\u3085\u3046"
+      kanji: "\u30A2\u30B8\u30A2\u7814\u7A76"
+      meaningFull: Asian studies
+      meaning: []
+    - kana: "\u30A2\u30E1\u30EA\u30AB"
+      kanji: 
+      meaningFull: U.S.A.
+      meaning: []
+    - kana: "\u3044\u3061\u306D\u3093\u305B\u3044"
+      kanji: "\u4E00\u5E74\u751F"
+      meaningFull: first-year student
+      meaning: []
+    - kana: "\u30A4\u30F3\u30C9"
+      kanji: 
+      meaningFull: India
+      meaning: []
+    - kana: "\u30A8\u30B8\u30D7\u30C8"
+      kanji: 
+      meaningFull: Egypt
+      meaning: []
+    - kana: "\u304C\u304F\u305B\u3044"
+      kanji: "\u5B66\u751F"
+      meaningFull: student
+      meaning: []
+    - kana: "\u30AB\u30CA\u30C0"
+      kanji: 
+      meaningFull: Canada
+      meaning: []
+    - kana: "\u3053\u3046\u3053\u3046"
+      kanji: "\u9AD8\u6821"
+      meaningFull: high school
+      meaning: []
+    - kana: "\u3053\u3046\u3053\u3046\u305B\u3044"
+      kanji: "\u9AD8\u6821\u751F"
+      meaningFull: high school student
+      meaning: []
+    - kana: "\u3053\u304F\u3055\u3044\u304B\u3093\u3051\u3044"
+      kanji: "\u56FD\u969B\u95A2\u4FC2"
+      meaningFull: international relations
+      meaning: []
+    - kana: "\u3054\u3054"
+      kanji: "\u5348\u5F8C"
+      meaningFull: p.m.
+      meaning: []
+    - kana: "\u3054\u305C\u3093"
+      kanji: "\u5348\u524D"
+      meaningFull: a.m.
+      meaning: []
+    - kana: "\u3057\u3085\u3075"
+      kanji: "\u4E3B\u5A66"
+      meaningFull: housewife
+      meaning: []
+    - kana: "\u305B\u3044\u3076\u3064\u304C\u304F"
+      kanji: "\u751F\u7269\u5B66"
+      meaningFull: biology
+      meaning: []
+    - kana: "\u305B\u3093\u3053\u3046"
+      kanji: "\u5C02\u653B"
+      meaningFull: major
+      meaning: []
+    - kana: "\u305B\u3093\u305B\u3044"
+      kanji: "\u5148\u751F"
+      meaningFull: teacher, Professor . . .
+      meaning: []
+    - kana: "\u3060\u3044\u304C\u304F"
+      kanji: "\u5927\u5B66"
+      meaningFull: college, university
+      meaning: []
+    - kana: "\u3060\u3044\u304C\u304F\u3044\u3093\u305B\u3044"
+      kanji: "\u5927\u5B66\u9662\u751F"
+      meaningFull: graduate student
+      meaning: []
+    - kana: "\u3060\u3044\u304C\u304F\u305B\u3044"
+      kanji: "\u5927\u5B66\u751F"
+      meaningFull: college student
+      meaning: []
+    - kana: "\u3067\u3093\u308F"
+      kanji: "\u96FB\u8A71"
+      meaningFull: telephone
+      meaning: []
+    - kana: "\u3068\u3082\u3060\u3061"
+      kanji: "\u53CB\u3060\u3061"
+      meaningFull: friend
+      meaning: []
+    - kana: "\u306A\u306B/\u306A\u3093"
+      kanji: "\u4F55"
+      meaningFull: what
+      meaning: []
+    - kana: "\u306A\u307E\u3048"
+      kanji: "\u540D\u524D"
+      meaningFull: name
+      meaning: []
+    - kana: "\u306A\u3093/\u306A\u306B"
+      kanji: "\u4F55"
+      meaningFull: what
+      meaning: []
+    - kana: "\u306B\u3058\u306F\u3093"
+      kanji: "\u4E8C\u6642\u534A"
+      meaningFull: half past two
+      meaning: []
+    - kana: "\u306B\u307B\u3093"
+      kanji: "\u65E5\u672C"
+      meaningFull: Japan
+      meaning: []
+    - kana: "\u306B\u307B\u3093\u3054"
+      kanji: "\u65E5\u672C\u8A9E"
+      meaningFull: Japanese language
+      meaning: []
+    - kana: "\u306B\u307B\u3093\u3058\u3093"
+      kanji: "\u65E5\u672C\u4EBA"
+      meaningFull: Japanese people
+      meaning: []
+    - kana: "\u3070\u3093\u3054\u3046"
+      kanji: "\u756A\u53F7"
+      meaningFull: number
+      meaning: []
+    - kana: "\u30D5\u30A3\u30EA\u30D4\u30F3"
+      kanji: 
+      meaningFull: Philippines
+      meaning: []
+    - kana: "\u308A\u3085\u3046\u304C\u304F\u305B\u3044"
+      kanji: "\u7559\u5B66\u751F"
+      meaningFull: international student
+      meaning: []
+    - kana: "\u308F\u305F\u3057"
+      kanji: "\u79C1"
+      meaningFull: I
+      meaning: []
+    - kana: "\u3044\u3061\u3058"
+      kanji: "\u4E00\u6642"
+      meaningFull: "one o\u2019clock"
+      meaning: []
+    - kana: "\u3044\u3057\u3083"
+      kanji: "\u533B\u8005"
+      meaningFull: doctor
+      meaning: []
+    - kana: "\u30AA\u30FC\u30B9\u30C8\u30E9\u30EA\u30A2"
+      kanji: 
+      meaningFull: Australia
+      meaning: []
+    - kana: "\u304B\u3093\u3054\u3057"
+      kanji: "\u770B\u8B77\u5E2B"
+      meaningFull: nurse
+      meaning: []
+    - kana: "\u305B\u3044\u3058"
+      kanji: "\u653F\u6CBB"
+      meaningFull: politics
+      meaning: []
+    - kana: "\u3079\u3093\u3054\u3057"
+      kanji: "\u5F01\u8B77\u58EB"
+      meaningFull: lawyer
+      meaning: []
+    - kana: "\u30A4\u30AE\u30EA\u30B9"
+      kanji: 
+      meaningFull: Britain
+      meaning: []
+    - kana: "\u304A\u304B\u3042\u3055\u3093"
+      kanji: "\u304A\u6BCD\u3055\u3093"
+      meaningFull: mother
+      meaning: []
+    - kana: "\u304A\u3068\u3046\u3055\u3093"
+      kanji: "\u304A\u7236\u3055\u3093"
+      meaningFull: father
+      meaning: []
+    - kana: "\u304B\u3093\u3053\u304F"
+      kanji: "\u97D3\u56FD"
+      meaningFull: Korea
+      meaning: []
+    - kana: "\u3051\u3044\u3056\u3044"
+      kanji: "\u7D4C\u6E08"
+      meaningFull: economics
+      meaning: []
+    - kana: "\u30B3\u30F3\u30D4\u30E5\u30FC\u30BF\u30FC"
+      kanji: 
+      meaningFull: computer
+      meaning: []
+    - kana: "\u3061\u3085\u3046\u3054\u304F"
+      kanji: "\u4E2D\u56FD"
+      meaningFull: China
+      meaning: []
+    - kana: "\u30D3\u30B8\u30CD\u30B9"
+      kanji: 
+      meaningFull: business
+      meaning: []
+    - kana: "\u308C\u304D\u3057"
+      kanji: "\u6B74\u53F2"
+      meaningFull: history
+      meaning: []
+    - kana: "\u3044\u3082\u3046\u3068"
+      kanji: "\u59B9"
+      meaningFull: younger sister
+      meaning: []
+    - kana: "\u304A\u3068\u3046\u3068"
+      kanji: "\u5F1F"
+      meaningFull: younger brother
+      meaning: []
+    - kana: "\u304A\u306B\u3044\u3055\u3093"
+      kanji: "\u304A\u5144\u3055\u3093"
+      meaningFull: older brother
+      meaning: []
+    - kana: "\u304A\u306D\u3048\u3055\u3093"
+      kanji: "\u304A\u59C9\u3055\u3093"
+      meaningFull: older sister
+      meaning: []
+    - kana: "\u304B\u3044\u3057\u3083\u3044\u3093"
+      kanji: "\u4F1A\u793E\u54E1"
+      meaningFull: office worker
+      meaning: []
+    - kana: "\u3076\u3093\u304C\u304F"
+      kanji: "\u6587\u5B66"
+      meaningFull: literature
+      meaning: []
+    - kana: "\u3044\u3063\u3077\u3093"
+      kanji: "\u4E00\u5206"
+      meaningFull: one minute
+      meaning: []
+    - kana: "\u304D\u3085\u3046\u3075\u3093"
+      kanji: "\u4E5D\u5206"
+      meaningFull: nine minutes
+      meaning: []
+    - kana: "\u304F\u3058"
+      kanji: "\u4E5D\u6642"
+      meaningFull: "nine o\u2019clock"
+      meaning: []
+    - kana: "\u3054\u3058"
+      kanji: "\u4E94\u6642"
+      meaningFull: "five o\u2019clock"
+      meaning: []
+    - kana: "\u3054\u3075\u3093"
+      kanji: "\u4E94\u5206"
+      meaningFull: five minutes
+      meaning: []
+    - kana: "\u3055\u3093\u3058"
+      kanji: "\u4E09\u6642"
+      meaningFull: "three o\u2019clock"
+      meaning: []
+    - kana: "\u3055\u3093\u3058\u3063\u3077\u3093/\u3055\u3093\u3058\u3085\u3063\u3077\u3093"
+      kanji: "\u4E09\u5341\u5206"
+      meaningFull: thirty minutes
+      meaning: []
+    - kana: "\u3055\u3093\u3077\u3093"
+      kanji: "\u4E09\u5206"
+      meaningFull: three minutes
+      meaning: []
+    - kana: "\u3057\u3061\u3058"
+      kanji: "\u4E03\u6642"
+      meaningFull: "seven o\u2019clock"
+      meaning: []
+    - kana: "\u3058\u3063\u3077\u3093"
+      kanji: "\u5341\u5206"
+      meaningFull: ten minutes
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u3044\u3061\u3058"
+      kanji: "\u5341\u4E00\u6642"
+      meaningFull: "eleven o\u2019clock"
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u3044\u3063\u3077\u3093"
+      kanji: "\u5341\u4E00\u5206"
+      meaningFull: eleven minutes
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u304D\u3085\u3046\u3075\u3093"
+      kanji: "\u5341\u4E5D\u5206"
+      meaningFull: nineteen minutes
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u3054\u3075\u3093"
+      kanji: "\u5341\u4E94\u5206"
+      meaningFull: fifteen minutes
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u3055\u3093\u3077\u3093"
+      kanji: "\u5341\u4E09\u5206"
+      meaningFull: thirteen minutes
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u3058"
+      kanji: "\u5341\u6642"
+      meaningFull: "ten o\u2019clock"
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u306A\u306A\u3075\u3093"
+      kanji: "\u5341\u4E03\u5206"
+      meaningFull: seventeen minutes
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u306B\u3058"
+      kanji: "\u5341\u4E8C\u6642"
+      meaningFull: "twelve o\u2019clock"
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u306B\u3075\u3093"
+      kanji: "\u5341\u4E8C\u5206"
+      meaningFull: twelve minutes
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u306F\u3061\u3075\u3093/\u3058\u3085\u3046\u306F\u3063\u3077\u3093"
+      kanji: "\u5341\u516B\u5206"
+      meaningFull: eighteen minutes
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u3088\u3093\u3077\u3093"
+      kanji: "\u5341\u56DB\u5206"
+      meaningFull: fourteen minutes
+      meaning: []
+    - kana: "\u3058\u3085\u3046\u308D\u3063\u3077\u3093"
+      kanji: "\u5341\u516D\u5206"
+      meaningFull: sixteen minutes
+      meaning: []
+    - kana: "\u3058\u3085\u3063\u3077\u3093"
+      kanji: "\u5341\u5206"
+      meaningFull: ten minutes
+      meaning: []
+    - kana: "\u306A\u306A\u3075\u3093"
+      kanji: "\u4E03\u5206"
+      meaningFull: seven minutes
+      meaning: []
+    - kana: "\u306B\u3058"
+      kanji: "\u4E8C\u6642"
+      meaningFull: "two o\u2019clock"
+      meaning: []
+    - kana: "\u306B\u3058\u3063\u3077\u3093"
+      kanji: "\u4E8C\u5341\u5206"
+      meaningFull: twenty minutes
+      meaning: []
+    - kana: "\u306B\u3058\u3085\u3063\u3077\u3093"
+      kanji: "\u4E8C\u5341\u5206"
+      meaningFull: twenty minutes
+      meaning: []
+    - kana: "\u306B\u3075\u3093"
+      kanji: "\u4E8C\u5206"
+      meaningFull: two minutes
+      meaning: []
+    - kana: "\u306F\u3061\u3058"
+      kanji: "\u516B\u6642"
+      meaningFull: "eight o\u2019clock"
+      meaning: []
+    - kana: "\u306F\u3061\u3075\u3093"
+      kanji: "\u516B\u5206"
+      meaningFull: eight minutes
+      meaning: []
+    - kana: "\u306F\u3063\u3077\u3093"
+      kanji: "\u516B\u5206"
+      meaningFull: eight minutes
+      meaning: []
+    - kana: "\u3088\u3058"
+      kanji: "\u56DB\u6642"
+      meaningFull: "four o\u2019clock"
+      meaning: []
+    - kana: "\u3088\u3093\u3077\u3093"
+      kanji: "\u56DB\u5206"
+      meaningFull: four minutes
+      meaning: []
+    - kana: "\u308D\u304F\u3058"
+      kanji: "\u516D\u6642"
+      meaningFull: "six o\u2019clock"
+      meaning: []
+    - kana: "\u308D\u3063\u3077\u3093"
+      kanji: "\u516D\u5206"
+      meaningFull: six minutes
+      meaning: []
+    adjectives:
+    - kana: "\u304B\u3093\u305F\u3093"
+      kanji: "\u7C21\u5358"
+      adjectiveType: 0
+      meaningFull: easy, simple
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3042\u305F\u305F\u304B\u3044"
+      kanji: "\u6696\u304B\u3044"
+      adjectiveType: 0
+      meaningFull: warm
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u304A\u305D\u3044"
+      kanji: "\u9045\u3044"
+      adjectiveType: 0
+      meaningFull: slow, late
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3059\u305A\u3057\u3044"
+      kanji: "\u6DBC\u3057\u3044"
+      adjectiveType: 0
+      meaningFull: cool (weather)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3064\u3081\u305F\u3044"
+      kanji: "\u51B7\u305F\u3044"
+      adjectiveType: 0
+      meaningFull: cold (things/people)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u306D\u3080\u3044"
+      kanji: "\u7720\u3044"
+      adjectiveType: 0
+      meaningFull: sleepy
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3044\u3058\u308F\u308B"
+      kanji: "\u610F\u5730\u60AA"
+      adjectiveType: 0
+      meaningFull: mean-spirited
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3055\u3073\u3057\u3044"
+      kanji: "\u5BC2\u3057\u3044"
+      adjectiveType: 0
+      meaningFull: lonely
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u308F\u304B\u3044"
+      kanji: "\u82E5\u3044"
+      adjectiveType: 0
+      meaningFull: young
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3042\u304A\u3044"
+      kanji: "\u9752\u3044"
+      adjectiveType: 0
+      meaningFull: blue
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3042\u304B\u3044"
+      kanji: "\u8D64\u3044"
+      adjectiveType: 0
+      meaningFull: red
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u304F\u308D\u3044"
+      kanji: "\u9ED2\u3044"
+      adjectiveType: 0
+      meaningFull: black
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3057\u308D\u3044"
+      kanji: "\u767D\u3044"
+      adjectiveType: 0
+      meaningFull: white
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u304B\u304A\u304C\u3042\u304A\u3044"
+      kanji: "\u9854\u304C\u9752\u3044"
+      adjectiveType: 0
+      meaningFull: to look pale
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u304D\u3044\u308D\u3044"
+      kanji: "\u9EC4\u8272\u3044"
+      adjectiveType: 0
+      meaningFull: yellow
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3061\u3083\u3044\u308D\u3044"
+      kanji: "\u8336\u8272\u3044"
+      adjectiveType: 0
+      meaningFull: brown
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3058\u3087\u3046\u305A"
+      kanji: "\u4E0A\u624B"
+      adjectiveType: 0
+      meaningFull: skillful, good at . . .
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3078\u305F"
+      kanji: "\u4E0B\u624B"
+      adjectiveType: 0
+      meaningFull: clumsy, poor at . . .
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3086\u3046\u3081\u3044"
+      kanji: "\u6709\u540D"
+      adjectiveType: 0
+      meaningFull: famous
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3057\u3093\u305B\u3064"
+      kanji: "\u89AA\u5207"
+      adjectiveType: 0
+      meaningFull: kind
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3079\u3093\u308A"
+      kanji: "\u4FBF\u5229"
+      adjectiveType: 0
+      meaningFull: convenient
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3042\u305F\u307E\u304C\u3044\u3044"
+      kanji: "\u982D\u304C\u3044\u3044"
+      adjectiveType: 0
+      meaningFull: bright, smart, clever
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u304B\u308F\u3044\u3044"
+      kanji: 
+      adjectiveType: 0
+      meaningFull: cute
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u305B\u304C\u305F\u304B\u3044"
+      kanji: "\u80CC\u304C\u9AD8\u3044"
+      adjectiveType: 0
+      meaningFull: tall (stature)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u305B\u304C\u3072\u304F\u3044"
+      kanji: "\u80CC\u304C\u4F4E\u3044"
+      adjectiveType: 0
+      meaningFull: short (stature)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u306A\u304C\u3044"
+      kanji: "\u9577\u3044"
+      adjectiveType: 0
+      meaningFull: long
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u306F\u3084\u3044"
+      kanji: "\u901F\u3044"
+      adjectiveType: 0
+      meaningFull: fast
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u307F\u3058\u304B\u3044"
+      kanji: "\u77ED\u3044"
+      adjectiveType: 0
+      meaningFull: short (length)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u304D\u3089\u3044"
+      kanji: "\u5ACC\u3044"
+      adjectiveType: 0
+      meaningFull: disgusted with, to dislike
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u304D\u308C\u3044"
+      kanji: 
+      adjectiveType: 0
+      meaningFull: beautiful, clean
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3052\u3093\u304D"
+      kanji: "\u5143\u6C17"
+      adjectiveType: 0
+      meaningFull: healthy, energetic
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3057\u305A\u304B"
+      kanji: "\u9759\u304B"
+      adjectiveType: 0
+      meaningFull: quiet
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3059\u304D"
+      kanji: "\u597D\u304D"
+      adjectiveType: 0
+      meaningFull: fond of, to like
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3060\u3044\u304D\u3089\u3044"
+      kanji: "\u5927\u5ACC\u3044"
+      adjectiveType: 0
+      meaningFull: to hate
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3060\u3044\u3059\u304D"
+      kanji: "\u5927\u597D\u304D"
+      adjectiveType: 0
+      meaningFull: very fond of, to love
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u306B\u304E\u3084\u304B"
+      kanji: 
+      adjectiveType: 0
+      meaningFull: lively
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3072\u307E"
+      kanji: "\u6687"
+      adjectiveType: 0
+      meaningFull: not busy, free (time)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3042\u305F\u3089\u3057\u3044"
+      kanji: "\u65B0\u3057\u3044"
+      adjectiveType: 0
+      meaningFull: new
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3042\u3064\u3044"
+      kanji: "\u71B1\u3044"
+      adjectiveType: 0
+      meaningFull: hot (thing)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3042\u3064\u3044"
+      kanji: "\u6691\u3044"
+      adjectiveType: 0
+      meaningFull: hot (weather)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3044\u305D\u304C\u3057\u3044"
+      kanji: "\u5FD9\u3057\u3044"
+      adjectiveType: 0
+      meaningFull: busy (people/days)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u304A\u304A\u304D\u3044"
+      kanji: "\u5927\u304D\u3044"
+      adjectiveType: 0
+      meaningFull: large
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u304A\u3082\u3057\u308D\u3044"
+      kanji: "\u9762\u767D\u3044"
+      adjectiveType: 0
+      meaningFull: interesting, funny
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u304B\u3063\u3053\u3044\u3044"
+      kanji: 
+      adjectiveType: 0
+      meaningFull: good-looking
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3053\u308F\u3044"
+      kanji: "\u6016\u3044"
+      adjectiveType: 0
+      meaningFull: frightening
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3055\u3080\u3044"
+      kanji: "\u5BD2\u3044"
+      adjectiveType: 0
+      meaningFull: cold (weather)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u305F\u306E\u3057\u3044"
+      kanji: "\u697D\u3057\u3044"
+      adjectiveType: 0
+      meaningFull: fun
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3061\u3044\u3055\u3044"
+      kanji: "\u5C0F\u3055\u3044"
+      adjectiveType: 0
+      meaningFull: small
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3064\u307E\u3089\u306A\u3044"
+      kanji: 
+      adjectiveType: 0
+      meaningFull: boring
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3075\u308B\u3044"
+      kanji: "\u53E4\u3044"
+      adjectiveType: 0
+      meaningFull: old (thing)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3080\u305A\u304B\u3057\u3044"
+      kanji: "\u96E3\u3057\u3044"
+      adjectiveType: 0
+      meaningFull: difficult
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3084\u3055\u3057\u3044"
+      kanji: 
+      adjectiveType: 0
+      meaningFull: easy (problem), kind (person)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3084\u3059\u3044"
+      kanji: "\u5B89\u3044"
+      adjectiveType: 0
+      meaningFull: inexpensive, cheap (thing)
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u3044\u3044"
+      kanji: 
+      adjectiveType: 0
+      meaningFull: good
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u306F\u3084\u3044"
+      kanji: "\u65E9\u3044"
+      adjectiveType: 0
+      meaningFull: early
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u304A\u3044\u3057\u3044"
+      kanji: 
+      adjectiveType: 0
+      meaningFull: delicious
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u305F\u304B\u3044"
+      kanji: "\u9AD8\u3044"
+      adjectiveType: 0
+      meaningFull: expensive, high
+      meaning: []
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 

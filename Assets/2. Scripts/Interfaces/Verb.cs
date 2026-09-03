@@ -16,7 +16,8 @@ public class Verb : IWord
 
     public VerbType VerbType => verbType;
     [SerializeField] private VerbType verbType;
-
+    public string MeaningFull => meaningFull;
+    [SerializeField] private string meaningFull;
     public List <string> Meaning => meaning;
     [SerializeField] private List<string> meaning;
     public string PoliteNonpast => ConjugatePoliteNonpast(kana);
@@ -97,6 +98,11 @@ public class Verb : IWord
         {
             return politeNonpast;
         }
+        else if (VerbType == VerbType.SURU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 2) + "します";
+        }
+
         return conjugatedForm;
     }
     private string ConjugatePoliteNonPastNegative(string dictionaryForm)
@@ -144,6 +150,10 @@ public class Verb : IWord
         else if (VerbType == VerbType.IRR)
         {
             return politeNonPastNegative;
+        }
+        else if (VerbType == VerbType.SURU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 2) + "しません";
         }
         return conjugatedForm;
     }
@@ -195,6 +205,10 @@ public class Verb : IWord
         else if (VerbType == VerbType.IRR)
         {
             return politePast;
+        }
+        else if (VerbType == VerbType.SURU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 2) + "しました";
         }
         return conjugatedForm;
     }
@@ -298,6 +312,10 @@ public class Verb : IWord
         {
             return standardPast;
         }
+        else if (VerbType == VerbType.SURU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 2) + "した";
+        }
         return conjugatedForm;
     }
     private string ConjugateStandardNonPastNegative(string dictionaryForm)
@@ -350,6 +368,10 @@ public class Verb : IWord
         {
             return standardNonpastNegative;
         }
+        else if (VerbType == VerbType.SURU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 2) + "しない";
+        }
         return conjugatedForm;
     }
     private string ConjugateStandardPastNegative(string dictionaryForm)
@@ -400,6 +422,10 @@ public class Verb : IWord
         else if (VerbType == VerbType.IRR)
         {
             return standardNonpastNegative;
+        }
+        else if (VerbType == VerbType.SURU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 2) + "しなかった";
         }
         return conjugatedForm;
     }
@@ -452,6 +478,10 @@ public class Verb : IWord
         {
             return politeVolitional;
         }
+        else if (VerbType == VerbType.SURU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 2) + "しましょう";
+        }
         return conjugatedForm;
     }
     private string ConjugateCasualVolitional(string dictionaryForm)
@@ -502,6 +532,10 @@ public class Verb : IWord
         else if (VerbType == VerbType.IRR)
         {
             return casualVolitional;
+        }
+        else if (VerbType == VerbType.SURU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 2) + "しよう";
         }
         return conjugatedForm;
     }
@@ -557,15 +591,20 @@ public class Verb : IWord
         {
             return teForm;
         }
+        else if (VerbType == VerbType.SURU)
+        {
+            conjugatedForm = dictionaryForm.Substring(0, dictionaryForm.Length - 2) + "して";
+        }
         return conjugatedForm;
     }
 }
 
 public enum VerbType
 {
-    U, //Godan Verbs, U-Verbs
-    RU, // Ichidan Verbs, RU-Verbs
-    IRR, // Irregular
+    U = 0, //Godan Verbs, U-Verbs
+    RU = 1, // Ichidan Verbs, RU-Verbs
+    IRR = 2, // Irregular
+    SURU = 3, //Irregular Suru Type verbs.
 }
 
 public enum ConjugationType
