@@ -30,6 +30,7 @@ public class AdventureMode : MonoBehaviour
     private float playerMaxHP = 100;
 
     private Action restartAction;
+    [SerializeField] private bool DebugEnemyHealth;
 
     [SerializeField] private float inputDelay = 5;
     private int playerDefaultMaxHP;
@@ -40,7 +41,9 @@ public class AdventureMode : MonoBehaviour
     private SpriteRenderer monsterSprite;
     private Image uiMonsterSprite;
     private Queue<MonsterDifficulty> campaignOrder;
+    private VisualElement enemy;
     [SerializeField] MonsterLibrary monsterLibrary;
+    [SerializeField] private DungeonGenerator dungeonGenerator;
 
     public bool Initialized { get; private set; }
 
@@ -49,11 +52,13 @@ public class AdventureMode : MonoBehaviour
         battleMenuRoot = battleMenu.rootVisualElement;
         testScreenRoot = testScreen.rootVisualElement.MQ<VisualElement>("Panel");
         uiMonsterSprite = battleMenuRoot.MQ<Image>("EnemySprite");
+        enemy = battleMenuRoot.MQ<VisualElement>("Enemy");
         animator = monster.GetComponent<Animator>();
         monsterSprite = monster.GetComponent<SpriteRenderer>();
         battleMenuRoot.dataSource = this;
         SetBattleScreenVisible(false);
         monsterSprite.enabled = false;
+        dungeonGenerator.TileSequenceComplete += GenerateMonster;
     }
 
     private void Update()
@@ -164,7 +169,7 @@ public class AdventureMode : MonoBehaviour
     {
         if (enemyCurrentHP <= 0)
         {
-            GenerateMonster();
+            NextEncounter();
             return;
         }
 
@@ -176,6 +181,14 @@ public class AdventureMode : MonoBehaviour
         simpleTest.PrepareNextQuestion();
         SetTestVisible(true);
     }
+    [Button("Debug Next Encounter", EButtonEnableMode.Playmode)]
+    private void NextEncounter()
+    {
+        dungeonGenerator.GenerateNextTile();
+        enemy.AddToClassList("Hidden");
+        enemy.RemoveFromClassList("Visible");
+    }
+
     private void GenerateMonster()
     {
         if (campaignOrder.TryPeek(out _))
@@ -190,10 +203,20 @@ public class AdventureMode : MonoBehaviour
         }
 
         playerCurrentHP = playerMaxHP;
-        enemyMaxHP = currentMonster.MaxHP;
-        enemyCurrentHP = currentMonster.MaxHP;
+        if (DebugEnemyHealth)
+        {
+            enemyMaxHP = 1;
+        }
+        else
+        {
+            enemyMaxHP = currentMonster.MaxHP;
+        }
+        enemyCurrentHP = enemyMaxHP;
+
         enemyName = currentMonster.Name;
         uiMonsterSprite.style.unityBackgroundImageTintColor = currentMonster.Tint;
+        enemy.RemoveFromClassList("Hidden");
+        enemy.AddToClassList("Visible");
         battleText = $"A wild {currentMonster.Name} appears!";
         simpleTest.SetQuestionTypes(currentMonster.ConjugationTypes);
         SetMonsterSprite((int)currentMonster.MonsterType);
