@@ -505,63 +505,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTest
   quizMenu: {fileID: 543165418}
---- !u!1001 &651983790
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1964031428049864052, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964031428049864052, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964031428049864052, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964031428049864052, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964031428049864052, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964031428049864052, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964031428049864052, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964031428049864052, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964031428049864052, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964031428049864052, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3068739266856041062, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
-      propertyPath: m_Name
-      value: X-Tile
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
 --- !u!1 &689657733
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +538,7 @@ MonoBehaviour:
   testScreen: {fileID: 543165418}
   simpleTest: {fileID: 689657737}
   battleMenu: {fileID: 1169017270}
-  DebugEnemyHealth: 0
+  DebugEnemyHealth: 1
   inputDelay: 3
   monster: {fileID: 1255470992}
   monsterLibrary: {fileID: 11400000, guid: cd4e58cfc7e89b645958adbed3160838, type: 2}
@@ -761,6 +704,7 @@ GameObject:
   - component: {fileID: 873334840}
   - component: {fileID: 873334839}
   - component: {fileID: 873334838}
+  - component: {fileID: 873334841}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -833,13 +777,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873334837}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1000, y: 1000, z: 1000}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 1000, y: 1000.0001, z: 1000.0001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &873334841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873334837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc067dabf950d44299eb7b88a9aa329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleFollow
+  target: {fileID: 1138002074}
+  ignorePositionX: 0
+  ignorePositionY: 0
+  ignorePositionZ: 0
+  ignoreRotationX: 1
+  ignoreRotationY: 1
+  ignoreRotationZ: 1
+  useLocalRotation: 0
+  inheritLocalScale: 0
 --- !u!1 &935846228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,12 +1536,11 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 410087041}
+  - {fileID: 873334840}
   - {fileID: 1138002074}
   - {fileID: 832575519}
   - {fileID: 1478899880}
   - {fileID: 689657736}
   - {fileID: 509548875}
   - {fileID: 935846231}
-  - {fileID: 873334840}
   - {fileID: 1649793488}
-  - {fileID: 651983790}

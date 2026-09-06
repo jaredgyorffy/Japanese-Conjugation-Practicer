@@ -57,3 +57,11 @@ public class DungeonCrawler : MonoBehaviour
     }
 
 }
+
+public enum DungeonDirection
+{
+    None = 0,
+    Left = 1,
+    Forward = 2,
+    Right = 3,
+}

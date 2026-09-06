@@ -5,6 +5,7 @@ using Unity.Properties;
 using Hieki.Search;
 using UnityEngine;
 using UnityEngine.UIElements;
+using System.Collections;
 
 public class AdventureMode : MonoBehaviour
 {
@@ -44,7 +45,14 @@ public class AdventureMode : MonoBehaviour
     private VisualElement enemy;
     [SerializeField] MonsterLibrary monsterLibrary;
     [SerializeField] private DungeonGenerator dungeonGenerator;
+    private Button leftButton;
+    private Button rightButton;
+    private Button centerButton;
+    private DungeonDirection currentDirectionInput;
 
+    public Action leftButtonPressed;
+    public Action rightButtonPressed;
+    public Action centerButtonPressed;
     public bool Initialized { get; private set; }
 
     void Start()
@@ -59,6 +67,9 @@ public class AdventureMode : MonoBehaviour
         SetBattleScreenVisible(false);
         monsterSprite.enabled = false;
         dungeonGenerator.TileSequenceComplete += GenerateMonster;
+        leftButton = battleMenuRoot.MQ<Button>("Left");
+        rightButton = battleMenuRoot.MQ<Button>("Right");
+        centerButton = battleMenuRoot.MQ<Button>("Forward");
     }
 
     private void Update()
@@ -83,6 +94,13 @@ public class AdventureMode : MonoBehaviour
         this.playerMaxHP = playerMaxHP;
         playerCurrentHP = playerMaxHP;
 
+        leftButton.clicked += leftButtonPressed;
+        rightButton.clicked += rightButtonPressed;
+        centerButton.clicked += centerButtonPressed;
+        leftButton.clicked += () => SetNextDirection(DungeonDirection.Left);
+        centerButton.clicked += () => SetNextDirection(DungeonDirection.Forward);
+        rightButton.clicked += () => SetNextDirection(DungeonDirection.Right);
+
         campaignOrder = GenerateMonsterOrder(enemies);
 
         GenerateMonster();
@@ -106,22 +124,18 @@ public class AdventureMode : MonoBehaviour
             if (i <= monsterCount * 0.33f)
             {
                 monsters.Enqueue(MonsterDifficulty.Easy);
-                Debug.Log("Easy");
             }
             else if (i <= monsterCount * 0.66f)
             {
                 monsters.Enqueue(MonsterDifficulty.Medium);
-                Debug.Log("Medium");
             }
             else if (i < monsterCount)
             {
                 monsters.Enqueue(MonsterDifficulty.Hard);
-                Debug.Log("Hard");
             }
             else if (i == monsterCount)
             {
                 monsters.Enqueue(MonsterDifficulty.Boss);
-                Debug.Log("Boss");
             }
         }
 
@@ -146,11 +160,13 @@ public class AdventureMode : MonoBehaviour
         {
             battleMenuRoot.SetEnabled(true);
             battleMenuRoot.visible = true;
+            testScreen.sortingOrder = 1;
         }
         else
         {
             battleMenuRoot.SetEnabled(false);
             battleMenuRoot.visible = false;
+            testScreen.sortingOrder = 0;
         }
     }
     private void SetTestVisible(bool visible)
@@ -158,9 +174,11 @@ public class AdventureMode : MonoBehaviour
         if (visible)
         {
             testScreenRoot.style.opacity = 1;
+            testScreen.sortingOrder = 3;
         }
         else
         {
+            testScreen.sortingOrder = 0;
             testScreenRoot.style.opacity = 0;
         }
     }
@@ -169,7 +187,7 @@ public class AdventureMode : MonoBehaviour
     {
         if (enemyCurrentHP <= 0)
         {
-            NextEncounter();
+            StartCoroutine(WaitForInput(NextEncounter));
             return;
         }
 
@@ -181,10 +199,25 @@ public class AdventureMode : MonoBehaviour
         simpleTest.PrepareNextQuestion();
         SetTestVisible(true);
     }
+    IEnumerator WaitForInput(Action action)
+    {
+        battleText = $"Waiting for Input";
+        currentDirectionInput = DungeonDirection.None;
+
+        yield return new WaitUntil(() => currentDirectionInput != DungeonDirection.None);
+        action.Invoke();
+    }
+
+    private void SetNextDirection(DungeonDirection direction)
+    {
+        Debug.Log(direction);
+        currentDirectionInput = direction;
+    }
+
     [Button("Debug Next Encounter", EButtonEnableMode.Playmode)]
     private void NextEncounter()
     {
-        dungeonGenerator.GenerateNextTile();
+        dungeonGenerator.GenerateNextTile(currentDirectionInput);
         enemy.AddToClassList("Hidden");
         enemy.RemoveFromClassList("Visible");
     }
@@ -279,5 +312,12 @@ public class AdventureMode : MonoBehaviour
         }
 
         Invoke("SetQuestion", inputDelay);
+    }
+
+    private void OnDestroy()
+    {
+        leftButton.clicked -= leftButtonPressed;
+        rightButton.clicked -= rightButtonPressed;
+        centerButton.clicked -= centerButtonPressed;
     }
 }
