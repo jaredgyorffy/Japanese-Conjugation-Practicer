@@ -4,7 +4,7 @@ VisualElement {
 .Pressed {
     color: rgb(255, 255, 255);
     transition-duration: 0.25s;
-    background-image: url("project://database/Assets/4.%20Art/Textures/UI/Dialogue/Buttons/20240709dragonButtonA-Sheet.png?fileID=1441414339&guid=94895963f3638ee4e8fc32d4ac3687d6&type=3#20240709dragonButtonA-Sheet_2");
+    background-image: url("project://database/Assets/4.%20Art/Textures/UI/Dialogue/Buttons/20240709dragonButtonA-Sheet.png?fileID=1441414339&guid=94895963f3638ee4e8fc32d4ac3687d6&type=3#mauveButton");
 }
 
 .Button {
@@ -55,7 +55,7 @@ VisualElement {
     margin-bottom: 0%;
     margin-left: 0%;
     transition-duration: 0.25s;
-    background-image: url("project://database/Assets/4.%20Art/Textures/UI/Dialogue/Buttons/20240709dragonButtonA-Sheet.png?fileID=1039246304&guid=94895963f3638ee4e8fc32d4ac3687d6&type=3#20240709dragonButtonA-Sheet_0");
+    background-image: url("project://database/Assets/4.%20Art/Textures/UI/Dialogue/Buttons/20240709dragonButtonA-Sheet.png?fileID=1039246304&guid=94895963f3638ee4e8fc32d4ac3687d6&type=3#orange button");
     -unity-slice-scale: 2.5px;
     -unity-slice-left: 0;
     -unity-slice-top: 0;
@@ -71,4 +71,12 @@ VisualElement {
     border-bottom-width: 0;
     border-left-width: 0;
     background-color: rgba(0, 0, 0, 0);
+}
+
+.FullScreenButton {
+    width: 33%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
 }

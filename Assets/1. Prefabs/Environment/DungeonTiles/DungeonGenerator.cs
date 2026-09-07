@@ -31,8 +31,12 @@ public class DungeonGenerator : MonoBehaviour
         }*/
     }
 
-    [Button("GenerateTileDebug", EButtonEnableMode.Playmode)]
-    public void GenerateNextTile(DungeonDirection direction)
+    private void EndTileSequence()
+    {
+        TileSequenceComplete.Invoke();
+    }
+
+    public DungeonTile GenerateNextTile(DungeonDirection direction)
     {
         if (PreviousTile)
         {
@@ -42,52 +46,19 @@ public class DungeonGenerator : MonoBehaviour
         PreviousTile = CurrentTile;
         CurrentTile = GenerateTile(SelectDirection(PreviousTile, direction));
         dungeonCrawler.CrawlForwards(PreviousTile.Start, PreviousTile.Center, CurrentTile.Start);
+        return CurrentTile;
     }
 
     private Transform SelectDirection(DungeonTile tile, DungeonDirection direction)
     {
-        if (tile.Endpoints.Count == 1)
+        foreach (DungeonEndPoint end in tile.Endpoints)
         {
-            return tile.Endpoints[0];
-        }
-        else if (tile.Endpoints.Count == 2)
-        {
-            if (direction == DungeonDirection.Left)
+            if (end.Direction == direction)
             {
-                return tile.Endpoints[0];
-            }
-            else if (direction == DungeonDirection.Right)
-            {
-                return tile.Endpoints[1];
-            }
-            else
-            {
-                return (tile.Endpoints[Random.Range(0, tile.Endpoints.Count)]);
+                return end.Endpoint;
             }
         }
-        else if (tile.Endpoints.Count == 3)
-        {
-            if (direction == DungeonDirection.Left)
-            {
-                return tile.Endpoints[0];
-            }
-            else if (direction == DungeonDirection.Right)
-            {
-                return tile.Endpoints[2];
-            }
-            else if (direction == DungeonDirection.Forward)
-            {
-                return tile.Endpoints[1];
-            }
-            else
-            {
-                return tile.Endpoints[Random.Range(0, tile.Endpoints.Count)];
-            }
-        }
-        else
-        {
-            return tile.Endpoints[Random.Range(0, tile.Endpoints.Count)];
-        }
+        return tile.Endpoints[0].Endpoint;
     }
 
     private DungeonTile GenerateTile(Transform transform)

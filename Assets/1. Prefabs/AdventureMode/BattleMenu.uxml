@@ -37,7 +37,28 @@
             </ui:ProgressBar>
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:Button text="" name="Left" style="width: 33%; height: 100%; position: absolute; background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;"/>
-    <ui:Button text="" name="Forward" style="width: 33%; height: 100%; position: absolute; background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; align-items: center; align-self: center;"/>
-    <ui:Button text="" name="Right" style="width: 33%; height: 100%; position: absolute; background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; align-self: flex-end;"/>
+    <ui:Button text="" name="Left" class="FullScreenButton">
+        <ui:Label text="Standard" name="LeftText" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 32px 100px; -unity-text-outline-color: rgb(255, 255, 255); font-size: 157px; -unity-text-outline-width: 5px; -unity-font-definition: url(&quot;project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&amp;guid=3f1f45f3d7e637345b21c4ce748e2d38&amp;type=3#EnkaDotGothic24&quot;); align-items: auto; justify-content: center; align-self: center;">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="LeftText" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Label text="←" name="LeftSymbol" enable-rich-text="false" style="align-self: center; align-items: center; justify-content: center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 32px 100px; -unity-text-outline-color: rgb(255, 255, 255); font-size: 157px; -unity-text-outline-width: 5px; -unity-font-definition: url(&quot;project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&amp;guid=3f1f45f3d7e637345b21c4ce748e2d38&amp;type=3#EnkaDotGothic24&quot;);"/>
+    </ui:Button>
+    <ui:Button text="" name="Forward" class="FullScreenButton" style="width: 33%; height: 100%; position: absolute; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; align-items: center; align-self: center;">
+        <ui:Label text="Standard" name="ForwardText" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 32px 100px; -unity-text-outline-color: rgb(255, 255, 255); font-size: 157px; -unity-text-outline-width: 5px; -unity-font-definition: url(&quot;project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&amp;guid=3f1f45f3d7e637345b21c4ce748e2d38&amp;type=3#EnkaDotGothic24&quot;);">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="ForwardText" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Label text="↑" name="ForwardSymbol" enable-rich-text="false" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 32px 100px; -unity-text-outline-color: rgb(255, 255, 255); font-size: 157px; -unity-text-outline-width: 5px; -unity-font-definition: url(&quot;project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&amp;guid=3f1f45f3d7e637345b21c4ce748e2d38&amp;type=3#EnkaDotGothic24&quot;); align-items: center; align-self: center; flex-shrink: 1;"/>
+    </ui:Button>
+    <ui:Button text="" name="Right" class="FullScreenButton" style="width: 33%; height: 100%; align-self: flex-end; justify-content: center; align-items: center;">
+        <ui:Label text="Standard" name="RightText" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 32px 100px; -unity-text-outline-color: rgb(255, 255, 255); font-size: 157px; -unity-text-outline-width: 5px; -unity-font-definition: url(&quot;project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&amp;guid=3f1f45f3d7e637345b21c4ce748e2d38&amp;type=3#EnkaDotGothic24&quot;);">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="RightText" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Label text="→" name="RightSymbol" enable-rich-text="false" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 32px 100px; -unity-text-outline-color: rgb(255, 255, 255); font-size: 157px; -unity-text-outline-width: 5px; -unity-font-definition: url(&quot;project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&amp;guid=3f1f45f3d7e637345b21c4ce748e2d38&amp;type=3#EnkaDotGothic24&quot;); align-items: center; align-self: center; flex-shrink: 1;"/>
+    </ui:Button>
 </ui:UXML>

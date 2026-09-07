@@ -32,7 +32,7 @@ public class DungeonCrawler : MonoBehaviour
         this.center = center;
         StartCoroutine("DungeonCrawl");
         TileSequenceStart?.Invoke();
-    }
+    }   
 
     IEnumerator DungeonCrawl()
     {

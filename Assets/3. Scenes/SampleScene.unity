@@ -1509,9 +1509,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
   tiles:
-  - {fileID: 4396623644203297163, guid: fb8f7cdf07568ef42a2a0ce92d5cbdf2, type: 3}
-  - {fileID: 867099293555120590, guid: dfab02c80743a0a4fb418f87f59f05bd, type: 3}
-  - {fileID: 7081146523479863795, guid: 9e4ee0d7e8376934a804d0c1d9f2521c, type: 3}
   - {fileID: 7331002870531163759, guid: c544650a8e306ad4bbfe7321c6fd5e34, type: 3}
   - {fileID: 3068739266856041062, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
   DungeonSize: 5
