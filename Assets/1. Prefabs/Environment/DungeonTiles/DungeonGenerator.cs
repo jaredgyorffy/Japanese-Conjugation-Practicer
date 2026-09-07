@@ -36,6 +36,11 @@ public class DungeonGenerator : MonoBehaviour
         TileSequenceComplete.Invoke();
     }
 
+    public void MoveToDecisionPoint(Action endAction)
+    {
+        dungeonCrawler.MoveToDecision(CurrentTile.Start, CurrentTile.DecisionPoint, endAction);
+    }
+
     public DungeonTile GenerateNextTile(DungeonDirection direction)
     {
         if (PreviousTile)
@@ -45,7 +50,15 @@ public class DungeonGenerator : MonoBehaviour
 
         PreviousTile = CurrentTile;
         CurrentTile = GenerateTile(SelectDirection(PreviousTile, direction));
-        dungeonCrawler.CrawlForwards(PreviousTile.Start, PreviousTile.Center, CurrentTile.Start);
+        if (PreviousTile.Endpoints.Count > 1)
+        {
+            dungeonCrawler.CrawlForwards(PreviousTile.DecisionPoint, PreviousTile.Center, CurrentTile.Start);
+        }
+        else
+        {
+            dungeonCrawler.CrawlForwards(PreviousTile.Start, PreviousTile.Center, CurrentTile.Start);
+        }
+
         return CurrentTile;
     }
 

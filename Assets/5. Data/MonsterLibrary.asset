@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonsterLibrary
   EasyMonsters:
   - Name: Respectful Randy
+    Description: Polite
     ConjugationTypes:
       VerbConjugationTypes: 0200000003000000
       AdjectiveConjugationTypes: 0400000003000000
@@ -22,6 +23,7 @@ MonoBehaviour:
     Tint: {r: 1, g: 0.51257855, b: 0.9287022, a: 1}
     MonsterType: 0
   - Name: The Meaning Maverick
+    Description: Vocab
     ConjugationTypes:
       VerbConjugationTypes: 00000000
       AdjectiveConjugationTypes: 00000000
@@ -30,6 +32,7 @@ MonoBehaviour:
     Tint: {r: 0.13196516, g: 1, b: 0, a: 1}
     MonsterType: 0
   - Name: Action Adam
+    Description: Verbs
     ConjugationTypes:
       VerbConjugationTypes: 02000000030000000400000005000000
       AdjectiveConjugationTypes: 
@@ -38,6 +41,7 @@ MonoBehaviour:
     Tint: {r: 1, g: 0.05669474, b: 0, a: 1}
     MonsterType: 0
   - Name: Nancy Noun
+    Description: Nouns
     ConjugationTypes:
       VerbConjugationTypes: 
       AdjectiveConjugationTypes: 
@@ -47,6 +51,7 @@ MonoBehaviour:
     MonsterType: 0
   MediumMonsters:
   - Name: Descriptive Daniel
+    Description: Adjectives
     ConjugationTypes:
       VerbConjugationTypes: 
       AdjectiveConjugationTypes: 080000000700000006000000
@@ -55,6 +60,7 @@ MonoBehaviour:
     Tint: {r: 1, g: 0, b: 0, a: 1}
     MonsterType: 1
   - Name: Standard Stanley
+    Description: Standard
     ConjugationTypes:
       VerbConjugationTypes: 060000000700000008000000
       AdjectiveConjugationTypes: 
@@ -63,6 +69,7 @@ MonoBehaviour:
     Tint: {r: 1, g: 1, b: 1, a: 1}
     MonsterType: 1
   - Name: Negative Nelson
+    Description: Negative
     ConjugationTypes:
       VerbConjugationTypes: 06000000080000000300000005000000
       AdjectiveConjugationTypes: 03000000050000000800000006000000
@@ -72,6 +79,7 @@ MonoBehaviour:
     MonsterType: 1
   HardMonsters:
   - Name: Multifarious Manny
+    Description: Verb
     ConjugationTypes:
       VerbConjugationTypes: 02000000030000000400000005000000060000000700000008000000090000000a0000000b000000
       AdjectiveConjugationTypes: 
@@ -80,6 +88,7 @@ MonoBehaviour:
     Tint: {r: 1, g: 0, b: 0, a: 1}
     MonsterType: 0
   - Name: Tricky Trevor
+    Description: Irregular
     ConjugationTypes:
       VerbConjugationTypes: 05000000060000000700000008000000
       AdjectiveConjugationTypes: 
@@ -88,6 +97,7 @@ MonoBehaviour:
     Tint: {r: 1, g: 0, b: 0, a: 1}
     MonsterType: 0
   - Name: Tricky Trent
+    Description: Irregular
     ConjugationTypes:
       VerbConjugationTypes: 05000000060000000700000008000000
       AdjectiveConjugationTypes: 
@@ -97,6 +107,7 @@ MonoBehaviour:
     MonsterType: 0
   BossMonsters:
   - Name: "\u30E9\u30B9\u30DC\u30B9"
+    Description: Boss
     ConjugationTypes:
       VerbConjugationTypes: 00000000020000000300000004000000050000000600000007000000080000000b000000
       AdjectiveConjugationTypes: 00000000040000000500000003000000060000000700000008000000

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Monster
 {
     public string Name;
+    public string Description;
     public ConjugationTypes ConjugationTypes;
     public float MaxHP;
     public Color Tint;

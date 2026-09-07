@@ -221,7 +221,20 @@ public class AdventureMode : MonoBehaviour
     {
         if (enemyCurrentHP <= 0)
         {
-            StartCoroutine(ChooseDungeonPath(NextEncounter));
+            if (dungeonGenerator.CurrentTile.Endpoints.Count > 1)
+            {
+                if (campaignOrder.TryPeek(out _))
+                {
+                    battleText = $"You are the Conjugation Master!";
+                    Invoke("VictoryCondition", inputDelay);
+                }
+                dungeonGenerator.MoveToDecisionPoint(PathChoosingSequence);
+            }
+            else
+            {
+                TryGenerateRandomMonster();
+                dungeonGenerator.GenerateNextTile(DungeonDirection.None);
+            }
             return;
         }
 
@@ -233,6 +246,12 @@ public class AdventureMode : MonoBehaviour
         simpleTest.PrepareNextQuestion();
         SetTestVisible(true);
     }
+
+    private void PathChoosingSequence()
+    {
+        StartCoroutine(ChooseDungeonPath(NextEncounter));
+    }
+
     IEnumerator ChooseDungeonPath(Action action)
     {
         List<Monster> monsters = GenerateMonsters(dungeonGenerator.CurrentTile.Endpoints);
@@ -268,19 +287,19 @@ public class AdventureMode : MonoBehaviour
             {
                 leftButton.AddToClassList("Visible");
                 leftButton.RemoveFromClassList("Hidden");
-                leftText = monsters[i].Name;
+                leftText = monsters[i].Description;
             }
             else if (Endpoints[i].Direction == DungeonDirection.Forward)
             {
                 centerButton.AddToClassList("Visible");
                 centerButton.RemoveFromClassList("Hidden");
-                forwardText = monsters[i].Name;
+                forwardText = monsters[i].Description;
             }
             else if (Endpoints[i].Direction == DungeonDirection.Right)
             {
                 rightButton.AddToClassList("Visible");
                 rightButton.RemoveFromClassList("Hidden");
-                rightText = monsters[i].Name;
+                rightText = monsters[i].Description;
             }
         }
     }
@@ -378,7 +397,6 @@ public class AdventureMode : MonoBehaviour
 
     private void VictoryCondition()
     {
-
         restartAction.Invoke();
     }
 

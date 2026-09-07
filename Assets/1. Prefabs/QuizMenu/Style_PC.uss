@@ -78,5 +78,30 @@ VisualElement {
     height: 100%;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
+    justify-content: flex-start;
+    transition-duration: 0.5s;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 33%;
+    padding-right: 0;
+    padding-bottom: 25%;
+    padding-left: 0;
+}
+
+.DirectionButtonText {
+    -unity-text-generator: advanced;
+    -unity-text-auto-size: best-fit 15px 100px;
+    -unity-text-outline-color: rgb(255, 255, 255);
+    font-size: 157px;
+    -unity-text-outline-width: 5px;
+    -unity-font-definition: url("project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&guid=3f1f45f3d7e637345b21c4ce748e2d38&type=3#EnkaDotGothic24");
+    align-items: auto;
     justify-content: center;
+    align-self: center;
+    margin-top: 0%;
+    margin-right: 5%;
+    margin-left: 5%;
+    transition-duration: 0.5s;
 }

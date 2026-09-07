@@ -7,6 +7,7 @@ public class DungeonCrawler : MonoBehaviour
 {
     private Camera m_Camera;
     [SerializeField] private float walkDuration;
+    [SerializeField] private float decisionPointDuration;
     [SerializeField] private Vector3 positionOffset;
     [SerializeField] private Vector3 rotationOffset;
     [SerializeField] private Vector2 rotationRemap;
@@ -17,6 +18,7 @@ public class DungeonCrawler : MonoBehaviour
 
     public event Action TileSequenceStart;
     public event Action TileSequenceComplete;
+    public event Action ArrivedAtDecisionPoint;
 
     public void Initialize(Transform start)
     {
@@ -25,6 +27,8 @@ public class DungeonCrawler : MonoBehaviour
         m_Camera.transform.rotation = start.rotation;
         m_Camera.transform.localRotation = m_Camera.transform.localRotation * Quaternion.Euler(rotationOffset);
     }
+
+
     public void CrawlForwards(Transform start, Transform center, Transform end)
     {
         this.start = start;
@@ -32,7 +36,28 @@ public class DungeonCrawler : MonoBehaviour
         this.center = center;
         StartCoroutine("DungeonCrawl");
         TileSequenceStart?.Invoke();
-    }   
+    }
+    public void MoveToDecision(Transform start, Transform end, Action endAction)
+    {
+        this.start = start;
+        this.end = end;
+        StartCoroutine("MoveToDecisionPoint", endAction);
+    }
+
+    IEnumerator MoveToDecisionPoint(Action endAction)
+    {
+        float time = 0;
+        float duration = decisionPointDuration;
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            float alpha = time / decisionPointDuration;
+            m_Camera.transform.position = Vector3.Lerp(start.position, end.position, alpha) + positionOffset;
+            yield return null;
+        }
+        endAction.Invoke();
+        ArrivedAtDecisionPoint?.Invoke();
+    }
 
     IEnumerator DungeonCrawl()
     {
