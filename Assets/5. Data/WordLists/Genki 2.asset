@@ -13,11 +13,31 @@ MonoBehaviour:
   m_Name: Genki 2
   m_EditorClassIdentifier: Assembly-CSharp::VerbList
   <listName>k__BackingField: Genki 2
+  questionTypes:
+  - Title: Standard Negative Noun
+    Category: 402
+    ConjugationTypes:
+      VerbConjugationTypes: 
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 06000000
+  - Title: Noun Meanings
+    Category: 300
+    ConjugationTypes:
+      VerbConjugationTypes: 
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 00000000
+  - Title: Expressions
+    Category: 301
+    ConjugationTypes:
+      VerbConjugationTypes: 
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 
   verbList: []
   adjectiveList:
   - kana: "\u304A\u3044\u3057\u3044"
     kanji: 
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - Delicious or Tasty
     - delicious
@@ -31,6 +51,7 @@ MonoBehaviour:
   - kana: "\u305F\u304B\u3044"
     kanji: "\u9AD8\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - Expensive, high, or tall
     - expensive
@@ -45,75 +66,92 @@ MonoBehaviour:
   nounList:
   - kana: "\u3042\u305D\u3053"
     kanji: 
+    meaningFull: 
     meaning:
     - that over there
     - over there
   - kana: "\u3042\u308C"
     kanji: 
+    meaningFull: 
     meaning:
     - That thing (something distant from both speaker and listener)
     - that
     - That thing
   - kana: "\u3044\u304F\u3089"
     kanji: 
+    meaningFull: 
     meaning:
     - how much
   - kana: "\u3048\u3044\u3054"
     kanji: "\u82F1\u8A9E"
+    meaningFull: 
     meaning:
     - English language
     - english
   - kana: "\u304B\u3055"
     kanji: "\u5098"
+    meaningFull: 
     meaning:
     - umbrella
   - kana: "\u304B\u3070\u3093"
     kanji: 
+    meaningFull: 
     meaning:
     - bag
   - kana: "\u304E\u3093\u3053\u3046"
     kanji: "\u9280\u884C"
+    meaningFull: 
     meaning:
     - bank
   - kana: "\u304F\u3064"
     kanji: "\u9774"
+    meaningFull: 
     meaning:
     - shoes
   - kana: "\u3053\u3053"
     kanji: 
+    meaningFull: 
     meaning:
     - here
   - kana: "\u3053\u308C"
     kanji: 
+    meaningFull: 
     meaning:
     - this one
     - this
   - kana: "\u30B3\u30F3\u30D3\u30CB"
     kanji: 
+    meaningFull: 
     meaning:
     - convenience store
   - kana: "\u3055\u3044\u3075"
     kanji: "\u8CA1\u5E03"
+    meaningFull: 
     meaning:
     - wallet
   - kana: "\u3055\u304B\u306A"
     kanji: "\u9B5A"
+    meaningFull: 
     meaning:
     - fish
   - kana: "\u30B8\u30FC\u30F3\u30BA"
     kanji: 
+    meaningFull: 
     meaning:
     - jeans
   - kana: "\u3058\u3066\u3093\u3057\u3083"
     kanji: "\u81EA\u8EE2\u8ECA"
+    meaningFull: 
     meaning:
     - bicycle
   - kana: "\u3057\u3093\u3076\u3093"
     kanji: "\u65B0\u805E"
+    meaningFull: 
     meaning:
     - newspaper
   - kana: "\u30B9\u30DE\u30DB"
     kanji: 
+    meaningFull: 
     meaning:
     - Smartphone or Mobilephone
     - smartphone
@@ -121,23 +159,28 @@ MonoBehaviour:
     - mobile phone
   - kana: "\u305D\u3053"
     kanji: 
+    meaningFull: 
     meaning:
     - there
   - kana: "\u305D\u308C"
     kanji: 
+    meaningFull: 
     meaning:
     - that one
     - that
   - kana: "\u3060\u308C"
     kanji: 
+    meaningFull: 
     meaning:
     - who
   - kana: "\u30C6\u30A3\u30FC\u30B7\u30E3\u30C4"
     kanji: "\uFF34\u30B7\u30E3\u30C4"
+    meaningFull: 
     meaning:
     - T-shirt
   - kana: "\u30C8\u30A4\u30EC"
     kanji: 
+    meaningFull: 
     meaning:
     - Toilet, Restroom, or Washroom
     - toilet
@@ -146,82 +189,102 @@ MonoBehaviour:
     - bathroom
   - kana: "\u3068\u3051\u3044"
     kanji: "\u6642\u8A08"
+    meaningFull: 
     meaning:
     - Watch or Clock
     - watch
     - clock
   - kana: "\u3069\u3053"
     kanji: 
+    meaningFull: 
     meaning:
     - where
   - kana: "\u3068\u3057\u3087\u304B\u3093"
     kanji: "\u56F3\u66F8\u9928"
+    meaningFull: 
     meaning:
     - library
   - kana: "\u3069\u308C"
     kanji: 
+    meaningFull: 
     meaning:
     - "which (of three or more)\u200B"
     - which
     - which one
   - kana: "\u3068\u3093\u304B\u3064"
     kanji: 
+    meaningFull: 
     meaning:
     - pork cutlet
   - kana: "\u306B\u304F"
     kanji: "\u8089"
+    meaningFull: 
     meaning:
     - meat
   - kana: "\u30CE\u30FC\u30C8"
     kanji: 
+    meaningFull: 
     meaning:
     - notebook
   - kana: "\u30DA\u30F3"
     kanji: 
+    meaningFull: 
     meaning:
     - pen
   - kana: "\u307C\u3046\u3057"
     kanji: "\u5E3D\u5B50"
+    meaningFull: 
     meaning:
     - hat
     - cap
   - kana: "\u30E1\u30CB\u30E5\u30FC"
     kanji: 
+    meaningFull: 
     meaning:
     - menu
   - kana: "\u3084\u3055\u3044"
     kanji: "\u91CE\u83DC"
+    meaningFull: 
     meaning:
     - vegetable
   - kana: "\u3086\u3046\u3073\u3093\u304D\u3087\u304F"
     kanji: "\u90F5\u4FBF\u5C40"
+    meaningFull: 
     meaning:
     - post office
   - kana: "\u307B\u3093"
     kanji: "\u672C"
+    meaningFull: 
     meaning:
     - book
   - kana: "\u3051\u3057\u30B4\u30E0"
     kanji: "\u6D88\u3057\u30B4\u30E0"
+    meaningFull: 
     meaning:
     - eraser
   - kana: "\u3053\u304F\u3070\u3093"
     kanji: "\u9ED2\u677F"
+    meaningFull: 
     meaning:
     - blackboard
   - kana: "\u3058\u3057\u3087"
     kanji: "\u8F9E\u66F8"
+    meaningFull: 
     meaning:
     - dictionary
   - kana: "\u30AB\u30FC\u30C6\u30F3"
     kanji: 
+    meaningFull: 
     meaning:
     - curtain
   - kana: "\u3044\u3059"
     kanji: 
+    meaningFull: 
     meaning:
     - chair
   - kana: "\u3064\u304F\u3048"
     kanji: "\u673A"
+    meaningFull: 
     meaning:
     - desk
+  expressionList: []

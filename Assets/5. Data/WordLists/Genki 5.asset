@@ -13,10 +13,24 @@ MonoBehaviour:
   m_Name: Genki 5
   m_EditorClassIdentifier: Assembly-CSharp::WordList
   <listName>k__BackingField: Genki 5
+  questionTypes:
+  - Title: Adjective Conjugation
+    Category: 403
+    ConjugationTypes:
+      VerbConjugationTypes: 
+      AdjectiveConjugationTypes: 06000000030000000400000007000000
+      NounConjugationTypes: 
+  - Title: Volition
+    Category: 401
+    ConjugationTypes:
+      VerbConjugationTypes: 09000000
+      AdjectiveConjugationTypes: 06000000030000000400000007000000
+      NounConjugationTypes: 
   verbList:
   - kana: "\u3067\u304B\u3051\u308B"
     kanji: "\u51FA\u304B\u3051\u308B"
     verbType: 1
+    meaningFull: 
     meaning:
     - To go out, to leave, to depart
     - 'to go out '
@@ -36,6 +50,7 @@ MonoBehaviour:
   - kana: "\u304A\u3088\u3050"
     kanji: "\u6CF3\u3050"
     verbType: 0
+    meaningFull: 
     meaning:
     - to swim
     politeNonpast: 
@@ -51,6 +66,7 @@ MonoBehaviour:
   - kana: "\u304D\u304F"
     kanji: "\u805E\u304F"
     verbType: 0
+    meaningFull: 
     meaning:
     - To listen, to hear, to ask
     - to ask
@@ -69,6 +85,7 @@ MonoBehaviour:
   - kana: "\u306E\u308B"
     kanji: "\u4E57\u308B"
     verbType: 0
+    meaningFull: 
     meaning:
     - To ride, to board, to get on
     - to ride
@@ -88,6 +105,7 @@ MonoBehaviour:
   - kana: "\u3084\u308B"
     kanji: 
     verbType: 0
+    meaningFull: 
     meaning:
     - To do, to perform
     - to do
@@ -107,6 +125,7 @@ MonoBehaviour:
   - kana: "\u304D\u3089\u3044"
     kanji: "\u5ACC\u3044"
     adjectiveType: 1
+    meaningFull: 
     meaning:
     - 'dislike, (weakly) hate '
     - dislike
@@ -120,6 +139,7 @@ MonoBehaviour:
   - kana: "\u304D\u308C\u3044"
     kanji: 
     adjectiveType: 1
+    meaningFull: 
     meaning:
     - Beautiful, pretty, clean
     - beautiful
@@ -134,6 +154,7 @@ MonoBehaviour:
   - kana: "\u3052\u3093\u304D"
     kanji: "\u5143\u6C17"
     adjectiveType: 1
+    meaningFull: 
     meaning:
     - Healthy, energetic
     - healthy
@@ -148,6 +169,7 @@ MonoBehaviour:
   - kana: "\u3057\u305A\u304B"
     kanji: "\u9759\u304B"
     adjectiveType: 1
+    meaningFull: 
     meaning:
     - quiet, silent, calm
     - quiet
@@ -162,6 +184,7 @@ MonoBehaviour:
   - kana: "\u3059\u304D"
     kanji: "\u597D\u304D"
     adjectiveType: 1
+    meaningFull: 
     meaning:
     - like, fond of, preferred
     - fond of
@@ -177,6 +200,7 @@ MonoBehaviour:
   - kana: "\u3060\u3044\u304D\u3089\u3044"
     kanji: "\u5927\u5ACC\u3044"
     adjectiveType: 1
+    meaningFull: 
     meaning:
     - Hate, strongly dislike
     - to hate
@@ -191,6 +215,7 @@ MonoBehaviour:
   - kana: "\u3060\u3044\u3059\u304D"
     kanji: "\u5927\u597D\u304D"
     adjectiveType: 1
+    meaningFull: 
     meaning:
     - Love, very fond of
     - very fond of
@@ -205,6 +230,7 @@ MonoBehaviour:
   - kana: "\u306B\u304E\u3084\u304B"
     kanji: 
     adjectiveType: 1
+    meaningFull: 
     meaning:
     - lively, busy, crowded
     - lively
@@ -219,6 +245,7 @@ MonoBehaviour:
   - kana: "\u3072\u307E"
     kanji: "\u6687"
     adjectiveType: 1
+    meaningFull: 
     meaning:
     - not busy, free time, time off
     - not busy
@@ -234,6 +261,7 @@ MonoBehaviour:
   - kana: "\u3042\u305F\u3089\u3057\u3044"
     kanji: "\u65B0\u3057\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - new, fresh, recent
     - new
@@ -248,6 +276,7 @@ MonoBehaviour:
   - kana: "\u3042\u3064\u3044"
     kanji: "\u71B1\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - hot (thing)
     - hot
@@ -260,6 +289,7 @@ MonoBehaviour:
   - kana: "\u3042\u3064\u3044"
     kanji: "\u6691\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - hot (weather)
     - hot
@@ -272,6 +302,7 @@ MonoBehaviour:
   - kana: "\u3044\u305D\u304C\u3057\u3044"
     kanji: "\u5FD9\u3057\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - Busy, occupied, hectic
     - busy
@@ -287,6 +318,7 @@ MonoBehaviour:
   - kana: "\u304A\u304A\u304D\u3044"
     kanji: "\u5927\u304D\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - Big, large, great
     - large
@@ -301,6 +333,7 @@ MonoBehaviour:
   - kana: "\u304A\u3082\u3057\u308D\u3044"
     kanji: "\u9762\u767D\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - Funny, interesting, amusing
     - interesting
@@ -316,6 +349,7 @@ MonoBehaviour:
   - kana: "\u3053\u308F\u3044"
     kanji: "\u6016\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - Scary, frightening
     - frightening
@@ -331,6 +365,7 @@ MonoBehaviour:
   - kana: "\u3055\u3080\u3044"
     kanji: "\u5BD2\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - cold (weather)
     - cold
@@ -343,6 +378,7 @@ MonoBehaviour:
   - kana: "\u305F\u306E\u3057\u3044"
     kanji: "\u697D\u3057\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - Fun, enjoyable, pleasant
     - fun
@@ -358,6 +394,7 @@ MonoBehaviour:
   - kana: "\u3061\u3044\u3055\u3044"
     kanji: "\u5C0F\u3055\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - Small, little, tiny
     - small
@@ -372,6 +409,7 @@ MonoBehaviour:
   - kana: "\u3064\u307E\u3089\u306A\u3044"
     kanji: 
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - dull, boring, uninteresting
     - boring
@@ -386,6 +424,7 @@ MonoBehaviour:
   - kana: "\u3075\u308B\u3044"
     kanji: "\u53E4\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - old, antique, aged (thing)
     - old
@@ -400,6 +439,7 @@ MonoBehaviour:
   - kana: "\u3084\u3055\u3057\u3044"
     kanji: 
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - easy (problem), kind, nice, gentle, (person)
     - easy
@@ -416,6 +456,7 @@ MonoBehaviour:
   - kana: "\u3080\u305A\u304B\u3057\u3044"
     kanji: 
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - difficult, hard, serious (problem)
     - difficult
@@ -430,6 +471,7 @@ MonoBehaviour:
   - kana: "\u3084\u3059\u3044"
     kanji: "\u5B89\u3044"
     adjectiveType: 0
+    meaningFull: 
     meaning:
     - cheap, inexpensive (thing)
     - inexpensive
@@ -443,12 +485,14 @@ MonoBehaviour:
   nounList:
   - kana: "\u3046\u307F"
     kanji: "\u6D77"
+    meaningFull: 
     meaning:
     - Ocean, Sea
     - sea
     - ocean
   - kana: "\u30A8\u30EB\u30B5\u30A4\u30BA"
     kanji: "\uFF2C\u30B5\u30A4\u30BA"
+    meaningFull: 
     meaning:
     - large size (ex. Clothing, drink)
     - size L
@@ -456,62 +500,76 @@ MonoBehaviour:
     - large size
   - kana: "\u304A\u307F\u3084\u3052"
     kanji: "\u304A\u571F\u7523"
+    meaningFull: 
     meaning:
     - Souvenir, present
     - souvenir
     - present
   - kana: "\u304F\u3060\u3082\u306E"
     kanji: "\u679C\u7269"
+    meaningFull: 
     meaning:
     - fruit
   - kana: "\u30B5\u30FC\u30D5\u30A3\u30F3"
     kanji: 
+    meaningFull: 
     meaning:
     - surfing
   - kana: "\u3057\u3085\u304F\u3060\u3044"
     kanji: "\u5BBF\u984C"
+    meaningFull: 
     meaning:
     - homework
   - kana: "\u305F\u3079\u3082\u306E"
     kanji: "\u98DF\u3079\u7269"
+    meaningFull: 
     meaning:
     - food
   - kana: "\u305F\u3093\u3058\u3087\u3046\u3073"
     kanji: "\u8A95\u751F\u65E5"
+    meaningFull: 
     meaning:
     - birthday
   - kana: "\u30C6\u30B9\u30C8"
     kanji: 
+    meaningFull: 
     meaning:
     - test
   - kana: "\u3066\u3093\u304D"
     kanji: "\u5929\u6C17"
+    meaningFull: 
     meaning:
     - weather
   - kana: "\u306E\u307F\u3082\u306E"
     kanji: "\u98F2\u307F\u7269"
+    meaningFull: 
     meaning:
     - drink
   - kana: "\u30D0\u30B9"
     kanji: 
+    meaningFull: 
     meaning:
     - bus
   - kana: "\u3078\u3084"
     kanji: "\u90E8\u5C4B"
+    meaningFull: 
     meaning:
     - room
   - kana: "\u307C\u304F"
     kanji: "\u50D5"
+    meaningFull: 
     meaning:
     - I, Me (Informal, used by young boys)
     - Me
     - I
   - kana: "\u307F\u3084\u3052"
     kanji: "\u571F\u7523"
+    meaningFull: 
     meaning:
     - souvenir
   - kana: "\u3084\u3059\u307F"
     kanji: "\u4F11\u307F"
+    meaningFull: 
     meaning:
     - Holiday, day off, absence
     - holiday
@@ -519,5 +577,7 @@ MonoBehaviour:
     - absence
   - kana: "\u308A\u3087\u3053\u3046"
     kanji: "\u65C5\u884C"
+    meaningFull: 
     meaning:
     - travel
+  expressionList: []

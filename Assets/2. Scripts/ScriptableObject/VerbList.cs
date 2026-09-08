@@ -67,7 +67,9 @@ public class VerbList : ScriptableObject
         }
     }
     [field: SerializeField] public string listName { get; private set; }
+    [field: SerializeField] public List<QuestionType> questionTypes;
     [field: SerializeField][FormerlySerializedAs("List")] public List<Verb> verbList;
     [field: SerializeField] public List<Adjective> adjectiveList;
     [field: SerializeField] public List<Noun> nounList;
+    [field: SerializeField] public List<Expression> expressionList;
 }

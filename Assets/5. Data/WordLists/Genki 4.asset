@@ -13,10 +13,18 @@ MonoBehaviour:
   m_Name: Genki 4
   m_EditorClassIdentifier: Assembly-CSharp::WordList
   <listName>k__BackingField: Genki 4
+  questionTypes:
+  - Title: Past Tense
+    Category: 200
+    ConjugationTypes:
+      VerbConjugationTypes: 04000000
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 04000000
   verbList:
   - kana: "\u3042\u3046"
     kanji: "\u4F1A\u3046"
     verbType: 0
+    meaningFull: 
     meaning:
     - to see, to meet (a person)
     - to meet
@@ -35,6 +43,7 @@ MonoBehaviour:
   - kana: "\u3042\u308B"
     kanji: "\u6709\u308B"
     verbType: 2
+    meaningFull: 
     meaning:
     - to be
     - to exist
@@ -53,6 +62,7 @@ MonoBehaviour:
   - kana: "\u304B\u3046"
     kanji: "\u8CB7\u3046"
     verbType: 0
+    meaningFull: 
     meaning:
     - to buy
     politeNonpast: 
@@ -68,6 +78,7 @@ MonoBehaviour:
   - kana: "\u304B\u304F"
     kanji: "\u66F8\u304F"
     verbType: 0
+    meaningFull: 
     meaning:
     - to write
     politeNonpast: 
@@ -83,6 +94,7 @@ MonoBehaviour:
   - kana: "\u3044\u308B"
     kanji: 
     verbType: 2
+    meaningFull: 
     meaning:
     - to be, to exist (of animate objects)
     - "to exist\u200B"
@@ -100,6 +112,7 @@ MonoBehaviour:
   - kana: "\u3068\u308B"
     kanji: "\u64AE\u308B"
     verbType: 0
+    meaningFull: 
     meaning:
     - to take (a picture), to record
     - to take
@@ -117,6 +130,7 @@ MonoBehaviour:
   - kana: "\u307E\u3064"
     kanji: "\u5F85\u3064"
     verbType: 0
+    meaningFull: 
     meaning:
     - to wait
     politeNonpast: 
@@ -132,6 +146,7 @@ MonoBehaviour:
   - kana: "\u308F\u304B\u308B"
     kanji: 
     verbType: 0
+    meaningFull: 
     meaning:
     - to understand
     politeNonpast: 
@@ -148,6 +163,7 @@ MonoBehaviour:
   nounList:
   - kana: "\u3042\u3044\u3060"
     kanji: "\u9593"
+    meaningFull: 
     meaning:
     - between, interval, gap
     - between
@@ -156,25 +172,30 @@ MonoBehaviour:
     - distance
   - kana: "\u3042\u306A\u305F"
     kanji: 
+    meaningFull: 
     meaning:
     - you
   - kana: "\u30A2\u30EB\u30D0\u30A4\u30C8"
     kanji: 
+    meaningFull: 
     meaning:
     - part-time job
     - parttime job
     - parttime
   - kana: "\u3044\u3061\u3058\u304B\u3093"
     kanji: "\u4E00\u6642\u9593"
+    meaningFull: 
     meaning:
     - one hour
     - 1 hour
   - kana: "\u3044\u306C"
     kanji: "\u72AC"
+    meaningFull: 
     meaning:
     - dog
   - kana: "\u3046\u3048"
     kanji: "\u4E0A"
+    meaningFull: 
     meaning:
     - on, above, up, etc.
     - on
@@ -183,6 +204,7 @@ MonoBehaviour:
     - up
   - kana: "\u3046\u3057\u308D"
     kanji: "\u5F8C\u308D"
+    meaningFull: 
     meaning:
     - back, behind
     - back
@@ -190,36 +212,44 @@ MonoBehaviour:
     - rear
   - kana: "\u304A\u3066\u3089"
     kanji: "\u304A\u5BFA"
+    meaningFull: 
     meaning:
     - temple
   - kana: "\u304B\u3044\u3082\u306E"
     kanji: "\u8CB7\u3044\u7269"
+    meaningFull: 
     meaning:
     - shopping
   - kana: "\u30AF\u30E9\u30B9"
     kanji: 
+    meaningFull: 
     meaning:
     - class
   - kana: "\u30B2\u30FC\u30E0"
     kanji: 
+    meaningFull: 
     meaning:
     - game
   - kana: "\u3053\u3046\u3048\u3093"
     kanji: "\u516C\u5712"
+    meaningFull: 
     meaning:
     - park
   - kana: "\u3053\u3069\u3082"
     kanji: "\u5B50\u4F9B"
+    meaningFull: 
     meaning:
     - child
   - kana: "\u3054\u306F\u3093"
     kanji: "\u3054\u98EF"
+    meaningFull: 
     meaning:
     - rice or meal
     - rice
     - meal
   - kana: "\u3057\u305F"
     kanji: "\u4E0B"
+    meaningFull: 
     meaning:
     - under, below, down
     - under
@@ -228,16 +258,19 @@ MonoBehaviour:
     - younger
   - kana: "\u3057\u3083\u3057\u3093"
     kanji: "\u5199\u771F"
+    meaningFull: 
     meaning:
     - Picture, photograph
     - picture
     - photograph
   - kana: "\u30B9\u30FC\u30D1\u30FC"
     kanji: 
+    meaningFull: 
     meaning:
     - supermarket
   - kana: "\u3061\u304B\u304F"
     kanji: "\u8FD1\u304F"
+    meaningFull: 
     meaning:
     - near, nearby, vicinity
     - near
@@ -246,10 +279,12 @@ MonoBehaviour:
     - vicinity
   - kana: "\u3066\u3089"
     kanji: "\u5BFA"
+    meaningFull: 
     meaning:
     - temple
   - kana: "\u3068\u304D"
     kanji: "\u6642"
+    meaningFull: 
     meaning:
     - When, time
     - when
@@ -259,6 +294,7 @@ MonoBehaviour:
     - at the time of
   - kana: "\u3068\u306A\u308A"
     kanji: "\u96A3"
+    meaningFull: 
     meaning:
     - next, adjacent
     - next
@@ -267,6 +303,7 @@ MonoBehaviour:
     - neighbour
   - kana: "\u306A\u304B"
     kanji: "\u4E2D"
+    meaningFull: 
     meaning:
     - inside, interior, middle, center
     - inside
@@ -275,62 +312,77 @@ MonoBehaviour:
     - center
   - kana: "\u306D\u3053"
     kanji: "\u732B"
+    meaningFull: 
     meaning:
     - cat
   - kana: "\u30D0\u30B9\u3066\u3044"
     kanji: "\u30D0\u30B9\u505C"
+    meaningFull: 
     meaning:
     - bus stop
   - kana: "\u306F\u306A"
     kanji: "\u82B1"
+    meaningFull: 
     meaning:
     - flower
   - kana: "\u30D1\u30F3"
     kanji: 
+    meaningFull: 
     meaning:
     - bread
   - kana: "\u3072\u3060\u308A"
     kanji: "\u5DE6"
+    meaningFull: 
     meaning:
     - left
   - kana: "\u3072\u3068"
     kanji: "\u4EBA"
+    meaningFull: 
     meaning:
     - person
   - kana: "\u3073\u3087\u3046\u3044\u3093"
     kanji: "\u75C5\u9662"
+    meaningFull: 
     meaning:
     - hospital
   - kana: "\u30DB\u30C6\u30EB"
     kanji: 
+    meaningFull: 
     meaning:
     - hotel
   - kana: "\u307B\u3093\u3084"
     kanji: "\u672C\u5C4B"
+    meaningFull: 
     meaning:
     - bookstore
   - kana: "\u307E\u3048"
     kanji: "\u524D"
+    meaningFull: 
     meaning:
     - front, before
     - front
     - before
   - kana: "\u307E\u3061"
     kanji: "\u753A"
+    meaningFull: 
     meaning:
     - Town, city
     - town
     - city
   - kana: "\u307F\u304E"
     kanji: "\u53F3"
+    meaningFull: 
     meaning:
     - right
   - kana: "\u30EC\u30B9\u30C8\u30E9\u30F3"
     kanji: 
+    meaningFull: 
     meaning:
     - restaurant
   - kana: "\u30EC\u30DD\u30FC\u30C8"
     kanji: 
+    meaningFull: 
     meaning:
     - (term) paper
     - paper
+  expressionList: []

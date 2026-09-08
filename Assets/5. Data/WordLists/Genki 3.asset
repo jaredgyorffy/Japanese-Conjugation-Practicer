@@ -13,6 +13,25 @@ MonoBehaviour:
   m_Name: Genki 3
   m_EditorClassIdentifier: Assembly-CSharp::WordList
   <listName>k__BackingField: Genki 3
+  questionTypes:
+  - Title: Polite Verb
+    Category: 100
+    ConjugationTypes:
+      VerbConjugationTypes: 0200000003000000
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 
+  - Title: Expressions
+    Category: 301
+    ConjugationTypes:
+      VerbConjugationTypes: 
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 
+  - Title: Vocab
+    Category: 300
+    ConjugationTypes:
+      VerbConjugationTypes: 00000000
+      AdjectiveConjugationTypes: 00000000
+      NounConjugationTypes: 00000000
   verbList:
   - kana: "\u304F\u308B"
     kanji: "\u6765\u308B"
@@ -416,3 +435,4 @@ MonoBehaviour:
     meaningFull: 
     meaning:
     - Sunday
+  expressionList: []
