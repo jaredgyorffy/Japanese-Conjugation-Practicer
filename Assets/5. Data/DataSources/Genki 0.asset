@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a672388ace1b614981178c265045edd, type: 3}
+  m_Name: Genki 0
+  m_EditorClassIdentifier: Assembly-CSharp::DataSource
+  <SourceName>k__BackingField: Genki 0
+  QuestionTypes:
+  - Title: Basic Expressions
+    Category: 301
+    ConjugationTypes:
+      VerbConjugationTypes: 
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 
+  VerbList: []
+  AdverbList:
+  - kana: "\u3044\u307E"
+    kanji: "\u4ECA"
+    meaningFull: now
+    meaning:
+    - now
+  AdjectiveList: []
+  NounList: []
+  ExpressionList:
+  - kana: "\u3042\u308A\u304C\u3068\u3046"
+    kanji: 
+    meaningFull: Thank you, Thanks
+    meaning:
+    - Thank you
+    - Thanks
+  - kana: "\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059"
+    kanji: 
+    meaningFull: Thank you (polite), Thank you
+    meaning:
+    - Thank you (polite)
+    - Thank you
+  - kana: "\u3044\u3044\u3048"
+    kanji: 
+    meaningFull: No, Not at all
+    meaning:
+    - No
+    - Not at all
+  - kana: "\u3044\u305F\u3060\u304D\u307E\u3059"
+    kanji: 
+    meaningFull: Thank you for the meal (before eating), Thank you for the meal,
+      Lets eat
+    meaning:
+    - Thank you for the meal (before eating)
+    - Thank you for the meal
+    - Lets eat
+  - kana: "\u3044\u3063\u3066\u304D\u307E\u3059"
+    kanji: 
+    meaningFull: "I\u2019ll go and come back,  I'm off, see you later"
+    meaning:
+    - "I\u2019ll go and come back"
+    - I'm off
+    - see you later
+  - kana: "\u3044\u3063\u3066\u3089\u3063\u3057\u3083\u3044"
+    kanji: "\u884C\u3063\u3066\u3089\u3063\u3057\u3083\u3044"
+    meaningFull: Please go and come back, have a good day, take care, see you
+    meaning:
+    - Please go and come back
+    - have a good day
+    - take care
+    - see you
+  - kana: "\u304A\u304B\u3048\u308A\uFF08\u306A\u3055\u3044\uFF09"
+    kanji: 
+    meaningFull: Welcome home
+    meaning:
+    - Welcome home
+  - kana: "\u304A\u306F\u3088\u3046"
+    kanji: 
+    meaningFull: Good morning
+    meaning:
+    - Good morning
+  - kana: "\u304A\u306F\u3088\u3046\u3054\u3056\u3044\u307E\u3059"
+    kanji: 
+    meaningFull: Good morning (polite)
+    meaning:
+    - Good morning (polite)
+  - kana: "\u304A\u3084\u3059\u307F\uFF08\u306A\u3055\u3044\uFF09"
+    kanji: 
+    meaningFull: Good night
+    meaning:
+    - Good night
+  - kana: "\u3054\u3061\u305D\u3046\u3055\u307E\uFF08\u3067\u3057\u305F\uFF09"
+    kanji: 
+    meaningFull: Thank you for the meal (after eating), Thank you for the meal, Thank
+      you for the food
+    meaning:
+    - Thank you for the meal (after eating)
+    - Thank you for the meal
+    - Thank you for the food
+  - kana: "\u3053\u3093\u306B\u3061\u306F"
+    kanji: 
+    meaningFull: Good afternoon
+    meaning:
+    - Good afternoon
+  - kana: "\u3053\u3093\u3070\u3093\u306F"
+    kanji: 
+    meaningFull: Good evening
+    meaning:
+    - Good evening
+  - kana: "\u3055\u3088\u3046\u306A\u3089"
+    kanji: 
+    meaningFull: Good-bye
+    meaning:
+    - Good-bye
+  - kana: "\u3059\u307F\u307E\u305B\u3093"
+    kanji: 
+    meaningFull: "Excuse me,  I\u2019m sorry"
+    meaning:
+    - Excuse me
+    - "I\u2019m sorry"
+  - kana: "\u305F\u3060\u3044\u307E"
+    kanji: 
+    meaningFull: "I\u2019m home"
+    meaning:
+    - "I\u2019m home"
+  - kana: "\u3067\u3059"
+    kanji: 
+    meaningFull: I am, it is
+    meaning:
+    - I am
+    - it is
+  - kana: "\u306F\u3058\u3081\u307E\u3057\u3066"
+    kanji: 
+    meaningFull: How do you do ?
+    meaning:
+    - How do you do ?

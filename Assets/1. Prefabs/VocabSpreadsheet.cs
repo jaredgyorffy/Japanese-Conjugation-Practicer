@@ -11,6 +11,10 @@ public class VocabSpreadsheet
     public List<Noun> nouns;
     [SpreadsheetPage("adjectives")]
     public List<Adjective> adjectives;
+    [SpreadsheetPage("expressions")]
+    public List<Expression> expressions;
+    [SpreadsheetPage("adverbs")]
+    public List<Adverb> adverbs;
 }
 [CreateAssetMenu(fileName = "SpreadsheetContainer", menuName = "SpreadsheetContainer")]
 public class SpreadsheetContainer : SpreadsheetsContainerBase
