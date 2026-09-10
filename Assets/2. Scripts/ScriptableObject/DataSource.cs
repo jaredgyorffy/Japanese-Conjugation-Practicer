@@ -9,9 +9,18 @@ using System;
 public class DataSource : ScriptableObject
 {
     [Button]
+    public void FormatData()
+    {
+        AddAnswersNouns();
+        AddAnswersVerbs();
+        AddAnswersAdjectives();
+        AddAnswersAdverbs();
+        AddAnswersExpressions();
+    }
+
     public void AddAnswersNouns()
     {
-        foreach (Noun noun in NounList)
+        foreach (Noun noun in VocabData.NounList)
         {
             List<string> items = noun.MeaningFull
             .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
@@ -23,10 +32,9 @@ public class DataSource : ScriptableObject
         }
     }
 
-    [Button]
     public void AddAnswersVerbs()
     {
-        foreach (Verb verb in VerbList)
+        foreach (Verb verb in VocabData.VerbList)
         {
             List<string> items = verb.MeaningFull
             .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
@@ -38,10 +46,9 @@ public class DataSource : ScriptableObject
         }
     }
 
-    [Button]
     public void AddAnswersAdjectives()
     {
-        foreach (Adjective verb in AdjectiveList)
+        foreach (Adjective verb in VocabData.AdjectiveList)
         {
             List<string> items = verb.MeaningFull
             .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
@@ -53,10 +60,9 @@ public class DataSource : ScriptableObject
         }
     }
 
-    [Button]
     public void AddAnswersExpressions()
     {
-        foreach (Expression expression in ExpressionList)
+        foreach (Expression expression in VocabData.ExpressionList)
         {
             List<string> items = expression.MeaningFull
             .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
@@ -68,10 +74,9 @@ public class DataSource : ScriptableObject
         }
     }
 
-    [Button]
     public void AddAnswersAdverbs()
     {
-        foreach (Adverb adverb in AdverbList)
+        foreach (Adverb adverb in VocabData.AdverbList)
         {
             List<string> items = adverb.MeaningFull
             .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
@@ -82,11 +87,36 @@ public class DataSource : ScriptableObject
             adverb.Meaning.AddRange(items);
         }
     }
-
     [Button]
+    public void PopulateGrammer()
+    {
+        foreach (GrammerExample example in VocabData.GrammerExamples)
+        {
+            bool containsKey = false;
+
+            foreach (var grammer in VocabData.GrammerList)
+            {
+                if (grammer.Key == example.Key)
+                {
+                    grammer.Examples.Add(example);
+                    containsKey = true;
+                }
+            }
+
+            if (containsKey)
+            {
+                continue;
+            }
+            Grammer newGrammer = new Grammer(example.Answer, example.Answer, example.Key);
+            newGrammer.Examples = new();
+            newGrammer.Examples.Add(example);
+            VocabData.GrammerList.Add(newGrammer);
+        }
+    }
+
     public void RemoveDuplicates()
     {
-        foreach (Noun noun in NounList)
+        foreach (Noun noun in VocabData.NounList)
         {
             HashSet<string> noDuplicates = new HashSet<string>(
                     noun.Meaning,
@@ -96,11 +126,8 @@ public class DataSource : ScriptableObject
             noun.Meaning.AddRange(new List<string>(noDuplicates).ToArray());
         }
     }
+
     [field: SerializeField] public string SourceName { get; private set; }
     [field: SerializeField] public List<QuestionType> QuestionTypes;
-    [field: SerializeField] public List<Verb> VerbList;
-    [field: SerializeField] public List<Adverb> AdverbList;
-    [field: SerializeField] public List<Adjective> AdjectiveList;
-    [field: SerializeField] public List<Noun> NounList;
-    [field: SerializeField] public List<Expression> ExpressionList;
+    [field: SerializeField] public VocabData VocabData;
 }

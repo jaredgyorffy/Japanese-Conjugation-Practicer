@@ -16,7 +16,7 @@ public class Adjective : IWord
     public AdjectiveType AdjectiveType => adjectiveType;
     [SerializeField] private AdjectiveType adjectiveType;
     public string MeaningFull => meaningFull;
-    [SerializeField] private string meaningFull;
+    private string meaningFull;
     public List<string> Meaning => meaning;
     [SerializeField] private List<string> meaning;
 
