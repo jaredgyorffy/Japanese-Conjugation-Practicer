@@ -12,7 +12,7 @@ public class AdventureMode : MonoBehaviour
     [SerializeField] private UIDocument testScreen;
     private VisualElement testScreenRoot;
 
-    [SerializeField] private SimpleTest simpleTest;
+    [SerializeField] private QuizMediator quizMediator;
 
     [SerializeField] private UIDocument battleMenu;
     private VisualElement battleMenuRoot;
@@ -98,7 +98,9 @@ public class AdventureMode : MonoBehaviour
         SetTestVisible(false);
         SetBattleScreenVisible(true);
         this.config = config;
-        simpleTest.InitializeQuiz(config);
+        quizMediator.SetQuizType(QuestionCategory.Vocab);
+        quizMediator.InitializeQuiz(config);
+
         battleMenu.enabled = true;
         this.playerMaxHP = playerMaxHP;
         playerCurrentHP = playerMaxHP;
@@ -109,6 +111,9 @@ public class AdventureMode : MonoBehaviour
         leftButton.clicked += () => SetNextDirection(DungeonDirection.Left);
         centerButton.clicked += () => SetNextDirection(DungeonDirection.Forward);
         rightButton.clicked += () => SetNextDirection(DungeonDirection.Right);
+
+        quizMediator.CurrentQuiz.SetQuestionType(GetRandomQuestionType(config.questionTypes));
+
         SetDirectionButtonVisibility(false);
         campaignOrder = GenerateMonsterOrder(enemies);
         TryGenerateRandomMonster();
@@ -116,13 +121,13 @@ public class AdventureMode : MonoBehaviour
         monsterSprite.enabled = true;
         animator.SetBool("Spawned", true);
         this.restartAction = restartAction;
-
         if (Initialized)
         {
             return;
         }
-        simpleTest.AnswerSubmitted += ResolveBattle;
+        quizMediator.AnswerSubmitted += ResolveBattle;
         Initialized = true;
+
     }
 
     private void SetDirectionButtonVisibility(bool visibility)
@@ -180,8 +185,7 @@ public class AdventureMode : MonoBehaviour
     {
         if (Initialized)
         {
-            simpleTest.AnswerSubmitted -= ResolveBattle;
-            simpleTest.Unsubscribe();
+            quizMediator.AnswerSubmitted -= ResolveBattle;
             SetBattleScreenVisible(false);
             SetTestVisible(true);
         }
@@ -217,25 +221,26 @@ public class AdventureMode : MonoBehaviour
         }
     }
 
-    private void SetQuestion()
+    private void ProceedInDungeon()
     {
         if (enemyCurrentHP <= 0)
         {
             if (dungeonGenerator.CurrentTile.Endpoints.Count > 1)
             {
-                if (campaignOrder.TryPeek(out _))
+                if (campaignOrder.TryPeek(out _) == false)
                 {
                     battleText = $"You are the Conjugation Master!";
                     Invoke("VictoryCondition", inputDelay);
                 }
                 dungeonGenerator.MoveToDecisionPoint(PathChoosingSequence);
+                return;
             }
             else
             {
                 TryGenerateRandomMonster();
                 dungeonGenerator.GenerateNextTile(DungeonDirection.None);
+                return;
             }
-            return;
         }
 
         if (playerCurrentHP <= 0)
@@ -243,7 +248,7 @@ public class AdventureMode : MonoBehaviour
             restartAction.Invoke();
             return;
         }
-        simpleTest.PrepareNextQuestion();
+        quizMediator.CurrentQuiz.PrepareNextQuestion();
         SetTestVisible(true);
     }
 
@@ -254,16 +259,38 @@ public class AdventureMode : MonoBehaviour
 
     IEnumerator ChooseDungeonPath(Action action)
     {
-        List<Monster> monsters = GenerateMonsters(dungeonGenerator.CurrentTile.Endpoints);
+        List<QuestionType> monsters = GenerateQuestionTypes(dungeonGenerator.CurrentTile.Endpoints);
         InitializeDirectionButtons(dungeonGenerator.CurrentTile.Endpoints, monsters);
         battleText = $"Waiting for Input";
 
         currentDirectionInput = DungeonDirection.None;
         yield return new WaitUntil(() => currentDirectionInput != DungeonDirection.None);
+
         SetDirectionButtonVisibility(false);
         int currentMonsterIndex = GetSelectedDirectionIndex(currentDirectionInput, dungeonGenerator.CurrentTile.Endpoints);
-        currentMonster = monsters[currentMonsterIndex];
+        quizMediator.CurrentQuiz.SetQuestionType(monsters[currentMonsterIndex]);
+        TryGenerateRandomMonster();
         DungeonTile nextTile = dungeonGenerator.GenerateNextTile(currentDirectionInput);
+    }
+
+    private List<QuestionType> GenerateQuestionTypes(List<DungeonEndPoint> endpoints)
+    {
+        List<QuestionType> questionLibrary = new();
+        questionLibrary.AddRange(config.questionTypes);
+        List <QuestionType> choices = new();
+
+        for (int i = 0; i < endpoints.Count; i++)
+        {
+            QuestionType questionType = GetRandomQuestionType(questionLibrary);
+            questionLibrary.Remove(questionType);
+            choices.Add(questionType);
+        }
+        return choices;
+    }
+
+    private QuestionType GetRandomQuestionType(List<QuestionType> questions)
+    {
+        return questions[UnityEngine.Random.Range(0, questions.Count)];
     }
 
     private int GetSelectedDirectionIndex(DungeonDirection currentDirectionInput, List<DungeonEndPoint> Endpoints)
@@ -278,7 +305,7 @@ public class AdventureMode : MonoBehaviour
         return 0;
     }
 
-    private void InitializeDirectionButtons(List<DungeonEndPoint> Endpoints, List<Monster> monsters)
+    private void InitializeDirectionButtons(List<DungeonEndPoint> Endpoints, List<QuestionType> monsters)
     {
         SetDirectionButtonVisibility(false);
         for (int i = 0; i < Endpoints.Count; i++)
@@ -287,19 +314,19 @@ public class AdventureMode : MonoBehaviour
             {
                 leftButton.AddToClassList("Visible");
                 leftButton.RemoveFromClassList("Hidden");
-                leftText = monsters[i].Description;
+                leftText = monsters[i].Title;
             }
             else if (Endpoints[i].Direction == DungeonDirection.Forward)
             {
                 centerButton.AddToClassList("Visible");
                 centerButton.RemoveFromClassList("Hidden");
-                forwardText = monsters[i].Description;
+                forwardText = monsters[i].Title;
             }
             else if (Endpoints[i].Direction == DungeonDirection.Right)
             {
                 rightButton.AddToClassList("Visible");
                 rightButton.RemoveFromClassList("Hidden");
-                rightText = monsters[i].Description;
+                rightText = monsters[i].Title;
             }
         }
     }
@@ -334,13 +361,13 @@ public class AdventureMode : MonoBehaviour
         enemy.RemoveFromClassList("Hidden");
         enemy.AddToClassList("Visible");
         battleText = $"A wild {currentMonster.Name} appears!";
-        simpleTest.SetQuestionTypes(currentMonster.ConjugationTypes);
 
         SetMonsterSprite((int)currentMonster.MonsterType);
         animator.SetBool("Death", false);
         animator.SetBool("Spawned", true);
         monsterSprite.enabled = true;
-        Invoke("SetQuestion", inputDelay);
+
+        StartCoroutine("ProceedInDungeon", inputDelay);
     }
 
     private void TryGenerateRandomMonster()
@@ -349,36 +376,8 @@ public class AdventureMode : MonoBehaviour
         {
             currentMonster = monsterLibrary.GetRandomMonsterByDifficulty(campaignOrder.Dequeue());
         }
-        else
-        {
-            battleText = $"You are the Conjugation Master!";
-            Invoke("VictoryCondition", inputDelay);
-            return;
-        }
     }
 
-    private List<Monster> GenerateMonsters(List<DungeonEndPoint> endpoints)
-    {
-        if (campaignOrder.TryPeek(out _))
-        {
-            List<Monster> monsterList = monsterLibrary.GetMonsterListByDifficulty(campaignOrder.Dequeue());
-            List<Monster> choices = new();
-            //monsterList.Remove(currentMonster);
-            for (int i = 0; i < endpoints.Count; i++)
-            {
-                Monster monster = monsterLibrary.GetRandomMonsterFromList(monsterList);
-                monsterList.Remove(monster);
-                choices.Add(monster);
-            }
-            return choices;
-        }
-        else
-        {
-            battleText = $"You are the Conjugation Master!";
-            Invoke("VictoryCondition", inputDelay);
-            return null;
-        }
-    }
 
     private void SetMonsterSprite(int monster)
     {
@@ -432,7 +431,7 @@ public class AdventureMode : MonoBehaviour
             battleText = $"Defeat: You have been Conjugated.";
         }
 
-        Invoke("SetQuestion", inputDelay);
+        Invoke("ProceedInDungeon", inputDelay);
     }
 
     private void OnDestroy()

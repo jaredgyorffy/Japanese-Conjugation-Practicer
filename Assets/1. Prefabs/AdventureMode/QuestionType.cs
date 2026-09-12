@@ -12,6 +12,7 @@ public class QuestionType
 public enum QuestionCategory
 {
     None = 0,
+    Conjugation = 1,
 
     Polite = 100,
     Standard = 101,
@@ -34,5 +35,4 @@ public enum QuestionCategory
     Grammer = 500,
     Numbers = 501,
     KoSoADo = 502,
-
 }

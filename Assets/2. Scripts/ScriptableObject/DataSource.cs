@@ -87,8 +87,9 @@ public class DataSource : ScriptableObject
             adverb.Meaning.AddRange(items);
         }
     }
+
     [Button]
-    public void PopulateGrammer()
+    public void PopulateGrammerExamples()
     {
         foreach (GrammerExample example in VocabData.GrammerExamples)
         {

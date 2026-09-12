@@ -6,11 +6,6 @@ public static class Hint
     public static string GetHint(IWord word, ConjugationType conjugationType)
     {
         string hint = "";
-        
-        if (conjugationType == ConjugationType.Meaning)
-        {
-            return "Hints for meaning is unavailable. Git Good and memorize your vocab";
-        }
 
         if (word.WordType == WordType.Verb)
         {

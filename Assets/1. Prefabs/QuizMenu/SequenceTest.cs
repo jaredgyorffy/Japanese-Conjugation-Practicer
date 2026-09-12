@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 
 public class SequenceTest : MonoBehaviour
 {
-    [SerializeField] private UIDocument quizMenu;
+    /*[SerializeField] private UIDocument quizMenu;
     private VisualElement quizMenuRoot;
     private Button submitButton;
     private Button restartButton;
@@ -24,8 +24,8 @@ public class SequenceTest : MonoBehaviour
 
     private ConjugationTypes conjugationTypes;
 
-    [CreateProperty] public string QuestionType => questionType;
-    private string questionType;
+    [CreateProperty] public string QuestionTitle => questionTitle;
+    private string questionTitle;
 
     private IWord currentWord;
     private ConjugationType currentConjugationType;
@@ -84,7 +84,7 @@ public class SequenceTest : MonoBehaviour
                 evt.StopImmediatePropagation();
                 OnPressSubmit();
             }
-        });*/
+        });
 
         textField.RegisterCallback<NavigationSubmitEvent>(OnPressEnterToSubmit, TrickleDown.TrickleDown);
     }
@@ -164,7 +164,7 @@ public class SequenceTest : MonoBehaviour
             textField.Focus();
             return;
         }
-        if (currentConjugationType != ConjugationType.Meaning)
+        /*if (currentConjugationType != ConjugationType.Meaning)
         {
             if (textField.value.ContainsEnglishCharacters())
             {
@@ -255,13 +255,7 @@ public class SequenceTest : MonoBehaviour
 
         Question question = GetQuestion();
 
-        (List<string> answer, string type) questionData = QuizUtility.GetQuestionAndAnswer(question, WordLists);
-
-        int wordIndex = question.Index;
-        ConjugationType form = question.conjugationType;
-        WordType wordType = question.Wordtype;
-
-        if (form == ConjugationType.Meaning)
+        /*if (form == ConjugationType.Meaning)
         {
             textConverter.SetEnabled(false);
         }
@@ -270,7 +264,7 @@ public class SequenceTest : MonoBehaviour
             textConverter.SetEnabled(true);
         }
 
-        questionType = questionData.type;
+        questionTitle = questionData.type;
         currentAnswer = questionData.answer;
 
         if (wordType == WordType.Verb)
@@ -377,5 +371,5 @@ public class SequenceTest : MonoBehaviour
         {
             Unsubscribe();
         }
-    }
+    }*/
 }

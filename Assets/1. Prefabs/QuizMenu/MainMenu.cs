@@ -52,10 +52,10 @@ public class MainMenu : MonoBehaviour
     private void Adventure()
     {
         QuizConfiguration config = InitializeQuiz();
-        if (sequenceTest.Initialized)
+        /*if (sequenceTest.Initialized)
         {
             sequenceTest.Unsubscribe();
-        }
+        }*/
 
         int adventureLength = 3;
         if (AdventureLength != null)
@@ -115,7 +115,7 @@ public class MainMenu : MonoBehaviour
         {
             adventure.Unsubscribe();
         }
-        sequenceTest.InitializeQuiz(config, questions, Restart);
+        //sequenceTest.InitializeQuiz(config, questions, Restart);
         root.visible = false;
     }
 
@@ -174,9 +174,9 @@ public class MainMenu : MonoBehaviour
         for (int i = 0; i < globalVariables.WordLists.Count; i++)
         {
             var toggleBox = togglePrefab.Instantiate();
-            toggleBox.MQ<Label>().text = globalVariables.WordLists[i].listName;
+            toggleBox.MQ<Label>().text = globalVariables.WordLists[i].SourceName;
 
-            if (globalVariables.WordLists[i].listName.Contains("Debug") == false)
+            if (globalVariables.WordLists[i].SourceName.Contains("Debug") == false)
             {
                 toggleBox.MQ<Toggle>().value = true;
             }
@@ -238,9 +238,13 @@ public class MainMenu : MonoBehaviour
         {
             if (contentToggles[i] != null && contentToggles[i].value)
             {
-                config.Verbs.AddRange(globalVariables.WordLists[i].verbList);
-                config.Adjectives.AddRange(globalVariables.WordLists[i].adjectiveList);
-                config.Nouns.AddRange(globalVariables.WordLists[i].nounList);
+                config.Verbs.AddRange(globalVariables.WordLists[i].VocabData.VerbList);
+                config.Adjectives.AddRange(globalVariables.WordLists[i].VocabData.AdjectiveList);
+                config.Nouns.AddRange(globalVariables.WordLists[i].VocabData.NounList);
+                config.Expressions.AddRange(globalVariables.WordLists[i].VocabData.ExpressionList);
+                config.Adverbs.AddRange(globalVariables.WordLists[i].VocabData.AdverbList);
+                config.Grammers.AddRange(globalVariables.WordLists[i].VocabData.GrammerList);
+                config.questionTypes.AddRange(globalVariables.WordLists[i].QuestionTypes);
             }
         }
 
@@ -260,7 +264,6 @@ public class MainMenu : MonoBehaviour
 public class QuizConfiguration
 {
     public bool AdventureMode;
-
     public bool VerbMeaning;
     public bool VerbPoliteNonpastForm;
     public bool VerbPoliteNonpastNegativeForm;
@@ -291,10 +294,13 @@ public class QuizConfiguration
     public bool Strictmode = false;
     public bool UseKanaKeyboard = false;
 
-
+    public List<QuestionType> questionTypes = new();
     public List<Verb> Verbs = new();
     public List<Adjective> Adjectives = new();
+    public List<Adverb> Adverbs = new();
+    public List<Expression> Expressions = new();
     public List<Noun> Nouns = new();
+    public List<Grammer> Grammers = new();
     public bool IsValid()
     {
         return AdjectiveSelected() || VerbsSelected() || NounSelected();

@@ -431,8 +431,9 @@ GameObject:
   m_Component:
   - component: {fileID: 543165419}
   - component: {fileID: 543165418}
-  - component: {fileID: 543165420}
   - component: {fileID: 543165421}
+  - component: {fileID: 543165420}
+  - component: {fileID: 543165422}
   m_Layer: 0
   m_Name: Quiz Menu
   m_TagString: Untagged
@@ -501,10 +502,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 543165417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb58b2e8b86d0814e92ed383bec3a2ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 3042a92d19b54da4a9a99a87d0e72df1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuizMenu
+  quizMenu: {fileID: 543165418}
+--- !u!114 &543165422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543165417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0b8ccfe9889574496405a9015a5273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTest
-  quizMenu: {fileID: 543165418}
 --- !u!1 &689657733
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689657736}
   - component: {fileID: 689657735}
-  - component: {fileID: 689657737}
+  - component: {fileID: 689657738}
   m_Layer: 0
   m_Name: AdventureMode
   m_TagString: Untagged
@@ -536,7 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdventureMode
   testScreen: {fileID: 543165418}
-  simpleTest: {fileID: 689657737}
+  quizMediator: {fileID: 689657738}
   battleMenu: {fileID: 1169017270}
   DebugEnemyHealth: 1
   inputDelay: 3
@@ -558,7 +571,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &689657737
+--- !u!114 &689657738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -567,10 +580,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 689657733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f0b8ccfe9889574496405a9015a5273, type: 3}
+  m_Script: {fileID: 11500000, guid: a36e660fba8a63444a28a22036e9ad1a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SimpleTest
-  quizMenu: {fileID: 543165418}
+  m_EditorClassIdentifier: Assembly-CSharp::QuizMediator
+  quizMenu: {fileID: 543165421}
+  defaultQuiz: {fileID: 543165422}
 --- !u!1 &742139356
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9911097462e2d468468c35c3df65d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  sequenceTest: {fileID: 543165421}
+  sequenceTest: {fileID: 0}
   adventure: {fileID: 689657735}
   togglePrefab: {fileID: 9197481963319205126, guid: 57db5c9776dabb6468ad1ea3148be33b, type: 3}
   inputManager: {fileID: 1478899879}

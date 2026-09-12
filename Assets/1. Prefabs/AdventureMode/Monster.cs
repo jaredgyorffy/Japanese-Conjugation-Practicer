@@ -6,7 +6,7 @@ public class Monster
 {
     public string Name;
     public string Description;
-    public ConjugationTypes ConjugationTypes;
+    //public ConjugationTypes ConjugationTypes;
     public float MaxHP;
     public Color Tint;
     public MonsterType MonsterType;

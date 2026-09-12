@@ -12,7 +12,7 @@ public class Adverb : IWord
 
     public WordType WordType => WordType.Adverb;
     public string MeaningFull => meaningFull;
-    private string meaningFull;
+    [SerializeField] private string meaningFull;
     public List<string> Meaning => meaning;
     [SerializeField] private List<string> meaning;
 }

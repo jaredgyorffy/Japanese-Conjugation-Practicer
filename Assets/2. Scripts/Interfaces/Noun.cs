@@ -4,6 +4,17 @@ using UnityEngine;
 [Serializable]
 public class Noun : IWord
 {
+    public Noun()
+    {
+
+    }
+
+    public Noun(string kana, string kanji, List<string> meaning)
+    {
+        this.kana = kana;
+        this.kanji = kanji;
+        this.meaning = meaning;
+    }
     public string Kana => kana;
     [SerializeField] private string kana;
 
@@ -12,7 +23,7 @@ public class Noun : IWord
 
     public WordType WordType => WordType.Noun;
     public string MeaningFull => meaningFull;
-    private string meaningFull;
+    [SerializeField] private string meaningFull;
     public List<string> Meaning => meaning;
     [SerializeField] private List<string> meaning;
 

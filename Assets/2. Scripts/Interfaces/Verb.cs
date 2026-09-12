@@ -17,7 +17,7 @@ public class Verb : IWord
     public VerbType VerbType => verbType;
     [SerializeField] private VerbType verbType;
     public string MeaningFull => meaningFull;
-    private string meaningFull;
+    [SerializeField] private string meaningFull;
     public List <string> Meaning => meaning;
     [SerializeField] private List<string> meaning;
     public string PoliteNonpast => ConjugatePoliteNonpast(kana);
@@ -609,7 +609,6 @@ public enum VerbType
 
 public enum ConjugationType
 {
-    Meaning,
     StandardNonpast,
     PoliteNonpast,
     PoliteNonpastNegative,
