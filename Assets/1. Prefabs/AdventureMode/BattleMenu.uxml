@@ -18,9 +18,9 @@
         <ui:VisualElement style="flex-grow: 0; position: relative; width: 100%; height: 35%; align-items: center; justify-content: center; align-self: flex-start; align-content: flex-start;">
             <ui:Image name="EnemySprite" scale-mode="ScaleToFit" style="height: auto; flex-direction: column; align-items: flex-start; flex-grow: 0; flex-shrink: 0; width: 110%; aspect-ratio: 1; margin-top: 0%; margin-right: 0%; margin-bottom: 0%; margin-left: 0%; padding-top: 0%; padding-right: 0%; padding-bottom: 0%; padding-left: 0%; display: flex; visibility: visible; background-image: url(&quot;project://database/Assets/8.External/Slime/idle.png?fileID=1368250707&amp;guid=e8a852d7500e4154bbfcc181bbbae9e9&amp;type=3#idle_1&quot;); position: absolute; background-size: 200% 200%; align-self: flex-start; justify-content: flex-start; left: -5%; -unity-background-image-tint-color: rgb(255, 255, 255);"/>
         </ui:VisualElement>
-        <ui:VisualElement name="DialogueBox" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/4.%20Art/Textures/UI/Dialogue/Border%20All%201.png?fileID=-1900623708&amp;guid=114c630690e13b74aacfaedbabcaa557&amp;type=3#Border All 1_44&quot;); -unity-slice-scale: 1px; -unity-slice-left: 0; height: 25%; justify-content: space-around; align-items: auto; align-self: center; align-content: auto; margin-top: 0%; margin-right: 0%; margin-bottom: 0%; margin-left: 0%; padding-top: 0%; padding-right: 0%; padding-bottom: 0%; padding-left: 0%; width: 100%;">
-            <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; align-self: center; align-items: auto; flex-direction: column; top: auto; width: 85%; height: 70%; position: relative; justify-content: flex-start; align-content: auto; -unity-text-align: upper-left;">
-                <ui:Label text="Incorrect.The Answer was うえでした" name="BattleText" class="Title" style="flex-grow: 1; flex-shrink: 0; white-space: normal; -unity-text-align: middle-center; margin-top: 0%; margin-right: 0%; margin-bottom: 0%; margin-left: 0%; -unity-font-style: normal; width: auto; height: auto; color: rgb(255, 255, 255); text-overflow: clip; font-size: 33%; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 5px 100px; overflow: visible;">
+        <ui:VisualElement name="DialogueBox" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/4.%20Art/Textures/UI/Dialogue/Border%20All%201.png?fileID=-1900623708&amp;guid=114c630690e13b74aacfaedbabcaa557&amp;type=3#Border All 1_44&quot;); -unity-slice-scale: 1px; -unity-slice-left: 0; height: 25%; justify-content: space-around; align-items: auto; align-self: center; align-content: auto; margin-top: 0%; margin-right: 0%; margin-bottom: 0%; margin-left: 0%; padding-top: 0%; padding-right: 0%; padding-bottom: 0%; padding-left: 0%; width: 100%; transition-duration: 0.5s;">
+            <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; align-self: center; align-items: auto; flex-direction: column; top: auto; width: 85%; height: 85%; position: relative; justify-content: flex-start; align-content: auto; display: flex;">
+                <ui:Label text="Incorrect.The Answer was うえでした" name="BattleText" class="Title" style="flex-grow: 1; flex-shrink: 0; white-space: pre-wrap; -unity-text-align: upper-center; margin-top: 0%; margin-right: 0%; margin-bottom: 0%; margin-left: 0%; -unity-font-style: normal; width: auto; height: auto; color: rgb(255, 255, 255); text-overflow: clip; font-size: 33%; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 5px 100px; overflow: visible; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
                     <Bindings>
                         <ui:DataBinding property="text" data-source-path="BattleText" binding-mode="ToTarget"/>
                     </Bindings>
@@ -37,15 +37,15 @@
             </ui:ProgressBar>
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:Button text="" name="Left" class="FullScreenButton">
+    <ui:Button text="" name="Left" class="FullScreenButton Hidden">
         <ui:Label text="←" name="LeftSymbol" enable-rich-text="false" style="align-self: center; align-items: center; justify-content: center; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 32px 100px; -unity-text-outline-color: rgb(255, 255, 255); font-size: 157px; -unity-text-outline-width: 5px; -unity-font-definition: url(&quot;project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&amp;guid=3f1f45f3d7e637345b21c4ce748e2d38&amp;type=3#EnkaDotGothic24&quot;);"/>
-        <ui:Label text="Standard" name="LeftText" class="DirectionButtonText">
+        <ui:Label text="Basic Expressions" name="LeftText" class="DirectionButtonText">
             <Bindings>
                 <ui:DataBinding property="text" data-source-path="LeftText" binding-mode="ToTarget"/>
             </Bindings>
         </ui:Label>
     </ui:Button>
-    <ui:Button text="" name="Forward" class="FullScreenButton" style="width: 33%; height: 100%; position: absolute; align-items: center; align-self: center;">
+    <ui:Button text="" name="Forward" class="FullScreenButton Hidden" style="width: 33%; height: 100%; position: absolute; align-items: center; align-self: center;">
         <ui:Label text="↑" name="ForwardSymbol" enable-rich-text="false" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 32px 100px; -unity-text-outline-color: rgb(255, 255, 255); font-size: 157px; -unity-text-outline-width: 5px; -unity-font-definition: url(&quot;project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&amp;guid=3f1f45f3d7e637345b21c4ce748e2d38&amp;type=3#EnkaDotGothic24&quot;); align-items: center; align-self: center; flex-shrink: 1;"/>
         <ui:Label text="Standard" name="ForwardText" class="DirectionButtonText">
             <Bindings>
@@ -53,9 +53,9 @@
             </Bindings>
         </ui:Label>
     </ui:Button>
-    <ui:Button text="" name="Right" class="FullScreenButton" style="width: 33%; height: 100%; align-self: flex-end; align-items: center;">
+    <ui:Button text="" name="Right" class="FullScreenButton Hidden" style="width: 33%; height: 100%; align-self: flex-end; align-items: center;">
         <ui:Label text="→" name="RightSymbol" enable-rich-text="false" style="-unity-text-generator: advanced; -unity-text-auto-size: best-fit 32px 100px; -unity-text-outline-color: rgb(255, 255, 255); font-size: 157px; -unity-text-outline-width: 5px; -unity-font-definition: url(&quot;project://database/Assets/4.%20Art/Fonts/EnkaDotGothic24.ttf?fileID=12800000&amp;guid=3f1f45f3d7e637345b21c4ce748e2d38&amp;type=3#EnkaDotGothic24&quot;); align-items: center; align-self: center; flex-shrink: 1;"/>
-        <ui:Label text="Standard" name="RightText" class="DirectionButtonText">
+        <ui:Label text="Grammer" name="RightText" class="DirectionButtonText">
             <Bindings>
                 <ui:DataBinding property="text" data-source-path="RightText" binding-mode="ToTarget"/>
             </Bindings>

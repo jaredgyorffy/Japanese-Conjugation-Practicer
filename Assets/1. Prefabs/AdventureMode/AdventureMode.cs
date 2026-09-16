@@ -40,7 +40,7 @@ public class AdventureMode : MonoBehaviour
     private string forwardText;
 
     private Action restartAction;
-    [SerializeField] private bool DebugEnemyHealth;
+    private bool debugEnemyHealth = false;
 
     [SerializeField] private float inputDelay = 5;
     private int playerDefaultMaxHP;
@@ -52,6 +52,7 @@ public class AdventureMode : MonoBehaviour
     private Image uiMonsterSprite;
     private Queue<MonsterDifficulty> campaignOrder;
     private VisualElement enemy;
+    private VisualElement dialogueBox;
     [SerializeField] MonsterLibrary monsterLibrary;
     [SerializeField] private DungeonGenerator dungeonGenerator;
     private Button leftButton;
@@ -70,6 +71,7 @@ public class AdventureMode : MonoBehaviour
         testScreenRoot = testScreen.rootVisualElement.MQ<VisualElement>("Panel");
         uiMonsterSprite = battleMenuRoot.MQ<Image>("EnemySprite");
         enemy = battleMenuRoot.MQ<VisualElement>("Enemy");
+        dialogueBox = battleMenuRoot.MQ<VisualElement>("DialogueBox");
         animator = monster.GetComponent<Animator>();
         monsterSprite = monster.GetComponent<SpriteRenderer>();
         battleMenuRoot.dataSource = this;
@@ -79,6 +81,22 @@ public class AdventureMode : MonoBehaviour
         leftButton = battleMenuRoot.MQ<Button>("Left");
         rightButton = battleMenuRoot.MQ<Button>("Right");
         centerButton = battleMenuRoot.MQ<Button>("Forward");
+    }
+
+    private void SetDialogueBoxText(string text)
+    {
+        if (text == "")
+        {
+            battleText = "";
+            dialogueBox.RemoveFromClassList("Visible");
+            dialogueBox.AddToClassList("Hidden");
+        }
+        else
+        {
+            battleText = text;
+            dialogueBox.RemoveFromClassList("Hidden");
+            dialogueBox.AddToClassList("Visible");
+        }
     }
 
     private void Update()
@@ -100,7 +118,7 @@ public class AdventureMode : MonoBehaviour
         this.config = config;
         quizMediator.SetQuizType(QuestionCategory.Vocab);
         quizMediator.InitializeQuiz(config);
-
+        debugEnemyHealth = config.DebugEnemyHealth;
         battleMenu.enabled = true;
         this.playerMaxHP = playerMaxHP;
         playerCurrentHP = playerMaxHP;
@@ -229,14 +247,16 @@ public class AdventureMode : MonoBehaviour
             {
                 if (campaignOrder.TryPeek(out _) == false)
                 {
-                    battleText = $"You are the Conjugation Master!";
+                    SetDialogueBoxText($"You are the Conjugation Master!");
                     Invoke("VictoryCondition", inputDelay);
+                    return;
                 }
                 dungeonGenerator.MoveToDecisionPoint(PathChoosingSequence);
                 return;
             }
             else
             {
+                SetDialogueBoxText("");
                 TryGenerateRandomMonster();
                 dungeonGenerator.GenerateNextTile(DungeonDirection.None);
                 return;
@@ -261,11 +281,11 @@ public class AdventureMode : MonoBehaviour
     {
         List<QuestionType> monsters = GenerateQuestionTypes(dungeonGenerator.CurrentTile.Endpoints);
         InitializeDirectionButtons(dungeonGenerator.CurrentTile.Endpoints, monsters);
-        battleText = $"Waiting for Input";
+        SetDialogueBoxText ($"Waiting for Input");
 
         currentDirectionInput = DungeonDirection.None;
         yield return new WaitUntil(() => currentDirectionInput != DungeonDirection.None);
-
+        SetDialogueBoxText($"");
         SetDirectionButtonVisibility(false);
         int currentMonsterIndex = GetSelectedDirectionIndex(currentDirectionInput, dungeonGenerator.CurrentTile.Endpoints);
         quizMediator.CurrentQuiz.SetQuestionType(monsters[currentMonsterIndex]);
@@ -346,7 +366,7 @@ public class AdventureMode : MonoBehaviour
     private void DeployMonster()
     {
         playerCurrentHP = playerMaxHP;
-        if (DebugEnemyHealth)
+        if (debugEnemyHealth)
         {
             enemyMaxHP = 1;
         }
@@ -360,14 +380,14 @@ public class AdventureMode : MonoBehaviour
         uiMonsterSprite.style.unityBackgroundImageTintColor = currentMonster.Tint;
         enemy.RemoveFromClassList("Hidden");
         enemy.AddToClassList("Visible");
-        battleText = $"A wild {currentMonster.Name} appears!";
+        SetDialogueBoxText($"A wild {currentMonster.Name} appears!");
 
         SetMonsterSprite((int)currentMonster.MonsterType);
         animator.SetBool("Death", false);
         animator.SetBool("Spawned", true);
         monsterSprite.enabled = true;
 
-        StartCoroutine("ProceedInDungeon", inputDelay);
+        Invoke("ProceedInDungeon", inputDelay);
     }
 
     private void TryGenerateRandomMonster()
@@ -406,7 +426,7 @@ public class AdventureMode : MonoBehaviour
         if (answerCorrect)
         {
             enemyCurrentHP -= 1;
-            battleText = $"{answer} is Correct! Dealt damage to {enemyName}!";
+            SetDialogueBoxText($"{answer} is Correct! Dealt damage to {enemyName}!");
             
             if (enemyCurrentHP > 0)
             {
@@ -416,19 +436,19 @@ public class AdventureMode : MonoBehaviour
         else
         {
             playerCurrentHP -= 1;
-            battleText = $"Incorrect! The correct answer was {answer}.";
+            SetDialogueBoxText($"Incorrect! The correct answer was {answer}.");
             animator.SetTrigger("Attack");
         }
 
         if (enemyCurrentHP <= 0)
         {
             animator.SetBool("Death", true);
-            battleText = $"You defeated the {enemyName}!";
+            SetDialogueBoxText($"You defeated the {enemyName}!");
         }
 
         if (playerCurrentHP <= 0)
         {
-            battleText = $"Defeat: You have been Conjugated.";
+            SetDialogueBoxText($"Defeat: You have been Conjugated.");
         }
 
         Invoke("ProceedInDungeon", inputDelay);

@@ -199,6 +199,13 @@ public class MainMenu : MonoBehaviour
 
         optionsToggles.Add(useAutoKeyboard.MQ<Toggle>());
         option.Add(useAutoKeyboard);
+
+        var DebugEnemyHealth = togglePrefab.Instantiate();
+        DebugEnemyHealth.MQ<Label>().text = "Debug Enemy Health";
+        Toggle DebugEnemyHealthToggle = DebugEnemyHealth.MQ<Toggle>();
+        DebugEnemyHealthToggle.value = false;
+        optionsToggles.Add(DebugEnemyHealthToggle);
+        option.Add(DebugEnemyHealth);
     }
 
     private QuizConfiguration InitializeQuiz()
@@ -250,6 +257,7 @@ public class MainMenu : MonoBehaviour
 
         config.Strictmode = optionsToggles[0].value;
         config.UseKanaKeyboard = optionsToggles[1].value;
+        config.DebugEnemyHealth = optionsToggles[2].value;
 
         return config;
     }
@@ -264,6 +272,7 @@ public class MainMenu : MonoBehaviour
 public class QuizConfiguration
 {
     public bool AdventureMode;
+    public bool DebugEnemyHealth;
     public bool VerbMeaning;
     public bool VerbPoliteNonpastForm;
     public bool VerbPoliteNonpastNegativeForm;
@@ -301,6 +310,7 @@ public class QuizConfiguration
     public List<Expression> Expressions = new();
     public List<Noun> Nouns = new();
     public List<Grammer> Grammers = new();
+
     public bool IsValid()
     {
         return AdjectiveSelected() || VerbsSelected() || NounSelected();

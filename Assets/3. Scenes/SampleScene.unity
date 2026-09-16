@@ -1527,6 +1527,8 @@ MonoBehaviour:
   - {fileID: 3068739266856041062, guid: ec0ae127d32d8bd4baa921de4da32ee4, type: 3}
   - {fileID: 867099293555120590, guid: dfab02c80743a0a4fb418f87f59f05bd, type: 3}
   - {fileID: 7081146523479863795, guid: 9e4ee0d7e8376934a804d0c1d9f2521c, type: 3}
+  - {fileID: 7331002870531163759, guid: 2bfc751f4b2cbe24d9f7038e601d8ea3, type: 3}
+  - {fileID: 7331002870531163759, guid: 95e72008a750a884395c9096381e3813, type: 3}
   DungeonSize: 5
 --- !u!114 &1649793490
 MonoBehaviour:

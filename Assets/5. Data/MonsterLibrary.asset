@@ -13,105 +13,61 @@ MonoBehaviour:
   m_Name: MonsterLibrary
   m_EditorClassIdentifier: Assembly-CSharp::MonsterLibrary
   EasyMonsters:
-  - Name: Respectful Randy
-    Description: Polite
-    ConjugationTypes:
-      VerbConjugationTypes: 0200000003000000
-      AdjectiveConjugationTypes: 0400000003000000
-      NounConjugationTypes: 
+  - Name: Pinkie
+    Description: 
     MaxHP: 3
-    Tint: {r: 1, g: 0.51257855, b: 0.9287022, a: 1}
+    Tint: {r: 0.9960785, g: 0.7607844, b: 0.8313726, a: 1}
     MonsterType: 0
-  - Name: The Meaning Maverick
-    Description: Vocab
-    ConjugationTypes:
-      VerbConjugationTypes: 00000000
-      AdjectiveConjugationTypes: 00000000
-      NounConjugationTypes: 00000000
+  - Name: Creepy
+    Description: 
     MaxHP: 2
-    Tint: {r: 0.13196516, g: 1, b: 0, a: 1}
+    Tint: {r: 0, g: 0.4156863, b: 0, a: 1}
     MonsterType: 0
-  - Name: Action Adam
-    Description: Verbs
-    ConjugationTypes:
-      VerbConjugationTypes: 02000000030000000400000005000000
-      AdjectiveConjugationTypes: 
-      NounConjugationTypes: 
+  - Name: Blinky
+    Description: 
     MaxHP: 3
-    Tint: {r: 1, g: 0.05669474, b: 0, a: 1}
+    Tint: {r: 0.98823535, g: 0.23137257, b: 0.058823533, a: 1}
     MonsterType: 0
-  - Name: Nancy Noun
-    Description: Nouns
-    ConjugationTypes:
-      VerbConjugationTypes: 
-      AdjectiveConjugationTypes: 
-      NounConjugationTypes: 030000000400000005000000
+  - Name: Clyde
+    Description: 
     MaxHP: 3
-    Tint: {r: 0.6666667, g: 0.5294118, b: 0.21568628, a: 1}
+    Tint: {r: 1, g: 0.6789964, b: 0, a: 1}
+    MonsterType: 0
+  - Name: Inkie
+    Description: 
+    MaxHP: 3
+    Tint: {r: 0.2901961, g: 0.8745099, b: 0.79215693, a: 1}
     MonsterType: 0
   MediumMonsters:
-  - Name: Descriptive Daniel
-    Description: Adjectives
-    ConjugationTypes:
-      VerbConjugationTypes: 
-      AdjectiveConjugationTypes: 080000000700000006000000
-      NounConjugationTypes: 
+  - Name: Dave
+    Description: 
     MaxHP: 3
     Tint: {r: 1, g: 0, b: 0, a: 1}
     MonsterType: 1
-  - Name: Standard Stanley
+  - Name: Stanley
     Description: Standard
-    ConjugationTypes:
-      VerbConjugationTypes: 060000000700000008000000
-      AdjectiveConjugationTypes: 
-      NounConjugationTypes: 
     MaxHP: 4
     Tint: {r: 1, g: 1, b: 1, a: 1}
     MonsterType: 1
-  - Name: Negative Nelson
-    Description: Negative
-    ConjugationTypes:
-      VerbConjugationTypes: 06000000080000000300000005000000
-      AdjectiveConjugationTypes: 03000000050000000800000006000000
-      NounConjugationTypes: 03000000050000000800000006000000
+  - Name: The Dark One
+    Description: 
     MaxHP: 4
     Tint: {r: 0, g: 0, b: 0, a: 1}
     MonsterType: 1
   HardMonsters:
-  - Name: Multifarious Manny
-    Description: Verb
-    ConjugationTypes:
-      VerbConjugationTypes: 02000000030000000400000005000000060000000700000008000000090000000a0000000b000000
-      AdjectiveConjugationTypes: 
-      NounConjugationTypes: 
+  - Name: Manny
+    Description: 
     MaxHP: 5
     Tint: {r: 1, g: 0, b: 0, a: 1}
     MonsterType: 0
-  - Name: Tricky Trevor
-    Description: Irregular
-    ConjugationTypes:
-      VerbConjugationTypes: 05000000060000000700000008000000
-      AdjectiveConjugationTypes: 
-      NounConjugationTypes: 
-    MaxHP: 5
-    Tint: {r: 1, g: 0, b: 0, a: 1}
-    MonsterType: 0
-  - Name: Tricky Trent
-    Description: Irregular
-    ConjugationTypes:
-      VerbConjugationTypes: 05000000060000000700000008000000
-      AdjectiveConjugationTypes: 
-      NounConjugationTypes: 
+  - Name: The Trickster
+    Description: 
     MaxHP: 5
     Tint: {r: 1, g: 0, b: 0, a: 1}
     MonsterType: 0
   BossMonsters:
   - Name: "\u30E9\u30B9\u30DC\u30B9"
     Description: Boss
-    ConjugationTypes:
-      VerbConjugationTypes: 00000000020000000300000004000000050000000600000007000000080000000b000000
-      AdjectiveConjugationTypes: 00000000040000000500000003000000060000000700000008000000
-      NounConjugationTypes: 00000000030000000400000005000000060000000700000008000000
     MaxHP: 10
     Tint: {r: 0, g: 0, b: 0, a: 1}
     MonsterType: 1

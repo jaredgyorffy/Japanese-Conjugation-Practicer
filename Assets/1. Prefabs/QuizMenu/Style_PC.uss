@@ -104,4 +104,5 @@ VisualElement {
     margin-right: 5%;
     margin-left: 5%;
     transition-duration: 0.5s;
+    white-space: pre-wrap;
 }
