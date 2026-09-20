@@ -1,0 +1,633 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a672388ace1b614981178c265045edd, type: 3}
+  m_Name: Genki 2
+  m_EditorClassIdentifier: Assembly-CSharp::DataSource
+  <SourceName>k__BackingField: Genki 2
+  QuestionTypes:
+  - Title: Vocab
+    Category: 300
+    ConjugationTypes:
+      VerbConjugationTypes: 
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 
+  - Title: Expressions
+    Category: 301
+    ConjugationTypes:
+      VerbConjugationTypes: 
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 
+  - Title: Grammer
+    Category: 500
+    ConjugationTypes:
+      VerbConjugationTypes: 
+      AdjectiveConjugationTypes: 
+      NounConjugationTypes: 
+  VocabData:
+    VerbList: []
+    NounList:
+    - kana: "\u3042\u305D\u3053"
+      kanji: 
+      meaningFull: over there, there, that place
+      meaning:
+      - over there
+      - there
+      - that place
+    - kana: "\u3042\u308C"
+      kanji: 
+      meaningFull: that one (over there), that one over there, that one
+      meaning:
+      - that one (over there)
+      - that one over there
+      - that one
+    - kana: "\u3044\u304F\u3089"
+      kanji: 
+      meaningFull: how much (does it cost), how much
+      meaning:
+      - how much (does it cost)
+      - how much
+    - kana: "\u3048\u3044\u3054"
+      kanji: "\u82F1\u8A9E"
+      meaningFull: English language, english
+      meaning:
+      - English language
+      - english
+    - kana: "\u304B\u3055"
+      kanji: "\u5098"
+      meaningFull: umbrella
+      meaning:
+      - umbrella
+    - kana: "\u304B\u3070\u3093"
+      kanji: 
+      meaningFull: bag, satchel, briefcase, basket
+      meaning:
+      - bag
+      - satchel
+      - briefcase
+      - basket
+    - kana: "\u304E\u3093\u3053\u3046"
+      kanji: "\u9280\u884C"
+      meaningFull: bank
+      meaning:
+      - bank
+    - kana: "\u304F\u3064"
+      kanji: "\u9774"
+      meaningFull: shoes
+      meaning:
+      - shoes
+    - kana: "\u3053\u3053"
+      kanji: 
+      meaningFull: here
+      meaning:
+      - here
+    - kana: "\u3053\u308C"
+      kanji: 
+      meaningFull: this one, this
+      meaning:
+      - this one
+      - this
+    - kana: "\u30B3\u30F3\u30D3\u30CB"
+      kanji: 
+      meaningFull: convenience store
+      meaning:
+      - convenience store
+    - kana: "\u3055\u3044\u3075"
+      kanji: "\u8CA1\u5E03"
+      meaningFull: wallet, purse, handbag
+      meaning:
+      - wallet
+      - purse
+      - handbag
+    - kana: "\u3055\u304B\u306A"
+      kanji: "\u9B5A"
+      meaningFull: fish
+      meaning:
+      - fish
+    - kana: "\u30B8\u30FC\u30F3\u30BA"
+      kanji: 
+      meaningFull: jeans
+      meaning:
+      - jeans
+    - kana: "\u3058\u3066\u3093\u3057\u3083"
+      kanji: "\u81EA\u8EE2\u8ECA"
+      meaningFull: bicycle
+      meaning:
+      - bicycle
+    - kana: "\u3057\u3093\u3076\u3093"
+      kanji: "\u65B0\u805E"
+      meaningFull: newspaper
+      meaning:
+      - newspaper
+    - kana: "\u30B9\u30DE\u30DB"
+      kanji: 
+      meaningFull: smartphone, mobile, celphone, cellphone
+      meaning:
+      - smartphone
+      - mobile
+      - celphone
+      - cellphone
+    - kana: "\u305D\u3053"
+      kanji: 
+      meaningFull: there
+      meaning:
+      - there
+    - kana: "\u305D\u308C"
+      kanji: 
+      meaningFull: that one, there, that
+      meaning:
+      - that one
+      - there
+      - that
+    - kana: "\u3060\u308C"
+      kanji: 
+      meaningFull: who
+      meaning:
+      - who
+    - kana: "\u30C6\u30A3\u30FC\u30B7\u30E3\u30C4"
+      kanji: "\uFF34\u30B7\u30E3\u30C4"
+      meaningFull: T-shirt, tshirt
+      meaning:
+      - T-shirt
+      - tshirt
+    - kana: "\u30C8\u30A4\u30EC"
+      kanji: 
+      meaningFull: toilet, restroom, bathroom, washroom
+      meaning:
+      - toilet
+      - restroom
+      - bathroom
+      - washroom
+    - kana: "\u3068\u3051\u3044"
+      kanji: "\u6642\u8A08"
+      meaningFull: watch, clock
+      meaning:
+      - watch
+      - clock
+    - kana: "\u3069\u3053"
+      kanji: 
+      meaningFull: where, what place
+      meaning:
+      - where
+      - what place
+    - kana: "\u3068\u3057\u3087\u304B\u3093"
+      kanji: "\u56F3\u66F8\u9928"
+      meaningFull: library
+      meaning:
+      - library
+    - kana: "\u3069\u308C"
+      kanji: 
+      meaningFull: which (of three or more), which one, which, whichever
+      meaning:
+      - which (of three or more)
+      - which one
+      - which
+      - whichever
+    - kana: "\u3068\u3093\u304B\u3064"
+      kanji: 
+      meaningFull: pork cutlet
+      meaning:
+      - pork cutlet
+    - kana: "\u306B\u304F"
+      kanji: "\u8089"
+      meaningFull: meat
+      meaning:
+      - meat
+    - kana: "\u30CE\u30FC\u30C8"
+      kanji: 
+      meaningFull: notebook, copy-book, exercise book, note, notebook pc
+      meaning:
+      - notebook
+      - copy-book
+      - exercise book
+      - note
+      - notebook pc
+    - kana: "\u30DA\u30F3"
+      kanji: 
+      meaningFull: pen
+      meaning:
+      - pen
+    - kana: "\u307C\u3046\u3057"
+      kanji: "\u5E3D\u5B50"
+      meaningFull: hat, cap
+      meaning:
+      - hat
+      - cap
+    - kana: "\u30E1\u30CB\u30E5\u30FC"
+      kanji: 
+      meaningFull: menu
+      meaning:
+      - menu
+    - kana: "\u3084\u3055\u3044"
+      kanji: "\u91CE\u83DC"
+      meaningFull: vegetable
+      meaning:
+      - vegetable
+    - kana: "\u3086\u3046\u3073\u3093\u304D\u3087\u304F"
+      kanji: "\u90F5\u4FBF\u5C40"
+      meaningFull: post office
+      meaning:
+      - post office
+    - kana: "\u307B\u3093"
+      kanji: "\u672C"
+      meaningFull: book
+      meaning:
+      - book
+    - kana: "\u3051\u3057\u30B4\u30E0"
+      kanji: "\u6D88\u3057\u30B4\u30E0"
+      meaningFull: eraser
+      meaning:
+      - eraser
+    - kana: "\u3053\u304F\u3070\u3093"
+      kanji: "\u9ED2\u677F"
+      meaningFull: blackboard
+      meaning:
+      - blackboard
+    - kana: "\u3058\u3057\u3087"
+      kanji: "\u8F9E\u66F8"
+      meaningFull: dictionary
+      meaning:
+      - dictionary
+    - kana: "\u30AB\u30FC\u30C6\u30F3"
+      kanji: 
+      meaningFull: curtain
+      meaning:
+      - curtain
+    - kana: "\u3044\u3059"
+      kanji: 
+      meaningFull: chair
+      meaning:
+      - chair
+    - kana: "\u3064\u304F\u3048"
+      kanji: "\u673A"
+      meaningFull: desk
+      meaning:
+      - desk
+    - kana: "\u3067\u3093\u304D"
+      kanji: "\u96FB\u6C17"
+      meaningFull: electricity, light
+      meaning:
+      - electricity
+      - light
+    - kana: "\u307E\u3069"
+      kanji: "\u7A93"
+      meaningFull: window
+      meaning:
+      - window
+    - kana: "\u30C9\u30A2"
+      kanji: 
+      meaningFull: door (Western-style), door
+      meaning:
+      - door (Western-style)
+      - door
+    AdjectiveList:
+    - kana: "\u304A\u3044\u3057\u3044"
+      kanji: 
+      adjectiveType: 0
+      meaningFull: delicious, tasty, sweet
+      meaning:
+      - delicious
+      - tasty
+      - sweet
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    - kana: "\u305F\u304B\u3044"
+      kanji: "\u9AD8\u3044"
+      adjectiveType: 0
+      meaningFull: expensive, high, tall
+      meaning:
+      - expensive
+      - high
+      - tall
+      politePast: 
+      standardPast: 
+      standardNonpastNegative: 
+      politeNonpastNegative: 
+      politePastNegative: 
+      standardPastNegative: 
+    ExpressionList:
+    - kana: "\uFF5E\u3048\u3093"
+      kanji: "\uFF5E\u5186"
+      meaningFull: yen
+      meaning:
+      - yen
+    - kana: "\u3042\u306E"
+      kanji: 
+      meaningFull: that . . . (over there), that over there, that
+      meaning:
+      - that . . . (over there)
+      - that over there
+      - that
+    - kana: "\u3053\u306E"
+      kanji: 
+      meaningFull: this . . ., this
+      meaning:
+      - this . . .
+      - this
+    - kana: "\u305D\u306E"
+      kanji: 
+      meaningFull: that . . ., That
+      meaning:
+      - that . . .
+      - That
+    - kana: "\u3069\u306E"
+      kanji: 
+      meaningFull: Which (Prefix), which, what
+      meaning:
+      - Which (Prefix)
+      - which
+      - what
+    - kana: "\u3044\u3089\u3063\u3057\u3083\u3044\u307E\u305B"
+      kanji: 
+      meaningFull: Welcome (to our store)., Welcome, welcome to our store
+      meaning:
+      - Welcome (to our store).
+      - Welcome
+      - welcome to our store
+    - kana: "\u304A\u306D\u304C\u3044\u3057\u307E\u3059"
+      kanji: 
+      meaningFull: please
+      meaning:
+      - please
+    - kana: "\u304F\u3060\u3055\u3044"
+      kanji: 
+      meaningFull: Please give me, Polite request, please do for me, please give
+        it to me, please do it for me
+      meaning:
+      - Please give me
+      - Polite request
+      - please do for me
+      - please give it to me
+      - please do it for me
+    - kana: "\u3058\u3083\u3042"
+      kanji: 
+      meaningFull: "then (combination of \u3067 and \u306F), then, if that is the
+        case, so, well then, well,"
+      meaning:
+      - "then (combination of \u3067 and \u306F)"
+      - then
+      - if that is the case
+      - so
+      - well then
+      - well
+    - kana: "\u3069\u3046\u305E"
+      kanji: 
+      meaningFull: Please, Here it is, by all means, kindly
+      meaning:
+      - Please
+      - Here it is
+      - by all means
+      - kindly
+    - kana: "\u3069\u3046\u3082"
+      kanji: 
+      meaningFull: Thank you, thanks, much thanks, sorry, very sorry, quite, really,
+        somehow, greetings, hello, goodbye
+      meaning:
+      - Thank you
+      - thanks
+      - much thanks
+      - sorry
+      - very sorry
+      - quite
+      - really
+      - somehow
+      - greetings
+      - hello
+      - goodbye
+    AdverbList: []
+    GrammerList:
+    - Kana: "\u306D"
+      Kanji: 
+      Key: "\u306D"
+      Explanation: "\u306D is classified as a sentence ending particle in Japanese.
+        \u306D is used when the speaker is looking for agreement from someone, or
+        wants confirmation about something. Due to this, it is often translated as
+        'right?', or 'isn't it?'. To use \u306D, simply add it to the end of almost
+        any sentence."
+      Examples:
+      - Question: "\u3044\u3044\u3067\u3059___\u3002"
+        Answer: "\u306D"
+        Translation: That's good right?
+        Hint: Agreement Indicator (sentence ending)
+        Key: "\u306D"
+      - Question: "\u7F8E\u5473\u3057\u3044___\u3002"
+        Answer: "\u306D"
+        Translation: It's delicious, right?
+        Hint: Agreement Indicator (sentence ending)
+        Key: "\u306D"
+      - Question: "\u5BD2\u3044___\uFF01"
+        Answer: "\u306D"
+        Translation: It is cold, isn't it!
+        Hint: Agreement Indicator (sentence ending)
+        Key: "\u306D"
+      - Question: "\u3044\u3044\u8CEA\u554F\u3067\u3059___\u3002"
+        Answer: "\u306D"
+        Translation: That is a good question, right?
+        Hint: Agreement Indicator (sentence ending)
+        Key: "\u306D"
+      - Question: "\u81EA\u8EE2\u8ECA\u306F\u3044\u3044___\u3002\uFE0E"
+        Answer: "\u306D"
+        Translation: Bicycles are nice, aren't they?
+        Hint: Agreement Indicator (sentence ending)
+        Key: "\u306D"
+    - Kana: "\u3088"
+      Kanji: 
+      Key: "\u3088"
+      Explanation: "\u3088 is classified as a sentence ending particle in Japanese.
+        In most cases, it is used to convey new information to the listener, or just
+        to add a bit of emphasis. Like most sentence ending particles, it is simply
+        added to the end of almost any sentence."
+      Examples:
+      - Question: "\u30C8\u30E0\u306F\u8DB3\u304C\u901F\u3044___\u3002"
+        Answer: "\u3088"
+        Translation: Tom has fast feet. (Tom is a fast runner)
+        Hint: Emphasis indicator (Sentence ending)
+        Key: "\u3088"
+      - Question: "\u79C1\u306F\u80CC\u304C\u9AD8\u3044___\u3002"
+        Answer: "\u3088"
+        Translation: I am tall.
+        Hint: Emphasis indicator (Sentence ending)
+        Key: "\u3088"
+      - Question: "\u91CE\u7403\u306F\u697D\u3057\u3044___\u3002"
+        Answer: "\u3088"
+        Translation: Baseball is fun.
+        Hint: Emphasis indicator (Sentence ending)
+        Key: "\u3088"
+      - Question: "\u3053\u308C\u306F\u30B1\u30FC\u30AD\u3060___\u3002"
+        Answer: "\u3088"
+        Translation: This is a cake.
+        Hint: Emphasis indicator (Sentence ending)
+        Key: "\u3088"
+      - Question: "\u305D\u308C\u306F\u3044\u3044___\u3002"
+        Answer: "\u3088"
+        Translation: That is good.
+        Hint: Emphasis indicator (Sentence ending)
+        Key: "\u3088"
+    - Kana: "\u3082"
+      Kanji: 
+      Key: "\u3082"
+      Explanation: "\u3082 can mean 'too/also', or 'even', or 'neither/either', depending
+        on if the sentence is affirmative or negative. Multiple meanings like this
+        are quite common for Japanese particles, as there is no need to use different
+        words simply to agree with other statements in the sentence (unlike English)."
+      Examples:
+      - Question: "\u3042\u306A\u305F\u3082\u30C8\u30E0\u3067\u3059\u3002"
+        Answer: "\u3082"
+        Translation: You are also Tom.
+        Hint: Also, Too, As well, even, either, neither
+        Key: "\u3082"
+      - Question: "\u79C1\u3082\u3002"
+        Answer: "\u3082"
+        Translation: Me too.
+        Hint: Also, Too, As well, even, either, neither
+        Key: "\u3082"
+      - Question: "\u5F7C\u3082\u5148\u751F\u3067\u3059\u3002"
+        Answer: "\u3082"
+        Translation: He is also a teacher.
+        Hint: Also, Too, As well, even, either, neither
+        Key: "\u3082"
+      - Question: "\u670D\u3082\u53E4\u3044\u3002"
+        Answer: "\u3082"
+        Translation: The clothes, too, are old.
+        Hint: Also, Too, As well, even, either, neither
+        Key: "\u3082"
+      - Question: "\u541B\u3082\u3001\u5FD9\u3057\u3044\u3002"
+        Answer: "\u3082"
+        Translation: You are also busy.
+        Hint: Also, Too, As well, even, either, neither
+        Key: "\u3082"
+    - Kana: "\u3060\u308C\u306E"
+      Kanji: 
+      Key: "\u3060\u308C\u306E"
+      Explanation: "means \u201Cwhose\u201D and it\u2019s used to ask about possession
+        or ownership. When followed by a noun, it forms a question asking who something
+        belongs to."
+      Examples:
+      - Question: "___\u304B\u3070\u3093\u3067\u3059\u304B\uFF1F"
+        Answer: "\u3060\u308C\u306E"
+        Translation: ' Whose bag is this?'
+        Hint: Whose
+        Key: "\u3060\u308C\u306E"
+      - Question: "___\u304F\u3064\u3067\u3059\u304B\uFF1F"
+        Answer: "\u3060\u308C\u306E"
+        Translation: Whose shoes are these?
+        Hint: Whose
+        Key: "\u3060\u308C\u306E"
+      - Question: "___\u30DA\u30F3\u3067\u3059\u304B\uFF1F"
+        Answer: "\u3060\u308C\u306E"
+        Translation: Whose pen is this?
+        Hint: Whose
+        Key: "\u3060\u308C\u306E"
+      - Question: "___\u672C\u3067\u3059\u304B\uFF1F "
+        Answer: "\u3060\u308C\u306E"
+        Translation: Whose book is this?
+        Hint: Whose
+        Key: "\u3060\u308C\u306E"
+    GrammerExamples:
+    - Question: "\u3044\u3044\u3067\u3059___\u3002"
+      Answer: "\u306D"
+      Translation: That's good right?
+      Hint: Agreement Indicator (sentence ending)
+      Key: "\u306D"
+    - Question: "\u7F8E\u5473\u3057\u3044___\u3002"
+      Answer: "\u306D"
+      Translation: It's delicious, right?
+      Hint: Agreement Indicator (sentence ending)
+      Key: "\u306D"
+    - Question: "\u5BD2\u3044___\uFF01"
+      Answer: "\u306D"
+      Translation: It is cold, isn't it!
+      Hint: Agreement Indicator (sentence ending)
+      Key: "\u306D"
+    - Question: "\u3044\u3044\u8CEA\u554F\u3067\u3059___\u3002"
+      Answer: "\u306D"
+      Translation: That is a good question, right?
+      Hint: Agreement Indicator (sentence ending)
+      Key: "\u306D"
+    - Question: "\u81EA\u8EE2\u8ECA\u306F\u3044\u3044___\u3002\uFE0E"
+      Answer: "\u306D"
+      Translation: Bicycles are nice, aren't they?
+      Hint: Agreement Indicator (sentence ending)
+      Key: "\u306D"
+    - Question: "\u30C8\u30E0\u306F\u8DB3\u304C\u901F\u3044___\u3002"
+      Answer: "\u3088"
+      Translation: Tom has fast feet. (Tom is a fast runner)
+      Hint: Emphasis indicator (Sentence ending)
+      Key: "\u3088"
+    - Question: "\u79C1\u306F\u80CC\u304C\u9AD8\u3044___\u3002"
+      Answer: "\u3088"
+      Translation: I am tall.
+      Hint: Emphasis indicator (Sentence ending)
+      Key: "\u3088"
+    - Question: "\u91CE\u7403\u306F\u697D\u3057\u3044___\u3002"
+      Answer: "\u3088"
+      Translation: Baseball is fun.
+      Hint: Emphasis indicator (Sentence ending)
+      Key: "\u3088"
+    - Question: "\u3053\u308C\u306F\u30B1\u30FC\u30AD\u3060___\u3002"
+      Answer: "\u3088"
+      Translation: This is a cake.
+      Hint: Emphasis indicator (Sentence ending)
+      Key: "\u3088"
+    - Question: "\u305D\u308C\u306F\u3044\u3044___\u3002"
+      Answer: "\u3088"
+      Translation: That is good.
+      Hint: Emphasis indicator (Sentence ending)
+      Key: "\u3088"
+    - Question: "\u3042\u306A\u305F\u3082\u30C8\u30E0\u3067\u3059\u3002"
+      Answer: "\u3082"
+      Translation: You are also Tom.
+      Hint: Also, Too, As well, even, either, neither
+      Key: "\u3082"
+    - Question: "\u79C1\u3082\u3002"
+      Answer: "\u3082"
+      Translation: Me too.
+      Hint: Also, Too, As well, even, either, neither
+      Key: "\u3082"
+    - Question: "\u5F7C\u3082\u5148\u751F\u3067\u3059\u3002"
+      Answer: "\u3082"
+      Translation: He is also a teacher.
+      Hint: Also, Too, As well, even, either, neither
+      Key: "\u3082"
+    - Question: "\u670D\u3082\u53E4\u3044\u3002"
+      Answer: "\u3082"
+      Translation: The clothes, too, are old.
+      Hint: Also, Too, As well, even, either, neither
+      Key: "\u3082"
+    - Question: "\u541B\u3082\u3001\u5FD9\u3057\u3044\u3002"
+      Answer: "\u3082"
+      Translation: You are also busy.
+      Hint: Also, Too, As well, even, either, neither
+      Key: "\u3082"
+    - Question: "___\u304B\u3070\u3093\u3067\u3059\u304B\uFF1F"
+      Answer: "\u3060\u308C\u306E"
+      Translation: ' Whose bag is this?'
+      Hint: Whose
+      Key: "\u3060\u308C\u306E"
+    - Question: "___\u304F\u3064\u3067\u3059\u304B\uFF1F"
+      Answer: "\u3060\u308C\u306E"
+      Translation: Whose shoes are these?
+      Hint: Whose
+      Key: "\u3060\u308C\u306E"
+    - Question: "___\u30DA\u30F3\u3067\u3059\u304B\uFF1F"
+      Answer: "\u3060\u308C\u306E"
+      Translation: Whose pen is this?
+      Hint: Whose
+      Key: "\u3060\u308C\u306E"
+    - Question: "___\u672C\u3067\u3059\u304B\uFF1F "
+      Answer: "\u3060\u308C\u306E"
+      Translation: Whose book is this?
+      Hint: Whose
+      Key: "\u3060\u308C\u306E"

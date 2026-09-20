@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     private List<Toggle> verbFormToggles = new();
     private List<Toggle> adjectiveFormToggles = new();
     private List<Toggle> nounFormToggles = new();
-    private List<Toggle> contentToggles = new();
+    private List<List<Toggle>> contentToggles = new();
     private List<Toggle> optionsToggles = new();
 
     void Start()
@@ -180,11 +180,26 @@ public class MainMenu : MonoBehaviour
             {
                 toggleBox.MQ<Toggle>().value = true;
             }
-
-            contentToggles.Add(toggleBox.MQ<Toggle>());
+            List<Toggle> subjectToggles = new List<Toggle>();
+            contentToggles.Add(subjectToggles);
+            subjectToggles.Add(toggleBox.MQ<Toggle>());
             content.Add(toggleBox);
+
+            foreach (QuestionType quesiton in globalVariables.WordLists[i].QuestionTypes)
+            {
+                var subject = togglePrefab.Instantiate();
+                subject.MQ<Label>().text = quesiton.Title;
+                var toggle = subject.MQ<Toggle>();
+                toggle.value = true;
+                subjectToggles.Add(toggle);
+                subject.AddToClassList("SubToggle");
+                content.Add(subject);
+            }
         }
-        
+
+
+
+
         VisualElement option = root.MQ<VisualElement>("Options");
         
         var strictModeOption = togglePrefab.Instantiate();
@@ -243,7 +258,7 @@ public class MainMenu : MonoBehaviour
 
         for (int i = 0; i < contentToggles.Count; i++)
         {
-            if (contentToggles[i] != null && contentToggles[i].value)
+            if (contentToggles[i] != null && contentToggles[i][0].value)
             {
                 config.Verbs.AddRange(globalVariables.WordLists[i].VocabData.VerbList);
                 config.Adjectives.AddRange(globalVariables.WordLists[i].VocabData.AdjectiveList);
@@ -251,9 +266,18 @@ public class MainMenu : MonoBehaviour
                 config.Expressions.AddRange(globalVariables.WordLists[i].VocabData.ExpressionList);
                 config.Adverbs.AddRange(globalVariables.WordLists[i].VocabData.AdverbList);
                 config.Grammers.AddRange(globalVariables.WordLists[i].VocabData.GrammerList);
-                config.questionTypes.AddRange(globalVariables.WordLists[i].QuestionTypes);
+
+                for (int j = 0; j < contentToggles[i].Count -1 ; j++)
+                {
+                    if (contentToggles[i][j+1].value)
+                    {
+                        config.questionTypes.Add(globalVariables.WordLists[i].QuestionTypes[j]);
+                    }
+                }
             }
         }
+
+
 
         config.Strictmode = optionsToggles[0].value;
         config.UseKanaKeyboard = optionsToggles[1].value;

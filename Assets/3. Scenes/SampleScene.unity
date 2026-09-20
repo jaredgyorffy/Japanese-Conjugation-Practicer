@@ -551,7 +551,6 @@ MonoBehaviour:
   testScreen: {fileID: 543165418}
   quizMediator: {fileID: 689657738}
   battleMenu: {fileID: 1169017270}
-  DebugEnemyHealth: 1
   inputDelay: 3
   monster: {fileID: 1255470992}
   monsterLibrary: {fileID: 11400000, guid: cd4e58cfc7e89b645958adbed3160838, type: 2}

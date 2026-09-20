@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a672388ace1b614981178c265045edd, type: 3}
   m_Name: Genki 1
   m_EditorClassIdentifier: Assembly-CSharp::DataSource
-  <SourceName>k__BackingField: 
+  <SourceName>k__BackingField: Genki 1
   QuestionTypes:
-  - Title: Noun Meanings
+  - Title: Vocab
     Category: 300
     ConjugationTypes:
       VerbConjugationTypes: 
       AdjectiveConjugationTypes: 
       NounConjugationTypes: 
-  - Title: Basic Expressions
+  - Title: Expressions
     Category: 301
     ConjugationTypes:
       VerbConjugationTypes: 
@@ -55,9 +55,12 @@ MonoBehaviour:
       - America
     - kana: "\u3044\u3061\u306D\u3093\u305B\u3044"
       kanji: "\u4E00\u5E74\u751F"
-      meaningFull: first-year student
+      meaningFull: first-year student, first grade student, first grader, 1st grader
       meaning:
       - first-year student
+      - first grade student
+      - first grader
+      - 1st grader
     - kana: "\u30A4\u30F3\u30C9"
       kanji: 
       meaningFull: India
@@ -95,16 +98,18 @@ MonoBehaviour:
       - international relations
     - kana: "\u3054\u3054"
       kanji: "\u5348\u5F8C"
-      meaningFull: p.m., pm
+      meaningFull: p.m., pm, afternoon
       meaning:
       - p.m.
       - pm
+      - afternoon
     - kana: "\u3054\u305C\u3093"
       kanji: "\u5348\u524D"
-      meaningFull: a.m., am
+      meaningFull: a.m., am, Morning
       meaning:
       - a.m.
       - am
+      - Morning
     - kana: "\u3057\u3085\u3075"
       kanji: "\u4E3B\u5A66"
       meaningFull: housewife
@@ -134,25 +139,31 @@ MonoBehaviour:
       - university
     - kana: "\u3060\u3044\u304C\u304F\u3044\u3093\u305B\u3044"
       kanji: "\u5927\u5B66\u9662\u751F"
-      meaningFull: graduate student
+      meaningFull: graduate student, graduate school student
       meaning:
       - graduate student
+      - graduate school student
     - kana: "\u3060\u3044\u304C\u304F\u305B\u3044"
       kanji: "\u5927\u5B66\u751F"
-      meaningFull: college student
+      meaningFull: college student, university student
       meaning:
       - college student
+      - university student
     - kana: "\u3067\u3093\u308F"
       kanji: "\u96FB\u8A71"
-      meaningFull: telephone
+      meaningFull: telephone, phone, telephone call, phone call
       meaning:
       - telephone
+      - phone
+      - telephone call
+      - phone call
     - kana: "\u3068\u3082\u3060\u3061"
       kanji: "\u53CB\u3060\u3061"
-      meaningFull: friend
+      meaningFull: friend, companion
       meaning:
       - friend
-    - kana: "\u306A\u306B/\u306A\u3093"
+      - companion
+    - kana: "\u306A\u306B"
       kanji: "\u4F55"
       meaningFull: what
       meaning:
@@ -162,16 +173,18 @@ MonoBehaviour:
       meaningFull: name
       meaning:
       - name
-    - kana: "\u306A\u3093/\u306A\u306B"
+    - kana: "\u306A\u3093"
       kanji: "\u4F55"
       meaningFull: what
       meaning:
       - what
     - kana: "\u306B\u3058\u306F\u3093"
       kanji: "\u4E8C\u6642\u534A"
-      meaningFull: half past two
+      meaningFull: half past two, 2:30, two thirty
       meaning:
       - half past two
+      - 2:30
+      - two thirty
     - kana: "\u306B\u307B\u3093"
       kanji: "\u65E5\u672C"
       meaningFull: Japan
@@ -179,19 +192,22 @@ MonoBehaviour:
       - Japan
     - kana: "\u306B\u307B\u3093\u3054"
       kanji: "\u65E5\u672C\u8A9E"
-      meaningFull: Japanese language
+      meaningFull: Japanese language, Japanese
       meaning:
       - Japanese language
+      - Japanese
     - kana: "\u306B\u307B\u3093\u3058\u3093"
       kanji: "\u65E5\u672C\u4EBA"
-      meaningFull: Japanese people
+      meaningFull: Japanese people, Japanese
       meaning:
       - Japanese people
+      - Japanese
     - kana: "\u3070\u3093\u3054\u3046"
       kanji: "\u756A\u53F7"
-      meaningFull: number
+      meaningFull: number, digit
       meaning:
       - number
+      - digit
     - kana: "\u30D5\u30A3\u30EA\u30D4\u30F3"
       kanji: 
       meaningFull: Philippines
@@ -204,14 +220,18 @@ MonoBehaviour:
       - international student
     - kana: "\u308F\u305F\u3057"
       kanji: "\u79C1"
-      meaningFull: I
+      meaningFull: I, me
       meaning:
       - I
+      - me
     - kana: "\u3044\u3061\u3058"
       kanji: "\u4E00\u6642"
-      meaningFull: "one o\u2019clock"
+      meaningFull: "one o\u2019clock, 1:00, one oclock, one o clock"
       meaning:
       - "one o\u2019clock"
+      - 1:00
+      - one oclock
+      - one o clock
     - kana: "\u3044\u3057\u3083"
       kanji: "\u533B\u8005"
       meaningFull: doctor
@@ -244,14 +264,16 @@ MonoBehaviour:
       - Britain
     - kana: "\u304A\u304B\u3042\u3055\u3093"
       kanji: "\u304A\u6BCD\u3055\u3093"
-      meaningFull: mother
+      meaningFull: mother, mom
       meaning:
       - mother
+      - mom
     - kana: "\u304A\u3068\u3046\u3055\u3093"
       kanji: "\u304A\u7236\u3055\u3093"
-      meaningFull: father
+      meaningFull: father, dad
       meaning:
       - father
+      - dad
     - kana: "\u304B\u3093\u3053\u304F"
       kanji: "\u97D3\u56FD"
       meaningFull: Korea
@@ -284,29 +306,36 @@ MonoBehaviour:
       - history
     - kana: "\u3044\u3082\u3046\u3068"
       kanji: "\u59B9"
-      meaningFull: younger sister
+      meaningFull: younger sister, little sister
       meaning:
       - younger sister
+      - little sister
     - kana: "\u304A\u3068\u3046\u3068"
       kanji: "\u5F1F"
-      meaningFull: younger brother
+      meaningFull: younger brother, little brother
       meaning:
       - younger brother
+      - little brother
     - kana: "\u304A\u306B\u3044\u3055\u3093"
       kanji: "\u304A\u5144\u3055\u3093"
-      meaningFull: older brother
+      meaningFull: older brother, elder brother
       meaning:
       - older brother
+      - elder brother
     - kana: "\u304A\u306D\u3048\u3055\u3093"
       kanji: "\u304A\u59C9\u3055\u3093"
-      meaningFull: older sister
+      meaningFull: older sister, elder sister, young lady, miss
       meaning:
       - older sister
+      - elder sister
+      - young lady
+      - miss
     - kana: "\u304B\u3044\u3057\u3083\u3044\u3093"
       kanji: "\u4F1A\u793E\u54E1"
-      meaningFull: office worker
+      meaningFull: office worker, company employee
       meaning:
       - office worker
+      - company employee
     - kana: "\u3076\u3093\u304C\u304F"
       kanji: "\u6587\u5B66"
       meaningFull: literature
@@ -314,179 +343,67 @@ MonoBehaviour:
       - literature
     - kana: "\u3044\u3063\u3077\u3093"
       kanji: "\u4E00\u5206"
-      meaningFull: one minute
+      meaningFull: one minute, 1 minute
       meaning:
       - one minute
-    - kana: "\u304D\u3085\u3046\u3075\u3093"
-      kanji: "\u4E5D\u5206"
-      meaningFull: nine minutes
-      meaning:
-      - nine minutes
-    - kana: "\u304F\u3058"
-      kanji: "\u4E5D\u6642"
-      meaningFull: "nine o\u2019clock"
-      meaning:
-      - "nine o\u2019clock"
-    - kana: "\u3054\u3058"
-      kanji: "\u4E94\u6642"
-      meaningFull: "five o\u2019clock"
-      meaning:
-      - "five o\u2019clock"
-    - kana: "\u3054\u3075\u3093"
-      kanji: "\u4E94\u5206"
-      meaningFull: five minutes
-      meaning:
-      - five minutes
-    - kana: "\u3055\u3093\u3058"
-      kanji: "\u4E09\u6642"
-      meaningFull: "three o\u2019clock"
-      meaning:
-      - "three o\u2019clock"
-    - kana: "\u3055\u3093\u3058\u3063\u3077\u3093/\u3055\u3093\u3058\u3085\u3063\u3077\u3093"
-      kanji: "\u4E09\u5341\u5206"
-      meaningFull: thirty minutes
-      meaning:
-      - thirty minutes
-    - kana: "\u3055\u3093\u3077\u3093"
-      kanji: "\u4E09\u5206"
-      meaningFull: three minutes
-      meaning:
-      - three minutes
-    - kana: "\u3057\u3061\u3058"
-      kanji: "\u4E03\u6642"
-      meaningFull: "seven o\u2019clock"
-      meaning:
-      - "seven o\u2019clock"
-    - kana: "\u3058\u3063\u3077\u3093"
-      kanji: "\u5341\u5206"
-      meaningFull: ten minutes
-      meaning:
-      - ten minutes
-    - kana: "\u3058\u3085\u3046\u3044\u3061\u3058"
-      kanji: "\u5341\u4E00\u6642"
-      meaningFull: "eleven o\u2019clock"
-      meaning:
-      - "eleven o\u2019clock"
-    - kana: "\u3058\u3085\u3046\u3044\u3063\u3077\u3093"
-      kanji: "\u5341\u4E00\u5206"
-      meaningFull: eleven minutes
-      meaning:
-      - eleven minutes
-    - kana: "\u3058\u3085\u3046\u304D\u3085\u3046\u3075\u3093"
-      kanji: "\u5341\u4E5D\u5206"
-      meaningFull: nineteen minutes
-      meaning:
-      - nineteen minutes
-    - kana: "\u3058\u3085\u3046\u3054\u3075\u3093"
-      kanji: "\u5341\u4E94\u5206"
-      meaningFull: fifteen minutes
-      meaning:
-      - fifteen minutes
-    - kana: "\u3058\u3085\u3046\u3055\u3093\u3077\u3093"
-      kanji: "\u5341\u4E09\u5206"
-      meaningFull: thirteen minutes
-      meaning:
-      - thirteen minutes
-    - kana: "\u3058\u3085\u3046\u3058"
-      kanji: "\u5341\u6642"
-      meaningFull: "ten o\u2019clock"
-      meaning:
-      - "ten o\u2019clock"
-    - kana: "\u3058\u3085\u3046\u306A\u306A\u3075\u3093"
-      kanji: "\u5341\u4E03\u5206"
-      meaningFull: seventeen minutes
-      meaning:
-      - seventeen minutes
-    - kana: "\u3058\u3085\u3046\u306B\u3058"
-      kanji: "\u5341\u4E8C\u6642"
-      meaningFull: "twelve o\u2019clock"
-      meaning:
-      - "twelve o\u2019clock"
-    - kana: "\u3058\u3085\u3046\u306B\u3075\u3093"
-      kanji: "\u5341\u4E8C\u5206"
-      meaningFull: twelve minutes
-      meaning:
-      - twelve minutes
-    - kana: "\u3058\u3085\u3046\u306F\u3061\u3075\u3093/\u3058\u3085\u3046\u306F\u3063\u3077\u3093"
-      kanji: "\u5341\u516B\u5206"
-      meaningFull: eighteen minutes
-      meaning:
-      - eighteen minutes
-    - kana: "\u3058\u3085\u3046\u3088\u3093\u3077\u3093"
-      kanji: "\u5341\u56DB\u5206"
-      meaningFull: fourteen minutes
-      meaning:
-      - fourteen minutes
-    - kana: "\u3058\u3085\u3046\u308D\u3063\u3077\u3093"
-      kanji: "\u5341\u516D\u5206"
-      meaningFull: sixteen minutes
-      meaning:
-      - sixteen minutes
-    - kana: "\u3058\u3085\u3063\u3077\u3093"
-      kanji: "\u5341\u5206"
-      meaningFull: ten minutes
-      meaning:
-      - ten minutes
-    - kana: "\u306A\u306A\u3075\u3093"
-      kanji: "\u4E03\u5206"
-      meaningFull: seven minutes
-      meaning:
-      - seven minutes
-    - kana: "\u306B\u3058"
-      kanji: "\u4E8C\u6642"
-      meaningFull: "two o\u2019clock"
-      meaning:
-      - "two o\u2019clock"
+      - 1 minute
     - kana: "\u306B\u3058\u3063\u3077\u3093"
       kanji: "\u4E8C\u5341\u5206"
-      meaningFull: twenty minutes
+      meaningFull: twenty minutes, 20 minutes
       meaning:
       - twenty minutes
-    - kana: "\u306B\u3058\u3085\u3063\u3077\u3093"
-      kanji: "\u4E8C\u5341\u5206"
-      meaningFull: twenty minutes
-      meaning:
-      - twenty minutes
+      - 20 minutes
     - kana: "\u306B\u3075\u3093"
       kanji: "\u4E8C\u5206"
-      meaningFull: two minutes
+      meaningFull: two minutes, 2 minutes
       meaning:
       - two minutes
+      - 2 minutes
     - kana: "\u306F\u3061\u3058"
       kanji: "\u516B\u6642"
-      meaningFull: "eight o\u2019clock"
+      meaningFull: "eight o\u2019clock, 8:00, eight o clock, eight oclock, 8 oclock"
       meaning:
       - "eight o\u2019clock"
+      - 8:00
+      - eight o clock
+      - eight oclock
+      - 8 oclock
     - kana: "\u306F\u3061\u3075\u3093"
       kanji: "\u516B\u5206"
-      meaningFull: eight minutes
+      meaningFull: eight minutes, 8 minutes
       meaning:
       - eight minutes
-    - kana: "\u306F\u3063\u3077\u3093"
-      kanji: "\u516B\u5206"
-      meaningFull: eight minutes
-      meaning:
-      - eight minutes
+      - 8 minutes
     - kana: "\u3088\u3058"
       kanji: "\u56DB\u6642"
-      meaningFull: "four o\u2019clock"
+      meaningFull: "four o\u2019clock, 4:00, four o clock, four oclock, 4 oclock"
       meaning:
       - "four o\u2019clock"
+      - 4:00
+      - four o clock
+      - four oclock
+      - 4 oclock
     - kana: "\u3088\u3093\u3077\u3093"
       kanji: "\u56DB\u5206"
-      meaningFull: four minutes
+      meaningFull: four minutes, 4 minutes
       meaning:
       - four minutes
+      - 4 minutes
     - kana: "\u308D\u304F\u3058"
       kanji: "\u516D\u6642"
-      meaningFull: "six o\u2019clock"
+      meaningFull: "six o\u2019clock, 6:00, six o clock, six oclock, 6 oclock"
       meaning:
       - "six o\u2019clock"
+      - 6:00
+      - six o clock
+      - six oclock
+      - 6 oclock
     - kana: "\u308D\u3063\u3077\u3093"
       kanji: "\u516D\u5206"
-      meaningFull: six minutes
+      meaningFull: six minutes, 6 minutes
       meaning:
       - six minutes
+      - 6 minutes
     AdjectiveList: []
     ExpressionList:
     - kana: "\u3054"
@@ -533,14 +450,18 @@ MonoBehaviour:
       - number
     - kana: "\u3042\u306E\u3046"
       kanji: 
-      meaningFull: um
+      meaningFull: um, umm, ummm
       meaning:
       - um
+      - umm
+      - ummm
     - kana: "\u305D\u3046\u3067\u3059"
       kanji: 
-      meaningFull: "That\u2019s right"
+      meaningFull: "That\u2019s right, thats right, that is right"
       meaning:
       - "That\u2019s right"
+      - thats right
+      - that is right
     - kana: "\u305D\u3046\u3067\u3059\u304B"
       kanji: 
       meaningFull: I see, Is that so
@@ -549,15 +470,21 @@ MonoBehaviour:
       - Is that so
     - kana: "\u306F\u3044"
       kanji: 
-      meaningFull: yes
+      meaningFull: yes, okay, OK
       meaning:
       - yes
+      - okay
+      - OK
     AdverbList:
     - kana: "\u3044\u307E"
       kanji: "\u4ECA"
-      meaningFull: now
+      meaningFull: now, the present time, just now, soon, immediately
       meaning:
       - now
+      - the present time
+      - just now
+      - soon
+      - immediately
     GrammerList:
     - Kana: "\u3067\u3059"
       Kanji: 
@@ -698,62 +625,62 @@ MonoBehaviour:
         word. In Japanese, however, the meaning is a bit broader, and shows that
         (B) is an attribute/possession of (A)."
       Examples:
-      - Question: "\u3042\u308C\u306F\u79C1__\u30DA\u30F3\u3067\u3059\u3002"
+      - Question: "\u3042\u308C\u306F\u79C1___\u30DA\u30F3\u3067\u3059\u3002"
         Answer: "\u306E"
         Translation: That over there is my pen.
         Hint: Possessive Indicator
         Key: "\u306E"
-      - Question: "\u3053\u308C\u3082\u79C1__\u30DA\u30F3\u3067\u3059\u3002"
+      - Question: "\u3053\u308C\u3082\u79C1___\u30DA\u30F3\u3067\u3059\u3002"
         Answer: "\u306E"
         Translation: This is also my pen.
         Hint: Possessive Indicator
         Key: "\u306E"
-      - Question: "\u3053\u308C\u306F\u79C1__\u732B\u3067\u3059\u3002"
+      - Question: "\u3053\u308C\u306F\u79C1___\u732B\u3067\u3059\u3002"
         Answer: "\u306E"
         Translation: This is my cat.
         Hint: Possessive Indicator
         Key: "\u306E"
-      - Question: "\u5148\u751F__\u5098\u3067\u3059\u3002"
+      - Question: "\u5148\u751F___\u5098\u3067\u3059\u3002"
         Answer: "\u306E"
         Translation: (It) is the teacher's umbrella.
         Hint: Possessive Indicator
         Key: "\u306E"
-      - Question: "\u3042\u306A\u305F__\u540D\u524D\u306F\uFF1F"
+      - Question: "\u3042\u306A\u305F___\u540D\u524D\u306F\uFF1F"
         Answer: "\u306E"
         Translation: Your name is?
         Hint: Possessive Indicator
         Key: "\u306E"
-      - Question: "\u3053\u308C\u306F\u3001\u79C1__\u5144\u3060\u3002"
+      - Question: "\u3053\u308C\u306F\u3001\u79C1___\u5144\u3060\u3002"
         Answer: "\u306E"
         Translation: This is my older brother.
         Hint: Possessive Indicator
         Key: "\u306E"
-      - Question: "\u3053\u308C\u306F\u751F\u5F92__\u30CE\u30FC\u30C8\u3067\u3059\u3002"
+      - Question: "\u3053\u308C\u306F\u751F\u5F92___\u30CE\u30FC\u30C8\u3067\u3059\u3002"
         Answer: "\u306E"
         Translation: This is the student's notebook.
         Hint: Possessive Indicator
         Key: "\u306E"
-      - Question: "\u4ECA\u65E5__\u591C\u3002"
+      - Question: "\u4ECA\u65E5___\u591C\u3002"
         Answer: "\u306E"
         Translation: Today's night (tonight).
         Hint: Possessive Indicator
         Key: "\u306E"
-      - Question: "\u99C5__\u30DB\u30FC\u30E0\u3002"
+      - Question: "\u99C5___\u30DB\u30FC\u30E0\u3002"
         Answer: "\u306E"
         Translation: The station's platform.
         Hint: Possessive Indicator
         Key: "\u306E"
-      - Question: "\u3053\u308C\u3082\u751F\u5F92__\u30CE\u30FC\u30C8\u3067\u3059\u3002"
+      - Question: "\u3053\u308C\u3082\u751F\u5F92___\u30CE\u30FC\u30C8\u3067\u3059\u3002"
         Answer: "\u306E"
         Translation: This is also the student's notebook.
         Hint: Possessive Indicator
         Key: "\u306E"
-      - Question: "\u3053\u308C\u306F\u304A\u7236\u3055\u3093__\u6642\u8A08\u3060\u3002"
+      - Question: "\u3053\u308C\u306F\u304A\u7236\u3055\u3093___\u6642\u8A08\u3060\u3002"
         Answer: "\u306E"
         Translation: This is dad's watch (clock).
         Hint: Possessive Indicator
         Key: "\u306E"
-      - Question: "\u3053\u308C\u306F\u304A\u6BCD\u3055\u3093__\u90E8\u5C4B\u3067\u3059\u3002"
+      - Question: "\u3053\u308C\u306F\u304A\u6BCD\u3055\u3093___\u90E8\u5C4B\u3067\u3059\u3002"
         Answer: "\u306E"
         Translation: This is mom's room.
         Hint: Possessive Indicator
@@ -765,62 +692,62 @@ MonoBehaviour:
         most difficult particles to master in Japanese. \u306F marks the topic of
         the sentence, and describes the whole sentence broadly."
       Examples:
-      - Question: "\u79C1__\u30C8\u30E0\u3067\u3059\u3002"
+      - Question: "\u79C1___\u30C8\u30E0\u3067\u3059\u3002"
         Answer: "\u306F"
         Translation: I (as the topic of this sentence) am Tom.
         Hint: As for... (Highlights sentence topic)
         Key: "\u306F"
-      - Question: "\u3042\u306A\u305F__\u30B8\u30E0\u3067\u3059\u3002"
+      - Question: "\u3042\u306A\u305F___\u30B8\u30E0\u3067\u3059\u3002"
         Answer: "\u306F"
         Translation: You (as the topic of this sentence) are Jim.
         Hint: As for... (Highlights sentence topic)
         Key: "\u306F"
-      - Question: "\u30C8\u30E0__\u5148\u751F\u3067\u3059\u3002"
+      - Question: "\u30C8\u30E0___\u5148\u751F\u3067\u3059\u3002"
         Answer: "\u306F"
         Translation: Tom [as the topic of this sentence] is a teacher.
         Hint: As for... (Highlights sentence topic)
         Key: "\u306F"
-      - Question: "\u30AB\u30D0\u30F3__\u6C5A\u3044\u3002"
+      - Question: "\u30AB\u30D0\u30F3___\u6C5A\u3044\u3002"
         Answer: "\u306F"
         Translation: The bag (as the topic of this sentence) is dirty.
         Hint: As for... (Highlights sentence topic)
         Key: "\u306F"
-      - Question: "\u30AB\u30EC\u30F3\u30C0\u30FC__\u5FC5\u8981\u3067\u3059\u3002"
+      - Question: "\u30AB\u30EC\u30F3\u30C0\u30FC___\u5FC5\u8981\u3067\u3059\u3002"
         Answer: "\u306F"
         Translation: A calendar (as the topic of this sentence) is necessary.
         Hint: As for... (Highlights sentence topic)
         Key: "\u306F"
-      - Question: "\u7384\u95A2__\u6697\u3044\u3002"
+      - Question: "\u7384\u95A2___\u6697\u3044\u3002"
         Answer: "\u306F"
         Translation: The entrance (as the topic of this sentence) is dark.
         Hint: As for... (Highlights sentence topic)
         Key: "\u306F"
-      - Question: "\u5F7C__\u771F\u9762\u76EE\u3067\u3059\u3002"
+      - Question: "\u5F7C___\u771F\u9762\u76EE\u3067\u3059\u3002"
         Answer: "\u306F"
         Translation: He (as the topic of this sentence) is serious/diligent/earnest.
         Hint: As for... (Highlights sentence topic)
         Key: "\u306F"
-      - Question: "\u79C1__\u5FD9\u3057\u3044\u3067\u3059\u3002"
+      - Question: "\u79C1___\u5FD9\u3057\u3044\u3067\u3059\u3002"
         Answer: "\u306F"
         Translation: I (as the topic of this sentence) am busy.
         Hint: As for... (Highlights sentence topic)
         Key: "\u306F"
-      - Question: "\u660E\u65E5__\u6708\u66DC\u65E5\u3067\u3059\u3002"
+      - Question: "\u660E\u65E5___\u6708\u66DC\u65E5\u3067\u3059\u3002"
         Answer: "\u306F"
         Translation: Tomorrow (as the topic of this sentence) is Monday.
         Hint: As for... (Highlights sentence topic)
         Key: "\u306F"
-      - Question: "\u516C\u5712__\u5E83\u3044\u3002"
+      - Question: "\u516C\u5712___\u5E83\u3044\u3002"
         Answer: "\u306F"
         Translation: The park (as the topic of this sentence) is spacious (wide).
         Hint: As for... (Highlights sentence topic)
         Key: "\u306F"
-      - Question: "\u6D77__\u7DBA\u9E97\u3067\u3059\u3002"
+      - Question: "\u6D77___\u7DBA\u9E97\u3067\u3059\u3002"
         Answer: "\u306F"
         Translation: The ocean (as the topic of this sentence) is beautiful.
         Hint: As for... (Highlights sentence topic)
         Key: "\u306F"
-      - Question: "\u5BAE\u5D0E\u99FF\u3055\u3093__\u6709\u540D\u3067\u3059\u3002"
+      - Question: "\u5BAE\u5D0E\u99FF\u3055\u3093___\u6709\u540D\u3067\u3059\u3002"
         Answer: "\u306F"
         Translation: Mr. Hayao Miyazaki (as the topic of this sentence) is famous.
         Hint: As for... (Highlights sentence topic)
@@ -859,22 +786,22 @@ MonoBehaviour:
         Translation: Is this good?
         Hint: Question Marker
         Key: "\u304B"
-      - Question: "\u660E\u65E5\u3082\u3044\u3044\u3067\u3059\u304B\u3002"
+      - Question: "\u660E\u65E5\u3082\u3044\u3044\u3067\u3059___\u3002"
         Answer: "\u304B"
         Translation: Is tomorrow also good?
         Hint: Question Marker
         Key: "\u304B"
-      - Question: "\u3053\u308C\u306F\u3001\u30E6\u30A6\u30AD\u3055\u3093\u306E\u304A\u6BCD\u3055\u3093\u3067\u3059__\u3002"
+      - Question: "\u3053\u308C\u306F\u3001\u30E6\u30A6\u30AD\u3055\u3093\u306E\u304A\u6BCD\u3055\u3093\u3067\u3059___\u3002"
         Answer: "\u304B"
         Translation: Is this Yuki's mother?
         Hint: Question Marker
         Key: "\u304B"
-      - Question: "\u3053\u308C\u306F\u30BE\u30F3\u30D3\u3067\u3059__\u3002"
+      - Question: "\u3053\u308C\u306F\u30BE\u30F3\u30D3\u3067\u3059___\u3002"
         Answer: "\u304B"
         Translation: Is this a zombie?
         Hint: Question Marker
         Key: "\u304B"
-      - Question: "\u304A\u5143\u6C17\u3067\u3059__\u3002"
+      - Question: "\u304A\u5143\u6C17\u3067\u3059___\u3002"
         Answer: "\u304B"
         Translation: How are you?
         Hint: Question Marker
@@ -965,62 +892,62 @@ MonoBehaviour:
       Translation: (He/she) is Japanese.
       Hint: '(He/she) is '
       Key: "\u3067\u3059"
-    - Question: "\u79C1__\u30C8\u30E0\u3067\u3059\u3002"
+    - Question: "\u79C1___\u30C8\u30E0\u3067\u3059\u3002"
       Answer: "\u306F"
       Translation: I (as the topic of this sentence) am Tom.
       Hint: As for... (Highlights sentence topic)
       Key: "\u306F"
-    - Question: "\u3042\u306A\u305F__\u30B8\u30E0\u3067\u3059\u3002"
+    - Question: "\u3042\u306A\u305F___\u30B8\u30E0\u3067\u3059\u3002"
       Answer: "\u306F"
       Translation: You (as the topic of this sentence) are Jim.
       Hint: As for... (Highlights sentence topic)
       Key: "\u306F"
-    - Question: "\u30C8\u30E0__\u5148\u751F\u3067\u3059\u3002"
+    - Question: "\u30C8\u30E0___\u5148\u751F\u3067\u3059\u3002"
       Answer: "\u306F"
       Translation: Tom [as the topic of this sentence] is a teacher.
       Hint: As for... (Highlights sentence topic)
       Key: "\u306F"
-    - Question: "\u30AB\u30D0\u30F3__\u6C5A\u3044\u3002"
+    - Question: "\u30AB\u30D0\u30F3___\u6C5A\u3044\u3002"
       Answer: "\u306F"
       Translation: The bag (as the topic of this sentence) is dirty.
       Hint: As for... (Highlights sentence topic)
       Key: "\u306F"
-    - Question: "\u30AB\u30EC\u30F3\u30C0\u30FC__\u5FC5\u8981\u3067\u3059\u3002"
+    - Question: "\u30AB\u30EC\u30F3\u30C0\u30FC___\u5FC5\u8981\u3067\u3059\u3002"
       Answer: "\u306F"
       Translation: A calendar (as the topic of this sentence) is necessary.
       Hint: As for... (Highlights sentence topic)
       Key: "\u306F"
-    - Question: "\u7384\u95A2__\u6697\u3044\u3002"
+    - Question: "\u7384\u95A2___\u6697\u3044\u3002"
       Answer: "\u306F"
       Translation: The entrance (as the topic of this sentence) is dark.
       Hint: As for... (Highlights sentence topic)
       Key: "\u306F"
-    - Question: "\u5F7C__\u771F\u9762\u76EE\u3067\u3059\u3002"
+    - Question: "\u5F7C___\u771F\u9762\u76EE\u3067\u3059\u3002"
       Answer: "\u306F"
       Translation: He (as the topic of this sentence) is serious/diligent/earnest.
       Hint: As for... (Highlights sentence topic)
       Key: "\u306F"
-    - Question: "\u79C1__\u5FD9\u3057\u3044\u3067\u3059\u3002"
+    - Question: "\u79C1___\u5FD9\u3057\u3044\u3067\u3059\u3002"
       Answer: "\u306F"
       Translation: I (as the topic of this sentence) am busy.
       Hint: As for... (Highlights sentence topic)
       Key: "\u306F"
-    - Question: "\u660E\u65E5__\u6708\u66DC\u65E5\u3067\u3059\u3002"
+    - Question: "\u660E\u65E5___\u6708\u66DC\u65E5\u3067\u3059\u3002"
       Answer: "\u306F"
       Translation: Tomorrow (as the topic of this sentence) is Monday.
       Hint: As for... (Highlights sentence topic)
       Key: "\u306F"
-    - Question: "\u516C\u5712__\u5E83\u3044\u3002"
+    - Question: "\u516C\u5712___\u5E83\u3044\u3002"
       Answer: "\u306F"
       Translation: The park (as the topic of this sentence) is spacious (wide).
       Hint: As for... (Highlights sentence topic)
       Key: "\u306F"
-    - Question: "\u6D77__\u7DBA\u9E97\u3067\u3059\u3002"
+    - Question: "\u6D77___\u7DBA\u9E97\u3067\u3059\u3002"
       Answer: "\u306F"
       Translation: The ocean (as the topic of this sentence) is beautiful.
       Hint: As for... (Highlights sentence topic)
       Key: "\u306F"
-    - Question: "\u5BAE\u5D0E\u99FF\u3055\u3093__\u6709\u540D\u3067\u3059\u3002"
+    - Question: "\u5BAE\u5D0E\u99FF\u3055\u3093___\u6709\u540D\u3067\u3059\u3002"
       Answer: "\u306F"
       Translation: Mr. Hayao Miyazaki (as the topic of this sentence) is famous.
       Hint: As for... (Highlights sentence topic)
@@ -1095,22 +1022,22 @@ MonoBehaviour:
       Translation: Is this good?
       Hint: Question Marker
       Key: "\u304B"
-    - Question: "\u660E\u65E5\u3082\u3044\u3044\u3067\u3059\u304B\u3002"
+    - Question: "\u660E\u65E5\u3082\u3044\u3044\u3067\u3059___\u3002"
       Answer: "\u304B"
       Translation: Is tomorrow also good?
       Hint: Question Marker
       Key: "\u304B"
-    - Question: "\u3053\u308C\u306F\u3001\u30E6\u30A6\u30AD\u3055\u3093\u306E\u304A\u6BCD\u3055\u3093\u3067\u3059__\u3002"
+    - Question: "\u3053\u308C\u306F\u3001\u30E6\u30A6\u30AD\u3055\u3093\u306E\u304A\u6BCD\u3055\u3093\u3067\u3059___\u3002"
       Answer: "\u304B"
       Translation: Is this Yuki's mother?
       Hint: Question Marker
       Key: "\u304B"
-    - Question: "\u3053\u308C\u306F\u30BE\u30F3\u30D3\u3067\u3059__\u3002"
+    - Question: "\u3053\u308C\u306F\u30BE\u30F3\u30D3\u3067\u3059___\u3002"
       Answer: "\u304B"
       Translation: Is this a zombie?
       Hint: Question Marker
       Key: "\u304B"
-    - Question: "\u304A\u5143\u6C17\u3067\u3059__\u3002"
+    - Question: "\u304A\u5143\u6C17\u3067\u3059___\u3002"
       Answer: "\u304B"
       Translation: How are you?
       Hint: Question Marker
@@ -1130,62 +1057,62 @@ MonoBehaviour:
       Translation: Is this necessary?
       Hint: Question Marker
       Key: "\u304B"
-    - Question: "\u3042\u308C\u306F\u79C1__\u30DA\u30F3\u3067\u3059\u3002"
+    - Question: "\u3042\u308C\u306F\u79C1___\u30DA\u30F3\u3067\u3059\u3002"
       Answer: "\u306E"
       Translation: That over there is my pen.
       Hint: Possessive Indicator
       Key: "\u306E"
-    - Question: "\u3053\u308C\u3082\u79C1__\u30DA\u30F3\u3067\u3059\u3002"
+    - Question: "\u3053\u308C\u3082\u79C1___\u30DA\u30F3\u3067\u3059\u3002"
       Answer: "\u306E"
       Translation: This is also my pen.
       Hint: Possessive Indicator
       Key: "\u306E"
-    - Question: "\u3053\u308C\u306F\u79C1__\u732B\u3067\u3059\u3002"
+    - Question: "\u3053\u308C\u306F\u79C1___\u732B\u3067\u3059\u3002"
       Answer: "\u306E"
       Translation: This is my cat.
       Hint: Possessive Indicator
       Key: "\u306E"
-    - Question: "\u5148\u751F__\u5098\u3067\u3059\u3002"
+    - Question: "\u5148\u751F___\u5098\u3067\u3059\u3002"
       Answer: "\u306E"
       Translation: (It) is the teacher's umbrella.
       Hint: Possessive Indicator
       Key: "\u306E"
-    - Question: "\u3042\u306A\u305F__\u540D\u524D\u306F\uFF1F"
+    - Question: "\u3042\u306A\u305F___\u540D\u524D\u306F\uFF1F"
       Answer: "\u306E"
       Translation: Your name is?
       Hint: Possessive Indicator
       Key: "\u306E"
-    - Question: "\u3053\u308C\u306F\u3001\u79C1__\u5144\u3060\u3002"
+    - Question: "\u3053\u308C\u306F\u3001\u79C1___\u5144\u3060\u3002"
       Answer: "\u306E"
       Translation: This is my older brother.
       Hint: Possessive Indicator
       Key: "\u306E"
-    - Question: "\u3053\u308C\u306F\u751F\u5F92__\u30CE\u30FC\u30C8\u3067\u3059\u3002"
+    - Question: "\u3053\u308C\u306F\u751F\u5F92___\u30CE\u30FC\u30C8\u3067\u3059\u3002"
       Answer: "\u306E"
       Translation: This is the student's notebook.
       Hint: Possessive Indicator
       Key: "\u306E"
-    - Question: "\u4ECA\u65E5__\u591C\u3002"
+    - Question: "\u4ECA\u65E5___\u591C\u3002"
       Answer: "\u306E"
       Translation: Today's night (tonight).
       Hint: Possessive Indicator
       Key: "\u306E"
-    - Question: "\u99C5__\u30DB\u30FC\u30E0\u3002"
+    - Question: "\u99C5___\u30DB\u30FC\u30E0\u3002"
       Answer: "\u306E"
       Translation: The station's platform.
       Hint: Possessive Indicator
       Key: "\u306E"
-    - Question: "\u3053\u308C\u3082\u751F\u5F92__\u30CE\u30FC\u30C8\u3067\u3059\u3002"
+    - Question: "\u3053\u308C\u3082\u751F\u5F92___\u30CE\u30FC\u30C8\u3067\u3059\u3002"
       Answer: "\u306E"
       Translation: This is also the student's notebook.
       Hint: Possessive Indicator
       Key: "\u306E"
-    - Question: "\u3053\u308C\u306F\u304A\u7236\u3055\u3093__\u6642\u8A08\u3060\u3002"
+    - Question: "\u3053\u308C\u306F\u304A\u7236\u3055\u3093___\u6642\u8A08\u3060\u3002"
       Answer: "\u306E"
       Translation: This is dad's watch (clock).
       Hint: Possessive Indicator
       Key: "\u306E"
-    - Question: "\u3053\u308C\u306F\u304A\u6BCD\u3055\u3093__\u90E8\u5C4B\u3067\u3059\u3002"
+    - Question: "\u3053\u308C\u306F\u304A\u6BCD\u3055\u3093___\u90E8\u5C4B\u3067\u3059\u3002"
       Answer: "\u306E"
       Translation: This is mom's room.
       Hint: Possessive Indicator

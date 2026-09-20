@@ -106,3 +106,7 @@ VisualElement {
     transition-duration: 0.5s;
     white-space: pre-wrap;
 }
+
+.SubToggle {
+    padding-left: 10%;
+}

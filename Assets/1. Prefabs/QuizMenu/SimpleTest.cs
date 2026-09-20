@@ -13,7 +13,7 @@ public class SimpleTest : MonoBehaviour, IQuiz
 
     public WordLists WordLists;
 
-    private List<(string, string)> askedQuestions = new();
+    private List<Question> askedQuestions = new();
 
     private bool confirmAnswer = false;
 
@@ -111,13 +111,12 @@ public class SimpleTest : MonoBehaviour, IQuiz
 
     public void PrepareNextQuestion()
     {
+        askedQuestions.Add(currentQuestion);
         Question question = GetQuestion();
-
         currentQuestion = question;
         quizMenu.SetQuestion(question.QuestionText);
 
         SetKana(question.Word);
-        //askedQuestions.Add((question.Word.Kana, question.QuestionText));
     }
 
     private void SetKana(string kana, string Kanji)
@@ -151,13 +150,16 @@ public class SimpleTest : MonoBehaviour, IQuiz
 
     private Question GetVocabQuestion()
     {
-        return QuizUtility.GetVocabQuestion(WordLists);
+        return QuizUtility.GetVocabQuestion(ref WordLists);
     }
 
     private Question GetExpressionQuestion()
     {
-        IWord word = QuizUtility.GetRandomWord(WordLists, WordType.Expression);
-
+        IWord word = QuizUtility.GetRandomWord(ref WordLists, WordType.Expression);
+        if (word == null)
+        {
+            Debug.LogError("Ran out of expressions");
+        }
         return QuizUtility.GetExpressionQuestion(word);
     }
 
@@ -167,7 +169,12 @@ public class SimpleTest : MonoBehaviour, IQuiz
 
         WordType wordType = QuizUtility.GetRandomWordType(questionType.ConjugationTypes);
         ConjugationType form = questionType.ConjugationTypes.GetConjugationTypeByWordType(wordType);
-        IWord word = QuizUtility.GetRandomWord(WordLists, wordType);
+        IWord word = QuizUtility.GetRandomWord(ref WordLists, wordType);
+
+        if (word == null)
+        {
+            Debug.LogError($"Ran out of {wordType.ToString()}");
+        }
 
         return QuizUtility.GetConjugationQuestion(wordType, form, word);
     }

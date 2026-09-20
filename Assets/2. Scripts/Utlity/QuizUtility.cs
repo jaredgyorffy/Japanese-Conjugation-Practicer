@@ -266,12 +266,12 @@ public static class QuizUtility
         return new Question(questionType, word.Meaning, word, QuestionCategory.Expression, hint);
     }
 
-    public static Question GetVocabQuestion(WordLists wordlist)
+    public static Question GetVocabQuestion(ref WordLists wordlist)
     {
         string questionType = "Meaning";
         string hint = "No hints are available for meaning questions";
 
-        IWord word = GetRandomWord(wordlist, GetRandomWordType(wordlist));
+        IWord word = GetRandomWord(ref wordlist, GetRandomWordType(wordlist));
         return new Question(questionType, word.Meaning, word, QuestionCategory.Vocab, hint);
     }
 
@@ -495,28 +495,44 @@ public static class QuizUtility
         return new Question(example.Hint, answers, fakeWord, QuestionCategory.Grammer, example.Translation);
     }
 
-    public static IWord GetRandomWord(WordLists words, WordType wordtype)
+    public static IWord GetRandomWord(ref WordLists words, WordType wordtype)
     {
         IWord word = null;
-        if (wordtype == WordType.Verb)
+        int index = 0;
+        if (wordtype == WordType.Verb && words.Verbs.Count > 0)
         {
-            word = words.Verbs[UnityEngine.Random.Range(0, words.Verbs.Count)];
+            index = UnityEngine.Random.Range(0, words.Verbs.Count);
+
+            word = words.Verbs[index];
+            words.Verbs.RemoveAt(index);
         }
-        else if (wordtype == WordType.Adjective)
+        else if (wordtype == WordType.Adjective && words.Adjectives.Count > 0)
         {
-            word = words.Adjectives[UnityEngine.Random.Range(0, words.Adjectives.Count)];
+            index = UnityEngine.Random.Range(0, words.Adjectives.Count);
+
+            word = words.Adjectives[index];
+            words.Adjectives.RemoveAt(index);
         }
-        else if (wordtype == WordType.Noun)
+        else if (wordtype == WordType.Noun && words.Nouns.Count > 0)
         {
-            word = words.Nouns[UnityEngine.Random.Range(0, words.Nouns.Count)];
+            index = UnityEngine.Random.Range(0, words.Nouns.Count);
+
+            word = words.Nouns[index];
+            words.Nouns.RemoveAt(index);
         }
-        else if (wordtype == WordType.Expression)
+        else if (wordtype == WordType.Expression && words.Expressions.Count > 0)
         {
-            word = words.Expressions[UnityEngine.Random.Range(0, words.Expressions.Count)];
+            index = UnityEngine.Random.Range(0, words.Expressions.Count);
+
+            word = words.Expressions[index];
+            words.Expressions.RemoveAt(index);
         }
-        else if (wordtype == WordType.Adverb)
+        else if (wordtype == WordType.Adverb && words.Adverbs.Count > 0)
         {
-            word = words.Adverbs[UnityEngine.Random.Range(0, words.Adverbs.Count)];
+            index = UnityEngine.Random.Range(0, words.Adverbs.Count);
+
+            word = words.Adverbs[index];
+            words.Adverbs.RemoveAt(index);
         }
 
         return word;
