@@ -818,6 +818,51 @@ MonoBehaviour:
   ignoreRotationZ: 1
   useLocalRotation: 0
   inheritLocalScale: 0
+--- !u!1 &879977858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 879977860}
+  - component: {fileID: 879977859}
+  m_Layer: 0
+  m_Name: NumberTestScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &879977859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879977858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e3e4f7f33d910438694ac50986c4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NumberTestScript
+  TestNumber: 77
+--- !u!4 &879977860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879977858}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.14547, y: 0, z: -12.42849}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &935846228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,3 +1604,4 @@ SceneRoots:
   - {fileID: 509548875}
   - {fileID: 935846231}
   - {fileID: 1649793488}
+  - {fileID: 879977860}

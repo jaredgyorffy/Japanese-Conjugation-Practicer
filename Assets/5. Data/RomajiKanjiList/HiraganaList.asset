@@ -176,6 +176,8 @@ MonoBehaviour:
     Romaji: "\u304A="
   - Kana: "\u3043"
     Romaji: "\u3044="
+  - Kana: "\u3058\u3085"
+    Romaji: ju
   ThreeLetterPairs:
   - Kana: "\u304D\u3083"
     Romaji: kya

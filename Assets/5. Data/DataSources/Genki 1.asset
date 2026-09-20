@@ -20,24 +20,28 @@ MonoBehaviour:
       VerbConjugationTypes: 
       AdjectiveConjugationTypes: 
       NounConjugationTypes: 
+    UseKanaKeyboard: 0
   - Title: Expressions
     Category: 301
     ConjugationTypes:
       VerbConjugationTypes: 
       AdjectiveConjugationTypes: 
       NounConjugationTypes: 
+    UseKanaKeyboard: 0
   - Title: Grammer
     Category: 500
     ConjugationTypes:
       VerbConjugationTypes: 
       AdjectiveConjugationTypes: 
       NounConjugationTypes: 
+    UseKanaKeyboard: 1
   - Title: Standard Negative Noun
     Category: 1
     ConjugationTypes:
       VerbConjugationTypes: 
       AdjectiveConjugationTypes: 
       NounConjugationTypes: 05000000
+    UseKanaKeyboard: 1
   VocabData:
     VerbList: []
     NounList:

@@ -30,7 +30,14 @@ public class SimpleTest : MonoBehaviour, IQuiz
         {
             return;
         }
-
+        if (types.UseKanaKeyboard)
+        {
+            quizMenu.SetKanaKeyboard(true);
+        }
+        else
+        {
+            quizMenu.SetKanaKeyboard(false);
+        }
         /*if (types.Category == QuestionCategory.Expression || types.Category == QuestionCategory.Vocab)
         {
             quizMenu.SetKanaKeyboard(false);
@@ -48,8 +55,7 @@ public class SimpleTest : MonoBehaviour, IQuiz
         quizMenu.SetNumberVisible(false);
         askedQuestions = new();
         SetInformationText("");
-        useKanaKeyboard = false;
-        //useKanaKeyboard = config.UseKanaKeyboard;
+        useKanaKeyboard = config.UseKanaKeyboard;
         quizMenu.SetKanaKeyboard(useKanaKeyboard);
         StrictMode = config.Strictmode;
     }
@@ -141,11 +147,19 @@ public class SimpleTest : MonoBehaviour, IQuiz
             return GetExpressionQuestion();
         case QuestionCategory.Vocab:
             return GetVocabQuestion();
+        case QuestionCategory.Numbers:
+            return GetNumbersQuestion();
         default:
             Debug.LogError($"invalid Question Category {questionType.Category}");
             break;
         }
         return GetConjugationQuesiton();
+    }
+
+    private Question GetNumbersQuestion()
+    {
+        int number = UnityEngine.Random.Range(0, 99);
+        return QuizUtility.GetNumbersQuestion(number);
     }
 
     private Question GetVocabQuestion()

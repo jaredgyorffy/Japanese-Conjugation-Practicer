@@ -266,6 +266,15 @@ public static class QuizUtility
         return new Question(questionType, word.Meaning, word, QuestionCategory.Expression, hint);
     }
 
+    public static Question GetNumbersQuestion(int number)
+    {
+        string questionType = "Number";
+        string hint = "No hints currently available for Numbers";
+        Noun word = new();
+        word.kanji = number.ToString();
+        return new Question(questionType, NumberTranslator.GetNumberTranslation(number), word, QuestionCategory.Numbers, hint);
+    }
+
     public static Question GetVocabQuestion(ref WordLists wordlist)
     {
         string questionType = "Meaning";

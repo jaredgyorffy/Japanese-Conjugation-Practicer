@@ -185,6 +185,7 @@ public class MainMenu : MonoBehaviour
             subjectToggles.Add(toggleBox.MQ<Toggle>());
             content.Add(toggleBox);
             Foldout section = new Foldout();
+            section.value = false;
             content.Add(section);
             section.name = globalVariables.WordLists[i].SourceName;
 
