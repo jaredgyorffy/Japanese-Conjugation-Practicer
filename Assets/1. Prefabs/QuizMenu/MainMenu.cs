@@ -184,6 +184,9 @@ public class MainMenu : MonoBehaviour
             contentToggles.Add(subjectToggles);
             subjectToggles.Add(toggleBox.MQ<Toggle>());
             content.Add(toggleBox);
+            Foldout section = new Foldout();
+            content.Add(section);
+            section.name = globalVariables.WordLists[i].SourceName;
 
             foreach (QuestionType quesiton in globalVariables.WordLists[i].QuestionTypes)
             {
@@ -192,8 +195,7 @@ public class MainMenu : MonoBehaviour
                 var toggle = subject.MQ<Toggle>();
                 toggle.value = true;
                 subjectToggles.Add(toggle);
-                subject.AddToClassList("SubToggle");
-                content.Add(subject);
+                section.Add(subject);
             }
         }
 
