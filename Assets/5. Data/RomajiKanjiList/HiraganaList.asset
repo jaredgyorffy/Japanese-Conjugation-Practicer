@@ -178,6 +178,8 @@ MonoBehaviour:
     Romaji: "\u3044="
   - Kana: "\u3058\u3085"
     Romaji: ju
+  - Kana: "\u3058\u3087"
+    Romaji: jo
   ThreeLetterPairs:
   - Kana: "\u304D\u3083"
     Romaji: kya
@@ -253,11 +255,3 @@ MonoBehaviour:
     Romaji: dyo
   - Kana: "\u3062\u3087"
     Romaji: dyo
-  - Kana: "\u3063\u304B"
-    Romaji: kka
-  - Kana: "\u3063\u304D"
-    Romaji: kki
-  - Kana: "\u3063\u304F"
-    Romaji: kku
-  - Kana: "\u3063\u3051"
-    Romaji: kku

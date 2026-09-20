@@ -268,11 +268,25 @@ public static class QuizUtility
 
     public static Question GetNumbersQuestion(int number)
     {
-        string questionType = "Number";
+        string questionType = "";
         string hint = "No hints currently available for Numbers";
-        Noun word = new();
-        word.kanji = number.ToString();
-        return new Question(questionType, NumberTranslator.GetNumberTranslation(number), word, QuestionCategory.Numbers, hint);
+        if (RandomUtility.PercentageChanceOfTrue(0.5f))
+        {
+            questionType = "Write the number";
+            Noun word = new();
+            word.kanji = NumberTranslator.GetNumberTranslation(number)[0];
+            List <string> correctAnswers = new List<string>();
+            correctAnswers.Add(number.ToString());
+            return new Question(questionType, correctAnswers, word, QuestionCategory.Numbers, hint);
+        }
+        else
+        {
+            questionType = "Translate the number";
+            Noun word = new();
+            word.kanji = number.ToString();
+            return new Question(questionType, NumberTranslator.GetNumberTranslation(number), word, QuestionCategory.Numbers, hint);
+        }
+
     }
 
     public static Question GetVocabQuestion(ref WordLists wordlist)
@@ -319,7 +333,7 @@ public static class QuizUtility
                 break;
             case ConjugationType.StandardNonpast:
                 answer.Add(Word.StandardNonpast);
-                questionType = "Standard Past Form";
+                questionType = "Type the Hiragana";
                 break;
             case ConjugationType.StandardNonpastNegative:
                 answer.Add(Word.StandardNonpastNegative);
@@ -376,6 +390,10 @@ public static class QuizUtility
                 answer.Add(Word.StandardPastNegative);
                 questionType = "Standard Past Negative Form";
                 break;
+            case ConjugationType.StandardNonpast:
+                answer.Add(Word.StandardNonpast);
+                questionType = "Type the Hiragana";
+                break;
             default:
                 Debug.LogWarning("Error: Question Type not valid");
                 break;
@@ -410,6 +428,10 @@ public static class QuizUtility
                 answer.Add(Word.StandardPastNegative);
                 questionType = "Standard Past Negative Form";
                 break;
+            case ConjugationType.StandardNonpast:
+                answer.Add(Word.StandardNonpast);
+                questionType = "Type the Hiragana";
+                break;
             default:
                 Debug.LogWarning("Error: Question Type not valid");
                 break;
@@ -418,30 +440,33 @@ public static class QuizUtility
 
         return new Question(questionType, answer, word, QuestionCategory.Conjugation, hint);
     }
-    public static WordType GetRandomWordType(ConjugationTypes words)
+    public static WordType GetRandomWordType(ConjugationTypes words, WordLists lists)
     {
         WordType wordtype;
-        if (words.VerbConjugationTypes.Count > 0 && words.AdjectiveConjugationTypes.Count == 0 && words.NounConjugationTypes.Count == 0)
+        bool containsVerb = words.VerbConjugationTypes.Count > 0 && lists.Verbs.Count > 0;
+        bool containsAdjective = words.AdjectiveConjugationTypes.Count > 0 && lists.Adjectives.Count > 0;
+        bool containsNoun = words.NounConjugationTypes.Count > 0 && lists.Nouns.Count > 0;
+        if (containsVerb && containsAdjective == false && containsNoun == false)
         {
             wordtype = WordType.Verb;
         }
-        else if (words.VerbConjugationTypes.Count == 0 && words.AdjectiveConjugationTypes.Count > 0 && words.NounConjugationTypes.Count == 0)
+        else if (containsVerb == false && containsAdjective && containsNoun == false)
         {
             wordtype = WordType.Adjective;
         }
-        else if (words.VerbConjugationTypes.Count == 0 && words.AdjectiveConjugationTypes.Count == 0 && words.NounConjugationTypes.Count > 0)
+        else if (containsVerb == false && containsAdjective == false && containsNoun)
         {
             wordtype = WordType.Noun;
         }
-        else if (words.VerbConjugationTypes.Count > 0 && words.AdjectiveConjugationTypes.Count > 0 && words.NounConjugationTypes.Count == 0)
+        else if (containsVerb && containsAdjective && containsNoun == false)
         {
             wordtype = RandomUtility.PercentageChanceOfTrue(0.5f) ? WordType.Verb : WordType.Adjective;
         }
-        else if (words.VerbConjugationTypes.Count == 0 && words.AdjectiveConjugationTypes.Count > 0 && words.NounConjugationTypes.Count > 0)
+        else if (containsVerb == false && containsAdjective && containsNoun)
         {
             wordtype = RandomUtility.PercentageChanceOfTrue(0.5f) ? WordType.Noun : WordType.Adjective;
         }
-        else if (words.VerbConjugationTypes.Count > 0 && words.AdjectiveConjugationTypes.Count == 0 && words.NounConjugationTypes.Count > 0)
+        else if (containsVerb && containsAdjective == false && containsNoun)
         {
             wordtype = RandomUtility.PercentageChanceOfTrue(0.5f) ? WordType.Noun : WordType.Verb;
         }

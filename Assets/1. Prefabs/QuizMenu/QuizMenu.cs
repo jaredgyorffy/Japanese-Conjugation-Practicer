@@ -161,13 +161,6 @@ public class QuizMenu : MonoBehaviour
         textConverter.SetEnabled(useKanaKeyboard);
     }
 
-    public void PrepareNextQuestion()
-    {
-
-
-        textField.Focus();
-    }
-
     public void SetKana(string kana, string Kanji)
     {
         if (string.IsNullOrEmpty(Kanji))
@@ -183,6 +176,7 @@ public class QuizMenu : MonoBehaviour
     }
     public void SetQuestion(string question)
     {
+        textField.Focus();
         this.question = question;
     }
 

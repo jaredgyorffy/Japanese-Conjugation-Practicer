@@ -21,6 +21,15 @@ MonoBehaviour:
       AdjectiveConjugationTypes: 
       NounConjugationTypes: 
     UseKanaKeyboard: 0
+    EnabledByDefault: 1
+  - Title: Typing Practice
+    Category: 1
+    ConjugationTypes:
+      VerbConjugationTypes: 00000000
+      AdjectiveConjugationTypes: 00000000
+      NounConjugationTypes: 00000000
+    UseKanaKeyboard: 1
+    EnabledByDefault: 0
   VocabData:
     VerbList: []
     NounList: []

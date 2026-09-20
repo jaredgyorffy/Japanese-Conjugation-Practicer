@@ -38,14 +38,6 @@ public class SimpleTest : MonoBehaviour, IQuiz
         {
             quizMenu.SetKanaKeyboard(false);
         }
-        /*if (types.Category == QuestionCategory.Expression || types.Category == QuestionCategory.Vocab)
-        {
-            quizMenu.SetKanaKeyboard(false);
-        }
-        else
-        {
-            quizMenu.SetKanaKeyboard(true);
-        }*/
     }
 
     public void InitializeQuiz(QuizConfiguration config, QuizMenu quizmenu)
@@ -151,9 +143,8 @@ public class SimpleTest : MonoBehaviour, IQuiz
             return GetNumbersQuestion();
         default:
             Debug.LogError($"invalid Question Category {questionType.Category}");
-            break;
+            return null;
         }
-        return GetConjugationQuesiton();
     }
 
     private Question GetNumbersQuestion()
@@ -181,7 +172,7 @@ public class SimpleTest : MonoBehaviour, IQuiz
     {
         List<string> answers = new List<string>();
 
-        WordType wordType = QuizUtility.GetRandomWordType(questionType.ConjugationTypes);
+        WordType wordType = QuizUtility.GetRandomWordType(questionType.ConjugationTypes, WordLists);
         ConjugationType form = questionType.ConjugationTypes.GetConjugationTypeByWordType(wordType);
         IWord word = QuizUtility.GetRandomWord(ref WordLists, wordType);
 

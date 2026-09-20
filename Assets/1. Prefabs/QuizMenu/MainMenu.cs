@@ -72,9 +72,16 @@ public class MainMenu : MonoBehaviour
         if (startingHealth <= 0 || adventureLength <= 0)
         {
             warningText.visible = true;
-            warningText.text = "Invalid Adventure Configuration";
+            warningText.text = "Invalid Adventure Configuration, both health and length must be > 0";
             return;
         }
+        if (config.questionTypes.Count <= 0)
+        {
+            warningText.visible = true;
+            warningText.text = "Not enough question types selected to start an adventure";
+            return;
+        }
+
         adventure.InitializeAdventure(startingHealth, adventureLength, config, Restart);
         root.visible = false;
     }
@@ -185,6 +192,7 @@ public class MainMenu : MonoBehaviour
             subjectToggles.Add(toggleBox.MQ<Toggle>());
             content.Add(toggleBox);
             Foldout section = new Foldout();
+            section.AddToClassList("SubToggle");
             section.value = false;
             content.Add(section);
             section.name = globalVariables.WordLists[i].SourceName;
@@ -194,7 +202,7 @@ public class MainMenu : MonoBehaviour
                 var subject = togglePrefab.Instantiate();
                 subject.MQ<Label>().text = quesiton.Title;
                 var toggle = subject.MQ<Toggle>();
-                toggle.value = true;
+                toggle.value = quesiton.EnabledByDefault;
                 subjectToggles.Add(toggle);
                 section.Add(subject);
             }
@@ -274,7 +282,18 @@ public class MainMenu : MonoBehaviour
                 {
                     if (contentToggles[i][j+1].value)
                     {
-                        config.questionTypes.Add(globalVariables.WordLists[i].QuestionTypes[j]);
+                        bool includesType = true;
+                        foreach (var question in config.questionTypes)
+                        {
+                            if (globalVariables.WordLists[i].QuestionTypes[j].Category == question.Category)
+                            {
+                                includesType = false;
+                            }
+                        }
+                        if (includesType)
+                        {
+                            config.questionTypes.Add(globalVariables.WordLists[i].QuestionTypes[j]);
+                        }
                     }
                 }
             }

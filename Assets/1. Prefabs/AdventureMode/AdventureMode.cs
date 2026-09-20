@@ -52,6 +52,7 @@ public class AdventureMode : MonoBehaviour
     private Image uiMonsterSprite;
     private Queue<MonsterDifficulty> campaignOrder;
     private VisualElement enemy;
+    private VisualElement player;
     private VisualElement dialogueBox;
     [SerializeField] MonsterLibrary monsterLibrary;
     [SerializeField] private DungeonGenerator dungeonGenerator;
@@ -59,6 +60,7 @@ public class AdventureMode : MonoBehaviour
     private Button rightButton;
     private Button centerButton;
     private DungeonDirection currentDirectionInput;
+    private QuestionCategory currentCategory;
 
     public Action leftButtonPressed;
     public Action rightButtonPressed;
@@ -71,6 +73,7 @@ public class AdventureMode : MonoBehaviour
         testScreenRoot = testScreen.rootVisualElement.MQ<VisualElement>("Panel");
         uiMonsterSprite = battleMenuRoot.MQ<Image>("EnemySprite");
         enemy = battleMenuRoot.MQ<VisualElement>("Enemy");
+        player = battleMenuRoot.MQ<VisualElement>("Player");
         dialogueBox = battleMenuRoot.MQ<VisualElement>("DialogueBox");
         animator = monster.GetComponent<Animator>();
         monsterSprite = monster.GetComponent<SpriteRenderer>();
@@ -130,8 +133,7 @@ public class AdventureMode : MonoBehaviour
         centerButton.clicked += () => SetNextDirection(DungeonDirection.Forward);
         rightButton.clicked += () => SetNextDirection(DungeonDirection.Right);
 
-        quizMediator.CurrentQuiz.SetQuestionType(GetRandomQuestionType(config.questionTypes));
-
+        SetQuizQuestionType(GetRandomQuestionType(config.questionTypes));
         SetDirectionButtonVisibility(false);
         campaignOrder = GenerateMonsterOrder(enemies);
         TryGenerateRandomMonster();
@@ -146,6 +148,12 @@ public class AdventureMode : MonoBehaviour
         quizMediator.AnswerSubmitted += ResolveBattle;
         Initialized = true;
 
+    }
+
+    private void SetQuizQuestionType(QuestionType questionType)
+    {
+        quizMediator.CurrentQuiz.SetQuestionType(questionType);
+        currentCategory = questionType.Category;
     }
 
     private void SetDirectionButtonVisibility(bool visibility)
@@ -239,7 +247,7 @@ public class AdventureMode : MonoBehaviour
         }
     }
 
-    private void ProceedInDungeon()
+    private void NextQuestionOrQuiz()
     {
         if (enemyCurrentHP <= 0)
         {
@@ -247,8 +255,7 @@ public class AdventureMode : MonoBehaviour
             {
                 if (campaignOrder.TryPeek(out _) == false)
                 {
-                    SetDialogueBoxText($"You are the Conjugation Master!");
-                    Invoke("VictoryCondition", inputDelay);
+                    StartVictorySequence();
                     return;
                 }
                 dungeonGenerator.MoveToDecisionPoint(PathChoosingSequence);
@@ -257,7 +264,11 @@ public class AdventureMode : MonoBehaviour
             else
             {
                 SetDialogueBoxText("");
-                TryGenerateRandomMonster();
+                SetQuizQuestionType(GetRandomQuestionType(config.questionTypes));
+                if (TryGenerateRandomMonster() == false)
+                {
+                    return;
+                }
                 dungeonGenerator.GenerateNextTile(DungeonDirection.None);
                 return;
             }
@@ -268,27 +279,43 @@ public class AdventureMode : MonoBehaviour
             restartAction.Invoke();
             return;
         }
+        //Final boss uses a randomized question type
+        if (campaignOrder.TryPeek(out _) == false)
+        {
+            quizMediator.CurrentQuiz.SetQuestionType(GetRandomQuestionType(config.questionTypes));
+        }
         quizMediator.CurrentQuiz.PrepareNextQuestion();
         SetTestVisible(true);
     }
 
+    private void StartVictorySequence()
+    {
+        SetBattleUIVisibility(false);
+        SetDialogueBoxText($"You are the Conjugation Master!");
+        Invoke("VictoryCondition", inputDelay);
+        return;
+    }
+
     private void PathChoosingSequence()
     {
-        StartCoroutine(ChooseDungeonPath(NextEncounter));
+        
+        SetDialogueBoxText("");
+        StartCoroutine(ChooseDungeonPath(null));
+        SetBattleUIVisibility(false);
     }
 
     IEnumerator ChooseDungeonPath(Action action)
     {
-        List<QuestionType> monsters = GenerateQuestionTypes(dungeonGenerator.CurrentTile.Endpoints);
-        InitializeDirectionButtons(dungeonGenerator.CurrentTile.Endpoints, monsters);
+        List<QuestionType> questionTypes = GenerateQuestionTypes(dungeonGenerator.CurrentTile.Endpoints);
+        InitializeDirectionButtons(dungeonGenerator.CurrentTile.Endpoints, questionTypes);
         SetDialogueBoxText ($"Waiting for Input");
 
         currentDirectionInput = DungeonDirection.None;
         yield return new WaitUntil(() => currentDirectionInput != DungeonDirection.None);
         SetDialogueBoxText($"");
         SetDirectionButtonVisibility(false);
-        int currentMonsterIndex = GetSelectedDirectionIndex(currentDirectionInput, dungeonGenerator.CurrentTile.Endpoints);
-        quizMediator.CurrentQuiz.SetQuestionType(monsters[currentMonsterIndex]);
+        int currentQuestionTypeIndex = GetSelectedDirectionIndex(currentDirectionInput, dungeonGenerator.CurrentTile.Endpoints);
+        SetQuizQuestionType(questionTypes[currentQuestionTypeIndex]);
         TryGenerateRandomMonster();
         DungeonTile nextTile = dungeonGenerator.GenerateNextTile(currentDirectionInput);
     }
@@ -302,7 +329,10 @@ public class AdventureMode : MonoBehaviour
         for (int i = 0; i < endpoints.Count; i++)
         {
             QuestionType questionType = GetRandomQuestionType(questionLibrary);
-            questionLibrary.Remove(questionType);
+            if (questionLibrary.Count > endpoints.Count - i)
+            {
+                questionLibrary.Remove(questionType);
+            }
             choices.Add(questionType);
         }
         return choices;
@@ -310,7 +340,19 @@ public class AdventureMode : MonoBehaviour
 
     private QuestionType GetRandomQuestionType(List<QuestionType> questions)
     {
-        return questions[UnityEngine.Random.Range(0, questions.Count)];
+        List<QuestionType> questionTypes = new();
+        if (questions.Count <= 1)
+        {
+            return questions[0];
+        }
+        foreach (QuestionType questionType in questions)
+        {
+            if (questionType.Category != currentCategory)
+            {
+                questionTypes.Add(questionType);
+            }
+        }
+        return questionTypes[UnityEngine.Random.Range(0, questionTypes.Count)];
     }
 
     private int GetSelectedDirectionIndex(DungeonDirection currentDirectionInput, List<DungeonEndPoint> Endpoints)
@@ -358,10 +400,24 @@ public class AdventureMode : MonoBehaviour
     }
 
     [Button("Debug Next Encounter", EButtonEnableMode.Playmode)]
-    private void NextEncounter()
+    private void SetBattleUIVisibility(bool visibility)
     {
-        enemy.AddToClassList("Hidden");
-        enemy.RemoveFromClassList("Visible");
+        if (visibility)
+        {
+            enemy.AddToClassList("Visible");
+            enemy.RemoveFromClassList("Hidden");
+            player.AddToClassList("Visible");
+            player.RemoveFromClassList("Hidden");
+        }
+        else
+        {
+            enemy.AddToClassList("Hidden");
+            enemy.RemoveFromClassList("Visible");
+            player.AddToClassList("Hidden");
+            player.RemoveFromClassList("Visible");
+            SetDialogueBoxText("");
+        }
+
     }
     private void DeployMonster()
     {
@@ -380,6 +436,7 @@ public class AdventureMode : MonoBehaviour
         uiMonsterSprite.style.unityBackgroundImageTintColor = currentMonster.Tint;
         enemy.RemoveFromClassList("Hidden");
         enemy.AddToClassList("Visible");
+        SetBattleUIVisibility(true);
         SetDialogueBoxText($"A wild {currentMonster.Name} appears!");
 
         SetMonsterSprite((int)currentMonster.MonsterType);
@@ -387,14 +444,20 @@ public class AdventureMode : MonoBehaviour
         animator.SetBool("Spawned", true);
         monsterSprite.enabled = true;
 
-        Invoke("ProceedInDungeon", inputDelay);
+        Invoke("NextQuestionOrQuiz", inputDelay);
     }
 
-    private void TryGenerateRandomMonster()
+    private bool TryGenerateRandomMonster()
     {
         if (campaignOrder.TryPeek(out _))
         {
             currentMonster = monsterLibrary.GetRandomMonsterByDifficulty(campaignOrder.Dequeue());
+            return true;
+        }
+        else
+        {
+            StartVictorySequence();
+            return false;
         }
     }
 
@@ -451,7 +514,7 @@ public class AdventureMode : MonoBehaviour
             SetDialogueBoxText($"Defeat: You have been Conjugated.");
         }
 
-        Invoke("ProceedInDungeon", inputDelay);
+        Invoke("NextQuestionOrQuiz", inputDelay);
     }
 
     private void OnDestroy()

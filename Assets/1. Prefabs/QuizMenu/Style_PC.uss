@@ -108,5 +108,5 @@ VisualElement {
 }
 
 .SubToggle {
-    padding-left: 10%;
+    background-color: rgb(191, 191, 191);
 }

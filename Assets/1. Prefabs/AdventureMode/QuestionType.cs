@@ -8,6 +8,7 @@ public class QuestionType
     public QuestionCategory Category;
     public ConjugationTypes ConjugationTypes;
     public bool UseKanaKeyboard = true;
+    public bool EnabledByDefault = true;
 }
 
 public enum QuestionCategory

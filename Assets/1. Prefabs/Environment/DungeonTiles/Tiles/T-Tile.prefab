@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c14ab4f9ab8891a478853eea345766f1, type: 2}
+  - {fileID: 2100000, guid: fd27c227cd1350a4c9401cc85a4aab4c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -634,7 +634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8868227285799843703, guid: 6aa4df3ae7bc6ec4bb9fe13cef76129e, type: 3}
       propertyPath: m_Name
-      value: T-Tile Variant
+      value: T-Tile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

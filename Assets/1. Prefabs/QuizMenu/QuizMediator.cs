@@ -45,11 +45,6 @@ public class QuizMediator : MonoBehaviour
         AnswerSubmitted?.Invoke(verdict.Item1, verdict.Item2);
     }
 
-    public void OnPrepareNextQuestion()
-    {
-
-    }
-
     private void OnHintPressed(bool hintVisible)
     {
         CurrentQuiz.ToggleHint(hintVisible);

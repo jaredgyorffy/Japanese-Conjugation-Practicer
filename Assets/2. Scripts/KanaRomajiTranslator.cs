@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UIElements;
 
 public class KanaRomajiTranslator : MonoBehaviour
@@ -51,11 +51,13 @@ public class KanaRomajiTranslator : MonoBehaviour
 
         foreach (var pair in KanaRomajiList.ThreeLetterPairs)
         {
+            FindAndReplaceKanjiWithSmallTu(pair);
             FindAndReplaceRomaji(pair);
         }
 
         foreach (var pair in KanaRomajiList.TwoLetterPairs)
         {
+            FindAndReplaceKanjiWithSmallTu(pair);
             FindAndReplaceRomaji(pair);
         }
 
@@ -63,6 +65,13 @@ public class KanaRomajiTranslator : MonoBehaviour
         {
             FindAndReplaceRomaji(pair);
         }
+    }
+    private void FindAndReplaceKanjiWithSmallTu(KanaRomajiPair pair)
+    {
+        KanaRomajiPair smallTsu;
+        smallTsu.Romaji = pair.Romaji.Substring(0, 1) + pair.Romaji;
+        smallTsu.Kana = "っ" + pair.Kana;
+        FindAndReplaceRomaji(smallTsu);
     }
 
     private void FindAndReplaceRomaji(KanaRomajiPair pair)
